@@ -223,7 +223,7 @@ function highlightFeature(e) {
 	info.update(layer.feature.properties);
 }
 function resetHighlight(e) {
-	e.layer.resetStyle(e.target); //reset geojson(=map drawn by geoJSON) style just like it had been initialized
+	geojson_recent.resetStyle(e.target); //reset geojson(=map drawn by geoJSON) style just like it had been initialized
 	info.update();
 }
 function zoomToFeature(e) {
