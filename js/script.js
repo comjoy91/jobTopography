@@ -57,8 +57,8 @@ for (var i=0; i<_dataJSON.length; i++) {
 	statesData_R_COSTII.features[i].properties.score = _dataJSON[i].score_R_COSTII;
 	statesData_expertRate.features[i].properties.rawData = _dataJSON[i].expertRate;
 	statesData_expertRate.features[i].properties.score = _dataJSON[i].score_expertRate;
-	statesData_meanScore.features[i].properties.rawData = _dataJSON[i].statesData_meanScore;
-	statesData_meanScore.features[i].properties.score = _dataJSON[i].statesData_meanScore;
+	statesData_meanScore.features[i].properties.rawData = _dataJSON[i].meanScore;
+	statesData_meanScore.features[i].properties.score = _dataJSON[i].meanScore;
 }
 
 
@@ -198,7 +198,7 @@ legend.onAdd = function (map) {
         labels = [];
 
     // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length; i++) {
+    for (var i = 0; i < grades.length-1; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i]) + '"></i> ' +
             grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
