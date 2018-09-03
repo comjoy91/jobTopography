@@ -30,7 +30,8 @@ var statesData_hiringRate_0 = JSON.parse(JSON.stringify(statesData)),
 	statesData_extinctIndex = JSON.parse(JSON.stringify(statesData)),
 	statesData_incomeRate = JSON.parse(JSON.stringify(statesData)),
 	statesData_R_COSTII = JSON.parse(JSON.stringify(statesData)),
-	statesData_expertRate = JSON.parse(JSON.stringify(statesData));
+	statesData_expertRate = JSON.parse(JSON.stringify(statesData)), 
+	statesData_meanScore = JSON.parse(JSON.stringify(statesData));
 
 	statesData_hiringRate_0.name = "1인 이상 제조업 고용 / 전체 고용";
 	statesData_hiringRate_300.name = "300인 이상 제조업 고용 / 전체 고용";
@@ -39,6 +40,7 @@ var statesData_hiringRate_0 = JSON.parse(JSON.stringify(statesData)),
 	statesData_incomeRate.name = "소득지 근로소득 / 원천징수지 근로소득";
 	statesData_R_COSTII.name = "R_COSTII";
 	statesData_expertRate.name = "관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자";
+	statesData_meanScore.name = "평균점수 (1인이상/300인이상 제조업고용은 제외)";
 
 for (var i=0; i<_dataJSON.length; i++) {
 	statesData_hiringRate_0.features[i].properties.rawData = _dataJSON[i].hiringRate_0;
@@ -55,6 +57,8 @@ for (var i=0; i<_dataJSON.length; i++) {
 	statesData_R_COSTII.features[i].properties.score = _dataJSON[i].score_R_COSTII;
 	statesData_expertRate.features[i].properties.rawData = _dataJSON[i].expertRate;
 	statesData_expertRate.features[i].properties.score = _dataJSON[i].score_expertRate;
+	statesData_meanScore.features[i].properties.rawData = _dataJSON[i].statesData_meanScore;
+	statesData_meanScore.features[i].properties.score = _dataJSON[i].statesData_meanScore;
 }
 
 
@@ -71,7 +75,7 @@ function getColor(d) {
 		   d >= 30 ? '#FDD0A2' :
 		   d >= 20 ? '#FEE6CE' :
 		   d >= 10 ? '#FFF5EB' :
-					  '#FFFFFF';
+					 '#FFFFFF';
 }
 function styleFunc(feature) {
 	return {
@@ -177,6 +181,11 @@ var geojson_expertRate = L.geoJson(statesData_expertRate, {
 	onEachFeature: onEachFeature
 }).addTo(map);
 
+var geojson_meanScore = L.geoJson(statesData_meanScore, {
+	style: styleFunc,
+	onEachFeature: onEachFeature
+}).addTo(map);
+
 
 
 // custom legend control
@@ -215,6 +224,7 @@ var baseMaps = {
     "소득지 근로소득 / 원천징수지 근로소득": geojson_incomeRate,
     "R-COSTII": geojson_R_COSTII,
     "관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자": geojson_expertRate,
+    "평균점수 (1인이상/300인이상 제조업고용은 제외)": geojson_meanScore
 };
 
 var overlayMaps = {};
