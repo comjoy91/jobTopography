@@ -22,6 +22,12 @@ var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
 
 var map = L.map('map', {layers: [grayscale]}).setView([36, 128], 7);
 
+var geojson_recent;
+// map.on('baselayerchange', function(e) {
+// 	geojson_recent = e.layer;
+// 	console.log(geojson_recent);
+// });
+
 
 // functions for implementing rawData and score into initial geoJSON data 
 var statesData_hiringRate_0 = JSON.parse(JSON.stringify(statesData)), 
@@ -60,87 +66,6 @@ for (var i=0; i<_dataJSON.length; i++) {
 	statesData_meanScore.features[i].properties.rawData = _dataJSON[i].meanScore;
 	statesData_meanScore.features[i].properties.score = _dataJSON[i].meanScore;
 }
-
-
-
-
-// adding colour for choropleth map
-function getColor(d) {
-	return d >= 90 ? '#7F2704' :
-		   d >= 80 ? '#A63603' :
-		   d >= 70 ? '#D94801' :
-		   d >= 60 ? '#F16913' :
-		   d >= 50 ? '#FD8D3C' :
-		   d >= 40 ? '#FDAE6B' :
-		   d >= 30 ? '#FDD0A2' :
-		   d >= 20 ? '#FEE6CE' :
-		   d >= 10 ? '#FFF5EB' :
-					 '#FFFFFF';
-}
-function styleFunc(feature) {
-	return {
-		fillColor: getColor(feature.properties.score),
-		weight: 0.5,
-		opacity: 1.0,
-		color: 'blue',
-		dashArray: '0',
-		fillOpacity: 1.0
-	};
-}
-
-
-
-// initialize 'info': show information on it while hover on a polygon
-var info = L.control();
-info.onAdd = function (map) {
-	this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-	this.update();
-	return this._div;
-};
-// method that we will use to update the control based on feature properties passed
-info.update = function (props) {
-	this._div.innerHTML =  (props ?
-		'<b>' + props.name + '</b><br/>데이터: ' + props.rawData + '<br/>점수: ' + props.score
-		: 'Hover over a state');
-};
-info.addTo(map);
-
-
-// hover on/off events
-// adding colour while hover on/off a polygon
-function highlightFeature(e) {
-	var layer = e.target;
-
-	// layer.setStyle({
-	// 	weight: 5,
-	// 	color: '#666',
-	// 	dashArray: '',
-	// 	fillOpacity: 1.0
-	// });
-
-	// if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-	// 	layer.bringToFront();
-	// }
-	info.update(layer.feature.properties);
-}
-function resetHighlight(e) {
-	//geojson.resetStyle(e.target); //reset geojson(=map drawn by geoJSON) style just like it had been initialized
-	info.update();
-}
-function zoomToFeature(e) {
-	map.fitBounds(e.target.getBounds());
-}
-function onEachFeature(feature, layer) {
-	layer.on({
-		mouseover: highlightFeature,
-		mouseout: resetHighlight,
-		click: zoomToFeature
-	});
-}
-
-
-
-
 
 
 
@@ -229,6 +154,85 @@ var baseMaps = {
 
 var overlayMaps = {};
 
-L.control.layers(baseMaps, overlayMaps, {hideSingleBase: true}).addTo(map);
+L.control.layers(baseMaps, overlayMaps, {collapsed: false, hideSingleBase: true}).addTo(map);
+geojson_recent = geojson_hiringRate_300;
 
 
+
+
+
+
+
+// adding colour for choropleth map
+function getColor(d) {
+	return d >= 90 ? '#7F2704' :
+		   d >= 80 ? '#A63603' :
+		   d >= 70 ? '#D94801' :
+		   d >= 60 ? '#F16913' :
+		   d >= 50 ? '#FD8D3C' :
+		   d >= 40 ? '#FDAE6B' :
+		   d >= 30 ? '#FDD0A2' :
+		   d >= 20 ? '#FEE6CE' :
+		   d >= 10 ? '#FFF5EB' :
+					 '#FFFFFF';
+}
+function styleFunc(feature) {
+	return {
+		fillColor: getColor(feature.properties.score),
+		weight: 0.5,
+		opacity: 1.0,
+		color: 'blue',
+		dashArray: '0',
+		fillOpacity: 1.0
+	};
+}
+
+
+
+// initialize 'info': show information on it while hover on a polygon
+var info = L.control();
+info.onAdd = function (map) {
+	this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+	this.update();
+	return this._div;
+};
+// method that we will use to update the control based on feature properties passed
+info.update = function (props) {
+	this._div.innerHTML =  /*'<h4>' + geojson_recent.name + '</h4>' + */(props ?
+		'<b>' + props.name + '</b><br/>데이터: ' + props.rawData + '<br/>점수: ' + props.score
+		: 'Hover over a state');
+};
+info.addTo(map);
+
+
+// hover on/off events
+// adding colour while hover on/off a polygon
+function highlightFeature(e) {
+	var layer = e.target;
+
+	layer.setStyle({
+		weight: 5,
+		color: '#666',
+		dashArray: '',
+		fillOpacity: 1.0
+	});
+
+	if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+		layer.bringToFront();
+	}
+	info.update(layer.feature.properties);
+}
+function resetHighlight(e) {
+	e.layer.resetStyle(e.target); //reset geojson(=map drawn by geoJSON) style just like it had been initialized
+	info.update();
+}
+function zoomToFeature(e) {
+	map.fitBounds(e.target.getBounds());
+}
+function onEachFeature(feature, layer) {
+	layer.on({
+		mouseover: highlightFeature,
+		mouseout: resetHighlight,
+		click: zoomToFeature
+	});
+}
