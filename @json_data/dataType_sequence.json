@@ -1,0 +1,30 @@
+[
+	{
+		"rawData": "hiringRate_0", 
+		"score": "score_hiringRate_0"
+	}, 
+	{
+		"rawData": "hiringRate_300",
+		"score": "score_hiringRate_300"
+	}, 
+	{
+		"rawData": "hiringRate_1000",
+		"score": "score_hiringRate_1000"
+	}, 
+	{
+		"rawData": "extinctIndex",
+		"score": "score_extinctIndex"
+	}, 
+	{
+		"rawData": "incomeRate",
+		"score": "score_incomeRate"
+	}, 
+	{
+		"rawData": "R_COSTII",
+		"score": "score_R_COSTII"
+	}, 
+	{
+		"rawData": "expertRate",
+		"score": "score_expertRate"
+	}
+]
