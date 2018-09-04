@@ -48,21 +48,36 @@ var statesData_hiringRate_0 = JSON.parse(JSON.stringify(statesData)),
 	statesData_expertRate.name = "관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자";
 	statesData_meanScore.name = "평균점수 (1인이상/300인이상 제조업고용은 제외)";
 
-for (var i=0; i<_dataJSON.length; i++) {
+for (var i=0; i<statesData_hiringRate_0.features.length; i++) {
+	statesData_hiringRate_0.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_hiringRate_0.features[i].properties.rawData = _dataJSON[i].hiringRate_0;
 	statesData_hiringRate_0.features[i].properties.score = _dataJSON[i].score_hiringRate_0;
+
+	statesData_hiringRate_300.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_hiringRate_300.features[i].properties.rawData = _dataJSON[i].hiringRate_300;
 	statesData_hiringRate_300.features[i].properties.score = _dataJSON[i].score_hiringRate_300;
+
+	statesData_hiringRate_1000.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_hiringRate_1000.features[i].properties.rawData = _dataJSON[i].hiringRate_1000;
 	statesData_hiringRate_1000.features[i].properties.score = _dataJSON[i].score_hiringRate_1000;
+
+	statesData_extinctIndex.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_extinctIndex.features[i].properties.rawData = _dataJSON[i].extinctIndex;
 	statesData_extinctIndex.features[i].properties.score = _dataJSON[i].score_extinctIndex;
+
+	statesData_incomeRate.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_incomeRate.features[i].properties.rawData = _dataJSON[i].incomeRate;
 	statesData_incomeRate.features[i].properties.score = _dataJSON[i].score_incomeRate;
+
+	statesData_R_COSTII.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_R_COSTII.features[i].properties.rawData = _dataJSON[i].R_COSTII;
 	statesData_R_COSTII.features[i].properties.score = _dataJSON[i].score_R_COSTII;
+
+	statesData_expertRate.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_expertRate.features[i].properties.rawData = _dataJSON[i].expertRate;
 	statesData_expertRate.features[i].properties.score = _dataJSON[i].score_expertRate;
+
+	statesData_meanScore.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_meanScore.features[i].properties.rawData = _dataJSON[i].meanScore;
 	statesData_meanScore.features[i].properties.score = _dataJSON[i].meanScore;
 }
@@ -199,7 +214,7 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
 	this._div.innerHTML =  /*'<h4>' + geojson_recent.name + '</h4>' + */(props ?
-		'<b>' + props.name + '</b><br/>데이터: ' + props.rawData + '<br/>점수: ' + props.score
+		props.province + ' <b>' + props.name + '</b><br/>데이터: ' + props.rawData + '<br/>점수: ' + props.score
 		: 'Hover over a state');
 };
 info.addTo(map);
