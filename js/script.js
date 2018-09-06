@@ -37,7 +37,8 @@ var statesData_hiringRate_0 = JSON.parse(JSON.stringify(statesData)),
 	statesData_incomeRate = JSON.parse(JSON.stringify(statesData)),
 	statesData_R_COSTII = JSON.parse(JSON.stringify(statesData)),
 	statesData_expertRate = JSON.parse(JSON.stringify(statesData)), 
-	statesData_meanScore = JSON.parse(JSON.stringify(statesData));
+	statesData_totalScore_300 = JSON.parse(JSON.stringify(statesData)),
+	statesData_totalScore_1000 = JSON.parse(JSON.stringify(statesData));
 
 	statesData_hiringRate_0.name = "1인 이상 제조업 고용 / 전체 고용";
 	statesData_hiringRate_300.name = "300인 이상 제조업 고용 / 전체 고용";
@@ -46,40 +47,36 @@ var statesData_hiringRate_0 = JSON.parse(JSON.stringify(statesData)),
 	statesData_incomeRate.name = "소득지 근로소득 / 원천징수지 근로소득";
 	statesData_R_COSTII.name = "R_COSTII";
 	statesData_expertRate.name = "관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자";
-	statesData_meanScore.name = "평균점수 (1인이상/300인이상 제조업고용은 제외)";
+	statesData_totalScore_300.name = "종합점수 (300인이상 기업 제조업고용)";
+	statesData_totalScore_1000.name = "종합점수 (1000인이상 기업 제조업고용)";
 
 for (var i=0; i<statesData_hiringRate_0.features.length; i++) {
-	statesData_hiringRate_0.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_hiringRate_0.features[i].properties.rawData = _dataJSON[i].hiringRate_0;
 	statesData_hiringRate_0.features[i].properties.score = _dataJSON[i].score_hiringRate_0;
 
-	statesData_hiringRate_300.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_hiringRate_300.features[i].properties.rawData = _dataJSON[i].hiringRate_300;
 	statesData_hiringRate_300.features[i].properties.score = _dataJSON[i].score_hiringRate_300;
 
-	statesData_hiringRate_1000.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_hiringRate_1000.features[i].properties.rawData = _dataJSON[i].hiringRate_1000;
 	statesData_hiringRate_1000.features[i].properties.score = _dataJSON[i].score_hiringRate_1000;
 
-	statesData_extinctIndex.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_extinctIndex.features[i].properties.rawData = _dataJSON[i].extinctIndex;
 	statesData_extinctIndex.features[i].properties.score = _dataJSON[i].score_extinctIndex;
 
-	statesData_incomeRate.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_incomeRate.features[i].properties.rawData = _dataJSON[i].incomeRate;
 	statesData_incomeRate.features[i].properties.score = _dataJSON[i].score_incomeRate;
 
-	statesData_R_COSTII.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_R_COSTII.features[i].properties.rawData = _dataJSON[i].R_COSTII;
 	statesData_R_COSTII.features[i].properties.score = _dataJSON[i].score_R_COSTII;
 
-	statesData_expertRate.features[i].properties.province = _dataJSON[i].province_name;
 	statesData_expertRate.features[i].properties.rawData = _dataJSON[i].expertRate;
 	statesData_expertRate.features[i].properties.score = _dataJSON[i].score_expertRate;
 
-	statesData_meanScore.features[i].properties.province = _dataJSON[i].province_name;
-	statesData_meanScore.features[i].properties.rawData = _dataJSON[i].meanScore;
-	statesData_meanScore.features[i].properties.score = _dataJSON[i].meanScore;
+	statesData_totalScore_300.features[i].properties.rawData = _dataJSON[i].totalScore_300;
+	statesData_totalScore_300.features[i].properties.score = _dataJSON[i].totalScore_300;
+
+	statesData_totalScore_1000.features[i].properties.rawData = _dataJSON[i].totalScore_1000;
+	statesData_totalScore_1000.features[i].properties.score = _dataJSON[i].totalScore_1000;
 }
 
 
@@ -121,11 +118,15 @@ var geojson_expertRate = L.geoJson(statesData_expertRate, {
 	onEachFeature: onEachFeature
 }).addTo(map);
 
-var geojson_meanScore = L.geoJson(statesData_meanScore, {
+var geojson_totalScore_300 = L.geoJson(statesData_totalScore_300, {
 	style: styleFunc,
 	onEachFeature: onEachFeature
 }).addTo(map);
 
+var geojson_totalScore_1000 = L.geoJson(statesData_totalScore_1000, {
+	style: styleFunc,
+	onEachFeature: onEachFeature
+}).addTo(map);
 
 
 // custom legend control
@@ -133,18 +134,18 @@ var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
 
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
-        labels = [];
+	var div = L.DomUtil.create('div', 'info legend'),
+		grades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+		labels = [];
 
-    // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length-1; i++) {
-        div.innerHTML +=
-            '<i style="background:' + getColor(grades[i]) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-    }
+	// loop through our density intervals and generate a label with a colored square for each interval
+	for (var i = 0; i < grades.length-1; i++) {
+		div.innerHTML +=
+			'<i style="background:' + getColor(grades[i]) + '"></i> ' +
+			grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+	}
 
-    return div;
+	return div;
 };
 
 legend.addTo(map);
@@ -157,14 +158,15 @@ legend.addTo(map);
 // //    "Streets": streets
 // };
 var baseMaps = {
-    "1인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_0,
-    "300인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_300,
-    "1000인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_1000,
-    "소멸지수": geojson_extinctIndex,
-    "소득지 근로소득 / 원천징수지 근로소득": geojson_incomeRate,
-    "R-COSTII": geojson_R_COSTII,
-    "관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자": geojson_expertRate,
-    "평균점수 (1인이상/300인이상 제조업고용은 제외)": geojson_meanScore
+	"1인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_0,
+	"300인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_300,
+	"1000인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_1000,
+	"소멸지수": geojson_extinctIndex,
+	"소득지 근로소득 / 원천징수지 근로소득": geojson_incomeRate,
+	"R-COSTII": geojson_R_COSTII,
+	"관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자": geojson_expertRate,
+	"종합점수 (300인이상 기업 제조업고용)": geojson_totalScore_300,
+	"종합점수 (1000인이상 기업 제조업고용)": geojson_totalScore_1000
 };
 
 var overlayMaps = {};
@@ -214,7 +216,7 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
 	this._div.innerHTML =  /*'<h4>' + geojson_recent.name + '</h4>' + */(props ?
-		props.province + ' <b>' + props.name + '</b><br/>데이터: ' + props.rawData + '<br/>점수: ' + props.score
+		props.province_name + ' <b>' + props.municipal_name + '</b><br/>데이터: ' + props.rawData + '<br/>점수: ' + props.score
 		: 'Hover over a state');
 };
 info.addTo(map);
