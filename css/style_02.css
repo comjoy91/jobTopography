@@ -39,6 +39,6 @@ svg g path {
     mix-blend-mode: multiply;
 }
 
-.leaflet-overlay-pane {
+.leaflet-shadow-pane {
     mix-blend-mode: color-burn;
 }
