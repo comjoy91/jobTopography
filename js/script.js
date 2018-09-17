@@ -1,16 +1,3 @@
-
-
-// var map = L.map('map').setView([37.8, -96], 4);
-
-// L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-// 	maxZoom: 18,
-// 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-// 		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-// 		'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-// 	id: 'mapbox.light'
-// }).addTo(map);
-
-
 // BACKGROUND LAYER!!!!!
 var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -22,111 +9,131 @@ var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
 
 var map = L.map('map', {layers: [grayscale]}).setView([36, 128], 7);
 
-var geojson_recent;
+// var geojsonBase_recent;
+// var geojsonOverlay_recent;
+// map.on('overlayadd', function(e) {
+// 	geojsonOverlay_recent = e.layer;
+// 	console.log(geojsonOverlay_recent);
+// });
 // map.on('baselayerchange', function(e) {
-// 	geojson_recent = e.layer;
-// 	console.log(geojson_recent);
+// 	geojsonBase_recent = e.layer;
+// 	console.log(geojsonBase_recent);
 // });
 
 
-// functions for implementing rawData and score into initial geoJSON data 
-var statesData_hiringRate_0 = JSON.parse(JSON.stringify(statesData)), 
-	statesData_hiringRate_300 = JSON.parse(JSON.stringify(statesData)),
-	statesData_hiringRate_1000 = JSON.parse(JSON.stringify(statesData)),
-	statesData_extinctIndex = JSON.parse(JSON.stringify(statesData)),
-	statesData_incomeRate = JSON.parse(JSON.stringify(statesData)),
-	statesData_R_COSTII = JSON.parse(JSON.stringify(statesData)),
-	statesData_expertRate = JSON.parse(JSON.stringify(statesData)), 
-	statesData_totalScore_300 = JSON.parse(JSON.stringify(statesData)),
-	statesData_totalScore_1000 = JSON.parse(JSON.stringify(statesData));
-
-	statesData_hiringRate_0.name = "1인 이상 제조업 고용 / 전체 고용";
-	statesData_hiringRate_300.name = "300인 이상 제조업 고용 / 전체 고용";
-	statesData_hiringRate_1000.name = "1000인 이상 제조업 고용 / 전체 고용";
-	statesData_extinctIndex.name = "소멸지수";
-	statesData_incomeRate.name = "소득지 근로소득 / 원천징수지 근로소득";
-	statesData_R_COSTII.name = "R_COSTII";
-	statesData_expertRate.name = "관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자";
-	statesData_totalScore_300.name = "종합점수 (300인이상 기업 제조업고용)";
-	statesData_totalScore_1000.name = "종합점수 (1000인이상 기업 제조업고용)";
-
-for (var i=0; i<statesData_hiringRate_0.features.length; i++) {
-	statesData_hiringRate_0.features[i].properties.rawData = _dataJSON[i].hiringRate_0;
-	statesData_hiringRate_0.features[i].properties.score = _dataJSON[i].score_hiringRate_0;
-
-	statesData_hiringRate_300.features[i].properties.rawData = _dataJSON[i].hiringRate_300;
-	statesData_hiringRate_300.features[i].properties.score = _dataJSON[i].score_hiringRate_300;
-
-	statesData_hiringRate_1000.features[i].properties.rawData = _dataJSON[i].hiringRate_1000;
-	statesData_hiringRate_1000.features[i].properties.score = _dataJSON[i].score_hiringRate_1000;
-
-	statesData_extinctIndex.features[i].properties.rawData = _dataJSON[i].extinctIndex;
-	statesData_extinctIndex.features[i].properties.score = _dataJSON[i].score_extinctIndex;
-
-	statesData_incomeRate.features[i].properties.rawData = _dataJSON[i].incomeRate;
-	statesData_incomeRate.features[i].properties.score = _dataJSON[i].score_incomeRate;
-
-	statesData_R_COSTII.features[i].properties.rawData = _dataJSON[i].R_COSTII;
-	statesData_R_COSTII.features[i].properties.score = _dataJSON[i].score_R_COSTII;
-
-	statesData_expertRate.features[i].properties.rawData = _dataJSON[i].expertRate;
-	statesData_expertRate.features[i].properties.score = _dataJSON[i].score_expertRate;
-
-	statesData_totalScore_300.features[i].properties.rawData = _dataJSON[i].totalScore_300;
-	statesData_totalScore_300.features[i].properties.score = _dataJSON[i].totalScore_300;
-
-	statesData_totalScore_1000.features[i].properties.rawData = _dataJSON[i].totalScore_1000;
-	statesData_totalScore_1000.features[i].properties.score = _dataJSON[i].totalScore_1000;
+// getting colour
+function getColour(_score, _hueValue) {
+	var coluorFunction = new L.HSLLuminosityFunction(new L.Point(0, 1), new L.Point(100, 0), {outputHue: 0, outputSaturation: '100%'});
+	return coluorFunction.evaluate(_score);
 }
 
 
 
 
+
+
+// functions for implementing rawData and score into initial geoJSON data 
+
+for (var i=0; i<statesData.features.length; i++) {
+	var prop = statesData.features[i].properties;
+	prop.hiringRate_300 = {
+		rawData: _dataJSON[i].hiringRate_300,
+		score: _dataJSON[i].score_hiringRate_300_cont,
+		typeName: "300인 이상 제조업 고용 / 전체 고용"
+	};
+	prop.hiringRate_1000 = {
+		rawData: _dataJSON[i].hiringRate_1000,
+		score: _dataJSON[i].score_hiringRate_1000,
+		typeName: "1000인 이상 제조업 고용 / 전체 고용"
+	};
+	prop.rateOf20sInManufact = {
+		rawData: _dataJSON[i].rateOf20sInManufact,
+		score: _dataJSON[i].score_rateOf20sInManufact,
+		typeName: "제조업 종사자 중 20대 비중"
+	};
+	prop.incomeRate = {
+		rawData: _dataJSON[i].incomeRate,
+		score: _dataJSON[i].score_incomeRate,
+		typeName: "소득지 근로소득 / 원천징수지 근로소득"
+	};
+	prop.R_COSTII = {
+		rawData: _dataJSON[i].R_COSTII,
+		score: _dataJSON[i].score_R_COSTII,
+		typeName: "R-COSTII"
+	};
+	prop.expertRate = {
+		rawData: _dataJSON[i].expertRate,
+		score: _dataJSON[i].score_expertRate,
+		typeName: "관리자, 전문가 비중"/*"관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자"*/
+	};
+	prop.score_total = prop.hiringRate_300.score;
+}
+
+// var statesData_cont_100 = statesData, 
+// 	statesData_disCont_100 = JSON.parse(JSON.stringify(statesData)), 
+// 	statesData_cont_50 = JSON.parse(JSON.stringify(statesData)),
+var	statesData_disCont_50 = JSON.parse(JSON.stringify(statesData));
+
+for (var i=0; i<statesData.features.length; i++) {
+	// var prop = statesData_disCont_100.features[i].properties;
+	// prop.hiringRate_300.score = _dataJSON[i].score_hiringRate_300_disCont;
+	// prop.score_total = prop.hiringRate_300.score;
+
+	// prop = statesData_cont_50.features[i].properties;
+	// prop.hiringRate_300.score = Math.round(_dataJSON[i].score_hiringRate_300_cont * 100) / 200;
+	// prop.score_total = prop.hiringRate_300.score;
+
+	var prop = statesData_disCont_50.features[i].properties;
+	prop.hiringRate_300.score = _dataJSON[i].score_hiringRate_300_disCont * 50 / 100;
+	prop.score_total = prop.hiringRate_300.score;
+}
+
+// var statesData_array = [statesData_cont_100, statesData_disCont_100, statesData_cont_50, statesData_disCont_50];
+var statesData_array = [statesData_disCont_50];
+
+
+
+
 // initialize whole map drawn by GeoJSON
-var geojson_hiringRate_0 = L.geoJson(statesData_hiringRate_0, {
+// var geojson_cont_100 = L.geoJson(statesData_cont_100, {
+// 	style: styleFunc,
+// 	onEachFeature: onEachFeature
+// }).addTo(map);
+// var geojson_disCont_100 = L.geoJson(statesData_disCont_100, {
+// 	style: styleFunc,
+// 	onEachFeature: onEachFeature
+// }).addTo(map);
+// var geojson_cont_50 = L.geoJson(statesData_cont_50, {
+// 	style: styleFunc,
+// 	onEachFeature: onEachFeature
+// }).addTo(map);
+var geojson_disCont_50 = L.geoJson(statesData_disCont_50, {
 	style: styleFunc,
 	onEachFeature: onEachFeature
 }).addTo(map);
 
-var geojson_hiringRate_300 = L.geoJson(statesData_hiringRate_300, {
-	style: styleFunc,
-	onEachFeature: onEachFeature
-}).addTo(map);
+// Layer selection
+var baseMaps = {
+	// "<span style='color: gray'>Grayscale</span>": grayscale,
+	// "300인 이상 제조업 고용 / 전체 고용: <b>100점 연속</b>": geojson_cont_100, 
+	// "300인 이상 제조업 고용 / 전체 고용: <b>100점 불연속</b>": geojson_disCont_100, 
+	// "300인 이상 제조업 고용 / 전체 고용: <b>50점 연속</b>": geojson_cont_50, 
+	"300인 이상 제조업 고용 / 전체 고용: <b>50점 불연속</b>": geojson_disCont_50
+};
+// var geojson_array = [geojson_cont_100, geojson_disCont_100, geojson_cont_50, geojson_disCont_50];
+var geojson_array = [geojson_disCont_50];
+var overlayMaps = {
+};
 
-var geojson_hiringRate_1000 = L.geoJson(statesData_hiringRate_1000, {
-	style: styleFunc,
-	onEachFeature: onEachFeature
-}).addTo(map);
+L.control.layers(baseMaps, overlayMaps, {collapsed: false, hideSingleBase: false}).addTo(map);
+// map.removeLayer(geojson_disCont_100); 
+// map.removeLayer(geojson_cont_50); 
+// map.removeLayer(geojson_disCont_50); 
 
-var geojson_extinctIndex = L.geoJson(statesData_extinctIndex, {
-	style: styleFunc,
-	onEachFeature: onEachFeature
-}).addTo(map);
 
-var geojson_incomeRate = L.geoJson(statesData_incomeRate, {
-	style: styleFunc,
-	onEachFeature: onEachFeature
-}).addTo(map);
 
-var geojson_R_COSTII = L.geoJson(statesData_R_COSTII, {
-	style: styleFunc,
-	onEachFeature: onEachFeature
-}).addTo(map);
 
-var geojson_expertRate = L.geoJson(statesData_expertRate, {
-	style: styleFunc,
-	onEachFeature: onEachFeature
-}).addTo(map);
 
-var geojson_totalScore_300 = L.geoJson(statesData_totalScore_300, {
-	style: styleFunc,
-	onEachFeature: onEachFeature
-}).addTo(map);
-
-var geojson_totalScore_1000 = L.geoJson(statesData_totalScore_1000, {
-	style: styleFunc,
-	onEachFeature: onEachFeature
-}).addTo(map);
 
 
 // custom legend control
@@ -141,7 +148,7 @@ legend.onAdd = function (map) {
 	// loop through our density intervals and generate a label with a colored square for each interval
 	for (var i = 0; i < grades.length-1; i++) {
 		div.innerHTML +=
-			'<i style="background:' + getColor(grades[i]) + '"></i> ' +
+			'<i style="background:' + getColour((grades[i]+grades[i+1])/2, 0) + '"></i> ' +
 			grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
 	}
 
@@ -152,27 +159,61 @@ legend.addTo(map);
 
 
 
-// Layer selection
-// var baseMaps = {
-//     "<span style='color: gray'>Grayscale</span>": grayscale//,
-// //    "Streets": streets
-// };
-var baseMaps = {
-	"1인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_0,
-	"300인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_300,
-	"1000인 이상 제조업 고용 / 전체 고용": geojson_hiringRate_1000,
-	"소멸지수": geojson_extinctIndex,
-	"소득지 근로소득 / 원천징수지 근로소득": geojson_incomeRate,
-	"R-COSTII": geojson_R_COSTII,
-	"관리자, 전문가 및 관련 종사자 / 전체 제조업 종사자": geojson_expertRate,
-	"종합점수 (300인이상 기업 제조업고용)": geojson_totalScore_300,
-	"종합점수 (1000인이상 기업 제조업고용)": geojson_totalScore_1000
+
+
+
+
+// checkboxes for adding score.
+var checkboxes = L.control();
+checkboxes.onAdd = function (map) {
+	this._div = L.DomUtil.create('div', 'checkboxes'); // create a div with a class "checkboxes"
+	this._div.innerHTML = '<input type="checkbox" id="check_hiringRate_1000" onclick="updateScore()"> 1000인 이상 제조업 고용 / 전체 고용<br/>'
+						+ '<input type="checkbox" id="check_rateOf20sInManufact" onclick="updateScore()"> 제조업 종사자 중 20대 비중<br/>'
+						+ '<input type="checkbox" id="check_incomeRate" onclick="updateScore()"> 소득지 근로소득 / 원천징수지 근로소득<br/>'
+						+ '<input type="checkbox" id="check_R_COSTII" onclick="updateScore()"> R-COSTII<br/>'
+						+ '<input type="checkbox" id="check_expertRate" onclick="updateScore()"> 관리자, 전문가 비중<br/>';
+	return this._div;
 };
+function updateScore() {
+	var check_hiringRate_1000 = document.getElementById("check_hiringRate_1000"), 
+		check_rateOf20sInManufact = document.getElementById("check_rateOf20sInManufact"), 
+		check_incomeRate = document.getElementById("check_incomeRate"), 
+		check_R_COSTII = document.getElementById("check_R_COSTII"), 
+		check_expertRate = document.getElementById("check_expertRate");
 
-var overlayMaps = {};
+	for (var statesData of statesData_array) {
+		for (var feature of statesData.features) {
+			var prop = feature.properties;
+			prop.score_total = prop.hiringRate_300.score;
+			if (check_hiringRate_1000.checked) {
+				prop.score_total += prop.hiringRate_1000.score;
+			}
+			if (check_rateOf20sInManufact.checked) {
+				prop.score_total += prop.rateOf20sInManufact.score;
+			}
+			if (check_incomeRate.checked) {
+				prop.score_total += prop.incomeRate.score;
+			}
+			if (check_R_COSTII.checked) {
+				prop.score_total += prop.R_COSTII.score;
+			}
+			if (check_expertRate.checked) {
+				prop.score_total += prop.expertRate.score;
+			}
 
-L.control.layers(baseMaps, overlayMaps, {collapsed: false, hideSingleBase: true}).addTo(map);
-geojson_recent = geojson_hiringRate_300;
+			if (prop.score_total > 100) prop.score_total = 100;
+		}
+	}
+
+	for (var geojson of geojson_array) {
+		geojson.eachLayer(function(layer) {
+			layer.setStyle({
+				fillColor: getColour(layer.feature.properties.score_total, 16)
+			});
+		});
+	}
+};
+checkboxes.addTo(map);
 
 
 
@@ -181,26 +222,14 @@ geojson_recent = geojson_hiringRate_300;
 
 
 // adding colour for choropleth map
-function getColor(d) {
-	return d >= 90 ? '#7F2704' :
-		   d >= 80 ? '#A63603' :
-		   d >= 70 ? '#D94801' :
-		   d >= 60 ? '#F16913' :
-		   d >= 50 ? '#FD8D3C' :
-		   d >= 40 ? '#FDAE6B' :
-		   d >= 30 ? '#FDD0A2' :
-		   d >= 20 ? '#FEE6CE' :
-		   d >= 10 ? '#FFF5EB' :
-					 '#FFFFFF';
-}
 function styleFunc(feature) {
 	return {
-		fillColor: getColor(feature.properties.score),
+		fillColor: getColour(feature.properties.score_total, 16),
 		weight: 0.5,
-		opacity: 1.0,
+		opacity: 1,
 		color: 'blue',
-		dashArray: '0',
-		fillOpacity: 1.0
+		dashArray: '',
+		fillOpacity: 0.7
 	};
 }
 
@@ -215,9 +244,17 @@ info.onAdd = function (map) {
 };
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
-	this._div.innerHTML =  /*'<h4>' + geojson_recent.name + '</h4>' + */(props ?
-		props.province_name + ' <b>' + props.municipal_name + '</b><br/>데이터: ' + props.rawData + '<br/>점수: ' + props.score
-		: 'Hover over a state');
+	if (props) {
+		this._div.innerHTML = props.province_name + ' <b>' + props.municipal_name + '</b>'
+							+ '<h4>현재 지도상의 점수: ' + props.score_total + '</h4>'
+							+ '<b>' + props.hiringRate_300.typeName + '</b><br/>' + '데이터: ' + props.hiringRate_300.rawData + '<br/>점수: ' + props.hiringRate_300.score + '<br/><br/>'
+							+ '<b>' + props.hiringRate_1000.typeName + '</b><br/>' + '데이터: ' + props.hiringRate_1000.rawData + '<br/>점수: ' + props.hiringRate_1000.score + '<br/><br/>'
+							+ '<b>' + props.rateOf20sInManufact.typeName + '</b><br/>' + '데이터: ' + props.rateOf20sInManufact.rawData + '<br/>점수: ' + props.rateOf20sInManufact.score + '<br/><br/>'
+							+ '<b>' + props.incomeRate.typeName + '</b><br/>' + '데이터: ' + props.incomeRate.rawData + '<br/>점수: ' + props.incomeRate.score + '<br/><br/>'
+							+ '<b>' + props.R_COSTII.typeName + '</b><br/>' + '데이터: ' + props.R_COSTII.rawData + '<br/>점수: ' + props.R_COSTII.score + '<br/><br/>'
+							+ '<b>' + props.expertRate.typeName + '</b><br/>' + '데이터: ' + props.expertRate.rawData + '<br/>점수: ' + props.expertRate.score;
+	}
+	else this._div.innerHTML = 'Hover over a state';
 };
 info.addTo(map);
 
@@ -226,12 +263,13 @@ info.addTo(map);
 // adding colour while hover on/off a polygon
 function highlightFeature(e) {
 	var layer = e.target;
+	// console.log(layer);
 
 	layer.setStyle({
 		weight: 5,
 		color: '#666',
-		dashArray: '',
-		fillOpacity: 1.0
+		dashArray: ''//,
+		// fillOpacity: 0.5
 	});
 
 	if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
@@ -239,17 +277,20 @@ function highlightFeature(e) {
 	}
 	info.update(layer.feature.properties);
 }
-function resetHighlight(e) {
-	geojson_recent.resetStyle(e.target); //reset geojson(=map drawn by geoJSON) style just like it had been initialized
+function resetHighlight(e) { //reset geojson(=map drawn by geoJSON) style just like it had been initialized
+	e.target.setStyle({
+		weight: 0.5, 
+		color: 'blue'
+	})
 	info.update();
 }
 function zoomToFeature(e) {
-	map.fitBounds(e.target.getBounds());
+	// map.fitBounds(e.target.getBounds());
 }
 function onEachFeature(feature, layer) {
 	layer.on({
 		mouseover: highlightFeature,
-		mouseout: resetHighlight,
-		click: zoomToFeature
+		mouseout: resetHighlight//,
+		// click: zoomToFeature
 	});
 }
