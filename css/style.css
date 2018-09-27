@@ -13,7 +13,7 @@
 
 
 html {
-	font-size: 14px; /* 1rem = this size. */
+	font-size: 12px; /* 1rem = this size. */
 	font-family: 'Spoqa Han Sans',sans-serif;
 	line-height: 1.5;
 	font-style: normal;
@@ -121,7 +121,7 @@ div, input {
 /* ------------ plots' colour: g.constituency polygon, .(party) svg ------------ */
 
 
-g.constituency polygon.conservative, .conservative svg {
+/*g.constituency polygon.conservative, .conservative svg {
 	fill: #C9151E;
 }
 g.constituency polygon.democrats, .democrats svg {
@@ -156,7 +156,7 @@ g.constituency polygon.friendParty, .friendParty svg, .friendParty img {
 }
 g.constituency polygon.undervotes_plot, #undervotes_plot svg {
 	fill: #E4E4E4;
-}
+}*/
 
 
 
@@ -247,17 +247,21 @@ g.constituency polygon.undervotes_plot, #undervotes_plot svg {
 
 .switch, .selectbox, .checkbox_cover {
 	/*position: absolute;*/
-	margin: 0 0 20px 0;
+	margin: 0 0 12px 0;
 	padding: 0 0 0 0;
 }
 
 
 	.UIName {
 		width: 100%;
-		margin: 0 0 0 0;
-		padding: 0 0 8px 12px;
+		/*margin: 0 0 0 0;
+		padding: 0 0 8px 12px;*/
+		margin: 0 12px 8px 0;
+
+		font-weight: 600;
 		font-size: 12px;
 		color: #000000;
+		
 		word-break: keep-all;
 		-ms-word-break: keep-all;
 		text-align: left;
@@ -267,7 +271,7 @@ g.constituency polygon.undervotes_plot, #undervotes_plot svg {
 		border: 2px solid #000000;
 		border-radius: 4px;
 
-		width: 100%;
+		width: 64px;
 		height: 36px;
 		font-size: 14px;
 	}
@@ -400,10 +404,16 @@ g.constituency polygon.undervotes_plot, #undervotes_plot svg {
 #map_nav {
 	top: 22px;
 	left: 38px;
-	width: 200px;
+	width: 216px;
+
+	padding: 18px 27px 18px 27px;
+
+	background-color: #ffffff;
+	border: 1px solid #c3c3c3;
+	border-radius: 4px;
 }
 	
-	#fullView {
+	/*#fullView {
 		width: 100%;
 	}
 	#largeView {
@@ -416,10 +426,14 @@ g.constituency polygon.undervotes_plot, #undervotes_plot svg {
 		width: 36px;
 		font-size: 18px;
 		padding: 2px 0 8px 0;
+	}*/
+
+	/*#mapYear .UIName*/ .selectbox .UIName {
+		display: inline;
 	}
 
 	#score_legend { 
-		height: 30px;
+		height: 16px;
 		opacity: 0.7;
 		background-color: hsl(0, 100%, 50%); /* 그레디언트가 지원되지 않는 경우의 색상(fallback color) */
 		background-image: -webkit-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%));
