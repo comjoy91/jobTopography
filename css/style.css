@@ -1,6 +1,31 @@
+@charset "UTF-8";
+
+/* 
+
+	device width distinction - 
+
+	1024px ~ : Desktop layout
+	768px ~ 1023xp : tablet layout
+	~ 767px, (min-aspect-ratio: 1/1) : mobile phone layout, widescreen aspect
+	360px ~ 767px, (max-aspect-ratio: 1/1) : mobile phone layout, portrait aspect
+	~ (320px) ~ 359px : legendary mobile phone layout
+*/
+
+
+html {
+	font-size: 14px; /* 1rem = this size. */
+	font-family: 'Spoqa Han Sans',sans-serif;
+	line-height: 1.5;
+	font-style: normal;
+	font-weight: 400;
+	position: relative;
+}
+
+
 body {
 	padding: 0;
 	margin: 0;
+	font-size: ;
 }
 html, body, #map {
 	height: 100%;
@@ -17,30 +42,23 @@ html, body, #map {
 	border-radius: 5px;
 }
 
-.info {
-	padding: 6px 8px;
-	font: 14px/16px Arial, Helvetica, sans-serif;
-	background: white;
-	background: rgba(255,255,255,0.8);
-	box-shadow: 0 0 15px rgba(0,0,0,0.2);
-	border-radius: 5px;
-}
 .info h4 {
 	margin: 0 0 5px;
 }
 
 
 
-.legend {
-	line-height: 18px;
-	color: #555;
-}
-.legend i {
-	width: 18px;
-	height: 18px;
-	float: left;
-	margin-right: 8px;
-	opacity: 0.7;
+
+.tooltip {
+	position: absolute;
+	text-align: center;
+	width: 100px;
+	height: 28px;
+	padding: 4px;
+	margin-top: -20px;
+	font: 10px sans-serif;
+	background: #ddd;
+	pointer-events: none;
 }
 
 
@@ -51,3 +69,1078 @@ html, body, #map {
 .leaflet-overlay-pane {
 	mix-blend-mode: color-burn;
 }*/
+
+
+
+
+
+/* ------------ skorea-election-map의 잔재여 잔재 ------------ */
+
+
+
+
+body {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 0;
+	height: 100vh;
+}
+div, input {
+	box-sizing: border-box;
+}
+
+
+@media all and (max-width:1023px) { /* tablet layout */
+
+	html {
+		font-size: 12px;
+	}
+
+}
+
+
+
+/* ------------ #map_background, #headerMenu, #map_nav, #dataInfo ------------ */
+
+#map_background, #headerMenu, #map_nav, #dataInfo {
+	position: absolute;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+
+@media all and (max-width:767px) { /* mobile phone layout */
+
+	/*#map_background,*/ #headerMenu, #map_nav {
+		position: fixed;
+	}
+
+}
+
+
+/* ------------ plots' colour: g.constituency polygon, .(party) svg ------------ */
+
+
+g.constituency polygon.conservative, .conservative svg {
+	fill: #C9151E;
+}
+g.constituency polygon.democrats, .democrats svg {
+	fill: #005BAA;
+}
+g.constituency polygon.regionalCentre, .regionalCentre svg {
+	fill: #009933;
+}
+g.constituency polygon.reformative_right, .reformative_right svg {
+	fill: #00B1EB;
+}
+g.constituency polygon.socialDemocrats, .socialDemocrats svg {
+	fill: #FED000;
+}
+g.constituency polygon.new_left, .new_left svg {
+	fill: #FF0000;
+}
+g.constituency polygon.greens, .greens svg {
+	fill: #7DC354;
+}
+g.constituency polygon.nationalist_left, .nationalist_left svg {
+	fill: #FB955D;
+}
+g.constituency polygon.far_right, .far_right svg {
+	fill: #C9151E;
+}
+g.constituency polygon.non_partisan, .non_partisan svg {
+	fill: #999999;
+}
+g.constituency polygon.friendParty, .friendParty svg, .friendParty img {
+	fill-opacity: 0.55;
+}
+g.constituency polygon.undervotes_plot, #undervotes_plot svg {
+	fill: #E4E4E4;
+}
+
+
+
+
+/* ------------ #map_background ------------ */
+
+#map_background {
+	left: 0px;
+	top: 0px;
+	width: 100%; /*100vw;*/
+	height: 100%; /*100vh;*/
+	z-index: -1;
+	overflow: hidden;
+}
+	#map_body_svg {
+		position: relative;
+		width: 100%; /*100vw;*/
+		height: 100%; /*100vh;*/
+	}
+	#map_body_svg g.edgeHEX_LAYER {
+		fill: transparent;
+		stroke: #000000;
+		stroke-width: 2px;
+	}
+
+	.nation.unselected .province.unselected .infoHex_layer {
+		opacity: 0.25;
+	}
+	.nation.unselected .province.selected .constituency.selected .edgeHEX_LAYER {
+		opacity: 1.0;
+	}
+	.edgeHEX_LAYER{
+		opacity: 0.0;
+	}
+
+	@media all and (min-width:1023px) { /* tablet layout */
+
+		#map_body_svg g {
+			transition-property: opacity;
+			transition-duration: 0.2s;
+		}
+		
+		.nation.selected:hover .province.unselected .infoHex_layer {
+			opacity: 0.25;
+		}
+		.nation.selected .province.unselected:hover .infoHex_layer {
+			opacity: 1.0;
+		}
+
+		.nation.unselected .province.unselected:hover .infoHex_layer {
+			opacity: 1.0;
+		}
+
+		.nation.unselected .province.selected .constituency.unselected:hover .edgeHEX_LAYER {
+			opacity: 1.0;
+		}
+
+	}
+
+
+	g.constituency text {
+		font-size: calc(5px/3);
+		line-height: 1.4;
+	}
+	g.constituency text.leftBottom {
+		text-anchor: start;
+	}
+	g.constituency text.leftTop {
+		text-anchor: start;
+	}
+	g.constituency text.rightBottom {
+		text-anchor: end;
+	}
+	g.constituency text.rightTop {
+		text-anchor: end;
+	}
+
+
+
+/* ------------ .switch, .selection, .UI, .UIName ------------ */
+
+
+
+.UI:hover, .button:not(.inactive):hover {
+	cursor: pointer;
+}
+
+
+.switch, .selectbox, .checkbox_cover {
+	/*position: absolute;*/
+	margin: 0 0 20px 0;
+	padding: 0 0 0 0;
+}
+
+
+	.UIName {
+		width: 100%;
+		margin: 0 0 0 0;
+		padding: 0 0 8px 12px;
+		font-size: 12px;
+		color: #000000;
+		word-break: keep-all;
+		-ms-word-break: keep-all;
+		text-align: left;
+	}
+
+	.UI {
+		border: 2px solid #000000;
+		border-radius: 4px;
+
+		width: 100%;
+		height: 36px;
+		font-size: 14px;
+	}
+		.switch .UI {
+			background-color: #ffffff; /* switch의 기본 배경 색깔 */
+			padding: 0 0 0 0;
+		}
+		.switch .UI div {
+			color: #BBBBBB; /* switch의 기본 폰트 색깔 */
+			display: inline-block;
+		}
+		.switch .UI div:active {
+			background-color: #000000; /* .UI의 active 배경 색깔 */
+			color: #ffffff; /* .UI의 active 폰트 색깔 */
+		}
+			.UI div {
+				width: 50%;
+				height: 100%;
+				padding-top: 5px;
+				padding-bottom: 8px;
+				text-align: center;
+			}
+			.UI div.selected {
+				background-color: #000000;
+				color: #ffffff; /* 폰트 색깔 */
+				/* border: 1px solid #000000; */
+			}
+
+		.selectbox .UI {
+			background-color: #000000; /* selectbox의 기본 배경 색깔 */
+			color: #ffffff; /* selectbox의 기본 폰트 색깔 */
+			padding: 5px 0 8px 12px;
+			text-align: left;
+		}
+
+		.checkbox_cover .UI {
+			background-color: #000000; /* selectbox의 기본 배경 색깔 */
+			color: #ffffff; /* selectbox의 기본 폰트 색깔 */
+			padding: 5px 0 8px 12px;
+			text-align: left;
+		}
+
+		select {
+			font-family: inherit;
+			font-size: 14px;
+			color: #ffffff; /* select의 기본 폰트 색깔 */
+			-webkit-appearance: none; /* 네이티브 외형 감추기 */
+			-moz-appearance: none;
+			appearance: none;
+			/* 출처: http://webdir.tistory.com/432 [WEBDIR] */
+		}
+
+
+
+.button {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	height: 36px;
+	background-color: #ffffff; /* button의 기본 배경 색깔 */
+	color: #000000; /* button의 기본 폰트 색깔 */
+	padding: 5px 0 8px 0;
+	margin: 0px 0 8px 0;
+
+	border: 2px solid #000000;
+	border-radius: 4px;
+}
+.button.inactive {
+	color: #eeeeee; /* button의 inactive 폰트 색깔 */
+	padding: 5px 0 8px 0;
+	border: 2px solid #eeeeee;
+	cursor: default;
+}
+.button:not(.inactive):active {
+	background-color: #000000; /* button:active의 기본 배경 색깔 */
+	color: #ffffff; /* button:active의 기본 폰트 색깔 */
+}
+
+
+
+
+@media all and (max-width:1023px) { /* tablet layout */
+
+	.switch, .selectbox {
+		margin: 12px 0 15px 0;
+	}
+  
+		.UIName {
+			padding: 0 0 2px 8px;
+			font-size: 10px;
+		}
+
+		.UI {
+			height: 32px;
+			font-size: 12px;
+
+			border: 1px solid #000000;
+			border-radius: 4px;
+		}
+			.selectbox .UI {
+				padding-left: 8px; 
+			}
+
+	.button {
+		height: 32px;
+
+		border: 1px solid #000000;
+		border-radius: 4px;
+	}
+	.button.inactive {
+		border: 1px solid #eeeeee;
+	}
+
+}
+
+
+@media all and (max-width:359px) { /* legendary mobile phone layout */
+
+	.switch, .selectbox {
+		margin: 8px 0 15px 0;
+	}
+
+}
+
+
+
+
+/* ------------ #map_nav ------------ */
+
+#map_nav {
+	top: 22px;
+	left: 38px;
+	width: 200px;
+}
+	
+	#fullView {
+		width: 100%;
+	}
+	#largeView {
+		width: 36px;
+		font-size: 18px;
+		margin: 0 8px 0 0;
+		padding: 2px 0 8px 0;
+	}
+	#smallView {
+		width: 36px;
+		font-size: 18px;
+		padding: 2px 0 8px 0;
+	}
+
+	#score_legend { 
+		height: 30px;
+		opacity: 0.7;
+		background-color: hsl(0, 100%, 50%); /* 그레디언트가 지원되지 않는 경우의 색상(fallback color) */
+		background-image: -webkit-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%));
+		background-image:    -moz-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Fx 3.6 부터 Fx 15 까지 처리 */
+		background-image:     -ms-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* IE 10 Platform Previews, Consumer Preview */
+		background-image:      -o-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Opera 11.1 부터 12.0 까지 처리 */ 
+		background-image:         linear-gradient(to right, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
+	}
+
+	#score_integer {
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+
+@media all and (max-width:1023px) {
+
+	#map_nav {
+		top: 68px;
+		left: 18px;
+		width: 60px;
+	}
+		#fullView {
+		}
+		#upperRegion {
+		}
+		#largeView {
+			width: 28px;
+			font-size: 15px;
+			margin: 0 4px 0 0;
+			padding: 4px 0 8px 0;
+		}
+		#smallView {
+			width: 28px;
+			font-size: 15px;
+			padding: 4px 0 8px 0;
+		}
+
+}
+
+
+@media all and (max-width:767px) { /* mobile phone, widescreen layout */
+
+	#map_nav {
+		top: 0px;
+	}
+
+}
+@media all and (max-width:767px) and (max-aspect-ratio: 1/1) { /* mobile phone, portrait layout */
+
+
+	#map_nav {
+		top: 72px;
+	}
+		#hex_property {
+			width: 100%;
+		}
+			#hex_property .UI {
+				height: 64px;
+			}
+			#hex_property .UI div {
+				width: 100%;
+				height: 50%;
+			}
+
+}
+
+@media all and (max-width:359px) { /* legendary mobile phone layout */
+
+	#map_nav {
+		left: 8px;
+	}
+		#hex_property {
+			width: 200%;
+		}
+			#hex_property .UI {
+				height: 32px;
+			}
+			#hex_property .UI div {
+				width: 50%;
+				height: 100%;
+			}
+
+}
+
+
+
+/* ------------ #dataInfo (without footer elements) ------------ */
+
+#dataInfo {
+	width: 350px;
+	/*min-height: 30vh;*/
+	max-height: calc(100vh - 140px);
+	/*height: auto;*/
+	height: calc(100vh - 140px);
+	top: 32px;
+	right: 32px;
+	background-color: #ffffff;
+
+	font-size: 12px;
+	color: #000000; /* 폰트 색깔 */
+	border: 1px solid #c3c3c3;
+	border-radius: 4px;
+
+	overflow-y: auto;
+
+	z-index: 999;
+}
+	#feature_search {
+		margin: 20px 24px 0px 24px;
+	}
+		#feature_search .input {
+			width: 100%;
+		}
+		#search_input {
+			width: 100%;
+			height: 28px;
+			padding: 0 0 0 10px;
+
+			background-color: #f1f1f1;
+			color: #8E8E93; /* 폰트 색깔 */
+			border: 0px solid;
+			border-radius: 6px;
+		}
+
+		/* ------------ .search / .icon in .semantic.ui ------------ */
+
+		.ui.icon.input>input {
+			padding-right: 2.67142857em!important;
+		}
+
+		.ui.icon.input>i.icon {
+			cursor: default;
+			position: absolute;
+			line-height: 1;
+			text-align: center;
+			top: 0;
+			right: 0;
+			margin: 0;
+			height: 100%;
+			width: 2.67142857em;
+			opacity: .5;
+			border-radius: 0 .28571429rem .28571429rem 0;
+			-webkit-transition: opacity .3s ease;
+			transition: opacity .3s ease;
+		}
+
+		.ui.icon.input>i.icon:after, .ui.icon.input>i.icon:before {
+			left: 0;
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			width: 100%;
+			margin-top: -.5em;
+		}
+
+		.ui.input>input {
+			color: rgba(0,0,0,.87);
+			-webkit-transition: border-color .1s ease,-webkit-box-shadow .1s ease;
+			transition: border-color .1s ease,-webkit-box-shadow .1s ease;
+			transition: box-shadow .1s ease,border-color .1s ease;
+			transition: box-shadow .1s ease,border-color .1s ease,-webkit-box-shadow .1s ease;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+
+
+	#info_gripper {
+		position: absolute;
+		right: 16px;
+		top: 28px;
+		height: 12px;
+		display: none;
+	}
+	#selectNotice {
+		margin: 18px 27px 0 34px;
+		font-weight: 400;
+		}
+
+	#info_nameContainer {
+		margin: 18px 27px 0 34px;
+		font-size: 18px;
+	}
+		#electionType_name, #province_name {
+			font-weight: 400;
+			display: inline-block;
+		}
+		#municipal_name {
+			font-weight: 600;
+			display: inline-block;
+	}
+	#info_hyperlink {
+		margin: 10px 27px 0 34px;
+	}
+		#info_hyperlink a div {
+			margin-right: 22px;
+			color: #007AFF;
+			text-decoration: underline;
+
+			display: inline-block;
+			cursor: pointer;
+		}
+
+
+
+@media all and (max-width:1023px) { /* tablet layout */
+
+	#dataInfo {
+		top: 92px;
+		right: 18px;
+		max-height: calc(100vh - 240px);
+	}
+
+}
+
+@media all and (max-width:767px) { /* mobile phone layout */
+
+	#dataInfo {
+		width: 100%;
+		min-height: 30%;
+		max-height: none;
+		top: 70%;
+		right: 0;
+		border: 0px;
+		border-radius: 0 16px 0 0;
+		box-shadow: -2px -2px 10px 0px #cccccc;
+	}
+		#feature_search {
+			margin: 20px 45px 0px 18px;
+		}
+			#search_input {
+				padding: 0 0 0 16px;
+			}
+		#info_gripper {
+			display: inline-block;
+		}
+
+}
+
+
+/* ------------ #dataInfo > #result_municipal, #result_province ------------ */
+
+
+	#result_municipal, #result_province {
+		margin: 21px 27px 0 34px;
+	}
+
+		.result_storage {
+			display: flex;
+			margin: 12px 0 0 0;
+		}
+
+		.unlayered {
+			color: #ccc;
+		}
+
+			.score {
+				width: 0px;
+				/*padding: 0 10px 0 0;*/
+				flex-grow: 1;
+
+				font-size: 24px;
+				font-weight: 300;
+				/*text-align: right*/
+			}
+			#result_municipal_total .score {
+				font-weight: 600;
+			}
+
+			.scoreInfo {
+				width: 0px;
+				flex-grow: 2;
+			}
+				.scoreName {
+					display: flex;
+					align-items: center;
+
+					height: 36px;
+					font-size: 16px;
+					font-weight: 400;
+				}
+
+					#result_municipal_total .scoreName {
+						font-weight: 600;
+					}
+
+				.dataInfo {
+					margin: 6px 0 0 0;
+				}
+
+				.unlayered .dataInfo {
+					display: none;
+				}
+
+					.dataName {
+						font-weight: 600;
+					}
+
+					.dataValue {
+					}
+
+
+
+
+/* ------------ #dataInfo > #vote_result_sum ------------ */
+
+	#vote_result_sum {
+		position: relative;
+		margin: 27px 27px 27px 13px;
+	}
+		#valid_votes, #electorates {
+			font-weight: 600;
+			margin: 8px 0 0 0;
+			height: 20px;
+			position: relative;
+		}
+		#counted_votes, #blank_ballots {
+			font-weight: 300;
+			margin: 0 0 0 0;
+			height: 20px;
+			position: relative;
+		}
+		#undervotes {
+			font-weight: 300;
+			margin: 0 0 7px 0;
+			height: 20px;
+			position: relative;
+		}
+			#vote_result_sum .description, #vote_result_sum .number {
+				position: absolute;
+			}
+			.description {
+				left: 21px;
+				top: 1px;
+			}
+			.number {
+				right: 63px;
+				top: 0;
+				text-align: right;
+			}
+
+
+/* ------------ footer (of html and #legendInfo) ------------ */
+
+
+#legendInfo_dataInfo {
+	margin: 0 27px 30px 34px;
+	display: block;
+	line-height: 1.8;
+	display: none;
+}
+	#legend_party_dataInfo, #legend_elected_dataInfo, #info_scrollingTop {
+		margin-right: 12px;
+		display: inline-block;
+	}
+
+		#legend_party_dataInfo img, #legend_elected_dataInfo img {
+			position: relative;
+			height: calc(1em + 1px);
+			top: 2px;
+		}
+
+	#info_scrollingTop {
+		position: absolute;
+		margin-right: 0;
+		height: calc(1em + 1px);
+		right: 27px;
+	}
+
+#divider_dataInfo {
+	display: none;
+}
+
+#title_dataInfo {
+	margin: 36px 27px 36px 34px;
+	display: none;
+}
+	#about_dataInfo {
+		font-weight: 600;
+	}
+	#title_dataInfo a {
+		color: #000000;
+	}
+
+
+
+footer {
+	width: 100vw;
+	height: 0;
+	left: 0;
+	bottom: 38px;
+	position: absolute;
+	font-weight: 400;
+
+	font-size: 14px;
+}
+	#title_footer, #legendInfo_footer {
+		position: absolute;
+	}
+	#title_footer {
+		left: 38px;
+		bottom: -6px;
+	}
+		#about {
+			padding-left: 2px;
+		}
+		#home {
+			font-size: 36px;
+			font-weight: 600;
+			text-decoration: none;
+			color: #000000;
+		}
+
+	#legendInfo_footer {
+		right: 406px;
+		bottom: 0px;
+		display: block;
+		text-align: right;
+		line-height: 1.8;
+	}
+		#legend_party, #legend_elected {
+			margin-left: 12px;
+			display: inline-block;
+		}
+
+			#legendInfo_footer div img {
+				position: relative;
+				top: 2.5px;
+			}
+
+	#about:hover, #home:hover, #legend_point:hover, #legend_party:hover, #legend_elected:hover, #legend_point_dataInfo:hover, #legend_party_dataInfo:hover, #legend_elected_dataInfo:hover {
+		cursor: pointer;
+	}
+
+
+@media all and (max-width:1023px) { /* tablet layout */
+
+	#legendInfo {
+		right: 45px;
+	}
+
+}
+
+@media all and (max-width:767px) { /* mobile phone layout */
+
+	#legendInfo_dataInfo {
+		display: block;
+	}
+	#divider_dataInfo {
+		display: block;
+	}
+	#title_dataInfo {
+		display: block;
+	}
+	footer {
+		display: none;
+	}
+
+}
+
+
+/* ------------ .dimmer#initial_instruction_PC ------------ */
+
+/*#initial_instruction_PC {
+	font-size: 14px;
+}*/
+
+.dimmer_whiteBox {
+	position: absolute;
+	background-color: transparent;
+	color: #FFFFFF;
+	padding: 4px 8px 4px 7.5px;
+	border: 2px solid #AAAAAA;
+	border-style: dotted;
+	border-radius: 4px;
+}
+.dimmer_description {
+	position: absolute;
+	color: #FFFFFF;
+	padding: 4px 8px 4px 8px;
+}
+#dimmer_mouse_finger {
+	width: 100px;
+}
+
+#touch_instruction {
+	margin-top: -32px;	
+	padding: 24px 24px 24px 24px;	
+}
+
+#whiteBox_dataInfoScroll {
+		right: 8px;
+	    top: calc(70vh + 18px);
+		width: 32px;
+		height: 32px;
+		text-align: center;
+
+	display: none;
+}
+#whiteBox_dataInfoScroll div {
+		position: absolute;
+    top: 34px;
+    width: 32px;
+    left: -1.5px;
+}
+
+#whiteBox_search {
+	right: 52px;
+	top: 130px;
+	width: 308px;
+	height: 32px;
+	text-align: right;
+}
+#description_search {
+	right: 52px;
+	top: 165px;
+	width: 308px;
+	text-align: center;
+}
+
+#whiteBox_headerBox {
+	right: 398px;
+	top: 16px;
+	width: 398px;
+	height: 78px;
+}
+#description_headerBox {
+	right: 396px;
+	top: 97px;
+	width: 400px;
+	text-align: center;
+}
+#whiteBox_consti_or_PR {
+	right: 48px;
+	top: 38px;
+	width: 318px;
+	height: 56px;
+}
+#description_consti_or_PR {
+	right: 57px;
+	top: 97px;
+	width: 300px;
+	text-align: center;
+}
+#whiteBox_map_nav {
+	left: -8px;
+	top: 16px;
+	width: 175px;
+	height: 230px;
+}
+#description_map_nav {
+	left: -6px;
+	top: 251px;
+	width: 164px;
+	text-align: left;
+}
+
+
+@media all and (max-width:1023px) { /* tablet layout */
+
+	#whiteBox_search {
+		right: 42px;
+		top: calc(130px - 16px);
+		width: 300px;
+	}
+	#description_search {
+		right: 48px;
+		top: calc(165px - 18px);
+		width: 300px;
+	}
+
+	#whiteBox_headerBox {
+		left: 12px;
+		top: 8px;
+		width: 324px;
+		height: 60px;
+	}
+	#description_headerBox {
+		left: 148px;
+		top: 74px;
+		width: 148px;
+		text-align: left;
+	}
+	#whiteBox_consti_or_PR {
+		right: 37px;
+		top: 23px;
+		width: 312px;
+		height: 45px;
+	}
+	#description_consti_or_PR {
+		right: 38px;
+		top: 74px;
+		width: 310px;
+	}
+	#whiteBox_map_nav {
+		left: -6px;
+		top: 8px;
+		width: 132px;
+		height: 188px;
+	}
+	#description_map_nav {
+		left: -8px;
+		top: 200px;
+		width: 144px;
+	}
+
+}
+
+@media all and (max-width:767px) { /* mobile phone layout, landscape layout */
+
+	#touch_instruction {
+		display: none;
+	}
+	#whiteBox_dataInfoScroll {
+		display: block;
+	}
+
+	#whiteBox_headerBox {
+		left: 174px;
+		width: 450px;
+	}
+	#description_headerBox {
+		left: 180px;
+		width: 280px;
+	}
+	#whiteBox_consti_or_PR {
+		display: none;
+	}
+	#description_consti_or_PR {
+		left: 180px;
+		top: 92px;
+		width: 232px;
+		text-align: left;
+	}
+	#description_map_nav {
+		left: 130px;
+		top: 152px;
+	}
+
+	#whiteBox_search {
+		left: 12px;
+		top: calc(70vh + 18px);
+		width: calc(100% - 60px);
+	}
+	#description_search {
+		left: 12px;
+		top: calc(70vh + 18px + 32px);
+		width: calc(100% - 60px);
+	}
+
+}
+
+@media all and (max-width:767px) and (max-aspect-ratio: 1/1) { /* mobile phone, portrait layout */
+
+	
+
+	
+
+	#whiteBox_headerBox {
+		left: 12px;
+		width: 324px;
+	}
+	#description_headerBox {
+		left: 144px;
+		width: 174px;
+	}
+	#whiteBox_consti_or_PR {
+		left: 12px;
+		top: calc(70vh - 56px);
+		width: 132px;
+
+		display: block;
+	}
+	#description_consti_or_PR {
+		left: 144px;
+		top: calc(70vh - 56px);
+		width: 128px;
+		text-align: left
+	}
+	#whiteBox_map_nav {
+		width: 72px;
+		height: 234px;
+	}
+	#description_map_nav {
+		left: 68px;
+		top: 120px;
+		width: 84px;
+	}
+
+}
+
+@media all and (max-width:359px) { /* legendary mobile phone layout */
+
+	#whiteBox_headerBox {
+		left: 2px;
+		top: 4px;
+		width: 316px;
+	}
+	#description_headerBox {
+		left: 136px;
+		top: 68px;
+	}
+	#whiteBox_consti_or_PR {
+		left: 2px;
+		top: calc(70vh - 60px);
+	}
+	#description_consti_or_PR {
+		left: 136px;
+		top: calc(70vh - 60px);
+	}
+	#whiteBox_map_nav {
+		top: 4px;
+		width: 132px;
+		height: 186px;
+	}
+	#description_map_nav {
+		left: 128px;
+		top: 147px;
+		width: 144px;
+	}
+
+}

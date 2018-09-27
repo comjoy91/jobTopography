@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Gripper</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Gripper" fill="#C8C7CC">
+            <path d="M0,3 L22,3 L22,4.58823529 L0,4.58823529 L0,3 Z M0,7.70588235 L22,7.70588235 L22,9.29411765 L0,9.29411765 L0,7.70588235 Z M0,12.4117647 L22,12.4117647 L22,14 L0,14 L0,12.4117647 Z"></path>
+        </g>
+    </g>
+</svg>
