@@ -1,4 +1,4 @@
-var statesData = {
+var municipalGeoJSON = {
 	"type": "FeatureCollection",
 	"name": "skorea-map-municipal",
 	"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
@@ -236,4 +236,4 @@ var statesData = {
 };
 
 
-statesData.features.sort(function(a, b){return a.properties.code - b.properties.code});
+municipalGeoJSON.features.sort(function(a, b){return a.properties.code - b.properties.code});

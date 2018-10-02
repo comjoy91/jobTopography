@@ -1,4 +1,4 @@
-var _province_border = {
+var provinceGeoJSON = {
 	"type": "FeatureCollection",
 	"name": "skorea-map-province",
 	"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },

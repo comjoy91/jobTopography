@@ -10,8 +10,9 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico">
 
-	<!-- jQuery 가져오기. -->
+	<!-- jQuery / jQuery UI 가져오기. -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 	<!-- D3.js 가져오기. -->
@@ -20,6 +21,8 @@
 	<!-- local Javascript plugin 가져오기. -->
 	<script type="text/javascript" src="js/plugins/jquery.easing.1.3.js"> </script>
 	<script type="text/javascript" src="js/plugins/countUp.js"> </script>
+	<!-- <link rel="stylesheet" type="text/css" href="js/plugins/d3-slider-master/d3.slider.css"/>
+	<script type="text/javascript" src="js/plugins/d3-slider-master/d3.slider.js"> </script> -->
 
 	<!-- Leaflet.js 가져오기. https://leafletjs.com -->
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" 
@@ -48,8 +51,10 @@
 
 	<script type="text/javascript" src="@json_data/skorea-map-municipal.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-map-province.js"></script>
-	<script type="text/javascript" src="@json_data/skorea-score.js"></script>
-	<script type="text/javascript" src="@json_data/mapColour.js"></script>
+	<script type="text/javascript" src="@json_data/skorea-score-2014.js"></script>
+	<script type="text/javascript" src="@json_data/skorea-score-2015.js"></script>
+	<script type="text/javascript" src="@json_data/skorea-score-2016.js"></script>
+	<!-- <script type="text/javascript" src="@json_data/mapColour.js"></script> -->
 
 	<!-- Semantic-UI -->
 	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Menu-master/menu.css">
@@ -75,41 +80,20 @@
 <body>
 	<div id="map_background"></div>
 
-	<!-- <div id="headerMenu">
-		<div class="selectbox" id="electionType">
-			<div class="UIName">조사년도</div>
-			<select class="UI" onchange="change_electionType()">
-				<option value="local-pp" disabled>2014</option>
-				<option value="local-pa" disabled>2015</option>
-				<option value="local-ea" selected>2016</option>
-			</select>
-		</div>
-	</div> -->
-
 	<div id="map_nav">
-		<!-- <div class="switch" id="hex_property">
-			<div class="UIName" id="hex_property_UIName">
-				<div>선거구별 </div>
-				<div>6각형 크기</div>
-			</div>
-			<div class="UI">
-				<div id="proportionalArea" class="leftSwitch">인구비례</div
-				><div id="uniformArea" class="rightSwitch">동일면적</div>
-			</div>
-		</div> -->
-		<div class="selectbox" id="mapYear">
+
+		<div class="UI_cover" id="mapYear">
 			<div class="UIName">조사년도</div>
-			<select class="UI" onchange="change_electionType()">
-				<option value="local-pp" disabled>2014</option>
-				<option value="local-pa" disabled>2015</option>
-				<option value="local-ea" selected>2016</option>
-			</select>
+			<div id="mapYear_slider"></div>
+			<div id="year_integer">
+				<div>2014</div> <div>2015</div> <div>2016</div>
+			</div>
 		</div>
 
 		<div class="checkbox_cover">
 			<div class="UIName">지도 위 데이터 <i class="info circle icon fitted"></i></div>
-			<div class="ui disabled checkbox" id="checkUI_hiringRate_300">
-				<input type="checkbox" id="check_hiringRate_300" checked="checked"> 
+			<div class="ui checkbox disabled" id="checkUI_hiringRate_300">
+				<input type="checkbox" id="check_hiringRate_300" checked="checked" disabled="disabled"> 
 				<label> 300인 이상 제조업 집중도</label>
 			</div>
 			<div class="ui checkbox" id="checkUI_hiringRate_1000"> 
@@ -142,9 +126,12 @@
 			</div>
 		</div>
 
-		<div id="score_legend"></div>
-		<div id="score_integer">
-			<div>0</div> <div>25</div> <div>50</div> <div>75</div> <div>100</div>
+		<div class="UI_cover" id="score_legend">
+			<div class="UIName">점수별 색상</div>
+			<div id="score_gradient"></div>
+			<div id="score_integer">
+				<div>0</div> <div>25</div> <div>50</div> <div>75</div> <div>100</div>
+			</div>
 		</div>
 		<!-- <div class="button" id="fullView">전국 결과</div>
 		<div class="button inactive" id="upperRegion">상위 지역</div>
@@ -179,7 +166,28 @@
 			><a id="disrtict_info" href="https://developer.mozilla.org/en-US/" target="_blank" style="display: none"><div>지역 내 선거 역대 결과</div></a>
 		</div>
 
+		<div id="result_province">
+			<div class="basicInfo_storage" id="basicInfo_province">
+				<div class="dataInfo">
+					<div class="dataName"></div>
+					<div class="dataValue"></div>
+				</div>
+			</div>
+			<div class="result_storage" id="result_province_total">
+				<div class="score"></div>
+				<div class="scoreInfo">
+					<div class="scoreName"></div>
+				</div>
+			</div>
+		</div>
+
 		<div id="result_municipal">
+			<div class="basicInfo_storage" id="basicInfo_municipal">
+				<div class="dataInfo">
+					<div class="dataName"></div>
+					<div class="dataValue"></div>
+				</div>
+			</div>
 			<div class="result_storage" id="result_municipal_total">
 				<div class="score"></div>
 				<div class="scoreInfo">
@@ -244,37 +252,7 @@
 			</div>
 		</div>
 
-		<div id="result_province">
-			<div class="result_storage" id="result_province_total"></div>
-			<div class="result_storage" id="result_province_hiringRate_300"></div>
-			<div class="result_storage" id="result_province_hiringRate_1000"></div>
-			<div class="result_storage" id="result_province_mainIndustryPortion"></div>
-			<div class="result_storage" id="result_province_rateOf20sInIndustry"></div>
-			<div class="result_storage" id="result_province_industryJobCreation"></div>
-			<div class="result_storage" id="result_province_incomeRate"></div>
-			<div class="result_storage" id="result_province_R_COSTII"></div>
-			<div class="result_storage" id="result_province_expertRate"></div>
-		</div>
 
-		<!-- <div id="vote_result_sum" style="display: none">
-			<div id="valid_votes">
-				<div class="description">총 유효표수</div><div class="number">표</div>
-			</div>
-			<div id="undervotes">
-				<div class="description">무효표수</div><div class="number">표</div>
-			</div>
-			<div id="undervotes_plot" class="candidate_plot">
-			</div>
-			<div id="counted_votes">
-				<div class="description">총 투표수</div><div class="number">표</div>
-			</div>
-			<div id="blank_ballots">
-				<div class="description">기권수</div><div class="number">표</div>
-			</div>
-			<div id="electorates">
-				<div class="description">총 유권자수 / 투표율</div><div class="number">표</div><div class="rate_votes">%</div>
-			</div>
-		</div> -->
 
 		<div id="legendInfo_dataInfo">
 			<div id="legend_point_dataInfo">卜 1개 = 약 5,000명</div
@@ -310,10 +288,10 @@
 
 
 	<!-- local js/css -->
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/headerMenu.js"></script>
-	<script type="text/javascript" src="js/dataInfo.js"></script>
 	<script type="text/javascript" src="js/onLoad.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<!-- <script type="text/javascript" src="js/headerMenu.js"></script> -->
+	<script type="text/javascript" src="js/dataInfo.js"></script>
 </body>
 </html>
 

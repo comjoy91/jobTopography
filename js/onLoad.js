@@ -1,188 +1,143 @@
+// BACKGROUND LAYER
+var mbAttr = '<a href="https://www.maptiler.com/license/maps/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+	mbUrl = 'https://maps.tilehosting.com/styles/positron/{z}/{x}/{y}@2x.png?key=JrAhm6tBG7Y3CCaBBIMe';
+var grayscale = L.tileLayer(mbUrl, {attribution: mbAttr});
+
+var map = L.map('map_background', {layers: [grayscale], zoomControl: false, attributionControl: false, scrollWheelZoom: true}).setView([36, 128], 7);
+L.control.attribution({position: 'bottomleft'}).addTo(map);
+L.control.zoom({position: 'bottomleft'}).addTo(map);
 
 
-
-var d3_mapping_config_json_file = "/SKorean-election-map/assets/d3_mapping_config.json";
-var counting_vote_json_file;
-var townCode_json_file;
-var party_json_file;
-var hex_svg_file = "/SKorean-election-map/assets/hexagon_svg/hexagon_final.svg";
-var plot_double_svg_file = "/SKorean-election-map/assets/img/plot_double.svg";
-var plot_single_svg_file = "/SKorean-election-map/assets/img/plot_single.svg";
-
-var d3_mapping_variable;
-var svgContainer;
-var zoomedMap;
-
-var d3_config_json
-var d3_config;
-var ELECTION_TYPE;
-var counting_vote_json;
-var townCode_json;
-var party_json;
-
-var hex_svg_imported;
-const HEX_MIN = 1;
-const HEX_MAX = 141;
-var sorting_plots = function(_total_plot, _hex_imported) {
-		var plot_selection = d3.select(_hex_imported).select(".PLOTHEX_LAYER").selectAll("polygon.plot");
-
-		var plot_array = plot_selection.nodes()
-		var radius_radian = [];
-		for (var i=0; i<_total_plot; i++) {
-			var buffer_polygonPoints = [];
-			var plotPoints_string = d3.select(plot_array[i]).attr("points").split(" ");
-			for (var j=0; j<plotPoints_string.length; j++) {
-				plotPoints_string[j] = plotPoints_string[j].split(",");
-				buffer_polygonPoints.push([parseFloat(plotPoints_string[j][0]), parseFloat(plotPoints_string[j][1])]);
-			}
-			var centroid_plot = d3.polygonCentroid(buffer_polygonPoints);
-			var angle = Math.atan2(centroid_plot[1], centroid_plot[0]) + startingAngle_hexColouring; //(centroid_plot[1], centroid_plot[0]) = (y, x).
-			if (angle < 0) {
-				angle = TWO_PI + angle;
-			}
-			radius_radian.push({'angle': angle});
-		}
-		plot_selection.data(radius_radian).sort(function(a, b) { return a['angle'] - b['angle']; });
+// functions for implementing rawData and score into initial geoJSON data.
+function data_object(_dataJson_district) {
+	var returnObject = {	
+		"hiringRate_300": {
+			"rawData": _dataJson_district.hiringRate_300,
+			"score": _dataJson_district.score_hiringRate_300
+		}, 
+		"hiringRate_1000": {
+			"rawData": _dataJson_district.hiringRate_1000,
+			"score": _dataJson_district.score_hiringRate_1000
+		}, 
+		"mainIndustryPortion": {
+			"rawData": _dataJson_district.mainIndustryPortion,
+			"score": _dataJson_district.score_mainIndustryPortion
+		}, 
+		"rateOf20sInIndustry": {
+			"rawData": _dataJson_district.rateOf20sInIndustry,
+			"score": _dataJson_district.score_rateOf20sInIndustry
+		}, 
+		"industryJobCreation": {
+			"rawData": _dataJson_district.industryJobCreation,
+			"score": _dataJson_district.score_industryJobCreation
+		}, 
+		"incomeRate": {
+			"rawData": _dataJson_district.incomeRate,
+			"score": _dataJson_district.score_incomeRate
+		}, 
+		"R_COSTII": {
+			"rawData": _dataJson_district.R_COSTII,
+			"score": _dataJson_district.score_R_COSTII
+		}, 
+		"expertRate": {
+			"rawData": _dataJson_district.expertRate,
+			"score": _dataJson_district.score_expertRate
+		},
+		"population": _dataJson_district.population, 
+		"mean_age": _dataJson_district.mean_age, 
+		"numWorkers_inDistrict": _dataJson_district.numWorkers_inDistrict, 
+		// "numWorkers_0": _dataJson_district.numWorkers_0, 
+		"numWorkers_300": _dataJson_district.numWorkers_300, 
+		"numWorkers_1000": _dataJson_district.numWorkers_1000, 
+		// "mainIndustry_0": _dataJson_district.mainIndustry_0, 
+		"mainIndustry_300": _dataJson_district.mainIndustry_300, 
+		// "mainIndustry_1000": _dataJson_district.mainIndustry_1000,
+		"factory": _dataJson_district.factory
 	};
 
+	return returnObject;
+};
 
-	
-var plot_double_svg_imported;
-var plot_single_svg_imported;
+function dataInsertion(_featureArray, _dataArray) {
+	for (var i=0; i<_featureArray.features.length; i++) {
+		var prop = _featureArray.features[i].properties;
+		prop.data = [];
 
-var party_class = {};
+		for (var j=0; j<_dataArray.length; j++) {
+			prop.data.push(data_object(_dataArray[j][i]));
+		}
+		
+		prop.score_total = _dataArray[_dataArray.length-1][i].score_hiringRate_300;
+	}
+};
 
-const UNIFORM_AREA = 1;
-const PROPORTIONAL_AREA = 0;
-var prop_or_sameArea = PROPORTIONAL_AREA;
-const CONSTI_CANDIDATE = 0;
-const PR_PARTY = 1;
-var consti_or_PR = CONSTI_CANDIDATE;
-
-var electionId = "0000000000";
-var oldElectionType = 1; 
-var electionType = 1;
-var electionName = "20170509";
-var electionCode = 1;
-var cityCode = 1100;
-var proportionalRepresentationCode = -1;
-var sggCityCode = -1;
-var townCode = -1;
-var sggTownCode = -1;
-
-var selected_hexCodeIndex = {index_province: -1, index_consti: -1};
-
-
-
-
-
+var municipalData = [_dataJSON_2014.municipals, _dataJSON_2015.municipals, _dataJSON_2016.municipals];
+var provinceData = [_dataJSON_2014.provinces, _dataJSON_2015.provinces, _dataJSON_2016.provinces];
+dataInsertion(municipalGeoJSON, municipalData);
+dataInsertion(provinceGeoJSON, provinceData);
 
 (function($){
-	$(window).on("load", function(){//먼저 JSON 파일 로드를 한 뒤, langSearch 변수를 이용한 작업을 진행.
+	$(window).on("load", function() {//먼저 js파일들을 모두 로드. 
 
-		prop_or_sameArea = PROPORTIONAL_AREA;
-
-		// $("#electionType select")[0].selectedIndex = 1;
-		// $("#nth select")[0].selectedIndex = 0;
-		// $("#infoType select")[0].selectedIndex = 1;
-
-		// $('#initial_instruction_PC').dimmer('show');
-		// $('#initial_instruction_PC').click(function() {
-		//   $('#initial_instruction_PC').dimmer('hide');
-		// });
-
-
-
-		$("#proportionalArea").click( function() {
-			if (!$("#proportionalArea").hasClass("selected")) { newMap_proportionalArea(); }
-		});
-		$("#uniformArea").click( function() {
-			if (!$("#uniformArea").hasClass("selected")) { newMap_uniformArea(); }
-		});
-
-		// $("#infoType .UI").change(change_infoType);
-
-		// $("#consti").click( function() {
-		// 	if (!$("#consti").hasClass("selected")) { change_consti(); }
-		// });
-		// $("#PR").click( function() {
-		// 	if (!$("#PR").hasClass("selected")) { change_PR(); }
-		// });
-
-		$("#legend_elected, #legend_elected_dataInfo").click( function() {
-			$('#electroral_system').modal('show');
+		// Layer selection with #mapYear slidebar
+		$("#mapYear_slider").slider({
+			animate: true,
+			min: 0,
+			max: 2,
+			value: 2,
+			slide: function(event, ui) {
+				year_index = ui.value; updateScore();
+			}
 		});
 
 
-		//Create SVG element
-		d3.select("#map_body_svg").append("g").classed("nation", true);
-		svgContainer = d3.select("#map_body_svg").selectAll("g.nation")
-		zoomedMap = d3.zoom()
-						.scaleExtent([0.5, 15])
-						// .translateExtent([[-width*1.5, -height*1.5], [width*5, height*5]])
-						.on("zoom", function() {
-							document.body.style.cursor="move";
-							svgContainer.attr("transform", d3.event.transform); })
-						.on("end", function() { document.body.style.cursor="default"; } );
+		var check_hiringRate_1000 = document.getElementById("check_hiringRate_1000"),  
+			check_mainIndustryPortion = document.getElementById("check_mainIndustryPortion"),
+			check_rateOf20sInIndustry = document.getElementById("check_rateOf20sInIndustry"),
+			check_industryJobCreation = document.getElementById("check_industryJobCreation"), 
+			check_incomeRate = document.getElementById("check_incomeRate"), 
+			check_R_COSTII = document.getElementById("check_R_COSTII"), 
+			check_expertRate = document.getElementById("check_expertRate");
 
-		// $("#fullView").on("click", function() { // TODO: 전국지도 버튼.
 
-		// 	originX = (window.innerWidth-width)/2;
-		// 	originY = (window.innerHeight-height+200)/2;	
-		// 	d3.select("#map_background").transition().duration(1000).call(zoomedMap.transform, d3.zoomIdentity.scale(1).translate(originX, originY));
-		// 	d3.select("#map_body_svg .selected").classed("selected", false).classed("unselected", true);
-		// 	d3.select("#map_body_svg .nation").classed("selected", true).classed("unselected", false);
-		// 	selected_hexCodeIndex.index_province = -1;
-		// 	selected_hexCodeIndex.index_consti = -1;
-
-		// 	// d3.select("#upperRegion").classed("inactive", true).on("click", null);
-		// 	d3.select("#dataInfo").classed("plot_large plot_medium", false).classed("plot_small", true);
-			info_votes_needtoSelect();
-			// info_votes(svgContainer.node().__data__);
-		// });
-		$("#largeView").on("click", function() { // TODO: 전국지도 버튼.
-			d3.select("#map_background").transition().duration(500).call(zoomedMap.scaleBy, 1.5);
+		$("#checkUI_hiringRate_1000").checkbox({
+			onChange: function(){
+				$("#result_municipal_hiringRate_1000").toggleClass("unlayered"); updateScore();
+			}
 		});
-		$("#smallView").on("click", function() { // TODO: 전국지도 버튼.
-			d3.select("#map_background").transition().duration(500).call(zoomedMap.scaleBy, 0.66);
+		$("#checkUI_mainIndustryPortion").checkbox({
+			onChange: function(){
+				$("#result_municipal_mainIndustryPortion").toggleClass("unlayered"); updateScore();
+			}
+		});
+		$("#checkUI_rateOf20sInIndustry").checkbox({
+			onChange: function(){
+				$("#result_municipal_rateOf20sInIndustry").toggleClass("unlayered"); updateScore();
+			}
+		});
+		$("#checkUI_industryJobCreation").checkbox({
+			onChange: function(){
+				$("#result_municipal_industryJobCreation").toggleClass("unlayered"); updateScore();
+			}
+		});
+		$("#checkUI_incomeRate").checkbox({
+			onChange: function(){
+				$("#result_municipal_incomeRate").toggleClass("unlayered"); updateScore();
+			}
+		});
+		$("#checkUI_R_COSTII").checkbox({
+			onChange: function(){
+				$("#result_municipal_R_COSTII").toggleClass("unlayered"); updateScore();
+			}
+		});
+		$("#checkUI_expertRate").checkbox({
+			onChange: function(){
+				$("#result_municipal_expertRate").toggleClass("unlayered"); updateScore();
+			}
 		});
 
-		$("#info_scrollingTop").on("click", function(event) { // TODO: scroll to top.
-			event.preventDefault();
-			$('html, body').stop().animate({
-				scrollTop: 0
-			}, 600,'easeOutCubic');
-		});
-
-
-		// var q_init = d3.queue();
-		// q_init.defer( d3.json, d3_mapping_config_json_file )
-		// .defer( d3.xml, hex_svg_file )
-		// .defer( d3.xml, plot_double_svg_file )
-		// .defer( d3.xml, plot_single_svg_file )
-		// .await(function(error, _d3_config_json, _hex_xml, _plot_double_xml, _plot_single_xml) {
-		// 	if (error) throw error;
-
-		// 	hex_svg_imported = d3.select(_hex_xml.documentElement).selectAll("g.hex_group").nodes();
-		// 	for(var i=HEX_MIN; i<HEX_MAX+1; i++) {
-		// 		sorting_plots( i, hex_svg_imported[i] );
-		// 	}
-		// 	// plot_double_svg_imported = d3.select(_plot_double_xml.documentElement).node().outerHTML;
-		// 	// plot_single_svg_imported = d3.select(_plot_single_xml.documentElement).node().outerHTML;
-		// 	plot_double_svg_imported = "<img src=\"/SKorean-election-map/assets/img/plot_double/plot_double_";
-		// 	plot_single_svg_imported = "<img src=\"/SKorean-election-map/assets/img/plot_single/plot_single_";
-
-		// 	d3_config_json = _d3_config_json;
-		// 	d3_config = d3_config_json[$("#electionType .UI").val()][$("#nth .UI").val()];
-		// 	width = d3_config["width"];
-		// 	height = d3_config["height"];
-		// 	originX = (window.innerWidth-width)/2;
-		// 	originY = (window.innerHeight-height+200)/2;			
-		// 	d3.select("#map_background").call(zoomedMap);
-		// 	d3.select("#map_background").call(zoomedMap.transform, d3.zoomIdentity.scale(1).translate(originX, originY));
-
-		// 	$("#consti").addClass("selected");
-		// 	change_election();
-		// });
+		change_dataInfo();
 	});
-})(jQuery)
+
+})(jQuery);
+
