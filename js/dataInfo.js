@@ -80,18 +80,18 @@ function change_dataInfo(_prop) {
 				$("#result_municipal_rateOf20sInIndustry .scoreInfo").append(insert_dataInfo("제조업 종사자 중 20대 비율", _data.rateOf20sInIndustry.rawData));
 
 			$("#result_municipal_industryJobCreation .score").html("+ " + _data.industryJobCreation.score + "점");
-			$("#result_municipal_industryJobCreation .scoreName").html("일자리창출률");
+			$("#result_municipal_industryJobCreation .scoreName").html("일자리 창출 위험도");
 
 			$("#result_municipal_incomeRate .score").html("+ " + _data.incomeRate.score + "점");
-			$("#result_municipal_incomeRate .scoreName").html("직장인-주민 일치 비율");
+			$("#result_municipal_incomeRate .scoreName").html("직장인-주민 괴리도(2016)");
 				$("#result_municipal_incomeRate .scoreInfo").append(insert_dataInfo("거주지 기준 근로소득 금액 ÷ <br>원천징수지 기준 근로소득 금액", _data.incomeRate.rawData));
 
 			$("#result_municipal_R_COSTII .score").html("+ " + _data.R_COSTII.score + "점");
-			$("#result_municipal_R_COSTII .scoreName").html("과학기술혁신 역량 지수");
+			$("#result_municipal_R_COSTII .scoreName").html("과학기술혁신 역량 위험도");
 				$("#result_municipal_R_COSTII .scoreInfo").append(insert_dataInfo("과학기술혁신역량지수 R-COSTII", _data.R_COSTII.rawData));
 
 			$("#result_municipal_expertRate .score").html("+ " + _data.expertRate.score + "점");
-			$("#result_municipal_expertRate .scoreName").html("관리자, 전문가 비중");
+			$("#result_municipal_expertRate .scoreName").html("관리자, 전문가 비중 위험도");
 				$("#result_municipal_expertRate .scoreInfo").append(insert_dataInfo("전체 취업자 중 관리자, 전문가 수", _data.expertRate.rawData));
 
 		}
