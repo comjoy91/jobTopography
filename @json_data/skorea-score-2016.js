@@ -4669,7 +4669,7 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2336,
 			"numWorkers_1000": 2336,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": "헌귝타이어 금산공장"
+			"factory": "한국타이어 금산공장"
 		},
 		{
 			"code_data": 3410,

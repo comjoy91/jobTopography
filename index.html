@@ -8,7 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="@images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="@images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="@images/favicon/favicon-16x16.png">
 
 	<!-- jQuery / jQuery UI 가져오기. -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -44,6 +46,23 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
 	<link rel='stylesheet' type='text/css' href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css'>
 
+	<!-- Semantic-UI -->
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Menu-master/menu.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Tab-master/tab.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Search-master/search.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Checkbox-master/checkbox.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Icon-master/icon.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Modal-master/modal.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Dimmer-master/dimmer.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Transition-master/transition.css">
+
+	<script type="text/javascript"  src="@Semantic-UI/UI-Tab-master/tab.js"></script>
+	<script type="text/javascript"  src="@Semantic-UI/UI-Search-master/search.js"></script>
+	<script type="text/javascript"  src="@Semantic-UI/UI-Checkbox-master/checkbox.js"></script>
+	<script type="text/javascript"  src="@Semantic-UI/UI-Modal-master/modal.js"></script>
+	<!-- <script type="text/javascript"  src="@Semantic-UI/UI-Modal-master/index.js"></script> -->
+	<script type="text/javascript"  src="@Semantic-UI/UI-Dimmer-master/dimmer.js"></script>
+	<script type="text/javascript"  src="@Semantic-UI/UI-Transition-master/transition.js"></script>
 
 
 	<!-- local json/css -->
@@ -56,22 +75,6 @@
 	<script type="text/javascript" src="@json_data/skorea-score-2016.js"></script>
 	<!-- <script type="text/javascript" src="@json_data/mapColour.js"></script> -->
 
-	<!-- Semantic-UI -->
-	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Menu-master/menu.css">
-	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Search-master/search.css">
-	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Checkbox-master/checkbox.css">
-	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Icon-master/icon.css">
-
-	<script type="text/javascript"  href="@Semantic-UI/UI-Menu-master/menu.js"></script>
-	<script type="text/javascript"  src="@Semantic-UI/UI-Search-master/search.js"></script>
-	<script type="text/javascript"  src="@Semantic-UI/UI-Checkbox-master/checkbox.js"></script>
-<!-- 
-	<script type="text/javascript"  src="@Semantic-UI/UI-Search-master/index.js"></script>
-	<script type="text/javascript"  src="@Semantic-UI/UI-Checkbox-master/index.js"></script>
-
-	<script type="text/javascript"  src="@Semantic-UI/UI-Search-master/package.js"></script>
-	<script type="text/javascript"  src="@Semantic-UI/UI-Checkbox-master/package.js"></script> -->
-
 
 </head>
 
@@ -80,18 +83,11 @@
 <body>
 	<div id="map_background"></div>
 
-	<div id="map_nav">
+	<a id="site_title" href="">제조업 고용위기 시그널</a>
 
-		<div class="UI_cover" id="mapYear">
-			<div class="UIName">조사년도</div>
-			<div id="mapYear_slider"></div>
-			<div id="year_integer">
-				<div>2014</div> <div>2015</div> <div>2016</div>
-			</div>
-		</div>
+	<div id="map_layerControl">
 
-		<div class="checkbox_cover">
-			<div class="UIName">지도 위 데이터 <i class="info circle icon fitted"></i></div>
+		<div id="checkbox_cover">
 			<div class="ui checkbox disabled" id="checkUI_hiringRate_300">
 				<input type="checkbox" id="check_hiringRate_300" checked="checked" disabled="disabled"> 
 				<label> 300인 이상 제조업 집중도</label>
@@ -126,24 +122,29 @@
 			</div>
 		</div>
 
-		<div class="UI_cover" id="score_legend">
-			<div class="UIName">점수별 색상</div>
-			<div id="score_gradient"></div>
-			<div id="score_integer">
-				<div>0</div> <div>25</div> <div>50</div> <div>75</div> <div>100</div>
+
+		<div id="mapYear">
+			<!-- <div class="UIName">조사년도</div> -->
+			<div id="mapYear_slider"></div>
+			<div id="year_integer">
+				<div>2014</div> <div>2015</div> <div>2016</div>
 			</div>
 		</div>
-		<!-- <div class="button" id="fullView">전국 결과</div>
-		<div class="button inactive" id="upperRegion">상위 지역</div>
-		<div class="button" id="largeView">＋</div
-		><div class="button" id="smallView">－</div> -->
 	</div>
 
-	<div id="dataInfo" class="plot_small">
-		<!-- <div class="ui fluid two item inverted menu">
-			<a id="menu_municipal" class="active item">자치구·시·군</a>
-			<a id="menu_province" class="item">광역시·도</a>
-		</div> -->
+
+	<i class="info circle icon" id="layerControl_legend"></i>
+
+	<div id="score_legend">
+		<!-- <div class="UIName">점수별 색상</div> -->
+		<div id="score_integer">
+			<div>0</div> <div>25</div> <div>50</div> <div>75</div> <div>100</div>
+		</div>
+		<div id="score_gradient"></div>
+	</div>
+
+
+	<div id="dataInfo">
 
 		<div class="ui fluid search" id="feature_search">
 			<div class="ui icon input">
@@ -152,112 +153,155 @@
 			</div>
 			<div class="results"></div>
 		</div>
+
 		<img id="info_gripper" src="@images/Gripper.svg">
 		<!-- <img id="info_scrolling" src="@images/Scroll_up.svg"> -->
-		<div id="selectNotice"></div>
+		<div id="selectNotice">
+			<p>[제조업 고용위기 시그널] 지도는 민간 독립 연구소 <a class="paragraph_link" href="https://lab2050.org/" target="_blank">LAB2050</a>이 ‘일자리 지형 변화 연구’를 위해 제작한 것입니다. 이 연구는 LAB2050의 자체 연구비로 진행됐으며 어떤 기관이나 기업, 정부의 지원 및 후원도 받지 않았습니다.</p>
+			<p>이 지도는 지역 관점에서 제조업 고용의 위험도를 가늠해 볼 수 있도록 정보를 종합해서 보여주려는 취지로 제작됐습니다. 기본 지도는 지역별 ‘300인 이상 제조업 집중도’이며 여기에 ‘제조업 고용위기’와 관련 있는 정보들을 겹쳐 볼 수 있도록 했습니다. 단순히 여러 정보들을 한 눈에 볼 수 있도록 중첩 배열한 것일 뿐, ‘지표’는 를 다.<br>
+			각 정보들의 색깔이 진해지는 정도를 비슷하게 맞추기 위해서 임의로 수치를 부여하기는 했으나 평가 점수는 아닙니다.</p>
+			<p>연구자: 황세원, 고동현 (이상 LAB2050)<br>
+				지도 제작 및 디자인: 조현익 (스튜디오 하프-보틀)<br>
+				문의: <a class="paragraph_link" href="mailto:joonchigirl@lab2050.org">joonchigirl@lab2050.org</a></p>
+		</div>
 
-		<div id="info_nameContainer">
-			<!-- <div id="electionType_name"></div> -->
-			<div id="province_name"></div>
-			<div id="municipal_name"></div>
+		<div class="ui top secondary pointing menu" id="info_nameContainer" style="display: none">
+			<a class="active item" data-tab="municipal" id="municipal_name"></a>
+			<a class="item" data-tab="province" id="province_name"></a>
+			<a class="right item" id="cancel_selecting">✕</a>
 		</div>
 		<div id="info_hyperlink" style="display: none">
-			<a id="candidate_info" href="https://developer.mozilla.org/en-US/" target="_blank"><div>후보자 상세 정보</div></a
-			><a id="disrtict_info" href="https://developer.mozilla.org/en-US/" target="_blank" style="display: none"><div>지역 내 선거 역대 결과</div></a>
+			<!-- <a id="candidate_info" href="https://developer.mozilla.org/en-US/" target="_blank"><div>후보자 상세 정보</div></a
+			><a id="disrtict_info" href="https://developer.mozilla.org/en-US/" target="_blank" style="display: none"><div>지역 내 선거 역대 결과</div></a> -->
 		</div>
 
-		<div id="result_province">
-			<div class="basicInfo_storage" id="basicInfo_province">
-				<div class="dataInfo">
-					<div class="dataName"></div>
-					<div class="dataValue"></div>
-				</div>
-			</div>
-			<div class="result_storage" id="result_province_total">
-				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
-			</div>
-		</div>
 
-		<div id="result_municipal">
+		<div class="ui bottom segment active tab" data-tab="municipal" id="result_municipal" style="display: none">
 			<div class="basicInfo_storage" id="basicInfo_municipal">
-				<div class="dataInfo">
-					<div class="dataName"></div>
-					<div class="dataValue"></div>
-				</div>
+				<div class="dataInfo" id="population_municipal"></div>
+				<div class="dataInfo" id="mean_age_municipal"></div>
+				<div class="dataInfo" id="workers_municipal"></div>
+				<div class="dataInfo" id="mainIndustry_municipal"></div>
+				<div class="dataInfo" id="factory_municipal"></div>
 			</div>
-			<div class="result_storage" id="result_municipal_total">
-				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
-			</div>
+			<!-- <div class="mainIndustry_quote">¹ 300인 이상 대기업의 최대 고용 제조업종.</div> -->
+
+			<div class="textbox_explain" id="textbox_explain_municipal"></div>
+
 			<div class="result_storage" id="result_municipal_hiringRate_300">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
 				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-					<div class="dataInfo">
-						<div class="dataName"></div>
-						<div class="dataValue"></div>
-					</div>
-					<div class="dataInfo">
-						<div class="dataName"></div>
-						<div class="dataValue"></div>
-					</div>
-				</div>
+				<div class="dataName"></div>
 			</div>
 			<div class="result_storage unlayered" id="result_municipal_hiringRate_1000">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
 				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
+				<div class="dataName"></div>
 			</div>
 			<div class="result_storage unlayered" id="result_municipal_mainIndustryPortion">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
 				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
+				<div class="dataName"></div>
 			</div>
 			<div class="result_storage unlayered" id="result_municipal_rateOf20sInIndustry">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
 				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
+				<div class="dataName"></div>
 			</div>
 			<div class="result_storage unlayered" id="result_municipal_industryJobCreation">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
 				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
+				<div class="dataName"></div>
 			</div>
 			<div class="result_storage unlayered" id="result_municipal_incomeRate">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
 				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
+				<div class="dataName"></div>
 			</div>
 			<div class="result_storage unlayered" id="result_municipal_R_COSTII">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
 				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
+				<div class="dataName"></div>
 			</div>
 			<div class="result_storage unlayered" id="result_municipal_expertRate">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
 				<div class="score"></div>
-				<div class="scoreInfo">
-					<div class="scoreName"></div>
-				</div>
+				<div class="dataName"></div>
+			</div>
+			<div id="result_municipal_total">
+				<!-- Total -->
+				<div class="scoreName">Total</div>
+				<div class="score">100.0 / 100.0</div>
+				<div class="dataName" id="dataInfo_municipal_legend"><i class="info circle icon"></i> 데이터 구성 및 출처</div>
+				<div id="description_municipal_total">* 이 연구는 300인 이상 대기업의 제조업 종사자가 존재하는 지역을 분석하고 있습니다. 지역 내에 해당 기업 사업체가 없을 경우, 연구대상에서 제외했습니다.</div>
 			</div>
 		</div>
 
+		<div class="ui bottom segment tab" data-tab="province" id="result_province" style="display: none">
+			<div class="basicInfo_storage" id="basicInfo_province">
+				<div class="dataInfo" id="population_province"></div>
+				<div class="dataInfo" id="mean_age_province"></div>
+				<div class="dataInfo" id="workers_province"></div>
+				<div class="dataInfo" id="mainIndustry_province"></div>
+			</div>
+			<!-- <div class="mainIndustry_quote">¹ 300인 이상 대기업의 최대 고용 제조업종.</div> -->
+
+			<div class="textbox_explain" id="textbox_explain_province"></div>
+
+			<div class="result_storage" id="result_province_hiringRate_300">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
+				<div class="dataName"></div>
+			</div>
+			<div class="result_storage unlayered" id="result_province_hiringRate_1000">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
+				<div class="dataName"></div>
+			</div>
+			<div class="result_storage unlayered" id="result_province_mainIndustryPortion">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
+				<div class="dataName"></div>
+			</div>
+			<div class="result_storage unlayered" id="result_province_rateOf20sInIndustry">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
+				<div class="dataName"></div>
+			</div>
+			<div class="result_storage unlayered" id="result_province_industryJobCreation">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
+				<div class="dataName"></div>
+			</div>
+			<div class="result_storage unlayered" id="result_province_incomeRate">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
+				<div class="dataName"></div>
+			</div>
+			<div class="result_storage unlayered" id="result_province_R_COSTII">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
+				<div class="dataName"></div>
+			</div>
+			<div class="result_storage unlayered" id="result_province_expertRate">
+				<div class="scoreName"></div>
+				<div class="dataValue"></div>
+				<div class="dataName"></div>
+			</div>
+		</div>
 
 
 		<div id="legendInfo_dataInfo">
-			<div id="legend_point_dataInfo">卜 1개 = 약 5,000명</div
-			><div id="legend_party_dataInfo"><img src="@images/information.svg"> 데이터 해설</div
-			><div id="legend_elected_dataInfo"><img src="@images/information.svg">  이 연구에 대한 정보</div>
+			<!-- <div id="legend_party_dataInfo"><img src="@images/information.svg"> 데이터 해설</div
+			><div id="legend_elected_dataInfo"><img src="@images/information.svg">  이 연구에 대한 정보</div> -->
 			<img id="info_scrollingTop" src="@images/Scroll_up.svg">
 		</div>
 
@@ -272,6 +316,53 @@
 	</div>
 
 
+	<div class="ui small modal" id="popup_modal">
+		<i class="close icon"></i>
+		<div class="header">데이터 구성 및 출처</div>
+		<div class="image scrolling content">
+			<div>
+				이 지도는 시군구 단위, 연도별로 데이터를 반영했습니다. 사용된 모든 데이터는 공개적으로 접근 가능한 것입니다. 
+				<br>다만, ‘일자리 창출 위험도’ 정보에 사용된 데이터는 통계청 원격프로그램 사용 승인을 통해서 확보했으며, 이 과정에서 통계청으로부터 ‘지역 간 직접 비교가 가능한 수치는 공개하지 말 것’을 요청받았기에 색깔 반영도만 표기했습니다. 
+				<br>‘직장인-주민 괴리도’ 정보에 사용된 데이터는 2016년부터 집계가 시작되었으므로 2014년, 2015년 지도에도 2016년 데이터가 표시됐습니다. 
+				<br>‘과학기술혁신역량 위험도’에 사용된 데이터는 광역 단위로 반영되었습니다. 
+				<br>데이터별 자세한 설명 및 출처. 색깔 반영도는 아래와 같습니다.
+			</div>
+			<!-- <div class="image">
+				An image can appear on left or an icon
+			</div>
+			<div>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+				<p>0123</p>
+			</div>
+			<div class="description">
+				A description can appear on the right
+			</div> -->
+		</div>
+		<!-- <div class="actions"><div class="ui button">Cancel</div><div class="ui button">OK</div></div> -->
+	</div>
+
 
 
 	<footer>
@@ -279,11 +370,11 @@
 			<div id="about">About…</div>
 			<a id="home" href="/">전국투표전도</a>
 		</div> -->
-		<div id="legendInfo_footer">
-			<!-- <div id="legend_point">卜 1개 = 약 5,000명</div> -->
+		<!-- <div id="legendInfo_footer">
 			<div id="legend_party"><img src="@images/information.svg"> 데이터 해설</div
 			><div id="legend_elected"><img src="@images/information.svg">  이 연구에 대한 정보</div>
-		</div>
+		</div> -->
+		<a id="lab2050_logo" href="https://lab2050.org/" target="_blank"><img src="@images/lab2050_colour.png"></a>
 	</footer>
 
 

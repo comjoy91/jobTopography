@@ -52,10 +52,10 @@ html, body, #map {
 .tooltip {
 	position: absolute;
 	text-align: center;
-	width: 100px;
-	height: 28px;
-	padding: 4px;
-	margin-top: -20px;
+	width: auto;
+	height: auto;
+	padding: 6px;
+	margin-top: -50px;
 	font: 10px sans-serif;
 	background: #ddd;
 	pointer-events: none;
@@ -100,9 +100,9 @@ div, input {
 
 
 
-/* ------------ #map_background, #headerMenu, #map_nav, #dataInfo ------------ */
+/* ------------ #map_background, #headerMenu, #map_layerControl, #layerControl_legend, #dataInfo ------------ */
 
-#map_background, #headerMenu, #map_nav, #dataInfo {
+#map_background, #site_title, #map_layerControl, #layerControl_legend, #score_legend, #dataInfo {
 	position: absolute;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
@@ -111,7 +111,7 @@ div, input {
 
 @media all and (max-width:767px) { /* mobile phone layout */
 
-	/*#map_background,*/ #headerMenu, #map_nav {
+	/*#map_background,*/ #headerMenu, #map_layerControl {
 		position: fixed;
 	}
 
@@ -136,14 +136,6 @@ div, input {
 .UI:hover, .button:not(.inactive):hover {
 	cursor: pointer;
 }
-
-
-.switch, .UI_cover, .checkbox_cover {
-	/*position: absolute;*/
-	margin: 0 0 12px 0;
-	padding: 0 0 0 0;
-}
-
 
 	.UIName {
 		width: 100%;
@@ -208,14 +200,35 @@ div, input {
 
 
 
-/* ------------ #map_nav ------------ */
+/* ------------ #site_title, #layerControl_legend, #map_layerControl, leaflet zoomButton (.leaflet-left, .leaflet-top) ------------ */
 
-#map_nav {
-	top: 22px;
+
+#site_title {
+	font-size: 21px;
+	font-weight: 600;
+	line-height: 1.0;
+	text-align: center;
+
+	top: 32px;
 	left: 38px;
-	width: 216px;
+	padding: 16px;
 
-    padding: 18px 24px 6px 24px;
+	background: #ffffff;
+	border: 1px solid #c3c3c3;
+	border-radius: 4px;
+	cursor: pointer;
+
+    color: #000000;
+    text-decoration: none;
+}
+
+
+#map_layerControl {
+	top: 100px;
+	left: 38px;
+	width: 192px;
+
+	padding: 18px 15px 15px 15px;
 
 	background-color: #ffffff;
 	border: 1px solid #c3c3c3;
@@ -241,34 +254,83 @@ div, input {
 		display: inline;
 	}*/
 
+	#checkbox_cover {
+		margin: 0 0 24px 0;
+		padding: 0 0 0 0;
+	}
+
 	#mapYear_slider {
-		margin: 0px 8px 4px 8px;
+		margin: 0px 8px 8px 8px;
 	}
 
-	#score_gradient { 
-		height: 16px;
-		margin-bottom: 2px;
-		opacity: 0.7;
-		background-color: hsl(0, 100%, 50%); /* 그레디언트가 지원되지 않는 경우의 색상(fallback color) */
-		background-image: -webkit-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%));
-		background-image:    -moz-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Fx 3.6 부터 Fx 15 까지 처리 */
-		background-image:     -ms-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* IE 10 Platform Previews, Consumer Preview */
-		background-image:      -o-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Opera 11.1 부터 12.0 까지 처리 */ 
-		background-image:         linear-gradient(to right, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
-	}
+		.ui-slider-horizontal {
+			height: .5em;
+		}
 
-	#year_integer, #score_integer {
+		.ui-slider-horizontal .ui-slider-handle {
+			top: -.49em;
+			margin-left: -.6em;
+		}
+
+		.ui-state-default, .ui-widget-content .ui-state-default, 
+		.ui-widget-header .ui-state-default, .ui-button, 
+		html .ui-button.ui-state-disabled:hover, 
+		html .ui-button.ui-state-disabled:active {
+			border: 1px solid #d3d3d3;
+			background: #51a0dc;
+			font-weight: normal;
+			color: #555555;
+		}
+
+		.ui-state-active,
+		.ui-widget-content .ui-state-active,
+		.ui-widget-header .ui-state-active,
+		a.ui-button:active,
+		.ui-button:active,
+		.ui-button.ui-state-active:hover {
+			border: 1px solid #aaaaaa;
+			background: #ffffff;
+			font-weight: normal;
+			color: #212121;
+		}
+
+	#year_integer {
 		display: flex;
 		justify-content: space-between;
 	}
 
+
+#layerControl_legend {
+	top: 100px;
+	left: 241px;
+	width: 24px;
+	height: 24px;
+	padding: 4px 3px 2px 3px;
+
+	font-size: 21px;
+	line-height: 1.0;
+
+	background-color: #ffffff;
+	border: 2px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+
+	cursor: pointer;
+}
+
+
+.leaflet-left .leaflet-control-zoom {
+	margin-left: 241px;
+}
+.leaflet-top .leaflet-control-zoom {
+	margin-top: 144px;
+}
 
 
 
 
 @media all and (max-width:1023px) {
 
-	#map_nav {
+	#map_layerControl {
 		top: 68px;
 		left: 18px;
 		width: 60px;
@@ -294,7 +356,7 @@ div, input {
 
 @media all and (max-width:767px) { /* mobile phone, widescreen layout */
 
-	#map_nav {
+	#map_layerControl {
 		top: 0px;
 	}
 
@@ -302,7 +364,7 @@ div, input {
 @media all and (max-width:767px) and (max-aspect-ratio: 1/1) { /* mobile phone, portrait layout */
 
 
-	#map_nav {
+	#map_layerControl {
 		top: 72px;
 	}
 		#hex_property {
@@ -320,7 +382,7 @@ div, input {
 
 @media all and (max-width:359px) { /* legendary mobile phone layout */
 
-	#map_nav {
+	#map_layerControl {
 		left: 8px;
 	}
 		#hex_property {
@@ -336,6 +398,52 @@ div, input {
 
 }
 
+/* ------------ #score_legend ------------ */
+
+#score_legend {
+	top: 360px;
+	left: 42px;
+	/*width: 100px;*/
+	height: 128px;
+	padding: 10px 10px 10px 8px;
+
+	display: flex;
+
+	background-color: rgba(255, 255, 255, 0.35);
+	border-radius: 4px;
+}
+
+
+	#score_gradient { 
+		width: 10px;
+		height: 100%;
+		opacity: 0.7;
+		background-color: hsl(0, 100%, 50%); /* 그레디언트가 지원되지 않는 경우의 색상(fallback color) */
+		background-image: -webkit-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%));
+		background-image:    -moz-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Fx 3.6 부터 Fx 15 까지 처리 */
+		background-image:     -ms-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* IE 10 Platform Previews, Consumer Preview */
+		background-image:      -o-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Opera 11.1 부터 12.0 까지 처리 */ 
+		background-image:         linear-gradient(to top, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
+	}
+
+	#score_integer {
+		width: auto;
+		height: 100%;
+		margin: 0 6px 0 0;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column-reverse;
+	}
+
+		#score_integer div {
+			width: auto;
+			line-height: 1.0;
+			text-align: right;
+			font-size: 10px;
+		}
+
+
+
 
 
 /* ------------ #dataInfo (without footer elements) ------------ */
@@ -343,9 +451,9 @@ div, input {
 #dataInfo {
 	width: 350px;
 	/*min-height: 30vh;*/
-	max-height: calc(100vh - 140px);
-	/*height: auto;*/
-	height: calc(100vh - 140px);
+	max-height: calc(100vh - 64px);
+	height: auto;
+	/*height: calc(100vh - 140px);*/
 	top: 32px;
 	right: 32px;
 	background-color: #ffffff;
@@ -355,7 +463,7 @@ div, input {
 	border: 1px solid #c3c3c3;
 	border-radius: 4px;
 
-	overflow-y: auto;
+	/*overflow-y: auto;*/
 
 	z-index: 999;
 }
@@ -371,6 +479,7 @@ div, input {
 			padding: 0 0 0 10px;
 
 			background-color: #f1f1f1;
+			font-family: "Spoqa Han Sans";
 			color: #8E8E93; /* 폰트 색깔 */
 			border: 0px solid;
 			border-radius: 6px;
@@ -426,23 +535,24 @@ div, input {
 		height: 12px;
 		display: none;
 	}
-	#selectNotice {
-		margin: 18px 27px 0 34px;
-		font-weight: 400;
-		}
 
 	#info_nameContainer {
-		margin: 18px 27px 0 34px;
+		margin: 18px 25px 0 25px;
 		font-size: 18px;
 	}
-		#electionType_name, #province_name {
-			font-weight: 400;
-			display: inline-block;
-		}
-		#municipal_name {
+		#municipal_name, #province_name {
+			font-family: "Spoqa Han Sans";
 			font-weight: 600;
-			display: inline-block;
-	}
+			padding: 12px 10px;
+			margin: 0 0 -4px 0;
+			border-bottom-width: 6px
+		}
+
+		#cancel_selecting {
+			font-weight: 600;
+			padding: 12px 9px;
+		}
+
 	#info_hyperlink {
 		margin: 10px 27px 0 34px;
 	}
@@ -492,30 +602,142 @@ div, input {
 }
 
 
-/* ------------ #dataInfo > #result_municipal, #result_province ------------ */
+/* ------------ #dataInfo > #result_municipal, #result_province, #selectNotice ------------ */
+
+	#selectNotice  {
+		padding: 21px 24px 28px 27px;
+
+		max-height: calc(100vh - 183px);
+		height: auto;
+		overflow-y: auto;
+	}
+
+		#selectNotice .paragraph_link {
+			text-decoration: underline;
+			color: #000000;
+		}
 
 
 	#result_municipal, #result_province {
-		margin: 21px 27px 0 34px;
+		padding: 21px 27px 28px 34px;
+
+		max-height: calc(100vh - 183px);
+		height: auto;
+		overflow-y: auto;
 	}
+
+		.basicInfo_storage {
+			margin: 0 0 24px 0;
+			padding: 0 0 24px 0;
+			border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+
+			display: flex;
+			flex-wrap: wrap;
+		}
+			.basicInfo_storage .dataInfo {
+				min-width: 33%;
+				max-width: 100%;
+				margin: 12px 0 4px 0;
+				flex-grow: 0;
+			}
+			.basicInfo_storage .name 
+			{
+				font-size: 12px;
+				font-weight: 600;
+			}
+			.basicInfo_storage .value 
+			{
+				font-size: 12px;
+				font-weight: 400;
+			}
+
+		.mainIndustry_quote {
+			font-size: 10px;
+			border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+			margin: 6px 0 24px 0;
+			padding: 0 0 24px 0;
+		}
+
+		.textbox_explain {
+			font-size: 10px;
+			border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+			margin: 6px 0 24px 0;
+			padding: 0 0 24px 0;
+		}
 
 		.result_storage {
 			display: flex;
-			margin: 12px 0 0 0;
+			flex-wrap: wrap;
+			align-items: end;
+			margin: 16px 0;
 		}
+			.result_storage div {
+				/*display: inline-block;*/
+				margin: 0 0 3px 0;
+			}
+			.result_storage .scoreName {
+				width: 60%;
+				font-size: 14px;
+				font-weight: 600;
+			}
+			.result_storage .dataValue {
+				width: 25%;
+				text-align: right;
+				font-size: 14px;
+				font-weight: 600;
+			}
+			.result_storage .score {
+				width: 15%;
+				text-align: right;
+				font-size: 12px;
+				font-weight: 300;
+			}
+			.result_storage .dataName {
+				font-size: 12px;
+				font-weight: 300;
+			}
+
+		#result_municipal_total {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			border-top: 1px solid rgba(34, 36, 38, 0.15);
+			margin: 24px 0 0 0;
+			padding: 24px 0 0 0;
+		}
+
+			#result_municipal_total .scoreName {
+				width: 60%;
+				font-size: 12px;
+				font-weight: 600;
+			}
+
+				
+
+			#result_municipal_total .score {
+				width: 40%;
+				font-size: 12px;
+				font-weight: 300;
+				text-align: right;
+			}
+
+			#dataInfo_municipal_legend {
+				font-size: 12px;
+				font-weight: 300;
+				line-height: 2.5;
+				color: #444444;
+				cursor: pointer;
+			}
+
+			#description_municipal_total {
+				margin: 12px 0 0 0;
+			}
 
 		.unlayered {
 			color: #ccc;
 		}
 
-			.score {
-				width: 0px;
-				/*padding: 0 10px 0 0;*/
-				flex-grow: 1;
-
-				font-size: 24px;
-				font-weight: 300;
-				/*text-align: right*/
 			}
 			#result_municipal_total .score {
 				font-weight: 600;
@@ -525,33 +747,14 @@ div, input {
 				width: 0px;
 				flex-grow: 2;
 			}
-				.scoreName {
-					display: flex;
-					align-items: center;
-
-					height: 36px;
-					font-size: 16px;
-					font-weight: 400;
-				}
-
-					#result_municipal_total .scoreName {
-						font-weight: 600;
-					}
 
 				.dataInfo {
 					margin: 6px 0 0 0;
 				}
 
-				.unlayered .dataInfo {
+				.unlayered .score, .unlayered .dataName {
 					display: none;
 				}
-
-					.dataName {
-						font-weight: 600;
-					}
-
-					.dataValue {
-					}
 
 
 
@@ -592,6 +795,23 @@ div, input {
 				top: 0;
 				text-align: right;
 			}
+
+
+
+/* ------------ #popup_modal, .ui.modal ------------ */
+
+
+#popup_modal {
+
+}
+
+	#popup_modal .header {
+		font-family: "Spoqa Han Sans";
+	}
+
+
+
+
 
 
 /* ------------ footer (of html and #legendInfo) ------------ */
@@ -646,9 +866,9 @@ footer {
 	position: absolute;
 	font-weight: 400;
 
-	font-size: 14px;
+	/*font-size: 14px;*/
 }
-	#title_footer, #legendInfo_footer {
+	/*#title_footer, #legendInfo_footer {
 		position: absolute;
 	}
 	#title_footer {
@@ -684,8 +904,20 @@ footer {
 
 	#about:hover, #home:hover, #legend_point:hover, #legend_party:hover, #legend_elected:hover, #legend_point_dataInfo:hover, #legend_party_dataInfo:hover, #legend_elected_dataInfo:hover {
 		cursor: pointer;
-	}
+	}*/
 
+
+	#lab2050_logo {
+		position: absolute;
+		bottom: 0px;
+		left: 36px;
+		width: 60px;
+		height: 60px;
+	}
+		#lab2050_logo img {
+			width: 100%;
+			height: 100%;
+		}
 
 @media all and (max-width:1023px) { /* tablet layout */
 

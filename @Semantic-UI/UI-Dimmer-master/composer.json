@@ -1,6 +1,6 @@
 {
-  "name": "semantic/icon",
-  "description": "Single component release of icon",
+  "name": "semantic/dimmer",
+  "description": "Single component release of dimmer",
   "homepage": "http://www.semantic-ui.com",
   "authors": [{
     "name": "Jack Lukic",

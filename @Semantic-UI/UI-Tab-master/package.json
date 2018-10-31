@@ -1,14 +1,14 @@
 {
-  "name": "semantic-ui-icon",
+  "name": "semantic-ui-tab",
   "version": "2.4.1",
-  "title": "Semantic UI - Icon",
-  "description": "Single component release of icon",
+  "title": "Semantic UI - Tab",
+  "description": "Single component release of tab",
   "homepage": "http://www.semantic-ui.com",
   "author": "Jack Lukic <jack@semantic-ui.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Semantic-Org/UI-Icon.git"
+    "url": "https://github.com/Semantic-Org/UI-Tab.git"
   },
   "bugs": {
     "url": "https://github.com/Semantic-Org/Semantic-UI/issues"

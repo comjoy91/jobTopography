@@ -1,6 +1,6 @@
 {
-  "name": "semantic-ui-icon",
-  "description": "Icon - Semantic UI",
+  "name": "semantic-ui-tab",
+  "description": "Tab - Semantic UI",
   "homepage": "http://www.semantic-ui.com",
   "author": {
     "name": "Jack Lukic",
@@ -9,5 +9,5 @@
   "ignore": ["docs", "node", "server", "spec", "src", "test"],
   "keywords": ["semantic", "ui", "css3", "framework"],
   "license": ["http://semantic-ui.mit-license.org/"],
-  "main": ["icon.css"]
+  "main": ["tab.css"]
 }

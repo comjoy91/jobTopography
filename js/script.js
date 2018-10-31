@@ -187,27 +187,34 @@ var tooltip = d3.select("body").append("div")
 	.attr("class", "tooltip")
 	.style("display", "none");
 function districtTooltip(e) { //build tooltip for mouseover layer
-	tooltip.html(e.target.feature.properties.province_name + " <b>" + e.target.feature.properties.municipal_name + "</b><br> 현재 점수: " + e.target.feature.properties.score_total + "/100")
-		.style("left", (e.containerPoint.x - 34) + "px")
-		.style("top", (e.containerPoint.y - 12) + "px");
+	tooltip.html( e.target.feature.properties.province_name + " <b>" 
+			+ e.target.feature.properties.municipal_name + "</b><br> 현재 Total: " 
+			+ d3.format(".1f")(e.target.feature.properties.score_total) + " / 100.0"
+		)
+		.style("left", (e.containerPoint.x - $(".tooltip").innerWidth()/2) + "px")
+		.style("top", (e.containerPoint.y) + "px");
+		// .css("transition")
 }
-function resetHighlight(e) { //reset geojson(=map drawn by geoJSON) style just like it had been initialized
-	if (e.target != current_municipal_layer) {
-		e.target.setStyle({
+
+function resetHighlight_layer(_layer) {
+	if (_layer != current_municipal_layer) {
+		_layer.setStyle({
 			weight: 0.5,
 			opacity: 0.15,
 			color: 'blue'
 		});
 		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-			e.target.bringToBack();
+			_layer.bringToBack();
 			if (current_municipal_layer) {
 				current_municipal_layer.bringToFront();
 			}
 		}
-	}
-		
+	}	
 	// info.update();
 	tooltip.style("display", "none");
+}
+function resetHighlight(e) { //reset geojson(=map drawn by geoJSON) style just like it had been initialized
+	resetHighlight_layer(e.target);
 }
 
 function municipal_toProvince_layer(_layer) {
@@ -217,7 +224,7 @@ function municipal_toProvince_prop(_prop) {
 	return layer_province_border.getLayers()[_prop.province_index].feature.properties;
 }
 
-function zoomToFeature_layer(_layer) {
+function cancel_selectingHighlight_layer() {
 	if (current_municipal_layer) {
 		current_municipal_layer.setStyle({
 			weight: 0.5,
@@ -230,11 +237,13 @@ function zoomToFeature_layer(_layer) {
 	}
 	if (current_province_layer)
 		layer_province_border.resetStyle(current_province_layer);
-
+}
+function zoomToFeature_layer(_layer) {
+	cancel_selectingHighlight_layer();
 
 	current_municipal_layer = _layer;
 	current_province_layer = municipal_toProvince_layer(_layer)
-	map.fitBounds(current_province_layer.getBounds(), {paddingBottomRight: [380, 0]});
+	map.fitBounds(current_province_layer.getBounds(), {paddingBottomRight: [382, 32], paddingTopLeft: [254, 32]});
 	current_province_layer.setStyle({
 		color: '#248'
 	});

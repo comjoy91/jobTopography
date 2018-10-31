@@ -1,6 +1,6 @@
 {
-  "name": "semantic/icon",
-  "description": "Single component release of icon",
+  "name": "semantic/tab",
+  "description": "Single component release of tab",
   "homepage": "http://www.semantic-ui.com",
   "authors": [{
     "name": "Jack Lukic",

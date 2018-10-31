@@ -3,9 +3,9 @@ var mbAttr = '<a href="https://www.maptiler.com/license/maps/" target="_blank">Â
 	mbUrl = 'https://maps.tilehosting.com/styles/positron/{z}/{x}/{y}@2x.png?key=JrAhm6tBG7Y3CCaBBIMe';
 var grayscale = L.tileLayer(mbUrl, {attribution: mbAttr});
 
-var map = L.map('map_background', {layers: [grayscale], zoomControl: false, attributionControl: false, scrollWheelZoom: true}).setView([36, 128], 7);
+var map = L.map('map_background', {layers: [grayscale], zoomControl: false, attributionControl: false, minZoom: 6, scrollWheelZoom: true}).setView([36, 128], 7);
 L.control.attribution({position: 'bottomleft'}).addTo(map);
-L.control.zoom({position: 'bottomleft'}).addTo(map);
+L.control.zoom({position: 'topleft'}).addTo(map);
 
 
 // functions for implementing rawData and score into initial geoJSON data.
@@ -90,6 +90,15 @@ dataInsertion(provinceGeoJSON, provinceData);
 			}
 		});
 
+		$('#municipal_name, #province_name').tab(); // menu tab initialize
+		$('#cancel_selecting').click( function() { // canceling selecting
+			cancel_selectingHighlight_layer();
+			current_municipal_layer = null;
+			change_dataInfo();
+		})
+		$('#layerControl_legend, #dataInfo_municipal_legend').click( function() { // modal popup
+			$('#popup_modal').modal('show');
+		});
 
 		var check_hiringRate_1000 = document.getElementById("check_hiringRate_1000"),  
 			check_mainIndustryPortion = document.getElementById("check_mainIndustryPortion"),
@@ -102,37 +111,51 @@ dataInsertion(provinceGeoJSON, provinceData);
 
 		$("#checkUI_hiringRate_1000").checkbox({
 			onChange: function(){
-				$("#result_municipal_hiringRate_1000").toggleClass("unlayered"); updateScore();
+				$("#result_municipal_hiringRate_1000").toggleClass("unlayered"); 
+				$("#result_province_hiringRate_1000").toggleClass("unlayered"); 
+				updateScore();
 			}
 		});
 		$("#checkUI_mainIndustryPortion").checkbox({
 			onChange: function(){
-				$("#result_municipal_mainIndustryPortion").toggleClass("unlayered"); updateScore();
+				$("#result_municipal_mainIndustryPortion").toggleClass("unlayered"); 
+				$("#result_province_mainIndustryPortion").toggleClass("unlayered"); 
+				updateScore();
 			}
 		});
 		$("#checkUI_rateOf20sInIndustry").checkbox({
 			onChange: function(){
-				$("#result_municipal_rateOf20sInIndustry").toggleClass("unlayered"); updateScore();
+				$("#result_municipal_rateOf20sInIndustry").toggleClass("unlayered"); 
+				$("#result_province_rateOf20sInIndustry").toggleClass("unlayered"); 
+				updateScore();
 			}
 		});
 		$("#checkUI_industryJobCreation").checkbox({
 			onChange: function(){
-				$("#result_municipal_industryJobCreation").toggleClass("unlayered"); updateScore();
+				$("#result_municipal_industryJobCreation").toggleClass("unlayered"); 
+				$("#result_province_industryJobCreation").toggleClass("unlayered"); 
+				updateScore();
 			}
 		});
 		$("#checkUI_incomeRate").checkbox({
 			onChange: function(){
-				$("#result_municipal_incomeRate").toggleClass("unlayered"); updateScore();
+				$("#result_municipal_incomeRate").toggleClass("unlayered"); 
+				$("#result_province_incomeRate").toggleClass("unlayered"); 
+				updateScore();
 			}
 		});
 		$("#checkUI_R_COSTII").checkbox({
 			onChange: function(){
-				$("#result_municipal_R_COSTII").toggleClass("unlayered"); updateScore();
+				$("#result_municipal_R_COSTII").toggleClass("unlayered"); 
+				$("#result_province_R_COSTII").toggleClass("unlayered"); 
+				updateScore();
 			}
 		});
 		$("#checkUI_expertRate").checkbox({
 			onChange: function(){
-				$("#result_municipal_expertRate").toggleClass("unlayered"); updateScore();
+				$("#result_municipal_expertRate").toggleClass("unlayered"); 
+				$("#result_province_expertRate").toggleClass("unlayered"); 
+				updateScore();
 			}
 		});
 
