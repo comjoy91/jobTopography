@@ -7,9 +7,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "0.29%",
 			"hiringRate_1000": "0.09%",
-			"mainIndustryPortion": "34.28%",
+			"mainIndustryPortion": "75.86%",
 			"rateOf20sInIndustry": "19.00%",
-			"industryJobCreation": "18.1%",
+			"industryJobCreation": "",
 			"incomeRate": "68.30%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -27,7 +27,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 12743,
 			"numWorkers_1000": 4148,
 			"mainIndustry_300": "옷, 액세서리",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 21,
@@ -36,9 +37,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "1.79%",
 			"hiringRate_1000": "0.87%",
-			"mainIndustryPortion": "15.75%",
+			"mainIndustryPortion": "21.23%",
 			"rateOf20sInIndustry": "12.60%",
-			"industryJobCreation": "13.3%",
+			"industryJobCreation": "",
 			"incomeRate": "118.40%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -56,7 +57,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 20317,
 			"numWorkers_1000": 9848,
 			"mainIndustry_300": "기타운송장비",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 22,
@@ -65,9 +67,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "1.58%",
 			"hiringRate_1000": "0.36%",
-			"mainIndustryPortion": "21.73%",
+			"mainIndustryPortion": "30.38%",
 			"rateOf20sInIndustry": "13.20%",
-			"industryJobCreation": "14.2%",
+			"industryJobCreation": "",
 			"incomeRate": "128.80%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -85,7 +87,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 11545,
 			"numWorkers_1000": 2626,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 23,
@@ -94,9 +97,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "5.00%",
 			"hiringRate_1000": "3.14%",
-			"mainIndustryPortion": "16.79%",
+			"mainIndustryPortion": "35.00%",
 			"rateOf20sInIndustry": "13.20%",
-			"industryJobCreation": "16.7%",
+			"industryJobCreation": "",
 			"incomeRate": "127.00%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -114,7 +117,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 40917,
 			"numWorkers_1000": 25695,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 24,
@@ -123,9 +127,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "4.35%",
 			"hiringRate_1000": "3.21%",
-			"mainIndustryPortion": "19.12%",
+			"mainIndustryPortion": "40.92%",
 			"rateOf20sInIndustry": "15.30%",
-			"industryJobCreation": "14.7%",
+			"industryJobCreation": "",
 			"incomeRate": "130.10%",
 			"R_COSTII": 7.41,
 			"expertRate": "22.90%",
@@ -143,7 +147,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 20556,
 			"numWorkers_1000": 15162,
 			"mainIndustry_300": "자동차",
-			"factory": "삼성전자 광주사업장, 기아자동차 광주공장, 금호타이어 광주공장, LG이노텍 광주공장"
+			"factory": "삼성전자 광주사업장, 기아자동차 광주공장, 금호타이어 광주공장, LG이노텍 광주공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 25,
@@ -152,9 +157,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "2.35%",
 			"hiringRate_1000": "1.09%",
-			"mainIndustryPortion": "14.36%",
+			"mainIndustryPortion": "23.40%",
 			"rateOf20sInIndustry": "17.70%",
-			"industryJobCreation": "12.8%",
+			"industryJobCreation": "",
 			"incomeRate": "100.50%",
 			"R_COSTII": 14.748,
 			"expertRate": "27.30%",
@@ -172,7 +177,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 11182,
 			"numWorkers_1000": 5195,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": "한국타이어 대전공장"
+			"factory": "한국타이어 대전공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 26,
@@ -181,9 +187,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "17.73%",
 			"hiringRate_1000": "13.54%",
-			"mainIndustryPortion": "28.47%",
+			"mainIndustryPortion": "44.90%",
 			"rateOf20sInIndustry": "13.50%",
-			"industryJobCreation": "11.4%",
+			"industryJobCreation": "",
 			"incomeRate": "104.80%",
 			"R_COSTII": 7.312,
 			"expertRate": "16.10%",
@@ -201,7 +207,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 77972,
 			"numWorkers_1000": 59570,
 			"mainIndustry_300": "자동차",
-			"factory": "현대자동차 울산공장, LG화학 울산공장 1,2"
+			"factory": "현대자동차 울산공장, LG화학 울산공장 1,2",
+			"additional_note": ""
 		},
 		{
 			"code_data": 27,
@@ -210,9 +217,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "10.44%",
 			"hiringRate_1000": "2.35%",
-			"mainIndustryPortion": "12.70%",
+			"mainIndustryPortion": "22.51%",
 			"rateOf20sInIndustry": "18.10%",
-			"industryJobCreation": "15.1%",
+			"industryJobCreation": "",
 			"incomeRate": "132.90%",
 			"R_COSTII": 6.634,
 			"expertRate": "17.50%",
@@ -230,7 +237,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 6350,
 			"numWorkers_1000": 1428,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성전기 세종사업장"
+			"factory": "삼성전기 세종사업장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 31,
@@ -239,9 +247,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "4.70%",
 			"hiringRate_1000": "3.23%",
-			"mainIndustryPortion": "17.46%",
+			"mainIndustryPortion": "64.89%",
 			"rateOf20sInIndustry": "16.20%",
-			"industryJobCreation": "16.1%",
+			"industryJobCreation": "",
 			"incomeRate": "122.00%",
 			"R_COSTII": 17.043,
 			"expertRate": "24.30%",
@@ -259,7 +267,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 190501,
 			"numWorkers_1000": 131151,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 32,
@@ -268,9 +277,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "1.24%",
 			"hiringRate_1000": "0.28%",
-			"mainIndustryPortion": "28.85%",
+			"mainIndustryPortion": "28.23%",
 			"rateOf20sInIndustry": "13.40%",
-			"industryJobCreation": "14.9%",
+			"industryJobCreation": "",
 			"incomeRate": "117.50%",
 			"R_COSTII": 6.163,
 			"expertRate": "15.40%",
@@ -288,7 +297,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 5213,
 			"numWorkers_1000": 1155,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 33,
@@ -297,9 +307,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "7.55%",
 			"hiringRate_1000": "3.05%",
-			"mainIndustryPortion": "13.76%",
+			"mainIndustryPortion": "44.90%",
 			"rateOf20sInIndustry": "16.80%",
-			"industryJobCreation": "14.7%",
+			"industryJobCreation": "",
 			"incomeRate": "115.40%",
 			"R_COSTII": 6.491,
 			"expertRate": "18.00%",
@@ -317,7 +327,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 39580,
 			"numWorkers_1000": 16004,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 34,
@@ -326,9 +337,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "10.70%",
 			"hiringRate_1000": "7.14%",
-			"mainIndustryPortion": "15.26%",
+			"mainIndustryPortion": "39.91%",
 			"rateOf20sInIndustry": "17.00%",
-			"industryJobCreation": "13.8%",
+			"industryJobCreation": "",
 			"incomeRate": "108.10%",
 			"R_COSTII": 6.634,
 			"expertRate": "17.50%",
@@ -346,7 +357,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 75241,
 			"numWorkers_1000": 50207,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 35,
@@ -355,9 +367,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "4.18%",
 			"hiringRate_1000": "2.38%",
-			"mainIndustryPortion": "18.72%",
+			"mainIndustryPortion": "41.87%",
 			"rateOf20sInIndustry": "13.20%",
-			"industryJobCreation": "12.6%",
+			"industryJobCreation": "",
 			"incomeRate": "118.50%",
 			"R_COSTII": 6.439,
 			"expertRate": "16.90%",
@@ -375,7 +387,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 21126,
 			"numWorkers_1000": 12049,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 36,
@@ -384,9 +397,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "4.72%",
 			"hiringRate_1000": "2.96%",
-			"mainIndustryPortion": "18.18%",
+			"mainIndustryPortion": "32.63%",
 			"rateOf20sInIndustry": "11.90%",
-			"industryJobCreation": "11.7%",
+			"industryJobCreation": "",
 			"incomeRate": "98.90%",
 			"R_COSTII": 6.064,
 			"expertRate": "12.30%",
@@ -404,7 +417,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 23604,
 			"numWorkers_1000": 14833,
 			"mainIndustry_300": "철강",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 37,
@@ -413,9 +427,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "9.22%",
 			"hiringRate_1000": "5.02%",
-			"mainIndustryPortion": "15.70%",
+			"mainIndustryPortion": "45.01%",
 			"rateOf20sInIndustry": "14.10%",
-			"industryJobCreation": "13.6%",
+			"industryJobCreation": "",
 			"incomeRate": "99.50%",
 			"R_COSTII": 10.251,
 			"expertRate": "12.40%",
@@ -433,7 +447,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 77228,
 			"numWorkers_1000": 42019,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 38,
@@ -442,9 +457,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "8.25%",
 			"hiringRate_1000": "5.50%",
-			"mainIndustryPortion": "18.65%",
+			"mainIndustryPortion": "40.00%",
 			"rateOf20sInIndustry": "13.40%",
-			"industryJobCreation": "13.9%",
+			"industryJobCreation": "",
 			"incomeRate": "107.10%",
 			"R_COSTII": 5.89,
 			"expertRate": "16.60%",
@@ -462,7 +477,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 90468,
 			"numWorkers_1000": 60302,
 			"mainIndustry_300": "기타운송장비",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 39,
@@ -471,9 +487,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "0.19%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "37.70%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "14.50%",
-			"industryJobCreation": "17.6%",
+			"industryJobCreation": "",
 			"incomeRate": "116.70%",
 			"R_COSTII": 6.473,
 			"expertRate": "15.60%",
@@ -491,7 +507,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 363,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "음료",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		}
 	], 
 	"municipals": [
@@ -502,9 +519,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "종로구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "35.60%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "19.10%",
-			"industryJobCreation": "24.6%",
+			"industryJobCreation": "",
 			"incomeRate": "13.00%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -522,7 +539,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 1102,
@@ -531,9 +549,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "중구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "57.52%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "22.10%",
-			"industryJobCreation": "19.5%",
+			"industryJobCreation": "",
 			"incomeRate": "7.80%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -551,7 +569,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1103,
@@ -560,9 +579,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "용산구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "37.97%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "20.20%",
-			"industryJobCreation": "23.9%",
+			"industryJobCreation": "",
 			"incomeRate": "27.60%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -580,7 +599,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1104,
@@ -589,9 +609,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "성동구",
 			"hiringRate_300": "0.30%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "22.26%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "15.90%",
-			"industryJobCreation": "19.2%",
+			"industryJobCreation": "",
 			"incomeRate": "75.50%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -609,7 +629,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 428,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "옷, 액세서리",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1105,
@@ -618,9 +639,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "광진구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "49.10%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "13.90%",
-			"industryJobCreation": "17.7%",
+			"industryJobCreation": "",
 			"incomeRate": "191.10%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -638,7 +659,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1106,
@@ -647,9 +669,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동대문구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "56.24%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.20%",
-			"industryJobCreation": "22.4%",
+			"industryJobCreation": "",
 			"incomeRate": "121.30%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -667,7 +689,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1107,
@@ -676,9 +699,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "중랑구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "66.90%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.30%",
-			"industryJobCreation": "23.9%",
+			"industryJobCreation": "",
 			"incomeRate": "261.10%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -696,7 +719,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1108,
@@ -705,9 +729,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "성북구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "68.81%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "16.00%",
-			"industryJobCreation": "20.4%",
+			"industryJobCreation": "",
 			"incomeRate": "229.10%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -725,7 +749,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1109,
@@ -734,9 +759,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "강북구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "69.69%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.00%",
-			"industryJobCreation": "20.9%",
+			"industryJobCreation": "",
 			"incomeRate": "288.70%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -754,7 +779,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1110,
@@ -763,9 +789,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "도봉구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "57.66%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.40%",
-			"industryJobCreation": "22.1%",
+			"industryJobCreation": "",
 			"incomeRate": "320.60%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -783,7 +809,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1111,
@@ -792,9 +819,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "노원구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "41.13%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "16.20%",
-			"industryJobCreation": "17.7%",
+			"industryJobCreation": "",
 			"incomeRate": "314.20%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -812,7 +839,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1112,
@@ -821,9 +849,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "은평구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "49.10%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.90%",
-			"industryJobCreation": "18.7%",
+			"industryJobCreation": "",
 			"incomeRate": "388.00%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -841,7 +869,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1113,
@@ -850,9 +879,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서대문구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "38.86%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "20.30%",
-			"industryJobCreation": "20.1%",
+			"industryJobCreation": "",
 			"incomeRate": "125.70%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -870,7 +899,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1114,
@@ -879,9 +909,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "마포구",
 			"hiringRate_300": "0.17%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "39.90%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "16.70%",
-			"industryJobCreation": "15.3%",
+			"industryJobCreation": "",
 			"incomeRate": "75.30%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -899,7 +929,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 376,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "옷, 액세서리",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1115,
@@ -908,9 +939,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "양천구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "30.13%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.70%",
-			"industryJobCreation": "16.1%",
+			"industryJobCreation": "",
 			"incomeRate": "312.00%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -928,7 +959,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1116,
@@ -937,9 +969,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "강서구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "19.64%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "17.20%",
-			"industryJobCreation": "18.7%",
+			"industryJobCreation": "",
 			"incomeRate": "112.60%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -957,7 +989,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1117,
@@ -966,9 +999,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "구로구",
 			"hiringRate_300": "0.26%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "16.49%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "17.20%",
-			"industryJobCreation": "14.8%",
+			"industryJobCreation": "",
 			"incomeRate": "87.10%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -986,7 +1019,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 485,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "섬유",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1118,
@@ -995,9 +1029,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "금천구",
 			"hiringRate_300": "1.10%",
 			"hiringRate_1000": "0.71%",
-			"mainIndustryPortion": "21.60%",
+			"mainIndustryPortion": "78.18%",
 			"rateOf20sInIndustry": "17.60%",
-			"industryJobCreation": "15.4%",
+			"industryJobCreation": "",
 			"incomeRate": "39.40%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -1015,7 +1049,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2299,
 			"numWorkers_1000": 1470,
 			"mainIndustry_300": "옷, 액세서리",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1119,
@@ -1024,9 +1059,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영등포구",
 			"hiringRate_300": "0.22%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "18.73%",
+			"mainIndustryPortion": "50.00%",
 			"rateOf20sInIndustry": "21.80%",
-			"industryJobCreation": "15.2%",
+			"industryJobCreation": "",
 			"incomeRate": "24.60%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -1044,7 +1079,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 741,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1120,
@@ -1053,9 +1089,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동작구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "35.98%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "17.20%",
-			"industryJobCreation": "14.3%",
+			"industryJobCreation": "",
 			"incomeRate": "190.10%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -1073,7 +1109,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1121,
@@ -1082,9 +1119,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "관악구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "63.84%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.70%",
-			"industryJobCreation": "17.5%",
+			"industryJobCreation": "",
 			"incomeRate": "266.40%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -1102,7 +1139,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 1122,
@@ -1111,9 +1149,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서초구",
 			"hiringRate_300": "0.29%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "39.87%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "16.90%",
-			"industryJobCreation": "14.0%",
+			"industryJobCreation": "",
 			"incomeRate": "56.20%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -1131,7 +1169,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1175,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "옷, 액세서리",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1123,
@@ -1140,9 +1179,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "강남구",
 			"hiringRate_300": "0.77%",
 			"hiringRate_1000": "0.40%",
-			"mainIndustryPortion": "60.92%",
+			"mainIndustryPortion": "92.21%",
 			"rateOf20sInIndustry": "20.30%",
-			"industryJobCreation": "15.9%",
+			"industryJobCreation": "",
 			"incomeRate": "40.90%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -1160,7 +1199,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 5110,
 			"numWorkers_1000": 2678,
 			"mainIndustry_300": "옷, 액세서리",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1124,
@@ -1169,9 +1209,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "송파구",
 			"hiringRate_300": "0.63%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "30.27%",
+			"mainIndustryPortion": "44.44%",
 			"rateOf20sInIndustry": "19.40%",
-			"industryJobCreation": "17.1%",
+			"industryJobCreation": "",
 			"incomeRate": "109.80%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -1189,7 +1229,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1706,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "화학",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 1125,
@@ -1198,9 +1239,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "강동구",
 			"hiringRate_300": "0.37%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "32.90%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "21.70%",
-			"industryJobCreation": "15.8%",
+			"industryJobCreation": "",
 			"incomeRate": "187.30%",
 			"R_COSTII": 16.074,
 			"expertRate": "27.70%",
@@ -1218,7 +1259,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 423,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "옷, 액세서리",
-			"factory": ""
+			"factory": "",
+			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2015년에 새로 집계됩니다."
 		},
 		{
 			"code_data": 2101,
@@ -1227,9 +1269,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "중구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "46.43%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "14.10%",
-			"industryJobCreation": "12.8%",
+			"industryJobCreation": "",
 			"incomeRate": "16.70%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1247,7 +1289,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2102,
@@ -1256,9 +1299,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "69.64%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.30%",
-			"industryJobCreation": "14.2%",
+			"industryJobCreation": "",
 			"incomeRate": "86.40%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1276,7 +1319,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2103,
@@ -1285,9 +1329,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "39.22%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.20%",
-			"industryJobCreation": "16.9%",
+			"industryJobCreation": "",
 			"incomeRate": "45.60%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1305,7 +1349,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2104,
@@ -1314,9 +1359,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영도구",
 			"hiringRate_300": "4.01%",
 			"hiringRate_1000": "4.01%",
-			"mainIndustryPortion": "35.05%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "8.30%",
-			"industryJobCreation": "13.1%",
+			"industryJobCreation": "",
 			"incomeRate": "99.90%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1334,7 +1379,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1291,
 			"numWorkers_1000": 1291,
 			"mainIndustry_300": "기타운송장비",
-			"factory": ""
+			"factory": "한진중공업 영도조선소",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2105,
@@ -1343,9 +1389,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "부산진구",
 			"hiringRate_300": "0.27%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "23.73%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "12.70%",
-			"industryJobCreation": "24.5%",
+			"industryJobCreation": "",
 			"incomeRate": "129.90%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1363,7 +1409,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 379,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "인쇄",
-			"factory": ""
+			"factory": "",
+			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2016년에 새로 집계됩니다."
 		},
 		{
 			"code_data": 2106,
@@ -1372,9 +1419,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동래구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "34.42%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.00%",
-			"industryJobCreation": "14.3%",
+			"industryJobCreation": "",
 			"incomeRate": "222.80%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1392,7 +1439,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2107,
@@ -1401,9 +1449,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남구",
 			"hiringRate_300": "1.26%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.62%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "14.10%",
-			"industryJobCreation": "13.1%",
+			"industryJobCreation": "",
 			"incomeRate": "142.00%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1421,7 +1469,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 780,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "철강",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2108,
@@ -1430,9 +1479,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "북구",
 			"hiringRate_300": "0.88%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "32.65%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "9.90%",
-			"industryJobCreation": "19.1%",
+			"industryJobCreation": "",
 			"incomeRate": "342.70%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1450,7 +1499,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 362,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "옷, 액세서리",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2109,
@@ -1459,9 +1509,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "해운대구",
 			"hiringRate_300": "1.69%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "17.50%",
+			"mainIndustryPortion": "30.18%",
 			"rateOf20sInIndustry": "18.80%",
-			"industryJobCreation": "13.1%",
+			"industryJobCreation": "",
 			"incomeRate": "219.40%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1479,7 +1529,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1812,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2110,
@@ -1488,9 +1539,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "사하구",
 			"hiringRate_300": "1.05%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "14.28%",
+			"mainIndustryPortion": "34.29%",
 			"rateOf20sInIndustry": "11.70%",
-			"industryJobCreation": "12.0%",
+			"industryJobCreation": "",
 			"incomeRate": "143.30%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1508,7 +1559,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 934,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "철강",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2111,
@@ -1517,9 +1569,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "금정구",
 			"hiringRate_300": "1.29%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.47%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "10.80%",
-			"industryJobCreation": "14.3%",
+			"industryJobCreation": "",
 			"incomeRate": "149.20%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1537,7 +1589,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 927,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2112,
@@ -1546,9 +1599,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "강서구",
 			"hiringRate_300": "11.79%",
 			"hiringRate_1000": "8.31%",
-			"mainIndustryPortion": "20.41%",
+			"mainIndustryPortion": "29.35%",
 			"rateOf20sInIndustry": "13.30%",
-			"industryJobCreation": "12.0%",
+			"industryJobCreation": "",
 			"incomeRate": "42.40%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1566,7 +1619,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 12145,
 			"numWorkers_1000": 8557,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "르노삼성자동차 부산공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2113,
@@ -1575,9 +1629,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "연제구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "34.96%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.10%",
-			"industryJobCreation": "17.7%",
+			"industryJobCreation": "",
 			"incomeRate": "82.60%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1595,7 +1649,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2114,
@@ -1604,9 +1659,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "수영구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "30.57%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "17.00%",
-			"industryJobCreation": "21.0%",
+			"industryJobCreation": "",
 			"incomeRate": "226.40%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1624,7 +1679,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2115,
@@ -1633,9 +1689,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "사상구",
 			"hiringRate_300": "0.81%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.67%",
+			"mainIndustryPortion": "64.20%",
 			"rateOf20sInIndustry": "11.90%",
-			"industryJobCreation": "13.1%",
+			"industryJobCreation": "",
 			"incomeRate": "81.20%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1653,7 +1709,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 860,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2116,
@@ -1662,9 +1719,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "기장군",
 			"hiringRate_300": "1.63%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "27.19%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "13.60%",
-			"industryJobCreation": "12.9%",
+			"industryJobCreation": "",
 			"incomeRate": "94.60%",
 			"R_COSTII": 6.638,
 			"expertRate": "20.80%",
@@ -1682,7 +1739,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 827,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2201,
@@ -1691,9 +1749,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "중구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "35.16%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "17.10%",
-			"industryJobCreation": "15.6%",
+			"industryJobCreation": "",
 			"incomeRate": "41.90%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -1711,7 +1769,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2202,
@@ -1720,9 +1779,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "13.90%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "15.60%",
-			"industryJobCreation": "20.2%",
+			"industryJobCreation": "",
 			"incomeRate": "141.50%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -1740,7 +1799,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2203,
@@ -1749,9 +1809,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "49.31%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "8.40%",
-			"industryJobCreation": "13.3%",
+			"industryJobCreation": "",
 			"incomeRate": "92.00%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -1769,7 +1829,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2204,
@@ -1778,9 +1839,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "17.65%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "20.50%",
-			"industryJobCreation": "16.7%",
+			"industryJobCreation": "",
 			"incomeRate": "110.80%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -1798,7 +1859,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2205,
@@ -1807,9 +1869,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "북구",
 			"hiringRate_300": "0.47%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "43.54%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "11.20%",
-			"industryJobCreation": "14.4%",
+			"industryJobCreation": "",
 			"incomeRate": "120.10%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -1827,7 +1889,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 580,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전기장비",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2206,
@@ -1836,9 +1899,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "수성구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.11%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "13.80%",
-			"industryJobCreation": "13.9%",
+			"industryJobCreation": "",
 			"incomeRate": "231.30%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -1856,7 +1919,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2207,
@@ -1865,9 +1929,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "달서구",
 			"hiringRate_300": "2.06%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.95%",
+			"mainIndustryPortion": "31.55%",
 			"rateOf20sInIndustry": "14.90%",
-			"industryJobCreation": "11.8%",
+			"industryJobCreation": "",
 			"incomeRate": "128.20%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -1885,7 +1949,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 3491,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2208,
@@ -1894,9 +1959,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "달성군",
 			"hiringRate_300": "9.89%",
 			"hiringRate_1000": "3.47%",
-			"mainIndustryPortion": "22.62%",
+			"mainIndustryPortion": "32.25%",
 			"rateOf20sInIndustry": "13.50%",
-			"industryJobCreation": "16.3%",
+			"industryJobCreation": "",
 			"incomeRate": "114.50%",
 			"R_COSTII": 6.248,
 			"expertRate": "18.70%",
@@ -1914,7 +1979,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 7474,
 			"numWorkers_1000": 2626,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2301,
@@ -1923,9 +1989,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "중구",
 			"hiringRate_300": "6.40%",
 			"hiringRate_1000": "5.65%",
-			"mainIndustryPortion": "51.03%",
+			"mainIndustryPortion": "88.28%",
 			"rateOf20sInIndustry": "20.70%",
-			"industryJobCreation": "15.5%",
+			"industryJobCreation": "",
 			"incomeRate": "60.10%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -1943,7 +2009,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 4804,
 			"numWorkers_1000": 4240,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2302,
@@ -1952,9 +2019,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동구",
 			"hiringRate_300": "17.75%",
 			"hiringRate_1000": "13.59%",
-			"mainIndustryPortion": "35.35%",
+			"mainIndustryPortion": "50.70%",
 			"rateOf20sInIndustry": "10.40%",
-			"industryJobCreation": "12.4%",
+			"industryJobCreation": "",
 			"incomeRate": "34.90%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -1972,7 +2039,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 4755,
 			"numWorkers_1000": 3641,
 			"mainIndustry_300": "철강",
-			"factory": ""
+			"factory": "두산인프라코어 인천공장, 현대제철 인천공장, 동국제강 인천공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2303,
@@ -1981,9 +2049,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남구",
 			"hiringRate_300": "1.17%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "16.46%",
+			"mainIndustryPortion": "37.61%",
 			"rateOf20sInIndustry": "11.80%",
-			"industryJobCreation": "12.5%",
+			"industryJobCreation": "",
 			"incomeRate": "196.80%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -2001,7 +2069,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1066,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2304,
@@ -2010,9 +2079,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "연수구",
 			"hiringRate_300": "5.61%",
 			"hiringRate_1000": "4.33%",
-			"mainIndustryPortion": "28.46%",
+			"mainIndustryPortion": "55.97%",
 			"rateOf20sInIndustry": "30.60%",
-			"industryJobCreation": "33.6%",
+			"industryJobCreation": "",
 			"incomeRate": "190.70%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -2030,7 +2099,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 4744,
 			"numWorkers_1000": 3665,
 			"mainIndustry_300": "의약품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2305,
@@ -2039,9 +2109,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남동구",
 			"hiringRate_300": "2.36%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.04%",
+			"mainIndustryPortion": "44.49%",
 			"rateOf20sInIndustry": "13.20%",
-			"industryJobCreation": "14.0%",
+			"industryJobCreation": "",
 			"incomeRate": "93.20%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -2059,7 +2129,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 4498,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2306,
@@ -2068,9 +2139,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "부평구",
 			"hiringRate_300": "12.00%",
 			"hiringRate_1000": "9.93%",
-			"mainIndustryPortion": "35.52%",
+			"mainIndustryPortion": "82.75%",
 			"rateOf20sInIndustry": "10.30%",
-			"industryJobCreation": "19.5%",
+			"industryJobCreation": "",
 			"incomeRate": "138.30%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -2088,7 +2159,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 15268,
 			"numWorkers_1000": 12632,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "한국GM부평공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2307,
@@ -2097,9 +2169,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "계양구",
 			"hiringRate_300": "1.39%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "14.74%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "16.00%",
-			"industryJobCreation": "15.7%",
+			"industryJobCreation": "",
 			"incomeRate": "260.70%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -2117,7 +2189,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 859,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2308,
@@ -2126,9 +2199,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서구",
 			"hiringRate_300": "3.38%",
 			"hiringRate_1000": "1.04%",
-			"mainIndustryPortion": "18.35%",
+			"mainIndustryPortion": "30.77%",
 			"rateOf20sInIndustry": "10.60%",
-			"industryJobCreation": "17.6%",
+			"industryJobCreation": "",
 			"incomeRate": "128.70%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -2146,7 +2219,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 4923,
 			"numWorkers_1000": 1517,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2309,
@@ -2155,9 +2229,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "강화군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "33.99%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.40%",
-			"industryJobCreation": "19.9%",
+			"industryJobCreation": "",
 			"incomeRate": "135.90%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -2175,7 +2249,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2310,
@@ -2184,9 +2259,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "옹진군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "45.99%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "3.80%",
-			"industryJobCreation": "20.4%",
+			"industryJobCreation": "",
 			"incomeRate": "213.60%",
 			"R_COSTII": 8.286,
 			"expertRate": "18.70%",
@@ -2204,7 +2279,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2401,
@@ -2213,9 +2289,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "35.80%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "16.80%",
-			"industryJobCreation": "22.7%",
+			"industryJobCreation": "",
 			"incomeRate": "68.20%",
 			"R_COSTII": 7.41,
 			"expertRate": "22.90%",
@@ -2233,7 +2309,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2402,
@@ -2242,9 +2319,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서구",
 			"hiringRate_300": "6.05%",
 			"hiringRate_1000": "6.05%",
-			"mainIndustryPortion": "74.23%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "10.10%",
-			"industryJobCreation": "10.2%",
+			"industryJobCreation": "",
 			"incomeRate": "103.00%",
 			"R_COSTII": 7.41,
 			"expertRate": "22.90%",
@@ -2262,7 +2339,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 7204,
 			"numWorkers_1000": 7204,
 			"mainIndustry_300": "자동차",
-			"factory": "기아자동차 광주공장"
+			"factory": "기아자동차 광주공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2403,
@@ -2271,9 +2349,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.83%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "14.70%",
-			"industryJobCreation": "13.5%",
+			"industryJobCreation": "",
 			"incomeRate": "245.30%",
 			"R_COSTII": 7.41,
 			"expertRate": "22.90%",
@@ -2291,7 +2369,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2404,
@@ -2300,9 +2379,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "북구",
 			"hiringRate_300": "3.77%",
 			"hiringRate_1000": "2.91%",
-			"mainIndustryPortion": "30.20%",
+			"mainIndustryPortion": "77.19%",
 			"rateOf20sInIndustry": "21.30%",
-			"industryJobCreation": "13.7%",
+			"industryJobCreation": "",
 			"incomeRate": "148.60%",
 			"R_COSTII": 7.41,
 			"expertRate": "22.90%",
@@ -2320,7 +2399,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 4768,
 			"numWorkers_1000": 3675,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2405,
@@ -2329,9 +2409,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "광산구",
 			"hiringRate_300": "6.76%",
 			"hiringRate_1000": "3.38%",
-			"mainIndustryPortion": "17.95%",
+			"mainIndustryPortion": "54.14%",
 			"rateOf20sInIndustry": "14.00%",
-			"industryJobCreation": "15.8%",
+			"industryJobCreation": "",
 			"incomeRate": "134.30%",
 			"R_COSTII": 7.41,
 			"expertRate": "22.90%",
@@ -2349,7 +2429,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 8584,
 			"numWorkers_1000": 4283,
 			"mainIndustry_300": "전기장비",
-			"factory": "삼성전자 광주사업장, 금호타이어 광주공장, LG이노텍 광주공장"
+			"factory": "삼성전자 광주사업장, 금호타이어 광주공장, LG이노텍 광주공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2501,
@@ -2358,9 +2439,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.90%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "15.20%",
-			"industryJobCreation": "16.3%",
+			"industryJobCreation": "",
 			"incomeRate": "63.60%",
 			"R_COSTII": 14.748,
 			"expertRate": "27.30%",
@@ -2378,7 +2459,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2502,
@@ -2387,9 +2469,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "중구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "27.52%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "21.80%",
-			"industryJobCreation": "16.0%",
+			"industryJobCreation": "",
 			"incomeRate": "139.80%",
 			"R_COSTII": 14.748,
 			"expertRate": "27.30%",
@@ -2407,7 +2489,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2503,
@@ -2416,9 +2499,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "15.34%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "20.20%",
-			"industryJobCreation": "15.2%",
+			"industryJobCreation": "",
 			"incomeRate": "118.70%",
 			"R_COSTII": 14.748,
 			"expertRate": "27.30%",
@@ -2436,7 +2519,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2504,
@@ -2445,9 +2529,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "유성구",
 			"hiringRate_300": "2.56%",
 			"hiringRate_1000": "0.94%",
-			"mainIndustryPortion": "21.58%",
+			"mainIndustryPortion": "49.61%",
 			"rateOf20sInIndustry": "22.60%",
-			"industryJobCreation": "12.1%",
+			"industryJobCreation": "",
 			"incomeRate": "118.60%",
 			"R_COSTII": 14.748,
 			"expertRate": "27.30%",
@@ -2465,7 +2549,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 3291,
 			"numWorkers_1000": 1204,
 			"mainIndustry_300": "화학",
-			"factory": "한화 대전공장"
+			"factory": "한화 대전공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2505,
@@ -2474,9 +2559,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "대덕구",
 			"hiringRate_300": "10.49%",
 			"hiringRate_1000": "5.31%",
-			"mainIndustryPortion": "15.96%",
+			"mainIndustryPortion": "32.98%",
 			"rateOf20sInIndustry": "14.10%",
-			"industryJobCreation": "12.0%",
+			"industryJobCreation": "",
 			"incomeRate": "58.20%",
 			"R_COSTII": 14.748,
 			"expertRate": "27.30%",
@@ -2494,7 +2579,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 7891,
 			"numWorkers_1000": 3991,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": "한국타이어 대전공장"
+			"factory": "한국타이어 대전공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2601,
@@ -2503,9 +2589,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "중구",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "18.81%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "17.90%",
-			"industryJobCreation": "13.5%",
+			"industryJobCreation": "",
 			"incomeRate": "229.20%",
 			"R_COSTII": 7.312,
 			"expertRate": "16.10%",
@@ -2523,7 +2609,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2602,
@@ -2532,9 +2619,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남구",
 			"hiringRate_300": "5.27%",
 			"hiringRate_1000": "1.28%",
-			"mainIndustryPortion": "44.54%",
+			"mainIndustryPortion": "50.66%",
 			"rateOf20sInIndustry": "15.50%",
-			"industryJobCreation": "9.8%",
+			"industryJobCreation": "",
 			"incomeRate": "134.30%",
 			"R_COSTII": 7.312,
 			"expertRate": "16.10%",
@@ -2552,7 +2639,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 8052,
 			"numWorkers_1000": 1950,
 			"mainIndustry_300": "화학",
-			"factory": "SK케미칼, 한화케미칼, 삼양사"
+			"factory": "SK케미칼, 한화케미칼, 삼양사",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2603,
@@ -2561,9 +2649,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동구",
 			"hiringRate_300": "34.02%",
 			"hiringRate_1000": "28.82%",
-			"mainIndustryPortion": "86.04%",
+			"mainIndustryPortion": "80.36%",
 			"rateOf20sInIndustry": "12.60%",
-			"industryJobCreation": "14.2%",
+			"industryJobCreation": "",
 			"incomeRate": "76.30%",
 			"R_COSTII": 7.312,
 			"expertRate": "16.10%",
@@ -2581,7 +2669,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 24202,
 			"numWorkers_1000": 20504,
 			"mainIndustry_300": "기타운송장비",
-			"factory": "현대중공업"
+			"factory": "현대중공업",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2604,
@@ -2590,9 +2679,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "북구",
 			"hiringRate_300": "39.16%",
 			"hiringRate_1000": "35.88%",
-			"mainIndustryPortion": "73.08%",
+			"mainIndustryPortion": "96.12%",
 			"rateOf20sInIndustry": "12.90%",
-			"industryJobCreation": "5.1%",
+			"industryJobCreation": "",
 			"incomeRate": "70.60%",
 			"R_COSTII": 7.312,
 			"expertRate": "16.10%",
@@ -2610,7 +2699,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 33786,
 			"numWorkers_1000": 30952,
 			"mainIndustry_300": "자동차",
-			"factory": "현대자동차 울산공장"
+			"factory": "현대자동차 울산공장",
+			"additional_note": "현대자동차 공장에 대한 고용 의존도가 매우 높습니다."
 		},
 		{
 			"code_data": 2605,
@@ -2619,9 +2709,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "울주군",
 			"hiringRate_300": "12.97%",
 			"hiringRate_1000": "6.70%",
-			"mainIndustryPortion": "17.53%",
+			"mainIndustryPortion": "23.36%",
 			"rateOf20sInIndustry": "14.00%",
-			"industryJobCreation": "16.6%",
+			"industryJobCreation": "",
 			"incomeRate": "97.30%",
 			"R_COSTII": 7.312,
 			"expertRate": "16.10%",
@@ -2639,7 +2729,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 11932,
 			"numWorkers_1000": 6164,
 			"mainIndustry_300": "철강",
-			"factory": "LG화학 울산공장 1,2"
+			"factory": "LG화학 울산공장 1,2",
+			"additional_note": ""
 		},
 		{
 			"code_data": 2701,
@@ -2648,9 +2739,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "(전체)",
 			"hiringRate_300": "10.44%",
 			"hiringRate_1000": "2.35%",
-			"mainIndustryPortion": "12.70%",
+			"mainIndustryPortion": "22.51%",
 			"rateOf20sInIndustry": "18.10%",
-			"industryJobCreation": "15.1%",
+			"industryJobCreation": "",
 			"incomeRate": "132.90%",
 			"R_COSTII": 6.634,
 			"expertRate": "17.50%",
@@ -2668,7 +2759,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 6350,
 			"numWorkers_1000": 1428,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성전기 세종사업장"
+			"factory": "삼성전기 세종사업장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3101,
@@ -2677,9 +2769,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "수원시",
 			"hiringRate_300": "3.68%",
 			"hiringRate_1000": "3.15%",
-			"mainIndustryPortion": "45.09%",
+			"mainIndustryPortion": "88.59%",
 			"rateOf20sInIndustry": "23.70%",
-			"industryJobCreation": "14.9%",
+			"industryJobCreation": "",
 			"incomeRate": "85.70%",
 			"R_COSTII": 17.043,
 			"expertRate": "31.60%",
@@ -2697,7 +2789,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 12497,
 			"numWorkers_1000": 10697,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성전자 본사, 삼성전자 수원사업장"
+			"factory": "삼성전자 본사, 삼성전자 수원사업장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3102,
@@ -2706,9 +2799,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "성남시",
 			"hiringRate_300": "1.32%",
 			"hiringRate_1000": "0.30%",
-			"mainIndustryPortion": "27.38%",
+			"mainIndustryPortion": "43.18%",
 			"rateOf20sInIndustry": "18.70%",
-			"industryJobCreation": "16.7%",
+			"industryJobCreation": "",
 			"incomeRate": "96.30%",
 			"R_COSTII": 17.043,
 			"expertRate": "29.40%",
@@ -2726,7 +2819,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 5033,
 			"numWorkers_1000": 1144,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "파리크라상"
+			"factory": "파리크라상",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3103,
@@ -2735,9 +2829,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "의정부시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "30.10%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "14.30%",
-			"industryJobCreation": "19.6%",
+			"industryJobCreation": "",
 			"incomeRate": "196.70%",
 			"R_COSTII": 17.043,
 			"expertRate": "20.80%",
@@ -2755,7 +2849,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3104,
@@ -2764,9 +2859,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "안양시",
 			"hiringRate_300": "0.67%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.15%",
+			"mainIndustryPortion": "46.27%",
 			"rateOf20sInIndustry": "15.50%",
-			"industryJobCreation": "18.0%",
+			"industryJobCreation": "",
 			"incomeRate": "133.10%",
 			"R_COSTII": 17.043,
 			"expertRate": "27.90%",
@@ -2784,7 +2879,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1430,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "기계",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3105,
@@ -2793,9 +2889,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "부천시",
 			"hiringRate_300": "1.16%",
 			"hiringRate_1000": "1.00%",
-			"mainIndustryPortion": "17.11%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "12.00%",
-			"industryJobCreation": "14.6%",
+			"industryJobCreation": "",
 			"incomeRate": "172.00%",
 			"R_COSTII": 17.043,
 			"expertRate": "21.90%",
@@ -2813,7 +2909,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2735,
 			"numWorkers_1000": 2351,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3106,
@@ -2822,9 +2919,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "광명시",
 			"hiringRate_300": "8.11%",
 			"hiringRate_1000": "8.11%",
-			"mainIndustryPortion": "42.06%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "8.70%",
-			"industryJobCreation": "10.3%",
+			"industryJobCreation": "",
 			"incomeRate": "189.50%",
 			"R_COSTII": 17.043,
 			"expertRate": "24.20%",
@@ -2842,7 +2939,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 5878,
 			"numWorkers_1000": 5878,
 			"mainIndustry_300": "자동차",
-			"factory": "기아자동차 소하공장"
+			"factory": "기아자동차 소하공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3107,
@@ -2851,9 +2949,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "평택시",
 			"hiringRate_300": "16.63%",
 			"hiringRate_1000": "11.76%",
-			"mainIndustryPortion": "28.68%",
+			"mainIndustryPortion": "64.04%",
 			"rateOf20sInIndustry": "16.70%",
-			"industryJobCreation": "21.5%",
+			"industryJobCreation": "",
 			"incomeRate": "103.70%",
 			"R_COSTII": 17.043,
 			"expertRate": "15.10%",
@@ -2871,7 +2969,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 30911,
 			"numWorkers_1000": 21857,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성전자 평택사업장, LG전자 평택디지털파크, 금호타이어 평택공장"
+			"factory": "삼성전자 평택사업장, LG전자 평택디지털파크, 금호타이어 평택공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3108,
@@ -2880,9 +2979,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동두천시",
 			"hiringRate_300": "5.26%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "25.36%",
+			"mainIndustryPortion": "67.11%",
 			"rateOf20sInIndustry": "13.10%",
-			"industryJobCreation": "13.8%",
+			"industryJobCreation": "",
 			"incomeRate": "165.90%",
 			"R_COSTII": 17.043,
 			"expertRate": "16.00%",
@@ -2900,7 +2999,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1082,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "의료, 정밀, 시계",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3109,
@@ -2909,9 +3009,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "안산시",
 			"hiringRate_300": "5.54%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "22.45%",
+			"mainIndustryPortion": "48.38%",
 			"rateOf20sInIndustry": "16.60%",
-			"industryJobCreation": "15.1%",
+			"industryJobCreation": "",
 			"incomeRate": "94.20%",
 			"R_COSTII": 17.043,
 			"expertRate": "18.60%",
@@ -2929,7 +3029,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 15169,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "LG이노텍 안산공장"
+			"factory": "LG이노텍 안산공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3110,
@@ -2938,9 +3039,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "고양시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "16.34%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.80%",
-			"industryJobCreation": "19.7%",
+			"industryJobCreation": "",
 			"incomeRate": "239.90%",
 			"R_COSTII": 17.043,
 			"expertRate": "27.50%",
@@ -2958,7 +3059,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3111,
@@ -2967,9 +3069,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "과천시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.63%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "13.40%",
-			"industryJobCreation": "11.8%",
+			"industryJobCreation": "",
 			"incomeRate": "59.30%",
 			"R_COSTII": 17.043,
 			"expertRate": "40.30%",
@@ -2987,7 +3089,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3112,
@@ -2996,9 +3099,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "구리시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "16.80%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.40%",
-			"industryJobCreation": "20.1%",
+			"industryJobCreation": "",
 			"incomeRate": "231.80%",
 			"R_COSTII": 17.043,
 			"expertRate": "23.10%",
@@ -3016,7 +3119,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3113,
@@ -3025,9 +3129,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남양주시",
 			"hiringRate_300": "0.25%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "16.67%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "10.40%",
-			"industryJobCreation": "20.4%",
+			"industryJobCreation": "",
 			"incomeRate": "224.00%",
 			"R_COSTII": 17.043,
 			"expertRate": "19.40%",
@@ -3045,7 +3149,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 309,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 3114,
@@ -3054,9 +3159,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "오산시",
 			"hiringRate_300": "4.50%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "25.71%",
+			"mainIndustryPortion": "56.22%",
 			"rateOf20sInIndustry": "20.10%",
-			"industryJobCreation": "21.2%",
+			"industryJobCreation": "",
 			"incomeRate": "225.10%",
 			"R_COSTII": 17.043,
 			"expertRate": "18.80%",
@@ -3074,7 +3179,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2237,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "LG이노텍 오산공장"
+			"factory": "LG이노텍 오산공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3115,
@@ -3083,9 +3189,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "시흥시",
 			"hiringRate_300": "2.99%",
 			"hiringRate_1000": "0.86%",
-			"mainIndustryPortion": "25.59%",
+			"mainIndustryPortion": "28.76%",
 			"rateOf20sInIndustry": "12.70%",
-			"industryJobCreation": "15.4%",
+			"industryJobCreation": "",
 			"incomeRate": "93.70%",
 			"R_COSTII": 17.043,
 			"expertRate": "13.60%",
@@ -3103,7 +3209,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 4837,
 			"numWorkers_1000": 1393,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3116,
@@ -3112,9 +3219,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "군포시",
 			"hiringRate_300": "2.77%",
 			"hiringRate_1000": "1.43%",
-			"mainIndustryPortion": "15.23%",
+			"mainIndustryPortion": "51.62%",
 			"rateOf20sInIndustry": "13.50%",
-			"industryJobCreation": "17.7%",
+			"industryJobCreation": "",
 			"incomeRate": "188.90%",
 			"R_COSTII": 17.043,
 			"expertRate": "28.60%",
@@ -3132,7 +3239,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2377,
 			"numWorkers_1000": 1233,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3117,
@@ -3141,9 +3249,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "의왕시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "17.64%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.50%",
-			"industryJobCreation": "22.2%",
+			"industryJobCreation": "",
 			"incomeRate": "188.80%",
 			"R_COSTII": 17.043,
 			"expertRate": "28.10%",
@@ -3161,7 +3269,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2016년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 3118,
@@ -3170,9 +3279,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "하남시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "13.27%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.00%",
-			"industryJobCreation": "17.8%",
+			"industryJobCreation": "",
 			"incomeRate": "222.60%",
 			"R_COSTII": 17.043,
 			"expertRate": "22.10%",
@@ -3190,7 +3299,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3119,
@@ -3199,9 +3309,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "용인시",
 			"hiringRate_300": "6.30%",
 			"hiringRate_1000": "5.80%",
-			"mainIndustryPortion": "35.52%",
+			"mainIndustryPortion": "95.87%",
 			"rateOf20sInIndustry": "23.50%",
-			"industryJobCreation": "16.8%",
+			"industryJobCreation": "",
 			"incomeRate": "148.70%",
 			"R_COSTII": 17.043,
 			"expertRate": "34.90%",
@@ -3219,7 +3329,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 16541,
 			"numWorkers_1000": 15226,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성디스플레이 기흥캠퍼스"
+			"factory": "삼성디스플레이 기흥캠퍼스",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3120,
@@ -3228,9 +3339,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "파주시",
 			"hiringRate_300": "15.23%",
 			"hiringRate_1000": "13.46%",
-			"mainIndustryPortion": "34.67%",
+			"mainIndustryPortion": "96.85%",
 			"rateOf20sInIndustry": "14.20%",
-			"industryJobCreation": "13.2%",
+			"industryJobCreation": "",
 			"incomeRate": "146.00%",
 			"R_COSTII": 17.043,
 			"expertRate": "17.30%",
@@ -3248,7 +3359,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 23019,
 			"numWorkers_1000": 20346,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "LG디스플레이 파주사업장, R&D 센터, LG화학 파주공장, LG이노텍 파주공장"
+			"factory": "LG디스플레이 파주사업장, R&D 센터, LG화학 파주공장, LG이노텍 파주공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3121,
@@ -3257,9 +3369,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "이천시",
 			"hiringRate_300": "17.56%",
 			"hiringRate_1000": "15.92%",
-			"mainIndustryPortion": "44.49%",
+			"mainIndustryPortion": "84.40%",
 			"rateOf20sInIndustry": "24.50%",
-			"industryJobCreation": "10.1%",
+			"industryJobCreation": "",
 			"incomeRate": "66.10%",
 			"R_COSTII": 17.043,
 			"expertRate": "12.70%",
@@ -3277,7 +3389,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 16437,
 			"numWorkers_1000": 14907,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "SK하이닉스 이천공장, 현대엘리베이터 이천공장"
+			"factory": "SK하이닉스 이천공장, 현대엘리베이터 이천공장",
+			"additional_note": "300인/1000인 이상 제조업 집중도는 높으나, SK하이닉스의 성장으로 20대 노동자 비중이 높고 과학기술혁신 역량도 높아서, 전체 색깔 반영도는 그다지 높지 않습니다."
 		},
 		{
 			"code_data": 3122,
@@ -3286,9 +3399,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "안성시",
 			"hiringRate_300": "6.87%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.11%",
+			"mainIndustryPortion": "37.85%",
 			"rateOf20sInIndustry": "16.60%",
-			"industryJobCreation": "16.1%",
+			"industryJobCreation": "",
 			"incomeRate": "81.60%",
 			"R_COSTII": 17.043,
 			"expertRate": "12.00%",
@@ -3306,7 +3419,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 5265,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "기계",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3123,
@@ -3315,9 +3429,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "김포시",
 			"hiringRate_300": "0.26%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "19.38%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "9.60%",
-			"industryJobCreation": "17.4%",
+			"industryJobCreation": "",
 			"incomeRate": "135.40%",
 			"R_COSTII": 17.043,
 			"expertRate": "21.80%",
@@ -3335,7 +3449,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 327,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "종이",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3124,
@@ -3344,9 +3459,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "화성시",
 			"hiringRate_300": "11.73%",
 			"hiringRate_1000": "9.81%",
-			"mainIndustryPortion": "16.30%",
+			"mainIndustryPortion": "59.85%",
 			"rateOf20sInIndustry": "15.50%",
-			"industryJobCreation": "13.9%",
+			"industryJobCreation": "",
 			"incomeRate": "90.30%",
 			"R_COSTII": 17.043,
 			"expertRate": "22.40%",
@@ -3364,7 +3479,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 43178,
 			"numWorkers_1000": 36119,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성전자 화성사업장, 기아자동차 화성공장"
+			"factory": "삼성전자 화성사업장, 기아자동차 화성공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3125,
@@ -3373,9 +3489,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "광주시",
 			"hiringRate_300": "0.36%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "14.76%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "10.00%",
-			"industryJobCreation": "18.6%",
+			"industryJobCreation": "",
 			"incomeRate": "124.50%",
 			"R_COSTII": 17.043,
 			"expertRate": "17.90%",
@@ -3393,7 +3509,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 403,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "기계",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3126,
@@ -3402,9 +3519,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "양주시",
 			"hiringRate_300": "0.51%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "27.07%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "9.40%",
-			"industryJobCreation": "14.7%",
+			"industryJobCreation": "",
 			"incomeRate": "118.30%",
 			"R_COSTII": 17.043,
 			"expertRate": "15.40%",
@@ -3422,7 +3539,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 349,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3127,
@@ -3431,9 +3549,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "포천시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "23.22%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.10%",
-			"industryJobCreation": "18.3%",
+			"industryJobCreation": "",
 			"incomeRate": "71.90%",
 			"R_COSTII": 17.043,
 			"expertRate": "9.10%",
@@ -3451,7 +3569,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3128,
@@ -3460,9 +3579,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "여주시",
 			"hiringRate_300": "1.59%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "33.01%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "11.40%",
-			"industryJobCreation": "16.2%",
+			"industryJobCreation": "",
 			"incomeRate": "111.50%",
 			"R_COSTII": 17.043,
 			"expertRate": "12.80%",
@@ -3480,7 +3599,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 487,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "비금속",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3129,
@@ -3489,9 +3609,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "연천군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "28.00%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "7.00%",
-			"industryJobCreation": "18.6%",
+			"industryJobCreation": "",
 			"incomeRate": "144.90%",
 			"R_COSTII": 17.043,
 			"expertRate": "10.90%",
@@ -3509,7 +3629,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3130,
@@ -3518,9 +3639,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "가평군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "42.53%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.20%",
-			"industryJobCreation": "23.8%",
+			"industryJobCreation": "",
 			"incomeRate": "127.20%",
 			"R_COSTII": 17.043,
 			"expertRate": "12.90%",
@@ -3538,7 +3659,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3131,
@@ -3547,9 +3669,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "양평군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "28.76%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.30%",
-			"industryJobCreation": "18.9%",
+			"industryJobCreation": "",
 			"incomeRate": "208.70%",
 			"R_COSTII": 17.043,
 			"expertRate": "14.50%",
@@ -3567,7 +3689,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3201,
@@ -3576,9 +3699,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "춘천시",
 			"hiringRate_300": "0.39%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "25.28%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "17.50%",
-			"industryJobCreation": "20.0%",
+			"industryJobCreation": "",
 			"incomeRate": "102.80%",
 			"R_COSTII": 6.163,
 			"expertRate": "20.60%",
@@ -3596,7 +3719,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 300,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "의료, 정밀, 시계",
-			"factory": ""
+			"factory": "",
+			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2016년에 새로 집계됩니다."
 		},
 		{
 			"code_data": 3202,
@@ -3605,9 +3729,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "원주시",
 			"hiringRate_300": "2.94%",
 			"hiringRate_1000": "1.06%",
-			"mainIndustryPortion": "21.41%",
+			"mainIndustryPortion": "45.92%",
 			"rateOf20sInIndustry": "14.90%",
-			"industryJobCreation": "15.4%",
+			"industryJobCreation": "",
 			"incomeRate": "101.90%",
 			"R_COSTII": 6.163,
 			"expertRate": "22.20%",
@@ -3625,7 +3749,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 3201,
 			"numWorkers_1000": 1155,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3203,
@@ -3634,9 +3759,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "강릉시",
 			"hiringRate_300": "0.86%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "42.34%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "14.60%",
-			"industryJobCreation": "15.8%",
+			"industryJobCreation": "",
 			"incomeRate": "149.60%",
 			"R_COSTII": 6.163,
 			"expertRate": "15.30%",
@@ -3654,7 +3779,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 519,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "비금속",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3204,
@@ -3663,9 +3789,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "동해시",
 			"hiringRate_300": "1.60%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "24.36%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "6.40%",
-			"industryJobCreation": "7.7%",
+			"industryJobCreation": "",
 			"incomeRate": "151.70%",
 			"R_COSTII": 6.163,
 			"expertRate": "17.30%",
@@ -3683,7 +3809,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 369,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "비금속",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3205,
@@ -3692,9 +3819,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "태백시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "27.50%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "7.70%",
-			"industryJobCreation": "16.0%",
+			"industryJobCreation": "",
 			"incomeRate": "159.80%",
 			"R_COSTII": 6.163,
 			"expertRate": "12.60%",
@@ -3712,7 +3839,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3206,
@@ -3721,9 +3849,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "속초시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "82.78%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.70%",
-			"industryJobCreation": "13.4%",
+			"industryJobCreation": "",
 			"incomeRate": "194.20%",
 			"R_COSTII": 6.163,
 			"expertRate": "15.70%",
@@ -3741,7 +3869,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3207,
@@ -3750,9 +3879,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "삼척시",
 			"hiringRate_300": "2.20%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "46.44%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "7.50%",
-			"industryJobCreation": "10.4%",
+			"industryJobCreation": "",
 			"incomeRate": "106.20%",
 			"R_COSTII": 6.163,
 			"expertRate": "13.50%",
@@ -3770,7 +3899,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 414,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "비금속",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3208,
@@ -3779,9 +3909,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "홍천군",
 			"hiringRate_300": "2.34%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "32.62%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "17.90%",
-			"industryJobCreation": "11.8%",
+			"industryJobCreation": "",
 			"incomeRate": "99.20%",
 			"R_COSTII": 6.163,
 			"expertRate": "8.70%",
@@ -3799,7 +3929,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 410,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "음료",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3209,
@@ -3808,9 +3939,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "횡성군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "29.43%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "14.70%",
-			"industryJobCreation": "12.2%",
+			"industryJobCreation": "",
 			"incomeRate": "87.10%",
 			"R_COSTII": 6.163,
 			"expertRate": "8.40%",
@@ -3828,7 +3959,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2016년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 3210,
@@ -3837,9 +3969,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영월군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "50.92%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "7.60%",
-			"industryJobCreation": "17.6%",
+			"industryJobCreation": "",
 			"incomeRate": "109.30%",
 			"R_COSTII": 6.163,
 			"expertRate": "9.70%",
@@ -3857,7 +3989,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 3211,
@@ -3866,9 +3999,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "평창군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "30.58%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "7.20%",
-			"industryJobCreation": "11.9%",
+			"industryJobCreation": "",
 			"incomeRate": "89.40%",
 			"R_COSTII": 6.163,
 			"expertRate": "8.20%",
@@ -3886,7 +4019,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3212,
@@ -3895,9 +4029,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "정선군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "30.83%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "6.20%",
-			"industryJobCreation": "16.1%",
+			"industryJobCreation": "",
 			"incomeRate": "64.00%",
 			"R_COSTII": 6.163,
 			"expertRate": "9.40%",
@@ -3915,7 +4049,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3213,
@@ -3924,9 +4059,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "철원군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "42.78%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.00%",
-			"industryJobCreation": "12.9%",
+			"industryJobCreation": "",
 			"incomeRate": "204.20%",
 			"R_COSTII": 6.163,
 			"expertRate": "9.90%",
@@ -3944,7 +4079,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3214,
@@ -3953,9 +4089,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "화천군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "63.41%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "5.60%",
-			"industryJobCreation": "15.6%",
+			"industryJobCreation": "",
 			"incomeRate": "245.80%",
 			"R_COSTII": 6.163,
 			"expertRate": "7.90%",
@@ -3973,7 +4109,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3215,
@@ -3982,9 +4119,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "양구군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "53.15%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "7.90%",
-			"industryJobCreation": "17.7%",
+			"industryJobCreation": "",
 			"incomeRate": "223.90%",
 			"R_COSTII": 6.163,
 			"expertRate": "9.40%",
@@ -4002,7 +4139,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3216,
@@ -4011,9 +4149,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "인제군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "71.16%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "7.20%",
-			"industryJobCreation": "12.8%",
+			"industryJobCreation": "",
 			"incomeRate": "219.90%",
 			"R_COSTII": 6.163,
 			"expertRate": "11.80%",
@@ -4031,7 +4169,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3217,
@@ -4040,9 +4179,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "고성군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "69.29%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "6.50%",
-			"industryJobCreation": "15.6%",
+			"industryJobCreation": "",
 			"incomeRate": "99.80%",
 			"R_COSTII": 6.163,
 			"expertRate": "8.90%",
@@ -4060,7 +4199,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3218,
@@ -4069,9 +4209,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "양양군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "52.36%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "5.80%",
-			"industryJobCreation": "14.1%",
+			"industryJobCreation": "",
 			"incomeRate": "141.00%",
 			"R_COSTII": 6.163,
 			"expertRate": "9.00%",
@@ -4089,7 +4229,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3301,
@@ -4098,9 +4239,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "청주시",
 			"hiringRate_300": "10.51%",
 			"hiringRate_1000": "6.12%",
-			"mainIndustryPortion": "25.57%",
+			"mainIndustryPortion": "52.24%",
 			"rateOf20sInIndustry": "18.90%",
-			"industryJobCreation": "12.0%",
+			"industryJobCreation": "",
 			"incomeRate": "142.00%",
 			"R_COSTII": 6.491,
 			"expertRate": "17.20%",
@@ -4118,7 +4259,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 27497,
 			"numWorkers_1000": 16004,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "LG전자 청주사업장, LG화학 청주공장 1,2, LG이노텍 청주공장"
+			"factory": "LG전자 청주사업장, LG화학 청주공장 1,2, LG이노텍 청주공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3302,
@@ -4127,9 +4269,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "충주시",
 			"hiringRate_300": "1.76%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "17.34%",
+			"mainIndustryPortion": "70.45%",
 			"rateOf20sInIndustry": "17.10%",
-			"industryJobCreation": "20.2%",
+			"industryJobCreation": "",
 			"incomeRate": "128.00%",
 			"R_COSTII": 6.491,
 			"expertRate": "17.60%",
@@ -4147,7 +4289,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1126,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "금속가공",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3303,
@@ -4156,9 +4299,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "제천시",
 			"hiringRate_300": "0.77%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "28.02%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "15.60%",
-			"industryJobCreation": "18.0%",
+			"industryJobCreation": "",
 			"incomeRate": "151.80%",
 			"R_COSTII": 6.491,
 			"expertRate": "13.90%",
@@ -4176,7 +4319,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 303,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2016년에 새로 집계됩니다."
 		},
 		{
 			"code_data": 3304,
@@ -4185,9 +4329,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "보은군",
 			"hiringRate_300": "18.26%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "29.89%",
+			"mainIndustryPortion": "51.42%",
 			"rateOf20sInIndustry": "16.40%",
-			"industryJobCreation": "7.8%",
+			"industryJobCreation": "",
 			"incomeRate": "75.60%",
 			"R_COSTII": 6.491,
 			"expertRate": "6.70%",
@@ -4205,7 +4349,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1458,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "화학",
-			"factory": ""
+			"factory": "",
+			"additional_note": "이름 있는 대공장은 없으나 300인 이상 대공장 종사자의 비중이 높고, 이 종사자들은 대부분 다른 지역에 거주하는 것으로 보입니다."
 		},
 		{
 			"code_data": 3305,
@@ -4214,9 +4359,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "옥천군",
 			"hiringRate_300": "2.85%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.06%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "10.80%",
-			"industryJobCreation": "11.5%",
+			"industryJobCreation": "",
 			"incomeRate": "92.20%",
 			"R_COSTII": 6.491,
 			"expertRate": "10.80%",
@@ -4234,7 +4379,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 404,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "기계",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3306,
@@ -4243,9 +4389,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영동군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "27.02%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "8.70%",
-			"industryJobCreation": "8.6%",
+			"industryJobCreation": "",
 			"incomeRate": "127.10%",
 			"R_COSTII": 6.491,
 			"expertRate": "8.70%",
@@ -4263,7 +4409,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3307,
@@ -4272,9 +4419,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "진천군",
 			"hiringRate_300": "12.52%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "18.79%",
+			"mainIndustryPortion": "36.82%",
 			"rateOf20sInIndustry": "15.90%",
-			"industryJobCreation": "14.8%",
+			"industryJobCreation": "",
 			"incomeRate": "59.40%",
 			"R_COSTII": 6.491,
 			"expertRate": "8.40%",
@@ -4292,7 +4439,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 5085,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3308,
@@ -4301,9 +4449,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "괴산군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.67%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.50%",
-			"industryJobCreation": "14.9%",
+			"industryJobCreation": "",
 			"incomeRate": "76.00%",
 			"R_COSTII": 6.491,
 			"expertRate": "9.30%",
@@ -4321,7 +4469,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3309,
@@ -4330,9 +4479,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "음성군",
 			"hiringRate_300": "4.33%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.47%",
+			"mainIndustryPortion": "30.95%",
 			"rateOf20sInIndustry": "15.80%",
-			"industryJobCreation": "19.5%",
+			"industryJobCreation": "",
 			"incomeRate": "50.90%",
 			"R_COSTII": 6.491,
 			"expertRate": "7.50%",
@@ -4350,7 +4499,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2514,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3310,
@@ -4359,9 +4509,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "단양군",
 			"hiringRate_300": "4.49%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "70.60%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "9.90%",
-			"industryJobCreation": "7.8%",
+			"industryJobCreation": "",
 			"incomeRate": "84.60%",
 			"R_COSTII": 6.491,
 			"expertRate": "7.80%",
@@ -4379,7 +4529,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 431,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "비금속",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3311,
@@ -4388,9 +4539,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "증평군",
 			"hiringRate_300": "8.36%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "40.42%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "11.30%",
-			"industryJobCreation": "8.7%",
+			"industryJobCreation": "",
 			"incomeRate": "186.60%",
 			"R_COSTII": 6.491,
 			"expertRate": "11.20%",
@@ -4408,7 +4559,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 762,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3401,
@@ -4417,9 +4569,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "천안시",
 			"hiringRate_300": "7.35%",
 			"hiringRate_1000": "3.31%",
-			"mainIndustryPortion": "16.38%",
+			"mainIndustryPortion": "37.01%",
 			"rateOf20sInIndustry": "18.90%",
-			"industryJobCreation": "14.6%",
+			"industryJobCreation": "",
 			"incomeRate": "130.40%",
 			"R_COSTII": 6.634,
 			"expertRate": "16.70%",
@@ -4437,7 +4589,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 16759,
 			"numWorkers_1000": 7553,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성디스플레이 천안캠퍼스"
+			"factory": "삼성디스플레이 천안캠퍼스",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3402,
@@ -4446,9 +4599,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "공주시",
 			"hiringRate_300": "5.53%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.16%",
+			"mainIndustryPortion": "50.27%",
 			"rateOf20sInIndustry": "17.50%",
-			"industryJobCreation": "12.7%",
+			"industryJobCreation": "",
 			"incomeRate": "71.40%",
 			"R_COSTII": 6.634,
 			"expertRate": "13.70%",
@@ -4466,7 +4619,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1778,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전자, 통신",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3403,
@@ -4475,9 +4629,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "보령시",
 			"hiringRate_300": "3.50%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "30.89%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "11.90%",
-			"industryJobCreation": "14.2%",
+			"industryJobCreation": "",
 			"incomeRate": "119.00%",
 			"R_COSTII": 6.634,
 			"expertRate": "11.50%",
@@ -4495,7 +4649,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 908,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3404,
@@ -4504,9 +4659,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "아산시",
 			"hiringRate_300": "24.72%",
 			"hiringRate_1000": "19.42%",
-			"mainIndustryPortion": "29.85%",
+			"mainIndustryPortion": "64.08%",
 			"rateOf20sInIndustry": "15.90%",
-			"industryJobCreation": "12.6%",
+			"industryJobCreation": "",
 			"incomeRate": "103.50%",
 			"R_COSTII": 6.634,
 			"expertRate": "17.10%",
@@ -4524,7 +4679,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 35779,
 			"numWorkers_1000": 28109,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성디스플레이 아산캠퍼스 1,2, 삼성전자 온양사업장, 현대자동차 아산공장"
+			"factory": "삼성디스플레이 아산캠퍼스 1,2, 삼성전자 온양사업장, 현대자동차 아산공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3405,
@@ -4533,9 +4689,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서산시",
 			"hiringRate_300": "14.13%",
 			"hiringRate_1000": "10.64%",
-			"mainIndustryPortion": "46.29%",
+			"mainIndustryPortion": "42.96%",
 			"rateOf20sInIndustry": "22.10%",
-			"industryJobCreation": "15.3%",
+			"industryJobCreation": "",
 			"incomeRate": "111.90%",
 			"R_COSTII": 6.634,
 			"expertRate": "11.60%",
@@ -4553,7 +4709,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 7716,
 			"numWorkers_1000": 5811,
 			"mainIndustry_300": "화학",
-			"factory": "LG화학 대산공장, 롯데케미칼 대산공장, SK이노베이션, 현대다이모스 서산1,2공장, 기타 현대기아차 부품 계열사"
+			"factory": "LG화학 대산공장, 롯데케미칼 대산공장, SK이노베이션, 현대다이모스 서산1,2공장, 기타 현대기아차 부품 계열사",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3406,
@@ -4562,9 +4719,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "논산시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "27.08%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.30%",
-			"industryJobCreation": "14.0%",
+			"industryJobCreation": "",
 			"incomeRate": "99.10%",
 			"R_COSTII": 6.634,
 			"expertRate": "10.90%",
@@ -4582,7 +4739,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3407,
@@ -4591,9 +4749,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "계룡시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "50.24%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "15.70%",
-			"industryJobCreation": "20.5%",
+			"industryJobCreation": "",
 			"incomeRate": "420.70%",
 			"R_COSTII": 6.634,
 			"expertRate": "25.20%",
@@ -4611,7 +4769,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3408,
@@ -4620,9 +4779,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "당진시",
 			"hiringRate_300": "13.64%",
 			"hiringRate_1000": "9.84%",
-			"mainIndustryPortion": "40.21%",
+			"mainIndustryPortion": "86.58%",
 			"rateOf20sInIndustry": "17.60%",
-			"industryJobCreation": "11.3%",
+			"industryJobCreation": "",
 			"incomeRate": "103.60%",
 			"R_COSTII": 6.634,
 			"expertRate": "10.70%",
@@ -4640,7 +4799,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 8872,
 			"numWorkers_1000": 6398,
 			"mainIndustry_300": "철강",
-			"factory": "현대제철 당진제철소"
+			"factory": "현대제철 당진제철소",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3409,
@@ -4649,9 +4809,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "금산군",
 			"hiringRate_300": "12.30%",
 			"hiringRate_1000": "12.30%",
-			"mainIndustryPortion": "33.04%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "12.10%",
-			"industryJobCreation": "13.7%",
+			"industryJobCreation": "",
 			"incomeRate": "52.10%",
 			"R_COSTII": 6.634,
 			"expertRate": "7.50%",
@@ -4669,7 +4829,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2336,
 			"numWorkers_1000": 2336,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": "한국타이어 금산공장"
+			"factory": "헌귝타이어 금산공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3410,
@@ -4678,9 +4839,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "부여군",
 			"hiringRate_300": "3.24%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "33.27%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "7.20%",
-			"industryJobCreation": "14.3%",
+			"industryJobCreation": "",
 			"incomeRate": "108.50%",
 			"R_COSTII": 6.634,
 			"expertRate": "9.50%",
@@ -4698,7 +4859,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 427,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3411,
@@ -4707,9 +4869,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서천군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "52.20%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.00%",
-			"industryJobCreation": "12.9%",
+			"industryJobCreation": "",
 			"incomeRate": "95.50%",
 			"R_COSTII": 6.634,
 			"expertRate": "10.80%",
@@ -4727,7 +4889,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3412,
@@ -4736,9 +4899,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "청양군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "47.01%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "14.90%",
-			"industryJobCreation": "14.6%",
+			"industryJobCreation": "",
 			"incomeRate": "100.00%",
 			"R_COSTII": 6.634,
 			"expertRate": "9.10%",
@@ -4756,7 +4919,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3413,
@@ -4765,9 +4929,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "홍성군",
 			"hiringRate_300": "1.38%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "33.74%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "12.40%",
-			"industryJobCreation": "14.5%",
+			"industryJobCreation": "",
 			"incomeRate": "81.30%",
 			"R_COSTII": 6.634,
 			"expertRate": "12.80%",
@@ -4785,7 +4949,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 355,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전기장비",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3414,
@@ -4794,9 +4959,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "예산군",
 			"hiringRate_300": "1.46%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "23.22%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "15.60%",
-			"industryJobCreation": "22.4%",
+			"industryJobCreation": "",
 			"incomeRate": "59.80%",
 			"R_COSTII": 6.634,
 			"expertRate": "6.90%",
@@ -4814,7 +4979,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 311,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "전기장비",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3415,
@@ -4823,9 +4989,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "태안군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "44.49%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.00%",
-			"industryJobCreation": "19.2%",
+			"industryJobCreation": "",
 			"incomeRate": "99.50%",
 			"R_COSTII": 6.634,
 			"expertRate": "7.90%",
@@ -4843,7 +5009,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3501,
@@ -4852,9 +5019,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "전주시",
 			"hiringRate_300": "0.78%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "15.08%",
+			"mainIndustryPortion": "47.44%",
 			"rateOf20sInIndustry": "13.60%",
-			"industryJobCreation": "15.8%",
+			"industryJobCreation": "",
 			"incomeRate": "146.90%",
 			"R_COSTII": 6.439,
 			"expertRate": "24.70%",
@@ -4872,7 +5039,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1409,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "화학",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3502,
@@ -4881,9 +5049,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "군산시",
 			"hiringRate_300": "8.90%",
 			"hiringRate_1000": "7.18%",
-			"mainIndustryPortion": "20.37%",
+			"mainIndustryPortion": "44.61%",
 			"rateOf20sInIndustry": "10.70%",
-			"industryJobCreation": "12.1%",
+			"industryJobCreation": "",
 			"incomeRate": "128.30%",
 			"R_COSTII": 6.439,
 			"expertRate": "14.90%",
@@ -4901,7 +5069,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 7300,
 			"numWorkers_1000": 5893,
 			"mainIndustry_300": "자동차",
-			"factory": "OCI 군산공장, 세아베스틸 군산공장, 한국GM군산공장, 두산인프라코어 군산공장"
+			"factory": "OCI 군산공장, 세아베스틸 군산공장, 한국GM군산공장, 두산인프라코어 군산공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3503,
@@ -4910,9 +5079,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "익산시",
 			"hiringRate_300": "4.03%",
 			"hiringRate_1000": "1.22%",
-			"mainIndustryPortion": "17.07%",
+			"mainIndustryPortion": "30.27%",
 			"rateOf20sInIndustry": "13.90%",
-			"industryJobCreation": "11.2%",
+			"industryJobCreation": "",
 			"incomeRate": "126.70%",
 			"R_COSTII": 6.439,
 			"expertRate": "15.80%",
@@ -4930,7 +5099,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 3415,
 			"numWorkers_1000": 1034,
 			"mainIndustry_300": "식료품",
-			"factory": "LG화학 익산공장 1,2,3,"
+			"factory": "LG화학 익산공장 1,2,3,",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3504,
@@ -4939,9 +5109,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "정읍시",
 			"hiringRate_300": "2.20%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "34.31%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "11.90%",
-			"industryJobCreation": "14.8%",
+			"industryJobCreation": "",
 			"incomeRate": "114.40%",
 			"R_COSTII": 6.439,
 			"expertRate": "9.90%",
@@ -4959,7 +5129,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 585,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3505,
@@ -4968,9 +5139,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남원시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "38.12%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.10%",
-			"industryJobCreation": "16.5%",
+			"industryJobCreation": "",
 			"incomeRate": "105.90%",
 			"R_COSTII": 6.439,
 			"expertRate": "11.70%",
@@ -4988,7 +5159,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3506,
@@ -4997,9 +5169,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "김제시",
 			"hiringRate_300": "1.67%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "31.91%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "13.10%",
-			"industryJobCreation": "16.0%",
+			"industryJobCreation": "",
 			"incomeRate": "80.10%",
 			"R_COSTII": 6.439,
 			"expertRate": "8.40%",
@@ -5017,7 +5189,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 419,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3507,
@@ -5026,9 +5199,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "완주군",
 			"hiringRate_300": "18.35%",
 			"hiringRate_1000": "12.81%",
-			"mainIndustryPortion": "46.32%",
+			"mainIndustryPortion": "69.81%",
 			"rateOf20sInIndustry": "16.50%",
-			"industryJobCreation": "8.0%",
+			"industryJobCreation": "",
 			"incomeRate": "51.00%",
 			"R_COSTII": 6.439,
 			"expertRate": "10.30%",
@@ -5046,7 +5219,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 7334,
 			"numWorkers_1000": 5122,
 			"mainIndustry_300": "자동차",
-			"factory": "현대자동차 전주공장"
+			"factory": "현대자동차 전주공장",
+			"additional_note": "지역 제조업 종사자의 상당수가 인근의 전주시에 거주하는 것으로 보입니다."
 		},
 		{
 			"code_data": 3508,
@@ -5055,9 +5229,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "진안군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "54.06%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.30%",
-			"industryJobCreation": "22.3%",
+			"industryJobCreation": "",
 			"incomeRate": "99.90%",
 			"R_COSTII": 6.439,
 			"expertRate": "6.20%",
@@ -5075,7 +5249,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3509,
@@ -5084,9 +5259,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "무주군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "47.46%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "15.10%",
-			"industryJobCreation": "14.9%",
+			"industryJobCreation": "",
 			"incomeRate": "101.30%",
 			"R_COSTII": 6.439,
 			"expertRate": "7.00%",
@@ -5104,7 +5279,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3510,
@@ -5113,9 +5289,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "장수군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "34.59%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.60%",
-			"industryJobCreation": "15.7%",
+			"industryJobCreation": "",
 			"incomeRate": "90.20%",
 			"R_COSTII": 6.439,
 			"expertRate": "7.70%",
@@ -5133,7 +5309,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3511,
@@ -5142,9 +5319,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "임실군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "54.43%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.60%",
-			"industryJobCreation": "13.0%",
+			"industryJobCreation": "",
 			"incomeRate": "92.90%",
 			"R_COSTII": 6.439,
 			"expertRate": "3.80%",
@@ -5162,7 +5339,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2016년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 3512,
@@ -5171,9 +5349,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "순창군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "59.02%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.20%",
-			"industryJobCreation": "23.1%",
+			"industryJobCreation": "",
 			"incomeRate": "111.70%",
 			"R_COSTII": 6.439,
 			"expertRate": "7.10%",
@@ -5191,7 +5369,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3513,
@@ -5200,9 +5379,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "고창군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "49.26%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.50%",
-			"industryJobCreation": "17.5%",
+			"industryJobCreation": "",
 			"incomeRate": "112.50%",
 			"R_COSTII": 6.439,
 			"expertRate": "8.60%",
@@ -5220,7 +5399,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3514,
@@ -5229,9 +5409,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "부안군",
 			"hiringRate_300": "5.64%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "71.06%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "12.70%",
-			"industryJobCreation": "11.0%",
+			"industryJobCreation": "",
 			"incomeRate": "107.90%",
 			"R_COSTII": 6.439,
 			"expertRate": "8.90%",
@@ -5249,7 +5429,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 664,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3601,
@@ -5258,9 +5439,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "목포시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "24.32%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.40%",
-			"industryJobCreation": "17.3%",
+			"industryJobCreation": "",
 			"incomeRate": "149.30%",
 			"R_COSTII": 6.064,
 			"expertRate": "17.90%",
@@ -5278,7 +5459,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3602,
@@ -5287,9 +5469,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "여수시",
 			"hiringRate_300": "10.11%",
 			"hiringRate_1000": "3.19%",
-			"mainIndustryPortion": "57.66%",
+			"mainIndustryPortion": "77.65%",
 			"rateOf20sInIndustry": "14.70%",
-			"industryJobCreation": "6.4%",
+			"industryJobCreation": "",
 			"incomeRate": "123.30%",
 			"R_COSTII": 6.064,
 			"expertRate": "13.70%",
@@ -5307,7 +5489,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 9153,
 			"numWorkers_1000": 2892,
 			"mainIndustry_300": "화학",
-			"factory": "LG화학 여수공장, GS칼텍스 여수공장, 한화케미칼 여수공장"
+			"factory": "LG화학 여수공장, GS칼텍스 여수공장, 한화케미칼 여수공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3603,
@@ -5316,9 +5499,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "순천시",
 			"hiringRate_300": "0.60%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.22%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "16.50%",
-			"industryJobCreation": "14.8%",
+			"industryJobCreation": "",
 			"incomeRate": "201.10%",
 			"R_COSTII": 6.064,
 			"expertRate": "19.60%",
@@ -5336,7 +5519,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 437,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "철강",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3604,
@@ -5345,9 +5529,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "나주시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "40.05%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.90%",
-			"industryJobCreation": "15.3%",
+			"industryJobCreation": "",
 			"incomeRate": "31.80%",
 			"R_COSTII": 6.064,
 			"expertRate": "8.60%",
@@ -5365,7 +5549,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 3605,
@@ -5374,9 +5559,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "광양시",
 			"hiringRate_300": "13.36%",
 			"hiringRate_1000": "10.63%",
-			"mainIndustryPortion": "56.52%",
+			"mainIndustryPortion": "92.07%",
 			"rateOf20sInIndustry": "13.90%",
-			"industryJobCreation": "9.7%",
+			"industryJobCreation": "",
 			"incomeRate": "131.00%",
 			"R_COSTII": 6.064,
 			"expertRate": "16.20%",
@@ -5394,7 +5579,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 7904,
 			"numWorkers_1000": 6292,
 			"mainIndustry_300": "철강",
-			"factory": "포스코 광양제철소"
+			"factory": "포스코 광양제철소",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3606,
@@ -5403,9 +5589,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "담양군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "18.66%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.20%",
-			"industryJobCreation": "14.7%",
+			"industryJobCreation": "",
 			"incomeRate": "88.90%",
 			"R_COSTII": 6.064,
 			"expertRate": "9.70%",
@@ -5423,7 +5609,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3607,
@@ -5432,9 +5619,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "곡성군",
 			"hiringRate_300": "22.58%",
 			"hiringRate_1000": "22.58%",
-			"mainIndustryPortion": "67.67%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "4.70%",
-			"industryJobCreation": "3.8%",
+			"industryJobCreation": "",
 			"incomeRate": "114.20%",
 			"R_COSTII": 6.064,
 			"expertRate": "4.50%",
@@ -5452,7 +5639,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1755,
 			"numWorkers_1000": 1755,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": "금호타이어 곡성곡장"
+			"factory": "금호타이어 곡성곡장",
+			"additional_note": "인구(8만 명)에 비해 단일 대공장에 대한 고용 의존도가 높습니다."
 		},
 		{
 			"code_data": 3608,
@@ -5461,9 +5649,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "구례군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "68.30%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "17.10%",
-			"industryJobCreation": "9.2%",
+			"industryJobCreation": "",
 			"incomeRate": "115.40%",
 			"R_COSTII": 6.064,
 			"expertRate": "5.40%",
@@ -5481,7 +5669,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3609,
@@ -5490,9 +5679,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "고흥군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "73.37%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.50%",
-			"industryJobCreation": "20.5%",
+			"industryJobCreation": "",
 			"incomeRate": "114.30%",
 			"R_COSTII": 6.064,
 			"expertRate": "5.60%",
@@ -5510,7 +5699,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3610,
@@ -5519,9 +5709,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "보성군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "35.96%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "8.60%",
-			"industryJobCreation": "13.9%",
+			"industryJobCreation": "",
 			"incomeRate": "103.90%",
 			"R_COSTII": 6.064,
 			"expertRate": "4.50%",
@@ -5539,7 +5729,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3611,
@@ -5548,9 +5739,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "화순군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "15.16%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.40%",
-			"industryJobCreation": "10.1%",
+			"industryJobCreation": "",
 			"incomeRate": "86.40%",
 			"R_COSTII": 6.064,
 			"expertRate": "12.30%",
@@ -5568,7 +5759,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3612,
@@ -5577,9 +5769,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "장흥군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "76.26%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.10%",
-			"industryJobCreation": "15.5%",
+			"industryJobCreation": "",
 			"incomeRate": "124.60%",
 			"R_COSTII": 6.064,
 			"expertRate": "9.00%",
@@ -5597,7 +5789,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3613,
@@ -5606,9 +5799,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "강진군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "71.17%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.80%",
-			"industryJobCreation": "16.7%",
+			"industryJobCreation": "",
 			"incomeRate": "127.20%",
 			"R_COSTII": 6.064,
 			"expertRate": "7.70%",
@@ -5626,7 +5819,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3614,
@@ -5635,9 +5829,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "해남군",
 			"hiringRate_300": "3.20%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "54.19%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "11.60%",
-			"industryJobCreation": "9.9%",
+			"industryJobCreation": "",
 			"incomeRate": "103.40%",
 			"R_COSTII": 6.064,
 			"expertRate": "6.50%",
@@ -5655,7 +5849,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 461,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "기타운송장비",
-			"factory": ""
+			"factory": "",
+			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2016년에 새로 집계된 탓에 색깔 반영도가 급변했습니다."
 		},
 		{
 			"code_data": 3615,
@@ -5664,9 +5859,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영암군",
 			"hiringRate_300": "12.93%",
 			"hiringRate_1000": "12.93%",
-			"mainIndustryPortion": "78.69%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "7.60%",
-			"industryJobCreation": "11.4%",
+			"industryJobCreation": "",
 			"incomeRate": "43.00%",
 			"R_COSTII": 6.064,
 			"expertRate": "9.10%",
@@ -5684,7 +5879,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 3894,
 			"numWorkers_1000": 3894,
 			"mainIndustry_300": "기타운송장비",
-			"factory": "현대삼호중공업"
+			"factory": "현대삼호중공업",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3616,
@@ -5693,9 +5889,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "무안군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "27.01%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.60%",
-			"industryJobCreation": "16.2%",
+			"industryJobCreation": "",
 			"incomeRate": "53.80%",
 			"R_COSTII": 6.064,
 			"expertRate": "12.60%",
@@ -5713,7 +5909,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3617,
@@ -5722,9 +5919,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "함평군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "17.73%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.90%",
-			"industryJobCreation": "19.9%",
+			"industryJobCreation": "",
 			"incomeRate": "96.00%",
 			"R_COSTII": 6.064,
 			"expertRate": "6.40%",
@@ -5742,7 +5939,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3618,
@@ -5751,9 +5949,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영광군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "65.60%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.30%",
-			"industryJobCreation": "17.9%",
+			"industryJobCreation": "",
 			"incomeRate": "85.30%",
 			"R_COSTII": 6.064,
 			"expertRate": "10.00%",
@@ -5771,7 +5969,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3619,
@@ -5780,9 +5979,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "장성군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "18.81%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "12.40%",
-			"industryJobCreation": "13.8%",
+			"industryJobCreation": "",
 			"incomeRate": "90.30%",
 			"R_COSTII": 6.064,
 			"expertRate": "5.70%",
@@ -5800,7 +5999,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3620,
@@ -5809,9 +6009,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "완도군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "87.40%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "6.80%",
-			"industryJobCreation": "16.5%",
+			"industryJobCreation": "",
 			"incomeRate": "119.00%",
 			"R_COSTII": 6.064,
 			"expertRate": "7.00%",
@@ -5829,7 +6029,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3621,
@@ -5838,9 +6039,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "진도군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "63.06%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.60%",
-			"industryJobCreation": "14.8%",
+			"industryJobCreation": "",
 			"incomeRate": "122.60%",
 			"R_COSTII": 6.064,
 			"expertRate": "7.90%",
@@ -5858,7 +6059,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3622,
@@ -5867,9 +6069,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "신안군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "72.44%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "6.70%",
-			"industryJobCreation": "17.0%",
+			"industryJobCreation": "",
 			"incomeRate": "177.90%",
 			"R_COSTII": 6.064,
 			"expertRate": "5.20%",
@@ -5887,7 +6089,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3701,
@@ -5896,9 +6099,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "포항시",
 			"hiringRate_300": "7.67%",
 			"hiringRate_1000": "6.00%",
-			"mainIndustryPortion": "50.13%",
+			"mainIndustryPortion": "90.87%",
 			"rateOf20sInIndustry": "11.80%",
-			"industryJobCreation": "12.8%",
+			"industryJobCreation": "",
 			"incomeRate": "95.50%",
 			"R_COSTII": 10.251,
 			"expertRate": "17.30%",
@@ -5916,7 +6119,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 11898,
 			"numWorkers_1000": 9316,
 			"mainIndustry_300": "철강",
-			"factory": "포스코 포항제철소, 현대제철 포항제철소"
+			"factory": "포스코 포항제철소, 현대제철 포항제철소",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3702,
@@ -5925,9 +6129,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "경주시",
 			"hiringRate_300": "7.35%",
 			"hiringRate_1000": "3.18%",
-			"mainIndustryPortion": "29.36%",
+			"mainIndustryPortion": "28.16%",
 			"rateOf20sInIndustry": "13.70%",
-			"industryJobCreation": "16.1%",
+			"industryJobCreation": "",
 			"incomeRate": "84.50%",
 			"R_COSTII": 10.251,
 			"expertRate": "13.40%",
@@ -5945,7 +6149,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 7308,
 			"numWorkers_1000": 3165,
 			"mainIndustry_300": "금속가공",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3703,
@@ -5954,9 +6159,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "김천시",
 			"hiringRate_300": "1.77%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "13.80%",
+			"mainIndustryPortion": "57.63%",
 			"rateOf20sInIndustry": "15.00%",
-			"industryJobCreation": "15.6%",
+			"industryJobCreation": "",
 			"incomeRate": "84.30%",
 			"R_COSTII": 10.251,
 			"expertRate": "11.70%",
@@ -5974,7 +6179,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 708,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "종이",
-			"factory": "LG화학 김천공장"
+			"factory": "LG화학 김천공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3704,
@@ -5983,9 +6189,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "안동시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "43.41%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "14.40%",
-			"industryJobCreation": "16.3%",
+			"industryJobCreation": "",
 			"incomeRate": "120.40%",
 			"R_COSTII": 10.251,
 			"expertRate": "16.70%",
@@ -6003,7 +6209,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3705,
@@ -6012,9 +6219,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "구미시",
 			"hiringRate_300": "26.83%",
 			"hiringRate_1000": "15.87%",
-			"mainIndustryPortion": "47.70%",
+			"mainIndustryPortion": "73.72%",
 			"rateOf20sInIndustry": "19.00%",
-			"industryJobCreation": "9.6%",
+			"industryJobCreation": "",
 			"incomeRate": "122.90%",
 			"R_COSTII": 10.251,
 			"expertRate": "13.70%",
@@ -6032,7 +6239,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 46767,
 			"numWorkers_1000": 27656,
 			"mainIndustry_300": "전자, 통신",
-			"factory": "삼성전자 구미사업장 1,2, LG전자 구미사업장 1,2, LG디스플레이 구미사업장 1,2,3, LG이노텍 구미공장"
+			"factory": "삼성전자 구미사업장 1,2, LG전자 구미사업장 1,2, LG디스플레이 구미사업장 1,2,3, LG이노텍 구미공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3706,
@@ -6041,9 +6249,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영주시",
 			"hiringRate_300": "5.94%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.45%",
+			"mainIndustryPortion": "46.30%",
 			"rateOf20sInIndustry": "13.60%",
-			"industryJobCreation": "14.5%",
+			"industryJobCreation": "",
 			"incomeRate": "122.10%",
 			"R_COSTII": 10.251,
 			"expertRate": "14.10%",
@@ -6061,7 +6269,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1523,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "철강",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3707,
@@ -6070,9 +6279,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영천시",
 			"hiringRate_300": "4.42%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "31.23%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "13.40%",
-			"industryJobCreation": "16.0%",
+			"industryJobCreation": "",
 			"incomeRate": "72.20%",
 			"R_COSTII": 10.251,
 			"expertRate": "8.60%",
@@ -6090,7 +6299,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1534,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3708,
@@ -6099,9 +6309,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "상주시",
 			"hiringRate_300": "5.95%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "50.26%",
+			"mainIndustryPortion": "71.43%",
 			"rateOf20sInIndustry": "9.00%",
-			"industryJobCreation": "11.8%",
+			"industryJobCreation": "",
 			"incomeRate": "124.00%",
 			"R_COSTII": 10.251,
 			"expertRate": "10.20%",
@@ -6119,7 +6329,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1198,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "식료품",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3709,
@@ -6128,9 +6339,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "문경시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "27.50%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.10%",
-			"industryJobCreation": "8.6%",
+			"industryJobCreation": "",
 			"incomeRate": "124.90%",
 			"R_COSTII": 10.251,
 			"expertRate": "10.80%",
@@ -6148,7 +6359,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3710,
@@ -6157,9 +6369,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "경산시",
 			"hiringRate_300": "5.99%",
 			"hiringRate_1000": "2.11%",
-			"mainIndustryPortion": "26.08%",
+			"mainIndustryPortion": "58.93%",
 			"rateOf20sInIndustry": "14.20%",
-			"industryJobCreation": "15.0%",
+			"industryJobCreation": "",
 			"incomeRate": "91.00%",
 			"R_COSTII": 10.251,
 			"expertRate": "15.00%",
@@ -6177,7 +6389,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 5347,
 			"numWorkers_1000": 1882,
 			"mainIndustry_300": "자동차",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3711,
@@ -6186,9 +6399,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "군위군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.06%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.20%",
-			"industryJobCreation": "11.2%",
+			"industryJobCreation": "",
 			"incomeRate": "86.20%",
 			"R_COSTII": 10.251,
 			"expertRate": "7.40%",
@@ -6206,7 +6419,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3712,
@@ -6215,9 +6429,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "고흥군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "73.37%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "6.40%",
-			"industryJobCreation": "12.6%",
+			"industryJobCreation": "",
 			"incomeRate": "114.30%",
 			"R_COSTII": 10.251,
 			"expertRate": "5.60%",
@@ -6235,7 +6449,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3713,
@@ -6244,9 +6459,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "청송군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "53.89%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "16.60%",
-			"industryJobCreation": "12.2%",
+			"industryJobCreation": "",
 			"incomeRate": "109.60%",
 			"R_COSTII": 10.251,
 			"expertRate": "7.20%",
@@ -6264,7 +6479,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3714,
@@ -6273,9 +6489,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영양군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "60.98%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "13.10%",
-			"industryJobCreation": "29.0%",
+			"industryJobCreation": "",
 			"incomeRate": "108.80%",
 			"R_COSTII": 10.251,
 			"expertRate": "6.50%",
@@ -6293,7 +6509,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3715,
@@ -6302,9 +6519,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "영덕군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "75.99%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "6.00%",
-			"industryJobCreation": "17.6%",
+			"industryJobCreation": "",
 			"incomeRate": "109.60%",
 			"R_COSTII": 10.251,
 			"expertRate": "7.50%",
@@ -6322,7 +6539,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3716,
@@ -6331,9 +6549,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "청도군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "26.55%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "13.00%",
-			"industryJobCreation": "13.8%",
+			"industryJobCreation": "",
 			"incomeRate": "93.20%",
 			"R_COSTII": 10.251,
 			"expertRate": "5.30%",
@@ -6351,7 +6569,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3717,
@@ -6360,9 +6579,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "고령군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "23.81%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "6.80%",
-			"industryJobCreation": "17.2%",
+			"industryJobCreation": "",
 			"incomeRate": "55.20%",
 			"R_COSTII": 10.251,
 			"expertRate": "6.50%",
@@ -6380,7 +6599,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3718,
@@ -6389,9 +6609,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "성주군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "20.71%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.90%",
-			"industryJobCreation": "22.6%",
+			"industryJobCreation": "",
 			"incomeRate": "57.60%",
 			"R_COSTII": 10.251,
 			"expertRate": "7.30%",
@@ -6409,7 +6629,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3719,
@@ -6418,9 +6639,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "칠곡군",
 			"hiringRate_300": "0.85%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "17.97%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "11.00%",
-			"industryJobCreation": "16.6%",
+			"industryJobCreation": "",
 			"incomeRate": "108.20%",
 			"R_COSTII": 10.251,
 			"expertRate": "13.10%",
@@ -6438,7 +6659,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 410,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "금속가공",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3720,
@@ -6447,9 +6669,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "예천군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "40.65%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.40%",
-			"industryJobCreation": "13.8%",
+			"industryJobCreation": "",
 			"incomeRate": "160.60%",
 			"R_COSTII": 10.251,
 			"expertRate": "8.40%",
@@ -6467,7 +6689,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3721,
@@ -6476,9 +6699,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "봉화군",
 			"hiringRate_300": "8.01%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "55.86%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "9.50%",
-			"industryJobCreation": "8.6%",
+			"industryJobCreation": "",
 			"incomeRate": "97.90%",
 			"R_COSTII": 10.251,
 			"expertRate": "5.10%",
@@ -6496,7 +6719,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 535,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "철강",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3722,
@@ -6505,9 +6729,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "울진군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "61.90%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "7.30%",
-			"industryJobCreation": "9.4%",
+			"industryJobCreation": "",
 			"incomeRate": "99.20%",
 			"R_COSTII": 10.251,
 			"expertRate": "11.40%",
@@ -6525,7 +6749,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3723,
@@ -6534,9 +6759,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "울릉군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "54.94%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.30%",
-			"industryJobCreation": "11.5%",
+			"industryJobCreation": "",
 			"incomeRate": "169.20%",
 			"R_COSTII": 10.251,
 			"expertRate": "11.70%",
@@ -6554,7 +6779,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3801,
@@ -6563,9 +6789,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "진주시",
 			"hiringRate_300": "0.33%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "28.93%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "14.60%",
-			"industryJobCreation": "12.9%",
+			"industryJobCreation": "",
 			"incomeRate": "139.00%",
 			"R_COSTII": 5.89,
 			"expertRate": "21.30%",
@@ -6583,7 +6809,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 320,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "종이",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3802,
@@ -6592,9 +6819,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "통영시",
 			"hiringRate_300": "6.47%",
 			"hiringRate_1000": "6.47%",
-			"mainIndustryPortion": "75.25%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "9.80%",
-			"industryJobCreation": "24.3%",
+			"industryJobCreation": "",
 			"incomeRate": "140.10%",
 			"R_COSTII": 5.89,
 			"expertRate": "13.60%",
@@ -6612,7 +6839,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2036,
 			"numWorkers_1000": 2036,
 			"mainIndustry_300": "기타운송장비",
-			"factory": "성동조선 조선소"
+			"factory": "성동조선 조선소",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3803,
@@ -6621,9 +6849,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "사천시",
 			"hiringRate_300": "16.43%",
 			"hiringRate_1000": "11.08%",
-			"mainIndustryPortion": "51.00%",
+			"mainIndustryPortion": "75.05%",
 			"rateOf20sInIndustry": "18.10%",
-			"industryJobCreation": "11.2%",
+			"industryJobCreation": "",
 			"incomeRate": "81.90%",
 			"R_COSTII": 5.89,
 			"expertRate": "12.70%",
@@ -6641,7 +6869,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 6435,
 			"numWorkers_1000": 4342,
 			"mainIndustry_300": "기타운송장비",
-			"factory": "한국항공우주 사업장"
+			"factory": "한국항공우주 사업장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3804,
@@ -6650,9 +6879,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "김해시",
 			"hiringRate_300": "1.55%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "19.90%",
+			"mainIndustryPortion": "58.71%",
 			"rateOf20sInIndustry": "12.00%",
-			"industryJobCreation": "14.1%",
+			"industryJobCreation": "",
 			"incomeRate": "116.20%",
 			"R_COSTII": 5.89,
 			"expertRate": "20.40%",
@@ -6670,7 +6899,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 2904,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3805,
@@ -6679,9 +6909,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "밀양시",
 			"hiringRate_300": "1.18%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "18.09%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "14.10%",
-			"industryJobCreation": "14.9%",
+			"industryJobCreation": "",
 			"incomeRate": "111.10%",
 			"R_COSTII": 5.89,
 			"expertRate": "12.10%",
@@ -6699,7 +6929,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 301,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "비금속",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3806,
@@ -6708,9 +6939,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "거제시",
 			"hiringRate_300": "20.40%",
 			"hiringRate_1000": "18.32%",
-			"mainIndustryPortion": "81.79%",
+			"mainIndustryPortion": "95.44%",
 			"rateOf20sInIndustry": "15.10%",
-			"industryJobCreation": "12.0%",
+			"industryJobCreation": "",
 			"incomeRate": "88.40%",
 			"R_COSTII": 5.89,
 			"expertRate": "15.30%",
@@ -6728,7 +6959,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 23347,
 			"numWorkers_1000": 20966,
 			"mainIndustry_300": "기타운송장비",
-			"factory": "대우조선해양 거제조선소, 삼성중공업 거제조선소"
+			"factory": "대우조선해양 거제조선소, 삼성중공업 거제조선소",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3807,
@@ -6737,9 +6969,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "양산시",
 			"hiringRate_300": "8.36%",
 			"hiringRate_1000": "4.40%",
-			"mainIndustryPortion": "23.71%",
+			"mainIndustryPortion": "51.91%",
 			"rateOf20sInIndustry": "14.00%",
-			"industryJobCreation": "11.1%",
+			"industryJobCreation": "",
 			"incomeRate": "111.80%",
 			"R_COSTII": 5.89,
 			"expertRate": "15.70%",
@@ -6757,7 +6989,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 9194,
 			"numWorkers_1000": 4836,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": "넥센타이어 양산공장 1,2, 성우하이텍 서창공장"
+			"factory": "넥센타이어 양산공장 1,2, 성우하이텍 서창공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3808,
@@ -6766,9 +6999,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "창원시",
 			"hiringRate_300": "11.84%",
 			"hiringRate_1000": "7.37%",
-			"mainIndustryPortion": "23.19%",
+			"mainIndustryPortion": "26.35%",
 			"rateOf20sInIndustry": "12.90%",
-			"industryJobCreation": "13.7%",
+			"industryJobCreation": "",
 			"incomeRate": "108.80%",
 			"R_COSTII": 5.89,
 			"expertRate": "20.20%",
@@ -6786,7 +7019,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 43245,
 			"numWorkers_1000": 26919,
 			"mainIndustry_300": "전기장비",
-			"factory": "LG전자 창원사업장"
+			"factory": "LG전자 창원사업장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3809,
@@ -6795,9 +7029,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "의령군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "17.25%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "14.60%",
-			"industryJobCreation": "13.8%",
+			"industryJobCreation": "",
 			"incomeRate": "84.70%",
 			"R_COSTII": 5.89,
 			"expertRate": "4.00%",
@@ -6815,7 +7049,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3810,
@@ -6824,9 +7059,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "함안군",
 			"hiringRate_300": "3.37%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "25.34%",
+			"mainIndustryPortion": "40.65%",
 			"rateOf20sInIndustry": "11.30%",
-			"industryJobCreation": "17.9%",
+			"industryJobCreation": "",
 			"incomeRate": "57.90%",
 			"R_COSTII": 5.89,
 			"expertRate": "10.40%",
@@ -6844,7 +7079,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1155,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "금속가공",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3811,
@@ -6853,9 +7089,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "창녕군",
 			"hiringRate_300": "8.26%",
 			"hiringRate_1000": "6.49%",
-			"mainIndustryPortion": "21.53%",
+			"mainIndustryPortion": "78.57%",
 			"rateOf20sInIndustry": "13.00%",
-			"industryJobCreation": "16.1%",
+			"industryJobCreation": "",
 			"incomeRate": "94.00%",
 			"R_COSTII": 5.89,
 			"expertRate": "7.50%",
@@ -6873,7 +7109,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 1531,
 			"numWorkers_1000": 1203,
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": "넥센타이어 창녕공장"
+			"factory": "넥센타이어 창녕공장",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3812,
@@ -6882,9 +7119,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "고성군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "69.29%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "10.20%",
-			"industryJobCreation": "27.6%",
+			"industryJobCreation": "",
 			"incomeRate": "99.80%",
 			"R_COSTII": 5.89,
 			"expertRate": "8.90%",
@@ -6902,7 +7139,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2016년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 3813,
@@ -6911,9 +7149,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "남해군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "64.37%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "14.70%",
-			"industryJobCreation": "11.8%",
+			"industryJobCreation": "",
 			"incomeRate": "129.90%",
 			"R_COSTII": 5.89,
 			"expertRate": "9.60%",
@@ -6931,7 +7169,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3814,
@@ -6940,9 +7179,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "하동군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "38.98%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "11.60%",
-			"industryJobCreation": "11.6%",
+			"industryJobCreation": "",
 			"incomeRate": "94.90%",
 			"R_COSTII": 5.89,
 			"expertRate": "6.90%",
@@ -6960,7 +7199,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3815,
@@ -6969,9 +7209,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "산청군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "21.40%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "17.10%",
-			"industryJobCreation": "19.5%",
+			"industryJobCreation": "",
 			"incomeRate": "92.20%",
 			"R_COSTII": 5.89,
 			"expertRate": "5.20%",
@@ -6989,7 +7229,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
 		},
 		{
 			"code_data": 3816,
@@ -6998,9 +7239,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "함양군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "31.47%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "9.60%",
-			"industryJobCreation": "19.9%",
+			"industryJobCreation": "",
 			"incomeRate": "117.20%",
 			"R_COSTII": 5.89,
 			"expertRate": "7.20%",
@@ -7018,7 +7259,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3817,
@@ -7027,9 +7269,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "거창군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "36.90%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "15.70%",
-			"industryJobCreation": "13.9%",
+			"industryJobCreation": "",
 			"incomeRate": "130.60%",
 			"R_COSTII": 5.89,
 			"expertRate": "9.90%",
@@ -7047,7 +7289,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3818,
@@ -7056,9 +7299,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "합천군",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "35.67%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "6.00%",
-			"industryJobCreation": "15.1%",
+			"industryJobCreation": "",
 			"incomeRate": "115.20%",
 			"R_COSTII": 5.89,
 			"expertRate": "7.10%",
@@ -7076,7 +7319,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3901,
@@ -7085,9 +7329,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "제주시",
 			"hiringRate_300": "0.24%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "37.35%",
+			"mainIndustryPortion": "100.00%",
 			"rateOf20sInIndustry": "13.80%",
-			"industryJobCreation": "18.7%",
+			"industryJobCreation": "",
 			"incomeRate": "112.60%",
 			"R_COSTII": 6.473,
 			"expertRate": "16.70%",
@@ -7105,7 +7349,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 363,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "음료",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		},
 		{
 			"code_data": 3902,
@@ -7114,9 +7359,9 @@ var _dataJSON_2016 = {
 			"municipal_name": "서귀포시",
 			"hiringRate_300": "0.00%",
 			"hiringRate_1000": "0.00%",
-			"mainIndustryPortion": "39.05%",
+			"mainIndustryPortion": "N/A",
 			"rateOf20sInIndustry": "16.80%",
-			"industryJobCreation": "13.2%",
+			"industryJobCreation": "",
 			"incomeRate": "133.10%",
 			"R_COSTII": 6.473,
 			"expertRate": "11.00%",
@@ -7134,7 +7379,8 @@ var _dataJSON_2016 = {
 			"numWorkers_300": 0,
 			"numWorkers_1000": 0,
 			"mainIndustry_300": "N/A",
-			"factory": ""
+			"factory": "",
+			"additional_note": ""
 		}
 	]
 };

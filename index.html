@@ -55,12 +55,12 @@
 	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Modal-master/modal.css">
 	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Dimmer-master/dimmer.css">
 	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Transition-master/transition.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Table-master/table.css">
 
 	<script type="text/javascript"  src="@Semantic-UI/UI-Tab-master/tab.js"></script>
 	<script type="text/javascript"  src="@Semantic-UI/UI-Search-master/search.js"></script>
 	<script type="text/javascript"  src="@Semantic-UI/UI-Checkbox-master/checkbox.js"></script>
 	<script type="text/javascript"  src="@Semantic-UI/UI-Modal-master/modal.js"></script>
-	<!-- <script type="text/javascript"  src="@Semantic-UI/UI-Modal-master/index.js"></script> -->
 	<script type="text/javascript"  src="@Semantic-UI/UI-Dimmer-master/dimmer.js"></script>
 	<script type="text/javascript"  src="@Semantic-UI/UI-Transition-master/transition.js"></script>
 
@@ -68,6 +68,7 @@
 	<!-- local json/css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
+	<script type="text/javascript" src="@json_data/score_legend.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-map-municipal.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-map-province.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-score-2014.js"></script>
@@ -98,7 +99,7 @@
 			</div>
 			<div class="ui checkbox" id="checkUI_mainIndustryPortion"> 
 				<input type="checkbox" id="check_mainIndustryPortion" > 
-				<label> 제1 제조업 집중도</label>
+				<label> 제1제조업 집중도</label>
 			</div>
 			<div class="ui checkbox" id="checkUI_rateOf20sInIndustry"> 
 				<input type="checkbox" id="check_rateOf20sInIndustry" > 
@@ -241,6 +242,7 @@
 				<div class="scoreName">Total</div>
 				<div class="score">100.0 / 100.0</div>
 				<div class="dataName" id="dataInfo_municipal_legend"><i class="info circle icon"></i> 데이터 구성 및 출처</div>
+				<div id="description_additional_note"></div>
 				<div id="description_municipal_total">* 이 연구는 300인 이상 대기업의 제조업 종사자가 존재하는 지역을 분석하고 있습니다. 지역 내에 해당 기업 사업체가 없을 경우, 연구대상에서 제외했습니다.</div>
 			</div>
 		</div>
@@ -251,6 +253,7 @@
 				<div class="dataInfo" id="mean_age_province"></div>
 				<div class="dataInfo" id="workers_province"></div>
 				<div class="dataInfo" id="mainIndustry_province"></div>
+				<div class="dataInfo" id="factory_province"></div>
 			</div>
 			<!-- <div class="mainIndustry_quote">¹ 300인 이상 대기업의 최대 고용 제조업종.</div> -->
 
@@ -319,69 +322,30 @@
 	<div class="ui small modal" id="popup_modal">
 		<i class="close icon"></i>
 		<div class="header">데이터 구성 및 출처</div>
-		<div class="image scrolling content">
-			<div>
-				이 지도는 시군구 단위, 연도별로 데이터를 반영했습니다. 사용된 모든 데이터는 공개적으로 접근 가능한 것입니다. 
-				<br>다만, ‘일자리 창출 위험도’ 정보에 사용된 데이터는 통계청 원격프로그램 사용 승인을 통해서 확보했으며, 이 과정에서 통계청으로부터 ‘지역 간 직접 비교가 가능한 수치는 공개하지 말 것’을 요청받았기에 색깔 반영도만 표기했습니다. 
-				<br>‘직장인-주민 괴리도’ 정보에 사용된 데이터는 2016년부터 집계가 시작되었으므로 2014년, 2015년 지도에도 2016년 데이터가 표시됐습니다. 
-				<br>‘과학기술혁신역량 위험도’에 사용된 데이터는 광역 단위로 반영되었습니다. 
-				<br>데이터별 자세한 설명 및 출처. 색깔 반영도는 아래와 같습니다.
+
+		<div class="scrolling content" id="modal_content">
+			<div class="data_explanation">
+				<p>이 지도는 시군구 단위, 연도별로 데이터를 반영했습니다. 사용된 모든 데이터는 공개적으로 접근 가능한 것입니다.</p>
+				<p>① 다만, ‘일자리 창출 위험도’ 정보에 사용된 데이터는 통계청 원격프로그램 사용 승인을 통해서 확보했으며, 이 과정에서 통계청으로부터 ‘지역 간 직접 비교가 가능한 수치는 공개하지 말 것’을 요청받았기에 색깔 반영도만 표기했습니다.</p>
+				<p>② ‘직장인-주민 괴리도’ 정보에 사용된 데이터는 2016년부터 집계가 시작되었으므로 2014년, 2015년 지도에도 2016년 데이터가 표시됐습니다. </p>
+				<p>③ ‘과학기술혁신역량 위험도’에 사용된 데이터는 광역 단위로 반영되었습니다.</p>
+				<br>데이터별 자세한 설명 및 출처, 색깔 반영도는 아래와 같습니다.<br>
 			</div>
-			<!-- <div class="image">
-				An image can appear on left or an icon
-			</div>
-			<div>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-				<p>0123</p>
-			</div>
-			<div class="description">
-				A description can appear on the right
-			</div> -->
 		</div>
-		<!-- <div class="actions"><div class="ui button">Cancel</div><div class="ui button">OK</div></div> -->
+
 	</div>
 
 
 
 	<footer>
-		<!-- <div id="title_footer">
-			<div id="about">About…</div>
-			<a id="home" href="/">전국투표전도</a>
-		</div> -->
-		<!-- <div id="legendInfo_footer">
-			<div id="legend_party"><img src="@images/information.svg"> 데이터 해설</div
-			><div id="legend_elected"><img src="@images/information.svg">  이 연구에 대한 정보</div>
-		</div> -->
 		<a id="lab2050_logo" href="https://lab2050.org/" target="_blank"><img src="@images/lab2050_colour.png"></a>
 	</footer>
 
 
 	<!-- local js/css -->
 	<script type="text/javascript" src="js/onLoad.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<!-- <script type="text/javascript" src="js/headerMenu.js"></script> -->
+	<script type="text/javascript" src="js/popup_modal.js"></script>
+	<script type="text/javascript" src="js/leaflet_script.js"></script>
 	<script type="text/javascript" src="js/dataInfo.js"></script>
 </body>
 </html>

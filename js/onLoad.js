@@ -47,12 +47,13 @@ function data_object(_dataJson_district) {
 		"mean_age": _dataJson_district.mean_age, 
 		"numWorkers_inDistrict": _dataJson_district.numWorkers_inDistrict, 
 		// "numWorkers_0": _dataJson_district.numWorkers_0, 
-		"numWorkers_300": _dataJson_district.numWorkers_300, 
-		"numWorkers_1000": _dataJson_district.numWorkers_1000, 
+		// "numWorkers_300": _dataJson_district.numWorkers_300, 
+		// "numWorkers_1000": _dataJson_district.numWorkers_1000, 
 		// "mainIndustry_0": _dataJson_district.mainIndustry_0, 
 		"mainIndustry_300": _dataJson_district.mainIndustry_300, 
 		// "mainIndustry_1000": _dataJson_district.mainIndustry_1000,
-		"factory": _dataJson_district.factory
+		"factory": _dataJson_district.factory, 
+		"additional_note": _dataJson_district.additional_note
 	};
 
 	return returnObject;
@@ -160,6 +161,7 @@ dataInsertion(provinceGeoJSON, provinceData);
 		});
 
 		change_dataInfo();
+		popup_update();
 	});
 
 })(jQuery);

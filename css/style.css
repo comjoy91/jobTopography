@@ -419,10 +419,10 @@ div, input {
 		height: 100%;
 		opacity: 0.7;
 		background-color: hsl(0, 100%, 50%); /* 그레디언트가 지원되지 않는 경우의 색상(fallback color) */
-		background-image: -webkit-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%));
-		background-image:    -moz-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Fx 3.6 부터 Fx 15 까지 처리 */
-		background-image:     -ms-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* IE 10 Platform Previews, Consumer Preview */
-		background-image:      -o-linear-gradient(left, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Opera 11.1 부터 12.0 까지 처리 */ 
+		background-image: -webkit-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%));
+		background-image:    -moz-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Fx 3.6 부터 Fx 15 까지 처리 */
+		background-image:     -ms-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* IE 10 Platform Previews, Consumer Preview */
+		background-image:      -o-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Opera 11.1 부터 12.0 까지 처리 */ 
 		background-image:         linear-gradient(to top, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
 	}
 
@@ -730,7 +730,7 @@ div, input {
 				cursor: pointer;
 			}
 
-			#description_municipal_total {
+			#description_additional_note, #description_municipal_total {
 				margin: 12px 0 0 0;
 			}
 
@@ -802,12 +802,56 @@ div, input {
 
 
 #popup_modal {
+	font-family: "Spoqa Han Sans";
+	line-height: 1.5;
+	font-size: 14px;
 
+	width: 700px;
 }
 
 	#popup_modal .header {
 		font-family: "Spoqa Han Sans";
+		font-size: 24px;
 	}
+
+	#popup_modal .data_explanation {
+		margin: 0 0 48px 0;
+	}
+		#popup_modal h1 {
+			font-size: 18px;
+		}
+
+		#popup_modal .explanation_line {
+			margin: 0 0 15px 0;
+			display: flex;
+		}
+
+			#popup_modal .explanation_title {
+				font-weight: 600;
+				width: 116px;
+			}
+
+			#popup_modal .explanation {
+			}
+
+				#popup_modal .explanation .source {
+					font-size: 11px;
+					line-height: 2.0;
+				}
+
+		#popup_modal .explanation_table {
+			font-size: 12px;
+			margin: 18px 0 0 0;
+		}
+
+			#popup_modal .explanation_table th {
+				color: #ffffff;
+				text-align: center;
+				background-color: #767676;
+			}
+			#popup_modal .explanation_table td {
+				text-align: center;
+			}
 
 
 
