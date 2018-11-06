@@ -437,11 +437,11 @@
 
 .ui.fullscreen.modal {
   width: 95% !important;
-  left: 0em !important;
+  /*left: 0em !important;*/
   margin: 1em auto;
 }
 .ui.fullscreen.scrolling.modal {
-  left: 0em !important;
+  /*left: 0em !important;*/
 }
 .ui.fullscreen.modal > .header {
   padding-right: 2.25rem;

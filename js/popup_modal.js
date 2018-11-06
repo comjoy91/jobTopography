@@ -9,7 +9,7 @@ function thead_update(_th_array) {
 function tbody_update(_td_array) {
 	var html_string = '';
 	for (var td_elem of _td_array) {
-		html_string += '<td style="background-color: hsl(0, 100%, ' + (100-td_elem) + '%);">' + td_elem + '점</td>';
+		html_string += '<td style="background-color: hsl(0, 100%, ' + (100-td_elem) + '%);">' + td_elem + '</td>'; //'점</td>';
 	}
 	html_string = '<tbody><tr>' + html_string + '</tr></tbody>';
 	return html_string;
@@ -29,13 +29,13 @@ function popup_update() {
 				'</div>' +
 				'<div class="explanation_line">' +
 					'<div class="explanation_title">색상 반영도</div>' +
-					'<div class="explanation">' + 
-						'최대 ' + data_explanation.max_score + '점' + 
-						'<table class="ui very celled collapsing fixed single line table explanation_table">' +
+					// '<div class="explanation">' + 
+						// '최대 ' + data_explanation.max_score + '점' + 
+						'<table class="ui unstackable celled collapsing table explanation_table">' +
 							thead_update(data_explanation.dataValue_array) + 
 							tbody_update(data_explanation.score_array) +
 						'</table>' + 
-					'</div>' +
+					// '</div>' +
 				'</div>' +
 			'</div>';
 

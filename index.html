@@ -20,12 +20,6 @@
 	<!-- D3.js 가져오기. -->
 	<script src="https://d3js.org/d3.v4.js"></script>
 
-	<!-- local Javascript plugin 가져오기. -->
-	<script type="text/javascript" src="js/plugins/jquery.easing.1.3.js"> </script>
-	<script type="text/javascript" src="js/plugins/countUp.js"> </script>
-	<!-- <link rel="stylesheet" type="text/css" href="js/plugins/d3-slider-master/d3.slider.css"/>
-	<script type="text/javascript" src="js/plugins/d3-slider-master/d3.slider.js"> </script> -->
-
 	<!-- Leaflet.js 가져오기. https://leafletjs.com -->
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" 
 		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -34,17 +28,17 @@
 	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
 		integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
 		crossorigin=""></script>
-		<!-- Leaflet.js plugins -->
-	<script type="text/javascript" src="js/plugins/Leaflet.Control.Custom-master/Leaflet.Control.Custom.js"> </script>
 
 	<!-- Leaflet Data Visualization Framework 가져오기. https://github.com/humangeo/leaflet-dvf -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.1/css/dvf.css"/>
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.1/css/dvf.css"/> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.1/leaflet-dvf.js"></script>
-	<script src="https://unpkg.com/jsts@1.6.1/dist/jsts.min.js"></script>
+	<!-- <script src="https://unpkg.com/jsts@1.6.1/dist/jsts.min.js"></script> -->
 
 	<!-- importing webFonts -->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css?family=Noto+Sans+KR">
 	<link rel='stylesheet' type='text/css' href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 
 	<!-- Semantic-UI -->
 	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Menu-master/menu.css">
@@ -56,6 +50,7 @@
 	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Dimmer-master/dimmer.css">
 	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Transition-master/transition.css">
 	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Table-master/table.css">
+	<link rel="stylesheet" type="text/css" href="@Semantic-UI/UI-Popup-master/popup.css">
 
 	<script type="text/javascript"  src="@Semantic-UI/UI-Tab-master/tab.js"></script>
 	<script type="text/javascript"  src="@Semantic-UI/UI-Search-master/search.js"></script>
@@ -63,6 +58,7 @@
 	<script type="text/javascript"  src="@Semantic-UI/UI-Modal-master/modal.js"></script>
 	<script type="text/javascript"  src="@Semantic-UI/UI-Dimmer-master/dimmer.js"></script>
 	<script type="text/javascript"  src="@Semantic-UI/UI-Transition-master/transition.js"></script>
+	<script type="text/javascript"  src="@Semantic-UI/UI-Popup-master/popup.js"></script>
 
 
 	<!-- local json/css -->
@@ -74,7 +70,6 @@
 	<script type="text/javascript" src="@json_data/skorea-score-2014.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-score-2015.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-score-2016.js"></script>
-	<!-- <script type="text/javascript" src="@json_data/mapColour.js"></script> -->
 
 
 </head>
@@ -82,11 +77,16 @@
 
 
 <body>
+
 	<div id="map_background"></div>
 
-	<a id="site_title" href="">제조업 고용위기 시그널</a>
+	<a id="site_title" href=""><img src="@images/lab2050_colour.png">제조업 고용위기 시그널</a>
 
-	<div id="map_layerControl">
+	<i class="map icon" id="layerControl_popup"></i>
+
+	<!-- <div id="layerControl_popup"><i class="map icon"></i></div> -->
+
+	<div class="ui popup bottom right" id="map_layerControl">
 
 		<div id="checkbox_cover">
 			<div class="ui checkbox disabled" id="checkUI_hiringRate_300">
@@ -125,7 +125,6 @@
 
 
 		<div id="mapYear">
-			<!-- <div class="UIName">조사년도</div> -->
 			<div id="mapYear_slider"></div>
 			<div id="year_integer">
 				<div>2014</div> <div>2015</div> <div>2016</div>
@@ -137,7 +136,6 @@
 	<i class="info circle icon" id="layerControl_legend"></i>
 
 	<div id="score_legend">
-		<!-- <div class="UIName">점수별 색상</div> -->
 		<div id="score_integer">
 			<div>0</div> <div>25</div> <div>50</div> <div>75</div> <div>100</div>
 		</div>
@@ -158,10 +156,10 @@
 		<img id="info_gripper" src="@images/Gripper.svg">
 		<!-- <img id="info_scrolling" src="@images/Scroll_up.svg"> -->
 		<div id="selectNotice">
-			<p>[제조업 고용위기 시그널] 지도는 민간 독립 연구소 <a class="paragraph_link" href="https://lab2050.org/" target="_blank">LAB2050</a>이 ‘일자리 지형 변화 연구’를 위해 제작한 것입니다. 이 연구는 LAB2050의 자체 연구비로 진행됐으며 어떤 기관이나 기업, 정부의 지원 및 후원도 받지 않았습니다.</p>
-			<p>이 지도는 지역 관점에서 제조업 고용의 위험도를 가늠해 볼 수 있도록 정보를 종합해서 보여주려는 취지로 제작됐습니다. 기본 지도는 지역별 ‘300인 이상 제조업 집중도’이며 여기에 ‘제조업 고용위기’와 관련 있는 정보들을 겹쳐 볼 수 있도록 했습니다. 단순히 여러 정보들을 한 눈에 볼 수 있도록 중첩 배열한 것일 뿐, ‘지표’는 를 다.<br>
+			<p>[제조업 고용위기 시그널 지도]는 민간 독립 연구소 <a class="paragraph_link" href="https://lab2050.org/" target="_blank">LAB2050</a>이 ‘일자리 지형 변화 연구’를 위해 제작한 것입니다. <br>이 연구는 LAB2050의 자체 연구비로 진행됐으며 어떤 기관이나 기업, 정부의 지원 및 후원도 받지 않았습니다.</p>
+			<p>이 지도는 지역 관점에서 제조업 고용의 위험도를 가늠해 보도록 정보를 종합해서 보여주려는 취지로 제작됐습니다. <br>기본 지도는 지역별 ‘300인 이상 제조업 집중도’이며, 여기에 ‘제조업 고용위기’와 관련 있는 정보들을 겹쳐 볼 수 있도록 했습니다. 단순히 여러 정보들을 한 눈에 볼 수 있도록 중첩 배열한 것일 뿐, 지표 또는 지수를 만든 것은 아닙니다.<br>
 			각 정보들의 색깔이 진해지는 정도를 비슷하게 맞추기 위해서 임의로 수치를 부여하기는 했으나 평가 점수는 아닙니다.</p>
-			<p>연구자: 황세원, 고동현 (이상 LAB2050)<br>
+			<p>연구자: 황세원, 고동현, 서재교<br>
 				지도 제작 및 디자인: 조현익 (스튜디오 하프-보틀)<br>
 				문의: <a class="paragraph_link" href="mailto:joonchigirl@lab2050.org">joonchigirl@lab2050.org</a></p>
 		</div>
@@ -189,59 +187,58 @@
 
 			<div class="textbox_explain" id="textbox_explain_municipal"></div>
 
-			<div class="result_storage" id="result_municipal_hiringRate_300">
+			<div class="score_storage" id="result_municipal_hiringRate_300">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="score"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_municipal_hiringRate_1000">
+			<div class="score_storage unlayered" id="result_municipal_hiringRate_1000">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="score"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_municipal_mainIndustryPortion">
+			<div class="score_storage unlayered" id="result_municipal_mainIndustryPortion">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="score"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_municipal_rateOf20sInIndustry">
+			<div class="score_storage unlayered" id="result_municipal_rateOf20sInIndustry">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="score"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_municipal_industryJobCreation">
+			<div class="score_storage unlayered" id="result_municipal_industryJobCreation">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="score"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_municipal_incomeRate">
+			<div class="score_storage unlayered" id="result_municipal_incomeRate">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="score"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_municipal_R_COSTII">
+			<div class="score_storage unlayered" id="result_municipal_R_COSTII">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="score"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_municipal_expertRate">
+			<div class="score_storage unlayered" id="result_municipal_expertRate">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="score"></div>
 				<div class="dataName"></div>
 			</div>
-			<div id="result_municipal_total">
-				<!-- Total -->
+			<div id="score_municipal_total">
 				<div class="scoreName">Total</div>
 				<div class="score">100.0 / 100.0</div>
-				<div class="dataName" id="dataInfo_municipal_legend"><i class="info circle icon"></i> 데이터 구성 및 출처</div>
+				<div class="dataName" id="dataInfo_municipal_legend"><i class="info circle icon"> </i>데이터 구성 및 출처</div>
 				<div id="description_additional_note"></div>
 				<div id="description_municipal_total">* 이 연구는 300인 이상 대기업의 제조업 종사자가 존재하는 지역을 분석하고 있습니다. 지역 내에 해당 기업 사업체가 없을 경우, 연구대상에서 제외했습니다.</div>
 			</div>
@@ -259,79 +256,166 @@
 
 			<div class="textbox_explain" id="textbox_explain_province"></div>
 
-			<div class="result_storage" id="result_province_hiringRate_300">
+			<div class="score_storage" id="result_province_hiringRate_300">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_province_hiringRate_1000">
+			<div class="score_storage unlayered" id="result_province_hiringRate_1000">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_province_mainIndustryPortion">
+			<div class="score_storage unlayered" id="result_province_mainIndustryPortion">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_province_rateOf20sInIndustry">
+			<div class="score_storage unlayered" id="result_province_rateOf20sInIndustry">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_province_industryJobCreation">
+			<div class="score_storage unlayered" id="result_province_industryJobCreation">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_province_incomeRate">
+			<div class="score_storage unlayered" id="result_province_incomeRate">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_province_R_COSTII">
+			<div class="score_storage unlayered" id="result_province_R_COSTII">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="dataName"></div>
 			</div>
-			<div class="result_storage unlayered" id="result_province_expertRate">
+			<div class="score_storage unlayered" id="result_province_expertRate">
 				<div class="scoreName"></div>
 				<div class="dataValue"></div>
 				<div class="dataName"></div>
 			</div>
 		</div>
 
+		<img id="info_scrollingTop" src="@images/Scroll_down.svg">
 
-		<div id="legendInfo_dataInfo">
-			<!-- <div id="legend_party_dataInfo"><img src="@images/information.svg"> 데이터 해설</div
-			><div id="legend_elected_dataInfo"><img src="@images/information.svg">  이 연구에 대한 정보</div> -->
-			<img id="info_scrollingTop" src="@images/Scroll_up.svg">
-		</div>
-
-		<div id="divider_dataInfo" class="ui divider"></div>
+		<!-- <div id="divider_dataInfo" class="ui divider"></div>
 
 		<div id="title_dataInfo">
 			<p><a id="about_dataInfo" href="/">About 전국투표전도…</a></p>
 			<p>© 2017 조현익 Hyunik Cho. 
 			<br>선거관련 데이터는 한국 중앙선거관리위원회 <a href="http://info.nec.go.kr/">선거통계시스템</a>에서 무료로 조회 가능합니다.</p>
-		</div>
+		</div> -->
 
 	</div>
 
 
-	<div class="ui small modal" id="popup_modal">
+	<div class="ui modal" id="popup_modal">
 		<i class="close icon"></i>
 		<div class="header">데이터 구성 및 출처</div>
 
 		<div class="scrolling content" id="modal_content">
 			<div class="data_explanation">
 				<p>이 지도는 시군구 단위, 연도별로 데이터를 반영했습니다. 사용된 모든 데이터는 공개적으로 접근 가능한 것입니다.</p>
-				<p>① 다만, ‘일자리 창출 위험도’ 정보에 사용된 데이터는 통계청 원격프로그램 사용 승인을 통해서 확보했으며, 이 과정에서 통계청으로부터 ‘지역 간 직접 비교가 가능한 수치는 공개하지 말 것’을 요청받았기에 색깔 반영도만 표기했습니다.</p>
+				<p>① ‘일자리 창출 위험도’ 정보에 사용된 데이터는 통계청 원격프로그램 사용 승인을 통해서 확보했으며, 이 과정에서 통계청으로부터 ‘지역 간 직접 비교가 가능한 수치는 공개하지 말 것’을 요청받았기에 색깔 반영도만 표기했습니다.</p>
 				<p>② ‘직장인-주민 괴리도’ 정보에 사용된 데이터는 2016년부터 집계가 시작되었으므로 2014년, 2015년 지도에도 2016년 데이터가 표시됐습니다. </p>
 				<p>③ ‘과학기술혁신역량 위험도’에 사용된 데이터는 광역 단위로 반영되었습니다.</p>
 				<br>데이터별 자세한 설명 및 출처, 색깔 반영도는 아래와 같습니다.<br>
 			</div>
+
+		<div class="data_explanation" id="singleTable_30degree">
+			<h1>300인 이상 제조업 집중도 (기본지도)</h1>
+			<div class="explanation_line">
+				<div class="explanation_title">원데이터 및 출처</div>
+				<div class="explanation"> 
+					300인 이상 제1제조업 종사자수 / 300인 이상 제조업 종사자수 (시·군·자치구 기준, %)
+					<div class="source">고용노동부, 사업체노동실태현황</div> 
+				</div>
+			</div>
+			<div class="explanation_line">
+				<div class="explanation_title">색상 반영도</div>
+				<table class="ui unstackable celled collapsing table explanation_table">
+					<thead><tr>
+						<th>0%</th>
+						<th>1%<br>미만</th>
+						<th>~2%</th>
+						<th>~3%</th>
+						<th>~4%</th>
+						<th>~5%</th>
+						<th>~7.5%</th>
+						<th>~10%</th>
+						<th>~15%</th>
+						<th>~20%</th>
+						<th>20%<br>이상</th>
+					</tr></thead> 
+					<tbody><tr>
+						<td style="background-color: hsl(0, 100%, 100%);">0</td>
+						<td style="background-color: hsl(0, 100%, 97%);">3</td>
+						<td style="background-color: hsl(0, 100%, 94%);">6</td>
+						<td style="background-color: hsl(0, 100%, 91%);">9</td>
+						<td style="background-color: hsl(0, 100%, 88%);">12</td>
+						<td style="background-color: hsl(0, 100%, 85%);">15</td>
+						<td style="background-color: hsl(0, 100%, 82%);">18</td>
+						<td style="background-color: hsl(0, 100%, 79%);">21</td>
+						<td style="background-color: hsl(0, 100%, 76%);">24</td>
+						<td style="background-color: hsl(0, 100%, 73%);">27</td>
+						<td style="background-color: hsl(0, 100%, 70%);">30</td>
+					</tr></tbody> 
+				</table>
+			</div>
 		</div>
+
+		<div class="data_explanation" id="twinTable_30degree">
+			<h1>300인 이상 제조업 집중도 (기본지도)</h1>
+			<div class="explanation_line">
+				<div class="explanation_title">원데이터 및 출처</div>
+				<div class="explanation"> 
+					300인 이상 제1제조업 종사자수 / 300인 이상 제조업 종사자수 (시·군·자치구 기준, %)
+					<div class="source">고용노동부, 사업체노동실태현황</div> 
+				</div>
+			</div>
+			<div class="explanation_line">
+				<div class="explanation_title">색상 반영도</div>
+				<table class="ui unstackable celled collapsing table explanation_table">
+					<thead><tr>
+						<th>0%</th>
+						<th>1% 미만</th>
+						<th>~2%</th>
+						<th>~3%</th>
+						<th>~4%</th>
+						<th>~5%</th>
+					</tr></thead> 
+					<tbody><tr>
+						<td style="background-color: hsl(0, 100%, 100%);">0</td>
+						<td style="background-color: hsl(0, 100%, 97%);">3</td>
+						<td style="background-color: hsl(0, 100%, 94%);">6</td>
+						<td style="background-color: hsl(0, 100%, 91%);">9</td>
+						<td style="background-color: hsl(0, 100%, 88%);">12</td>
+						<td style="background-color: hsl(0, 100%, 85%);">15</td>
+					</tr></tbody> 
+				</table>
+				<table class="ui unstackable celled collapsing table explanation_table">
+					<thead><tr>
+						<th>~7.5%</th>
+						<th>~10%</th>
+						<th>~15%</th>
+						<th>~20%</th>
+						<th>20% 이상</th>
+					</tr></thead> 
+					<tbody><tr>
+						<td style="background-color: hsl(0, 100%, 82%);">18</td>
+						<td style="background-color: hsl(0, 100%, 79%);">21</td>
+						<td style="background-color: hsl(0, 100%, 76%);">24</td>
+						<td style="background-color: hsl(0, 100%, 73%);">27</td>
+						<td style="background-color: hsl(0, 100%, 70%);">30</td>
+					</tr></tbody> 
+				</table>
+			</div>
+		</div>
+		</div>
+
+
 
 	</div>
 
@@ -341,12 +425,12 @@
 		<a id="lab2050_logo" href="https://lab2050.org/" target="_blank"><img src="@images/lab2050_colour.png"></a>
 	</footer>
 
-
 	<!-- local js/css -->
 	<script type="text/javascript" src="js/onLoad.js"></script>
 	<script type="text/javascript" src="js/popup_modal.js"></script>
 	<script type="text/javascript" src="js/leaflet_script.js"></script>
 	<script type="text/javascript" src="js/dataInfo.js"></script>
+
 </body>
 </html>
 

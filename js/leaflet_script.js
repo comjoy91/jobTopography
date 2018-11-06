@@ -47,18 +47,6 @@ function onEachFeature_municipal(_feature, _layer) {
 	});	
 }
 
-// function onEachFeature_province(_feature, _layer) {
-// 	// functions for filling search_contents.
-// 	var prop = _feature.properties;
-// 	search_contents.push({
-// 		title: "<b>" + prop.province_name + "</b> (전체)",
-// 		title_string: prop.province_name + " (전체)",
-// 		province_name: prop.province_name,
-// 		municipal_name: "",
-// 		layer: _layer
-// 	});
-// }
-
 
 // adding colour for choropleth map
 function styleFunc(feature) {
@@ -90,8 +78,7 @@ var layer_municipal = L.geoJson(municipalGeoJSON, {
 }).addTo(map);
 
 var layer_province_border = L.geoJson(provinceGeoJSON, {
-	style: styleFunc_province_border,
-	// onEachFeature: onEachFeature_province
+	style: styleFunc_province_border
 }).addTo(map);
 
 
@@ -243,7 +230,31 @@ function zoomToFeature_layer(_layer) {
 
 	current_municipal_layer = _layer;
 	current_province_layer = municipal_toProvince_layer(_layer)
-	map.fitBounds(current_province_layer.getBounds(), {paddingBottomRight: [382, 32], paddingTopLeft: [254, 32]});
+	// map.fitBounds(current_province_layer.getBounds(), {paddingBottomRight: [382, 32], paddingTopLeft: [224, 32]});
+
+
+
+	{ // extra working by different browser window width.
+		if ( windowWidth >= 1025 ) {
+			map.fitBounds(current_province_layer.getBounds(), {paddingBottomRight: [382, 32], paddingTopLeft: [224, 32]});
+		}
+
+		else if ( windowWidth >= 768 && wideRatio > 2/1) { // "iPhone X"
+			map.fitBounds(current_province_layer.getBounds(), {paddingBottomRight: [336, 16], paddingTopLeft: [40, 16]});
+		}
+
+		else if ( windowWidth >= 768 ) {
+			map.fitBounds(current_province_layer.getBounds(), {paddingBottomRight: [336, 16], paddingTopLeft: [16, 144]});
+		}
+
+		else { 
+			map.fitBounds(current_province_layer.getBounds(), {paddingBottomRight: [0, windowHeight/10*3], paddingTopLeft: [16, 48]});
+		}
+	}
+
+
+
+
 	current_province_layer.setStyle({
 		color: '#248'
 	});
@@ -262,6 +273,7 @@ function zoomToFeature_layer(_layer) {
 }
 function zoomToFeature(e) {
 	zoomToFeature_layer(e.target);
+	tooltip.style("display", "none");
 }
 
 

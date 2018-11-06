@@ -22,11 +22,6 @@ function append_municipal_dataInfo(_scoreName, _dataValue, _score, _dataName) {
 
 
 
-
-// function isProvince_menu() {
-// 	return $("#menu_province").hasClass("active");
-// }
-
 function change_dataInfo(_prop) {
 	(function($){
 		if (_prop == null) {
@@ -52,7 +47,7 @@ function change_dataInfo(_prop) {
 
 
 			$(".dataInfo").detach();
-			$(".result_storage").empty();
+			$(".score_storage").empty();
 
 
 			// ----------- municipal ------------
@@ -61,7 +56,7 @@ function change_dataInfo(_prop) {
 			$("#basicInfo_municipal").append(append_basic_dataInfo("전체 인구", d3.format(",")(_data.population)+"명"));
 			$("#basicInfo_municipal").append(append_basic_dataInfo("평균 연령", d3.format(".1f")(_data.mean_age)+"세"));
 			$("#basicInfo_municipal").append(append_basic_dataInfo("전체 종사자수", d3.format(",")(_data.numWorkers_inDistrict)+"명"));
-			$("#basicInfo_municipal").append(append_basic_dataInfo("제1제조업 (300인 이상 대기업의 최대 고용 제조업종)", _data.mainIndustry_300)); //<br>(300인 이상 대기업 중)
+			$("#basicInfo_municipal").append(append_basic_dataInfo("제1제조업 (300인 이상 제조업 중 최대 고용 업종)", _data.mainIndustry_300)); //<br>(300인 이상 대기업 중)
 			$("#basicInfo_municipal").append(append_basic_dataInfo("주요 사업체 (1000인 이상 대기업)", _data.factory));
 			var factory_html = $("#basicInfo_municipal .dataInfo").eq(4);
 			if ($(factory_html).children(".value").html() == "") $(factory_html).children(".value").html("-");//$(factory_html).css("display", "none");
@@ -74,13 +69,13 @@ function change_dataInfo(_prop) {
 
 			// municipal score.
 			$("#result_municipal_hiringRate_300").append(
-				append_municipal_dataInfo("300인 이상 제조업 집중도", _data.hiringRate_300.rawData, _data.hiringRate_300.score, "제조업 종사자 중 300인 이상 대기업 종사자 비율")//"제조업 종사자 중 300인 이상 대기업 종사자 / 전체 제조업체 종사자")
+				append_municipal_dataInfo("300인 이상 제조업 집중도", _data.hiringRate_300.rawData, _data.hiringRate_300.score, "지역 종사자 중 300인 이상 제조업 종사자 비율")//"제조업 종사자 중 300인 이상 대기업 종사자 / 전체 제조업체 종사자")
 			);
 			$("#result_municipal_hiringRate_1000").append(
-				append_municipal_dataInfo("1000인 이상 제조업 집중도", _data.hiringRate_1000.rawData, _data.hiringRate_1000.score, "제조업 종사자 중 1000인 이상 대기업 종사자 비율")//"1000인 이상 대기업 제조업체 종사자 / 전체 제조업체 종사자")
+				append_municipal_dataInfo("1000인 이상 제조업 집중도", _data.hiringRate_1000.rawData, _data.hiringRate_1000.score, "지역 종사자 중 1000인 이상 제조업 종사자 비율")//"1000인 이상 대기업 제조업체 종사자 / 전체 제조업체 종사자")
 			);
 			$("#result_municipal_mainIndustryPortion").append(
-				append_municipal_dataInfo("제1제조업 집중도", _data.mainIndustryPortion.rawData, _data.mainIndustryPortion.score, "제조업 종사자 중 제1제조업(300인 이상 대기업 기준) 종사자 비율")//"제1제조업(300인 이상 기업) 종사자 / 전체 제조업체 종사자")
+				append_municipal_dataInfo("제1제조업 집중도", _data.mainIndustryPortion.rawData, _data.mainIndustryPortion.score, "300인 이상 제조업 종사자 중 제1제조업 종사자 비율")//"제1제조업(300인 이상 기업) 종사자 / 전체 제조업체 종사자")
 			);
 			$("#result_municipal_rateOf20sInIndustry").append(
 				append_municipal_dataInfo("제조업 고령화", _data.rateOf20sInIndustry.rawData, _data.rateOf20sInIndustry.score, "제조업 종사자 중 20대 비율")
@@ -99,15 +94,15 @@ function change_dataInfo(_prop) {
 			);
 
 			if ( _data.additional_note == "" ) $("#description_additional_note").css("display", "none");
-			else $("#description_additional_note").html("Note: " + _data.additional_note).css("display", "");
+			else $("#description_additional_note").html("Note: <br>" + _data.additional_note).css("display", "");
 
 			if ( _data.hiringRate_300.score > 0 ) {
-				$("#result_municipal_total .score").html(d3.format(".1f")(_prop.score_total) + " / 100.0");
+				$("#score_municipal_total .score").html(d3.format(".1f")(_prop.score_total) + " / 100.0");
 				$("#description_municipal_total").css("display", "none");
 			}
 			else {
-				$(".result_storage .score").append("*");
-				$("#result_municipal_total .score").html("0.0* / 100.0");
+				$(".score_storage .score").append("*");
+				$("#score_municipal_total .score").html("0.0* / 100.0");
 				$("#description_municipal_total").css("display", "");
 			}
 
@@ -117,7 +112,7 @@ function change_dataInfo(_prop) {
 			$("#basicInfo_province").append(append_basic_dataInfo("전체 인구", d3.format(",")(_data_province.population)+"명"));
 			$("#basicInfo_province").append(append_basic_dataInfo("평균 연령", d3.format(".1f")(_data_province.mean_age)+"세"));
 			$("#basicInfo_province").append(append_basic_dataInfo("전체 종사자수", d3.format(",")(_data_province.numWorkers_inDistrict)+"명"));
-			$("#basicInfo_province").append(append_basic_dataInfo("제1제조업 (300인 이상 대기업의 최대 고용 제조업종)", _data_province.mainIndustry_300));
+			$("#basicInfo_province").append(append_basic_dataInfo("제1제조업 (300인 이상 제조업 중 최대 고용 업종)", _data_province.mainIndustry_300));
 			if ( _data_province.factory != "" ) 
 				$("#basicInfo_province").append(append_basic_dataInfo("주요 사업체 (1000인 이상 대기업)", _data_province.factory));
 
@@ -128,13 +123,13 @@ function change_dataInfo(_prop) {
 
 			// province score.
 			$("#result_province_hiringRate_300").append(
-				append_province_dataInfo("300인 이상 제조업 집중도", _data_province.hiringRate_300.rawData, "제조업 종사자 중 300인 이상 대기업 종사자 비율")//"제조업 종사자 중 300인 이상 대기업 종사자 / 전체 제조업체 종사자")
+				append_province_dataInfo("300인 이상 제조업 집중도", _data_province.hiringRate_300.rawData, "지역 종사자 중 300인 이상 제조업 종사자 비율")//"제조업 종사자 중 300인 이상 대기업 종사자 / 전체 제조업체 종사자")
 			);
 			$("#result_province_hiringRate_1000").append(
-				append_province_dataInfo("1000인 이상 제조업 집중도", _data_province.hiringRate_1000.rawData, "제조업 종사자 중 1000인 이상 대기업 종사자 비율")//"1000인 이상 대기업 제조업체 종사자 / 전체 제조업체 종사자")
+				append_province_dataInfo("1000인 이상 제조업 집중도", _data_province.hiringRate_1000.rawData, "지역 종사자 중 1000인 이상 제조업 종사자 비율")//"1000인 이상 대기업 제조업체 종사자 / 전체 제조업체 종사자")
 			);
 			$("#result_province_mainIndustryPortion").append(
-				append_province_dataInfo("제1제조업 집중도", _data_province.mainIndustryPortion.rawData, "제조업 종사자 중 제1제조업(300인 이상 대기업 기준) 종사자 비율")//"제1제조업(300인 이상 기업) 종사자 / 전체 제조업체 종사자")
+				append_province_dataInfo("제1제조업 집중도", _data_province.mainIndustryPortion.rawData, "300인 이상 제조업 종사자 중 제1제조업 종사자 비율")//"제1제조업(300인 이상 기업) 종사자 / 전체 제조업체 종사자")
 			);
 			$("#result_province_rateOf20sInIndustry").append(
 				append_province_dataInfo("제조업 고령화", _data_province.rateOf20sInIndustry.rawData, "제조업 종사자 중 20대 비율")
@@ -159,7 +154,6 @@ function change_dataInfo(_prop) {
 function change_dataInfo_needtoSelect() {
 	(function($){
 		$("#selectNotice").css("display", "");
-		// $("#electionType_name").html("");
 		$("#info_nameContainer").css("display", "none");
 		$("#info_hyperlink").css("display", "none");
 		$("#result_municipal, #result_province").css("display", "none");

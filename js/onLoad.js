@@ -3,10 +3,19 @@ var mbAttr = '<a href="https://www.maptiler.com/license/maps/" target="_blank">�
 	mbUrl = 'https://maps.tilehosting.com/styles/positron/{z}/{x}/{y}@2x.png?key=JrAhm6tBG7Y3CCaBBIMe';
 var grayscale = L.tileLayer(mbUrl, {attribution: mbAttr});
 
-var map = L.map('map_background', {layers: [grayscale], zoomControl: false, attributionControl: false, minZoom: 6, scrollWheelZoom: true}).setView([36, 128], 7);
-L.control.attribution({position: 'bottomleft'}).addTo(map);
+var map = L.map( 'map_background', {
+					layers: [grayscale], 
+					zoomControl: false, 
+					attributionControl: false,
+					minZoom: 6, 
+					scrollWheelZoom: true} ).setView([36, 128], 7);
+var attribution = L.control.attribution({position: 'bottomleft'}).addTo(map);
 L.control.zoom({position: 'topleft'}).addTo(map);
+if ( !L.Browser.touch ) {
+	$("#map_background").addClass("leaflet-touch"); // add class .leaflet-touch for every browser to expand size of zoom control button.
+}
 
+var windowWidth, windowHeight, wideRatio = 0;
 
 // functions for implementing rawData and score into initial geoJSON data.
 function data_object(_dataJson_district) {
@@ -78,11 +87,42 @@ dataInsertion(municipalGeoJSON, municipalData);
 dataInsertion(provinceGeoJSON, provinceData);
 
 (function($){
+
+	function resizeWindow() { // extra working by different browser window width.
+		windowWidth = $(window).width();
+		windowHeight = $(window).height();
+		wideRatio = windowWidth / windowHeight;
+		if ( windowWidth >= 1025 ) {
+			$("#mapYear_slider").slider( "option", "orientation", "horizontal" );
+			$("#map_layerControl").attr( {class: "", style: ""} );
+		}
+
+		else if ( windowWidth >= 768 && wideRatio > 2/1) { // "iPhone X"
+			$("#mapYear_slider").slider( "option", "orientation", "horizontal" );
+			$("#map_layerControl").addClass( "ui popup bottom right" );
+			attribution.setPosition("bottomleft");
+		}
+
+		else if ( windowWidth >= 768 ) {
+			$("#mapYear_slider").slider( "option", "orientation", "vertical" );
+			$("#map_layerControl").attr( {class: "", style: ""} );
+			attribution.setPosition("bottomleft");
+		}
+
+		else { 
+			$("#mapYear_slider").slider( "option", "orientation", "horizontal" );
+			$("#map_layerControl").addClass( "ui popup bottom right" );
+			attribution.setPosition("topright");
+		}
+	}
+
 	$(window).on("load", function() {//먼저 js파일들을 모두 로드. 
+
 
 		// Layer selection with #mapYear slidebar
 		$("#mapYear_slider").slider({
 			animate: true,
+			orientation: "horizontal",
 			min: 0,
 			max: 2,
 			value: 2,
@@ -100,6 +140,26 @@ dataInsertion(provinceGeoJSON, provinceData);
 		$('#layerControl_legend, #dataInfo_municipal_legend').click( function() { // modal popup
 			$('#popup_modal').modal('show');
 		});
+
+		$('#layerControl_popup').popup( { // popup button for #map_layerControl in mobile devices.
+			popup : '#map_layerControl',
+		    on    : 'click',
+			inline     : true,
+			hoverable  : true,
+			position   : 'bottom right',
+			delay: {
+				show: 300,
+				hide: 800
+			}
+		});	
+
+		$("#info_scrollingTop").click( function() { // scroll #dataInfo down in mobile devices.
+			event.preventDefault();
+			$('html, body').stop().animate({
+				scrollTop: 0
+			}, 600,'easeOutCubic');
+		});
+
 
 		var check_hiringRate_1000 = document.getElementById("check_hiringRate_1000"),  
 			check_mainIndustryPortion = document.getElementById("check_mainIndustryPortion"),
@@ -160,9 +220,12 @@ dataInsertion(provinceGeoJSON, provinceData);
 			}
 		});
 
+		resizeWindow();
 		change_dataInfo();
 		popup_update();
 	});
+
+	$(window).on("resize", resizeWindow); // 창 크기가 바뀔 때에는
 
 })(jQuery);
 

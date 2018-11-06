@@ -29,7 +29,7 @@ i.icon {
   margin: 0em 0.25rem 0em 0em;
   width: 1.18em;
   height: 1em;
-  font-family: 'Icons';
+  font-family: 'Icons', 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
@@ -4075,7 +4075,7 @@ i.icon.youtube.play:before {
   text-transform: none;
 }
 i.icon.outline {
-  font-family: 'outline-icons';
+  font-family: 'outline-icons', 'Font Awesome 5 Free';
 }
 
 /* Icon Definitions */
@@ -4434,7 +4434,7 @@ i.icon.disk.outline:before {
 }
 i.icon.heart.empty,
 i.icon.star.empty {
-  font-family: 'outline-icons';
+  font-family: 'outline-icons', 'Font Awesome 5 Free';
 }
 i.icon.heart.empty:before {
   content: "\f004";
@@ -4794,7 +4794,7 @@ i.icon.yelp,
 i.icon.yoast,
 i.icon.youtube,
 i.icon.youtube.square {
-  font-family: 'brand-icons';
+  font-family: 'brand-icons', 'Font Awesome 5 Free';
 }
 
 /* Brand Icons Ideally Would Be Defined Here */
