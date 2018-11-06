@@ -1030,7 +1030,7 @@ footer {
 @media all and (max-width:767px) { /* mobile phone layout */
 
 	#info_scrollingTop {
-		margin: 0 24px 24px 264px;
+		margin: 0 0px 24px 264px;
 		display: initial;
 	}
 
