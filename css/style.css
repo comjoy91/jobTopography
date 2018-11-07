@@ -117,12 +117,13 @@ div, input {
 #site_title {
 	font-size: 21px;
 	font-weight: 600;
-	line-height: 1.0;
-	text-align: center;
+	line-height: 1.25;
+	display: flex;
+	align-items: center;
 
 	top: 32px;
 	left: 32px;
-	padding: 16px;
+	padding: 16px 12px 15px 13px;
 
 	background: #ffffff;
 	border: 1px solid #c3c3c3;
@@ -133,9 +134,13 @@ div, input {
 	text-decoration: none;
 }
 
-#site_title img {
-	height: 1em;
-}
+	#site_title img {
+		height: 2.6em;
+		margin: 0 0.5em 0 0;
+	}
+	#site_title div {
+		padding: 0.1em 0 0 0;
+	}
 
 
 #layerControl_popup {
@@ -158,7 +163,8 @@ div, input {
 @media all and (max-width:1024px) { /* tablet layout */
 	#site_title {
 		top: 16px;
-		left: 16px;
+		left: -32px;
+		padding: 16px 12px 16px 48px;
 		/*width: 80px;*/
 
 		text-align: left;
@@ -167,27 +173,35 @@ div, input {
 }
 @media all and (max-width:1024px) and (min-aspect-ratio: 2/1) { /* "iPhone X", widescreen aspect */
 	#site_title {
-		/*display: none;*/
 		font-size: 15px;
-		padding: 12px 12px;
+		left: -36px;
+		padding: 8px 8px 7px 48px;
 		border: 2px solid rgba(0,0,0,0.3);
 	}
+		#site_title img {
+			height: 2.6em;
+			margin: 0 0.6em 0 0;
+		}
 	#layerControl_popup {
-		top: 116px;
+		top: 136px;
 		left: 16px;
 		display: initial;
 	}
 }
 @media all and (max-width:767px) { /* mobile phone, widescreen layout */
 	#site_title {
-		/*display: none;*/
 		font-size: 15px;
 		top: 28px;
-		padding: 12px 12px;
+		left: -36px;
+		padding: 8px 8px 7px 48px;
 		border: 2px solid rgba(0,0,0,0.3);
 	}
+		#site_title img {
+			height: 2.6em;
+			margin: 0 0.6em 0 0;
+		}
 	#layerControl_popup {
-		top: 128px;
+		top: 136px;
 		left: 16px;
 		display: initial;
 	}
@@ -205,7 +219,7 @@ div, input {
 /* ------------ #map_layerControl ------------ */
 
 #map_layerControl {
-	top: 100px;
+	top: 132px;
 	left: 32px;
 	width: 192px;
 
@@ -358,8 +372,8 @@ div, input {
 /* ------------ #layerControl_legend ------------ */
 
 #layerControl_legend {
-	top: 100px;
-	left: 235px;
+	top: 132px;
+	left: 236px;
 	width: 24px;
 	height: 24px;
 	padding: 4px 3px 2px 3px;
@@ -376,19 +390,19 @@ div, input {
 
 @media all and (max-width:1024px) { /* tablet layout */
 	#layerControl_legend {
-		top: 144px;
-		left: 90px;
+		top: 162px;
+		left: 76px;
 	}
 }
 @media all and (max-width:1024px) and (min-aspect-ratio: 2/1) { /* "iPhone X", widescreen aspect */
 	#layerControl_legend {
-		top: 72px;
+		top: 96px;
 		left: 16px;
 	}
 }
 @media all and (max-width:767px) { /* mobile phone, widescreen layout */
 	#layerControl_legend {
-		top: 84px;
+		top: 96px;
 		left: 16px;
 	}
 }
@@ -397,18 +411,18 @@ div, input {
 /* ------------ leaflet zoomButton (.leaflet-left, .leaflet-top) ------------ */
 
 .leaflet-left .leaflet-control-zoom {
-	margin-left: 235px;
+	margin-left: 236px;
 }
 .leaflet-top .leaflet-control-zoom {
-	margin-top: 144px;
+	margin-top: 176px;
 }
 
 @media all and (max-width:1024px) { /* tablet layout */
 	.leaflet-left .leaflet-control-zoom {
-		margin-left: 90px;
+		margin-left: 76px;
 	}
 	.leaflet-top .leaflet-control-zoom {
-		margin-top: 188px;
+		margin-top: 206px;
 	}
 }
 @media all and (max-width:1024px) and (min-aspect-ratio: 2/1) { /* "iPhone X", widescreen aspect */
@@ -416,7 +430,7 @@ div, input {
 		margin-left: 16px;
 	}
 	.leaflet-top .leaflet-control-zoom {
-		margin-top: 160px;
+		margin-top: 176px;
 	}
 }
 @media all and (max-width:767px) { /* mobile phone, widescreen layout */
@@ -424,7 +438,7 @@ div, input {
 		margin-left: 16px;
 	}
 	.leaflet-top .leaflet-control-zoom {
-		margin-top: 172px;
+		margin-top: 176px;
 	}
 }
 
@@ -433,11 +447,11 @@ div, input {
 /* ------------ #score_legend ------------ */
 
 #score_legend {
-	top: 360px;
+	top: 392px;
 	left: 36px;
 	width: auto;
 	height: 128px;
-	padding: 10px 10px 10px 8px;
+	padding: 10px 9px 10px 7px;
 
 	display: flex;
 
@@ -461,7 +475,7 @@ div, input {
 	#score_integer {
 		width: auto;
 		height: 100%;
-		margin: 0 6px 0 0;
+		margin: 0 8px 0 0;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column-reverse;
@@ -476,12 +490,16 @@ div, input {
 
 @media all and (max-width:1024px) { /* tablet layout */
 	#score_legend {
-		top: 144px;
+		top: 162px;
 		left: 24px;
 		height: 108px;
+		padding: 10px 7px 10px 6px;
 	}
 		#score_legend div {
 			text-align: center;
+		}
+		#score_gradient {
+			width: 6px;
 		}
 }
 
@@ -504,7 +522,7 @@ div, input {
 	#score_legend {
 		top: auto;
 		left: auto;
-		right: 360px;
+		right: 352px;
 		bottom: 20px;
 	}
 }
