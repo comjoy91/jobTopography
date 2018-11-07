@@ -1,4 +1,10 @@
 // BACKGROUND LAYER
+
+var windowWidth, windowHeight, wideRatio = 0;
+windowWidth = $(window).width();
+windowHeight = $(window).height();
+wideRatio = windowWidth / windowHeight;
+
 var mbAttr = '<a href="https://www.maptiler.com/license/maps/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
 	mbUrl = 'https://maps.tilehosting.com/styles/positron/{z}/{x}/{y}@2x.png?key=JrAhm6tBG7Y3CCaBBIMe';
 var grayscale = L.tileLayer(mbUrl, {attribution: mbAttr});
@@ -8,14 +14,30 @@ var map = L.map( 'map_background', {
 					zoomControl: false, 
 					attributionControl: false,
 					minZoom: 6, 
-					scrollWheelZoom: true} ).setView([36, 128], 7);
+					maxZoom: 12,
+					scrollWheelZoom: true} );
 var attribution = L.control.attribution({position: 'bottomleft'}).addTo(map);
 L.control.zoom({position: 'topleft'}).addTo(map);
 if ( !L.Browser.touch ) {
 	$("#map_background").addClass("leaflet-touch"); // add class .leaflet-touch for every browser to expand size of zoom control button.
 }
 
-var windowWidth, windowHeight, wideRatio = 0;
+{ // initial map view setting by different browser window width.
+	if ( windowWidth >= 1025 ) {
+		map.setView([36, 128], 7);
+	}
+	else if ( windowWidth >= 768 && wideRatio > 2/1) { // "iPhone X"
+		map.setView([36, 131], 6);
+	}
+	else if ( windowWidth >= 768 ) {
+		map.setView([36.3, 129.3], 7);
+	}
+	else { 
+		map.setView([34.5, 127.7], 6);
+	}
+}
+
+
 
 // functions for implementing rawData and score into initial geoJSON data.
 function data_object(_dataJson_district) {
@@ -142,15 +164,12 @@ dataInsertion(provinceGeoJSON, provinceData);
 		});
 
 		$('#layerControl_popup').popup( { // popup button for #map_layerControl in mobile devices.
-			popup : '#map_layerControl',
-		    on    : 'click',
-			inline     : true,
-			hoverable  : true,
-			position   : 'bottom right',
-			delay: {
-				show: 300,
-				hide: 800
-			}
+			popup 		: '#map_layerControl',
+		    on 			: 'click',
+			inline		: true,
+			position	: 'right center',
+			delay		: { show: 300, hide: 800 }, 
+			distanceAway		: 8
 		});	
 
 		$("#info_scrollingTop").click( function() { // scroll #dataInfo down in mobile devices.
@@ -221,6 +240,9 @@ dataInsertion(provinceGeoJSON, provinceData);
 		});
 
 		resizeWindow();
+		if ( (windowWidth >= 768 && wideRatio > 2/1) || (windowWidth < 768) )  { // show popup initially.
+			$("#layerControl_popup").popup('show');
+		}
 		change_dataInfo();
 		popup_update();
 	});
