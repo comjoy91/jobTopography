@@ -97,12 +97,12 @@ function change_dataInfo(_prop) {
 			else $("#description_additional_note").html("Note: <br>" + _data.additional_note).css("display", "");
 
 			if ( _data.hiringRate_300.score > 0 ) {
-				$("#score_municipal_total .score").html(d3.format(".1f")(_prop.score_total) + " / 100.0");
+				$("#score_municipal_total .score").html(d3.format(".1f")(_prop.score_total)); // + " / 100.0");
 				$("#description_municipal_total").css("display", "none");
 			}
 			else {
 				$(".score_storage .score").append("*");
-				$("#score_municipal_total .score").html("0.0* / 100.0");
+				$("#score_municipal_total .score").html("0.0*"); // / 100.0");
 				$("#description_municipal_total").css("display", "");
 			}
 

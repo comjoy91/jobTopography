@@ -50,7 +50,17 @@ function onEachFeature_municipal(_feature, _layer) {
 
 // adding colour for choropleth map
 function styleFunc(feature) {
-	return {
+	if ( feature.properties.score_total <= 0 ) {
+		return {
+			fillColor: "#c3c9cb",
+			weight: 0.5,
+			opacity: 0.15,
+			color: 'blue',
+			dashArray: '',
+			fillOpacity: 0.85 // 1.0
+		}
+	}
+	else return {
 		fillColor: getColour(feature.properties.score_total, 16),
 		weight: 0.5,
 		opacity: 0.15,
@@ -64,7 +74,7 @@ function styleFunc_province_border(feature) {
 	return {
 		color: 'green', 
 		weight: 1.4, 
-		opacity: 1,
+		opacity: 0.25,
 		fillColor: 'black', 
 		fillOpacity: 0
 	}
@@ -120,9 +130,16 @@ function updateScore() {
 
 			if (prop.score_total > 100) prop.score_total = 100;
 
-			_layer.setStyle({
-				fillColor: getColour(prop.score_total, 16)
-			});
+			if (prop.score_total <= 0) 
+				_layer.setStyle({
+					fillColor: "#c3c9cb",
+					fillOpacity: 0.85 // 1.0
+				});
+			else  
+				_layer.setStyle({
+					fillColor: getColour(prop.score_total, 16),
+					fillOpacity: 0.7
+				});
 		});
 	}
 	if (current_municipal_layer)
@@ -174,10 +191,16 @@ var tooltip = d3.select("body").append("div")
 	.attr("class", "tooltip")
 	.style("display", "none");
 function districtTooltip(e) { //build tooltip for mouseover layer
-	tooltip.html( e.target.feature.properties.province_name + " <b>" 
-			+ e.target.feature.properties.municipal_name + "</b><br> 현재 Total: " 
-			+ d3.format(".1f")(e.target.feature.properties.score_total) + " / 100.0"
-		)
+	var tooltipHTML;
+	if ( e.target.feature.properties.score_total <= 0) 
+		tooltipHTML = e.target.feature.properties.province_name + " <b>" 
+					+ e.target.feature.properties.municipal_name + "</b><br> 300인 이상 제조업체 없음";
+	else
+		tooltipHTML = e.target.feature.properties.province_name + " <b>" 
+					+ e.target.feature.properties.municipal_name + "</b><br> 현재 Total: " 
+					+ d3.format(".1f")(e.target.feature.properties.score_total);// + " / 100.0";
+
+	tooltip.html( tooltipHTML )
 		.style("left", (e.containerPoint.x - $(".tooltip").innerWidth()/2) + "px")
 		.style("top", (e.containerPoint.y) + "px");
 		// .css("transition")
