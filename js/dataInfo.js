@@ -57,7 +57,7 @@ function change_dataInfo(_prop) {
 			$("#basicInfo_municipal").append(append_basic_dataInfo("평균 연령", d3.format(".1f")(_data.mean_age)+"세"));
 			$("#basicInfo_municipal").append(append_basic_dataInfo("전체 종사자수", d3.format(",")(_data.numWorkers_inDistrict)+"명"));
 			$("#basicInfo_municipal").append(append_basic_dataInfo("제1제조업 (300인 이상 제조업 중 최대 고용 업종)", _data.mainIndustry_300)); //<br>(300인 이상 대기업 중)
-			$("#basicInfo_municipal").append(append_basic_dataInfo("주요 사업체 (1000인 이상 대기업)", _data.factory));
+			$("#basicInfo_municipal").append(append_basic_dataInfo("주요 사업체", _data.factory));
 			var factory_html = $("#basicInfo_municipal .dataInfo").eq(4);
 			if ($(factory_html).children(".value").html() == "") $(factory_html).children(".value").html("-");//$(factory_html).css("display", "none");
 			// else factory_html.css("display", "");
@@ -114,7 +114,7 @@ function change_dataInfo(_prop) {
 			$("#basicInfo_province").append(append_basic_dataInfo("전체 종사자수", d3.format(",")(_data_province.numWorkers_inDistrict)+"명"));
 			$("#basicInfo_province").append(append_basic_dataInfo("제1제조업 (300인 이상 제조업 중 최대 고용 업종)", _data_province.mainIndustry_300));
 			if ( _data_province.factory != "" ) 
-				$("#basicInfo_province").append(append_basic_dataInfo("주요 사업체 (1000인 이상 대기업)", _data_province.factory));
+				$("#basicInfo_province").append(append_basic_dataInfo("주요 사업체", _data_province.factory));
 
 			// province explanation.
 			$("#textbox_explain_province").html(_data_province.explanation);

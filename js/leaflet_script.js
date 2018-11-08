@@ -52,7 +52,7 @@ function onEachFeature_municipal(_feature, _layer) {
 function styleFunc(feature) {
 	if ( feature.properties.score_total <= 0 ) {
 		return {
-			fillColor: "#c3c9cb",
+			fillColor: "#aaaaaa",
 			weight: 0.5,
 			opacity: 0.15,
 			color: 'blue',
@@ -132,7 +132,7 @@ function updateScore() {
 
 			if (prop.score_total <= 0) 
 				_layer.setStyle({
-					fillColor: "#c3c9cb",
+					fillColor: "#aaaaaa",
 					fillOpacity: 0.85 // 1.0
 				});
 			else  
