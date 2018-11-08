@@ -154,7 +154,9 @@ function updateScore_check() {
 
 function updateScore_radio() {
 	var outputHue, maxColourValue = 0;
-	if (radio_hue_35.checked)
+	if (radio_hue_0.checked)
+		outputHue = 0;
+	else if (radio_hue_35.checked)
 		outputHue = 35;
 	else if (radio_hue_100.checked)
 		outputHue = 100;

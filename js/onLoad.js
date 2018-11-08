@@ -323,7 +323,8 @@ dataInsertion(provinceGeoJSON, provinceData);
 		});
 
 
-		var radio_hue_35 = document.getElementById("radio_hue_35"),
+		var radio_hue_0 = document.getElementById("radio_hue_0"),
+			radio_hue_35 = document.getElementById("radio_hue_35"),
 			radio_hue_100 = document.getElementById("radio_hue_100"),
 			radio_hue_180 = document.getElementById("radio_hue_180"),
 			radio_hue_224 = document.getElementById("radio_hue_224"),
