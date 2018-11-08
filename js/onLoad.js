@@ -117,6 +117,7 @@ dataInsertion(provinceGeoJSON, provinceData);
 		if ( windowWidth >= 1025 ) {
 			$("#mapYear_slider").slider( "option", "orientation", "horizontal" );
 			$("#map_layerControl").attr( {class: "", style: ""} );
+			attribution.setPosition("bottomleft");
 		}
 
 		else if ( windowWidth >= 768 && wideRatio > 2/1) { // "iPhone X"
@@ -180,14 +181,23 @@ dataInsertion(provinceGeoJSON, provinceData);
 		});
 
 
-		var check_hiringRate_1000 = document.getElementById("check_hiringRate_1000"),  
+		var check_hiringRate_300 = document.getElementById("check_hiringRate_300"),
+			check_hiringRate_1000 = document.getElementById("check_hiringRate_1000"),  
 			check_mainIndustryPortion = document.getElementById("check_mainIndustryPortion"),
 			check_rateOf20sInIndustry = document.getElementById("check_rateOf20sInIndustry"),
 			check_industryJobCreation = document.getElementById("check_industryJobCreation"), 
 			check_incomeRate = document.getElementById("check_incomeRate"), 
 			check_R_COSTII = document.getElementById("check_R_COSTII"), 
 			check_expertRate = document.getElementById("check_expertRate");
+			
 
+		$("#checkUI_hiringRate_300").checkbox({
+			onChange: function(){
+				$("#result_municipal_hiringRate_300").toggleClass("unlayered"); 
+				$("#result_province_hiringRate_300").toggleClass("unlayered"); 
+				updateScore();
+			}
+		});
 
 		$("#checkUI_hiringRate_1000").checkbox({
 			onChange: function(){
@@ -240,7 +250,7 @@ dataInsertion(provinceGeoJSON, provinceData);
 		});
 
 		resizeWindow();
-		if ( (windowWidth >= 768 && wideRatio > 2/1) || (windowWidth < 768) )  { // show popup initially.
+		if ( (windowWidth >= 768 && windowWidth < 1025 && wideRatio > 2/1) || (windowWidth < 768) )  { // show popup initially.
 			$("#layerControl_popup").popup('show');
 		}
 		change_dataInfo();

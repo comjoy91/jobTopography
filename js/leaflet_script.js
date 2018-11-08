@@ -279,7 +279,8 @@ function zoomToFeature_layer(_layer) {
 
 
 	current_province_layer.setStyle({
-		color: '#248'
+		color: '#248', 
+		opacity: 1
 	});
 	_layer.setStyle({
 		weight: 4,

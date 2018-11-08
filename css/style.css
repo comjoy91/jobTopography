@@ -50,7 +50,7 @@ div, input {
 	text-align: center;
 	width: auto;
 	height: auto;
-	padding: 6px;
+	padding: 6px 6px 5px 6px;
 	margin-top: -50px;
 	font: 10px sans-serif;
 	background: #ddd;
