@@ -38,7 +38,6 @@ if ( !L.Browser.touch ) {
 }
 
 
-
 // functions for implementing rawData and score into initial geoJSON data.
 function data_object(_dataJson_district) {
 	var returnObject = {	
@@ -150,7 +149,8 @@ dataInsertion(provinceGeoJSON, provinceData);
 			max: 2,
 			value: 2,
 			slide: function(event, ui) {
-				year_index = ui.value; updateScore();
+				year_index = ui.value; 
+				// updateScore();
 			}
 		});
 
@@ -189,65 +189,157 @@ dataInsertion(provinceGeoJSON, provinceData);
 			check_incomeRate = document.getElementById("check_incomeRate"), 
 			check_R_COSTII = document.getElementById("check_R_COSTII"), 
 			check_expertRate = document.getElementById("check_expertRate");
-			
 
-		$("#checkUI_hiringRate_300").checkbox({
-			onChange: function(){
-				$("#result_municipal_hiringRate_300").toggleClass("unlayered"); 
-				$("#result_province_hiringRate_300").toggleClass("unlayered"); 
-				updateScore();
-			}
-		});
-
+		// $("#checkUI_hiringRate_300").checkbox({
+		// 	onChange: function(){
+		// 		$("#result_municipal_hiringRate_300").toggleClass("unlayered"); 
+		// 		$("#result_province_hiringRate_300").toggleClass("unlayered"); 
+		// 		updateScore_check();
+		// 	}
+		// });
 		$("#checkUI_hiringRate_1000").checkbox({
 			onChange: function(){
 				$("#result_municipal_hiringRate_1000").toggleClass("unlayered"); 
 				$("#result_province_hiringRate_1000").toggleClass("unlayered"); 
-				updateScore();
+				updateScore_check();
 			}
 		});
 		$("#checkUI_mainIndustryPortion").checkbox({
 			onChange: function(){
 				$("#result_municipal_mainIndustryPortion").toggleClass("unlayered"); 
 				$("#result_province_mainIndustryPortion").toggleClass("unlayered"); 
-				updateScore();
+				updateScore_check();
 			}
 		});
 		$("#checkUI_rateOf20sInIndustry").checkbox({
 			onChange: function(){
 				$("#result_municipal_rateOf20sInIndustry").toggleClass("unlayered"); 
 				$("#result_province_rateOf20sInIndustry").toggleClass("unlayered"); 
-				updateScore();
+				updateScore_check();
 			}
 		});
 		$("#checkUI_industryJobCreation").checkbox({
 			onChange: function(){
 				$("#result_municipal_industryJobCreation").toggleClass("unlayered"); 
 				$("#result_province_industryJobCreation").toggleClass("unlayered"); 
-				updateScore();
+				updateScore_check();
 			}
 		});
 		$("#checkUI_incomeRate").checkbox({
 			onChange: function(){
 				$("#result_municipal_incomeRate").toggleClass("unlayered"); 
 				$("#result_province_incomeRate").toggleClass("unlayered"); 
-				updateScore();
+				updateScore_check();
 			}
 		});
 		$("#checkUI_R_COSTII").checkbox({
 			onChange: function(){
 				$("#result_municipal_R_COSTII").toggleClass("unlayered"); 
 				$("#result_province_R_COSTII").toggleClass("unlayered"); 
-				updateScore();
+				updateScore_check();
 			}
 		});
 		$("#checkUI_expertRate").checkbox({
 			onChange: function(){
 				$("#result_municipal_expertRate").toggleClass("unlayered"); 
 				$("#result_province_expertRate").toggleClass("unlayered"); 
-				updateScore();
+				updateScore_check();
 			}
 		});
+
+
+		var radio_hiringRate_300 = document.getElementById("radio_hiringRate_300"),
+			radio_hiringRate_1000 = document.getElementById("radio_hiringRate_1000"),  
+			radio_mainIndustryPortion = document.getElementById("radio_mainIndustryPortion"),
+			radio_rateOf20sInIndustry = document.getElementById("radio_rateOf20sInIndustry"),
+			radio_industryJobCreation = document.getElementById("radio_industryJobCreation"), 
+			radio_incomeRate = document.getElementById("radio_incomeRate"), 
+			radio_R_COSTII = document.getElementById("radio_R_COSTII"), 
+			radio_expertRate = document.getElementById("radio_expertRate");
+
+		$("#radioUI_hiringRate_300").checkbox({
+			onChecked: function(){
+				$(".score_storage").addClass("unlayered");
+				$("#result_municipal_hiringRate_300").removeClass("unlayered");
+				$("#result_province_hiringRate_300").removeClass("unlayered");
+				updateScore_radio();
+			}
+		});
+		$("#radioUI_hiringRate_1000").checkbox({
+			onChecked: function(){
+				$(".score_storage").addClass("unlayered");
+				$("#result_municipal_hiringRate_1000").removeClass("unlayered");
+				$("#result_province_hiringRate_1000").removeClass("unlayered");
+				updateScore_radio();
+			}
+		});
+		$("#radioUI_mainIndustryPortion").checkbox({
+			onChecked: function(){
+				$(".score_storage").addClass("unlayered");
+				$("#result_municipal_mainIndustryPortion").removeClass("unlayered");
+				$("#result_province_mainIndustryPortion").removeClass("unlayered");
+				updateScore_radio();
+			}
+		});
+		$("#radioUI_rateOf20sInIndustry").checkbox({
+			onChecked: function(){
+				$(".score_storage").addClass("unlayered");
+				$("#result_municipal_rateOf20sInIndustry").removeClass("unlayered");
+				$("#result_province_rateOf20sInIndustry").removeClass("unlayered");
+				updateScore_radio();
+			}
+		});
+		$("#radioUI_industryJobCreation").checkbox({
+			onChecked: function(){
+				$(".score_storage").addClass("unlayered");
+				$("#result_municipal_industryJobCreation").removeClass("unlayered");
+				$("#result_province_industryJobCreation").removeClass("unlayered");
+				updateScore_radio();
+			}
+		});
+		$("#radioUI_incomeRate").checkbox({
+			onChecked: function(){
+				$(".score_storage").addClass("unlayered");
+				$("#result_municipal_incomeRate").removeClass("unlayered");
+				$("#result_province_incomeRate").removeClass("unlayered");
+				updateScore_radio();
+			}
+		});
+		$("#radioUI_R_COSTII").checkbox({
+			onChecked: function(){
+				$(".score_storage").addClass("unlayered");
+				$("#result_municipal_R_COSTII").removeClass("unlayered");
+				$("#result_province_R_COSTII").removeClass("unlayered");
+				updateScore_radio();
+			}
+		});
+		$("#radioUI_expertRate").checkbox({
+			onChecked: function(){
+				$(".score_storage").addClass("unlayered");
+				$("#result_municipal_expertRate").removeClass("unlayered");
+				$("#result_province_expertRate").removeClass("unlayered");
+				updateScore_radio();
+			}
+		});
+
+
+		var radio_hue_35 = document.getElementById("radio_hue_35"),
+			radio_hue_100 = document.getElementById("radio_hue_100"),
+			radio_hue_180 = document.getElementById("radio_hue_180"),
+			radio_hue_224 = document.getElementById("radio_hue_224"),
+			radio_hue_280 = document.getElementById("radio_hue_280"),
+			radio_hue_324 = document.getElementById("radio_hue_324"),
+			radio_value_10 = document.getElementById("radio_value_10"), 
+			radio_value_30 = document.getElementById("radio_value_30"), 
+			radio_value_50 = document.getElementById("radio_value_50"), 
+			radio_value_70 = document.getElementById("radio_value_70"), 
+			radio_value_100 = document.getElementById("radio_value_100");
+		$("#newcontroller .ui.radio.checkbox").checkbox({
+			onChecked: function(){
+				updateScore_radio();
+			}
+		});
+
 
 		resizeWindow();
 		if ( (windowWidth >= 768 && windowWidth < 1025 && wideRatio > 2/1) || (windowWidth < 768) )  { // show popup initially.

@@ -89,36 +89,71 @@
 	<div class="ui popup bottom right" id="map_layerControl">
 
 		<div id="checkbox_cover">
-			<div class="ui radio checkbox" id="checkUI_hiringRate_300">
-				<input type="radio" name="radioButton" id="check_hiringRate_300" checked="checked"> 
+			<div class="ui checkbox disabled" id="checkUI_hiringRate_300">
+				<input type="checkbox" id="check_hiringRate_300" checked="checked" disabled="disabled"> 
 				<label> 300인 이상 제조업 집중도</label>
 			</div>
-			<div class="ui radio checkbox" id="checkUI_hiringRate_1000"> 
-				<input type="radio" name="radioButton" id="check_hiringRate_1000"> 
+			<div class="ui checkbox" id="checkUI_hiringRate_1000"> 
+				<input type="checkbox" id="check_hiringRate_1000" > 
 				<label> 1000인 이상 제조업 집중도</label>
 			</div>
-			<div class="ui radio checkbox" id="checkUI_mainIndustryPortion"> 
-				<input type="radio" name="radioButton" id="check_mainIndustryPortion"> 
+			<div class="ui checkbox" id="checkUI_mainIndustryPortion"> 
+				<input type="checkbox" id="check_mainIndustryPortion" > 
 				<label> 제1제조업 집중도</label>
 			</div>
-			<div class="ui radio checkbox" id="checkUI_rateOf20sInIndustry"> 
-				<input type="radio" name="radioButton" id="check_rateOf20sInIndustry"> 
+			<div class="ui checkbox" id="checkUI_rateOf20sInIndustry"> 
+				<input type="checkbox" id="check_rateOf20sInIndustry" > 
 				<label> 제조업 고령화</label>
 			</div>
-			<div class="ui radio checkbox" id="checkUI_industryJobCreation"> 
-				<input type="radio" name="radioButton" id="check_industryJobCreation"> 
+			<div class="ui checkbox" id="checkUI_industryJobCreation"> 
+				<input type="checkbox" id="check_industryJobCreation" > 
 				<label> 일자리 창출 위험도</label>
 			</div>
-			<div class="ui radio checkbox" id="checkUI_incomeRate"> 
-				<input type="radio" name="radioButton" id="check_incomeRate"> 
+			<div class="ui checkbox" id="checkUI_incomeRate"> 
+				<input type="checkbox" id="check_incomeRate" > 
 				<label> 직장인-주민 괴리도(2016)</label>
 			</div>
-			<div class="ui radio checkbox" id="checkUI_R_COSTII"> 
-				<input type="radio" name="radioButton" id="check_R_COSTII"> 
+			<div class="ui checkbox" id="checkUI_R_COSTII"> 
+				<input type="checkbox" id="check_R_COSTII" > 
 				<label> 과학기술혁신 역량 위험도</label>
 			</div>
-			<div class="ui radio checkbox" id="checkUI_expertRate"> 
-				<input type="radio" name="radioButton" id="check_expertRate"> 
+			<div class="ui checkbox" id="checkUI_expertRate"> 
+				<input type="checkbox" id="check_expertRate" > 
+				<label> 관리자, 전문가 비중 위험도</label>
+			</div>
+		</div>
+
+		<div id="radiobox_cover">
+			<div class="ui radio checkbox" id="radioUI_hiringRate_300">
+				<input type="radio" name="radioButton" id="radio_hiringRate_300"> 
+				<label> 300인 이상 제조업 집중도</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_hiringRate_1000"> 
+				<input type="radio" name="radioButton" id="radio_hiringRate_1000"> 
+				<label> 1000인 이상 제조업 집중도</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_mainIndustryPortion"> 
+				<input type="radio" name="radioButton" id="radio_mainIndustryPortion"> 
+				<label> 제1제조업 집중도</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_rateOf20sInIndustry"> 
+				<input type="radio" name="radioButton" id="radio_rateOf20sInIndustry"> 
+				<label> 제조업 고령화</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_industryJobCreation"> 
+				<input type="radio" name="radioButton" id="radio_industryJobCreation"> 
+				<label> 일자리 창출 위험도</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_incomeRate"> 
+				<input type="radio" name="radioButton" id="radio_incomeRate"> 
+				<label> 직장인-주민 괴리도(2016)</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_R_COSTII"> 
+				<input type="radio" name="radioButton" id="radio_R_COSTII"> 
+				<label> 과학기술혁신 역량 위험도</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_expertRate"> 
+				<input type="radio" name="radioButton" id="radio_expertRate"> 
 				<label> 관리자, 전문가 비중 위험도</label>
 			</div>
 		</div>
@@ -135,12 +170,12 @@
 
 	<i class="info circle icon" id="layerControl_legend"></i>
 
-	<div id="score_legend">
+	<!-- <div id="score_legend">
 		<div id="score_integer">
 			<div>0</div> <div>25</div> <div>50</div> <div>75</div> <div>100</div>
 		</div>
 		<div id="score_gradient"></div>
-	</div>
+	</div> -->
 
 
 	<div id="dataInfo">
@@ -403,10 +438,62 @@
 			</div>
 		</div>
 		</div>
-
-
-
 	</div>
+
+	<div id="newcontroller">
+		<div id="radiobox_hue">
+			<b>색상</b><br>
+			<div class="ui radio checkbox" id="radioUI_hue_35">
+				<input type="radio" name="radioButton2" id="radio_hue_35" checked="checked"> 
+				<label> 주황</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_hue_100"> 
+				<input type="radio" name="radioButton2" id="radio_hue_100"> 
+				<label> 연두</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_hue_180"> 
+				<input type="radio" name="radioButton2" id="radio_hue_180"> 
+				<label> 하늘</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_hue_224"> 
+				<input type="radio" name="radioButton2" id="radio_hue_224"> 
+				<label> 파랑</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_hue_280"> 
+				<input type="radio" name="radioButton2" id="radio_hue_280"> 
+				<label> 보라</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_hue_324"> 
+				<input type="radio" name="radioButton2" id="radio_hue_324"> 
+				<label> 핑크</label>
+			</div>
+		</div>
+		<br>
+		<div id="radiobox_maxColourValue">
+			<b>진해지는 최대 정도 (100점 만점 기준)</b><br>
+			<div class="ui radio checkbox" id="radioUI_value_10">
+				<input type="radio" name="radioButton3" id="radio_value_10" checked="checked"> 
+				<label> 10</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_value_30"> 
+				<input type="radio" name="radioButton3" id="radio_value_30"> 
+				<label> 30</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_value_50"> 
+				<input type="radio" name="radioButton3" id="radio_value_50"> 
+				<label> 50</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_value_70"> 
+				<input type="radio" name="radioButton3" id="radio_value_70"> 
+				<label> 70</label>
+			</div>
+			<div class="ui radio checkbox" id="radioUI_value_100"> 
+				<input type="radio" name="radioButton3" id="radio_value_100"> 
+				<label> 100</label>
+			</div>
+		</div>
+
+
 
 
 	<!-- local js/css -->

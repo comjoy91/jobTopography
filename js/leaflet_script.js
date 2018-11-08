@@ -21,9 +21,13 @@ var year_index = 2;
 
 
 // getting colour
-function getColour(_score, _hueValue) {
+function getColour_score(_score) {
 	var colourFunction = new L.HSLLuminosityFunction(new L.Point(0, 1), new L.Point(100, 0), {outputHue: 0, outputSaturation: '100%'});
 	return colourFunction.evaluate(_score);
+}
+function getColour_index(_score, _maxScore, _outputHue, _maxColourValue) {
+	var colourFunction = new L.HSLLuminosityFunction(new L.Point(0, 1), new L.Point(100, 0), {outputHue: _outputHue, outputSaturation: '100%'});
+	return colourFunction.evaluate(_score / _maxScore * _maxColourValue);
 }
 
 // initialize whole map drawn by GeoJSON
@@ -61,7 +65,7 @@ function styleFunc(feature) {
 		}
 	}
 	else return {
-		fillColor: getColour(feature.properties.score_total, 16),
+		fillColor: getColour_score(feature.properties.score_total),
 		weight: 0.5,
 		opacity: 0.15,
 		color: 'blue',
@@ -105,7 +109,7 @@ var geojson_array = [layer_municipal, layer_province_border];
 
 
 
-function updateScore() {
+function updateScore_check() {
 	for (var geojson of geojson_array) {
 		geojson.eachLayer(function(_layer) {
 
@@ -130,25 +134,104 @@ function updateScore() {
 
 			if (prop.score_total > 100) prop.score_total = 100;
 
-			if (prop.score_total <= 0) 
+			if (data.hiringRate_300.score <= 0) 
 				_layer.setStyle({
 					fillColor: "#aaaaaa",
 					fillOpacity: 0.85 // 1.0
 				});
 			else  
 				_layer.setStyle({
-					fillColor: getColour(prop.score_total, 16),
+					fillColor: getColour_score(prop.score_total),
 					fillOpacity: 0.7
 				});
 		});
 	}
-	if (current_municipal_layer)
-		change_dataInfo(current_municipal_layer.feature.properties);
+	// if (current_municipal_layer)
+	// 	change_dataInfo(current_municipal_layer.feature.properties);
 };
 
 
 
+function updateScore_radio() {
+	var outputHue, maxColourValue = 0;
+	if (radio_hue_35.checked)
+		outputHue = 35;
+	else if (radio_hue_100.checked)
+		outputHue = 100;
+	else if (radio_hue_180.checked)
+		outputHue = 180;
+	else if (radio_hue_224.checked)
+		outputHue = 224;
+	else if (radio_hue_280.checked)
+		outputHue = 280;
+	else if (radio_hue_324.checked)
+		outputHue = 324;
+	if (radio_value_10.checked)
+		maxColourValue = 10;
+	else if (radio_value_30.checked)
+		maxColourValue = 30;
+	else if (radio_value_50.checked)
+		maxColourValue = 50;
+	else if (radio_value_70.checked)
+		maxColourValue = 70;
+	else if (radio_value_100.checked)
+		maxColourValue = 100;
 
+	for (var geojson of geojson_array) {
+		geojson.eachLayer(function(_layer) {
+
+			var prop = _layer.feature.properties;
+			var data = prop.data[year_index];
+			var max_score;
+
+			if (radio_hiringRate_300.checked) {
+				prop.score_total = data.hiringRate_300.score;
+				max_score = 30;
+			}
+			else if (radio_hiringRate_1000.checked) {
+				prop.score_total = data.hiringRate_1000.score;
+				max_score = 10;
+			}
+			else if (radio_mainIndustryPortion.checked) {
+				prop.score_total = data.mainIndustryPortion.score;
+				max_score = 10;
+			}
+			else if (radio_rateOf20sInIndustry.checked) {
+				prop.score_total = data.rateOf20sInIndustry.score;
+				max_score = 10;
+			}
+			else if (radio_industryJobCreation.checked) {
+				prop.score_total = data.industryJobCreation.score;
+				max_score = 10;
+			}
+			else if (radio_incomeRate.checked) {
+				prop.score_total = data.incomeRate.score;
+				max_score = 10;
+			}
+			else if (radio_R_COSTII.checked) {
+				prop.score_total = data.R_COSTII.score;
+				max_score = 10;
+			}
+			else if (radio_expertRate.checked) {
+				prop.score_total = data.expertRate.score;
+				max_score = 10;
+			}
+
+			if (data.hiringRate_300.score <= 0) 
+				_layer.setStyle({
+					fillColor: "#aaaaaa",
+					fillOpacity: 0.85 // 1.0
+				});
+			else  
+				_layer.setStyle({
+					fillColor: getColour_index(prop.score_total, max_score, outputHue, maxColourValue),
+					fillOpacity: 0.7
+				});
+		});
+	}
+	// if (current_municipal_layer)
+	// 	change_dataInfo(current_municipal_layer.feature.properties);
+};
 
 
 
@@ -315,17 +398,6 @@ $('.ui.search').search({
 	maxResults: 8,
 	onSelect: function(result, response) { zoomToFeature_layer (result.layer); }
 });
-
-
-
-
-
-// $('#menu_municipal, #menu_province').on('click', function() {
-// 	$('#menu_municipal, #menu_province').removeClass("active");
-// 	$(this).addClass("active");
-// 	if (current_municipal_layer)
-// 		change_dataInfo(current_municipal_layer.feature.properties);
-// });
 
 
 

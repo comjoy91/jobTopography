@@ -230,21 +230,24 @@ div, input {
 	border-radius: 4px;
 }
 
-	#checkbox_cover {
+	#checkbox_cover, 
+	#radiobox_cover {
 		margin: 0 0 16px 0;
 		padding: 0 0 0 0;
 	}
 
-		/* ------------ semantic-ui checkbox ------------ */
+		/* ------------ semantic-ui checkbox / radiobox ------------ */
 
-		#checkbox_cover .ui.checkbox {
+		#checkbox_cover .ui.checkbox, 
+		#radiobox_cover .ui.checkbox {
 			min-height: 17px;
 			font-size: inherit;
 			line-height: 1.0;
 			min-width: 17px;
 		}
 
-		#checkbox_cover .ui.checkbox input[type="checkbox"] {
+		#checkbox_cover .ui.checkbox input[type="checkbox"], 
+		#radiobox_cover .ui.checkbox input[type="radio"] {
 			width: 1rem;
 			height: 1rem;
 		}
@@ -253,6 +256,12 @@ div, input {
 			/*top: -1px;*/
 			width: 1rem;
 			height: 1rem;
+		} 
+		#radiobox_cover .ui.checkbox .box:before, #radiobox_cover .ui.checkbox label:before {
+			top: -1px;
+			width: calc( 1rem + 2px );
+			height: calc( 1rem + 2px );
+			border-radius: calc( 1rem + 2px );
 		}
 
 		#checkbox_cover .ui.checkbox .box:after, #checkbox_cover .ui.checkbox label:after {
@@ -261,6 +270,13 @@ div, input {
 			left: 1px;
 			width: 1rem;
 			height: 1rem;
+		} 
+		#radiobox_cover .ui.checkbox .box:after, #radiobox_cover .ui.checkbox label:after {
+			font-size: inherit;
+			top: 0px;
+			left: 1px;
+			width: calc( 1rem + 2px );
+			height: calc( 1rem + 2px );
 		}
 
 
@@ -321,7 +337,7 @@ div, input {
 		display: flex;
 		flex-direction: row-reverse;
 	}
-		#checkbox_cover {
+		#checkbox_cover, #radiobox_cover {
 			margin: 0 0 0 0;
 			padding: 15px 15px 15px 20px;
 			background-color: #ffffff;
@@ -333,13 +349,28 @@ div, input {
 			width: 320px;
 			display: inline;
 		}
-			#checkbox_cover .ui.checkbox {
+			#checkbox_cover .ui.checkbox, 
+			#radiobox_cover .ui.checkbox {
 			    width: 140px;
 			    min-height: 0;
 			    margin: 3px 0;
 
 			    line-height: 1.3;
+			}			
+			#radiobox_cover .ui.checkbox .box:before, #radiobox_cover .ui.checkbox label:before {
+				top: 0px;
+				width: 1rem;
+				height: 1rem;
+				border-radius: 1rem;
 			}
+			#radiobox_cover .ui.checkbox .box:after, #radiobox_cover .ui.checkbox label:after {
+				font-size: inherit;
+				top: 0px;
+				left: 0px;
+				width: calc( 1rem + 2px );
+				height: calc( 1rem + 2px );
+			}
+
 		#mapYear {
 			margin: 0 16px 0 0;
 			padding: 21px 15px 21px 18px;
@@ -537,7 +568,7 @@ div, input {
 	/*height: calc(100vh - 140px);*/
 	top: 32px;
 	right: 32px;
-	padding: 20px 24px 0px 16px;
+	padding: 20px 24px 16px 16px;
 	background-color: #ffffff;
 
 	/*font-size: 12px;*/
@@ -797,7 +828,7 @@ div, input {
 		right: 16px;
 		width: 320px;
 		max-height: calc(100vh - 64px - 98px);
-		padding: 20px 18px 0px 12px;
+		padding: 20px 18px 12px 12px;
 	}
 		#selectNotice  {
 			/*max-height: calc(100vh - 183px - 98px);*/
@@ -838,7 +869,7 @@ div, input {
 		top: 70%;
 		left: auto;
 		right: 0;
-	    padding: 16px 16px 0px 12px;
+	    padding: 16px 16px 12px 12px;
 		border: 0px;
 		border-radius: 16px 0 0 0;
 		box-shadow: -4px -4px 10px 1px rgba(0, 0, 0, 0.07);
@@ -1059,5 +1090,16 @@ footer {
 		display: none;
 	}
 
+}
+
+
+
+
+#newcontroller {
+	background-color: #ffffff;
+	position: absolute;
+	bottom: 64px;
+	left: 32px;
+	padding: 12px;
 }
 
