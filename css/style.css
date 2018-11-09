@@ -34,16 +34,6 @@ div, input {
 	box-sizing: border-box;
 }
 
-/*.checkboxes {
-	padding: 6px 10px 6px 6px;
-	font: 12px/1.5 Arial, Helvetica, sans-serif;
-	color: #333;
-	background: white;
-	background: rgba(255,255,255,0.8);
-	box-shadow: 0 0 15px rgba(0,0,0,0.2);
-	border-radius: 5px;
-}
-*/
 
 .tooltip {
 	position: absolute;
@@ -205,14 +195,6 @@ div, input {
 		left: 16px;
 		display: initial;
 	}
-}
-
-@media all and (max-width:767px) and (min-aspect-ratio: 1/1) { /* mobile phone, portrait layout */
-}
-
-@media all and (max-width:767px) and (max-aspect-ratio: 1/1) { /* mobile phone, portrait layout */
-}
-@media all and (max-width:359px) { /* legendary mobile phone layout */
 }
 
 
@@ -390,6 +372,10 @@ div, input {
 			#checkbox_cover, #radioButton_cover {
 				margin: 0 0 0 0;
 			}
+
+
+				/* ------------ semantic-ui checkbox & radio button ------------ */
+
 				#checkbox_cover .ui.checkbox, 
 				#radioButton_cover .ui.checkbox {
 				    width: 140px;
@@ -610,16 +596,13 @@ div, input {
 
 #dataInfo {
 	width: 350px;
-	/*min-height: 30vh;*/
 	max-height: calc(100vh - 64px);
 	height: auto;
-	/*height: calc(100vh - 140px);*/
 	top: 32px;
 	right: 32px;
 	padding: 20px 24px 16px 16px;
 	background-color: #ffffff;
 
-	/*font-size: 12px;*/
 	color: #000000; /* 폰트 색깔 */
 	border: 1px solid #c3c3c3;
 	border-radius: 4px;
@@ -715,20 +698,6 @@ div, input {
 			padding: 12px 8px;
 		}
 
-	/* ------------ #info_hyperlink...? ------------ */
-
-	#info_hyperlink {
-		margin: 10px 27px 0 34px;
-	}
-		#info_hyperlink a div {
-			margin-right: 22px;
-			color: #007AFF;
-			text-decoration: underline;
-
-			display: inline-block;
-			cursor: pointer;
-		}
-
 	/* ------------ #dataInfo > #initialNotice ------------ */
 
 	#initialNotice  {
@@ -736,7 +705,6 @@ div, input {
 
 		font-size: 12px;
 
-		/*max-height: calc(100vh - 183px);*/
 		height: auto;
 		overflow-y: auto;
 
@@ -753,8 +721,6 @@ div, input {
 
 	#result_municipal, #result_province {
 		padding: 21px 3px 28px 17px;
-
-		/*max-height: calc(100vh - 183px);*/
 		height: auto;
 		overflow-y: auto;
 	}
@@ -775,12 +741,10 @@ div, input {
 			}
 				.basicInfo_storage .name 
 				{
-					/*font-size: 12px;*/
 					font-weight: 600;
 				}
 				.basicInfo_storage .value 
 				{
-					/*font-size: 12px;*/
 					font-weight: 400;
 				}
 
@@ -798,28 +762,23 @@ div, input {
 			margin: 16px 2px 0 0;
 		}
 			.score_storage div {
-				/*display: inline-block;*/
 				margin: 0 0 3px 0;
 			}
 			.score_storage .scoreName {
 				width: 60%;
-				/*font-size: 14px;*/
 				font-weight: 600;
 			}
 			.score_storage .dataValue {
 				width: 25%;
 				text-align: right;
-				/*font-size: 14px;*/
 				font-weight: 600;
 			}
 			.score_storage .score {
 				width: 15%;
 				text-align: right;
-				/*font-size: 12px;*/
 				font-weight: 300;
 			}
 			.score_storage .dataName {
-				/*font-size: 12px;*/
 				font-weight: 300;
 			}
 
@@ -842,13 +801,11 @@ div, input {
 
 			#score_municipal_total .scoreName {
 				width: 60%;
-				/*font-size: 12px;*/
 				font-weight: 600;
 			}
 
 			#score_municipal_total .score {
 				width: 40%;
-				/*font-size: 12px;*/
 				font-weight: 300;
 				text-align: right;
 			}
@@ -878,15 +835,10 @@ div, input {
 		max-height: calc(100vh - 198px);
 		padding: 20px 18px 12px 12px;
 	}
-		#initialNotice  {
-			/*max-height: calc(100vh - 183px - 98px);*/
-		}
 		#nameContainer {
 			margin: 9px 1px 0 10px;
 		}
 		#result_municipal, #result_province {
-			/*max-height: calc(100vh - 183px - 98px);*/
-		    /*padding: 21px 12px 28px 10px;*/
 		    padding: 18px 2px 28px 17px;
 		}
 			.basicInfo_storage {
@@ -911,7 +863,6 @@ div, input {
 
 	#dataInfo {
 		width: 320px;
-		/*width: 100%;*/
 		min-height: 30%;
 		max-height: none;
 		top: 70%;
@@ -950,8 +901,6 @@ div, input {
 			}
 
 		#result_municipal, #result_province {
-			/*max-height: calc(100vh - 183px - 98px);*/
-		    /*padding: 21px 12px 28px 10px;*/
 		    padding: 12px 3px 12px 17px;
 		}
 			.basicInfo_storage {
@@ -1081,63 +1030,10 @@ div, input {
 	display: none;
 }
 
-
-/*#title_dataInfo {
-	margin: 36px 27px 36px 34px;
-	display: none;
-}
-	#about_dataInfo {
-		font-weight: 600;
-	}
-	#title_dataInfo a {
-		color: #000000;
-	}
-*/
-
-
-
-
-
-footer {
-	width: 100vw;
-	height: 0;
-	left: 0;
-	bottom: 38px;
-	position: absolute;
-	font-weight: 400;
-}
-
-	#lab2050_logo {
-		position: absolute;
-		bottom: 0px;
-		left: 30px;
-		width: 60px;
-		height: 60px;
-
-		cursor: pointer;
-	}
-		#lab2050_logo img {
-			width: 100%;
-			height: 100%;
-		}
-
-@media all and (max-width:1024px) { /* tablet layout */
-}
-
 @media all and (max-width:767px) { /* mobile phone layout */
-
-	#info_scrollingTop {
-		margin: 0 0px 24px 264px;
-		display: initial;
-	}
-
 	#title_dataInfo {
 		display: block;
 	}
-	footer {
-		display: none;
-	}
-
 }
 
 
