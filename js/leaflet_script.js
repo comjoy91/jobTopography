@@ -21,13 +21,13 @@ var year_index = 2;
 
 
 // getting colour
-function getColour_score(_score) {
+function getColour_multiLayer(_score) { // _outputHue == 0, _maxColourValue == 100
 	var colourFunction = new L.HSLLuminosityFunction(new L.Point(0, 1), new L.Point(100, 0), {outputHue: 0, outputSaturation: '100%'});
 	return colourFunction.evaluate(_score);
 }
-function getColour_index(_score, _maxScore, _outputHue, _maxColourValue) {
-	var colourFunction = new L.HSLLuminosityFunction(new L.Point(0, 1), new L.Point(100, 0), {outputHue: _outputHue, outputSaturation: '100%'});
-	return colourFunction.evaluate(_score / _maxScore * _maxColourValue);
+function getColour_singleLayer(_score, _maxScore) { // _outputHue == 35, _maxColourValue == 50
+	var colourFunction = new L.HSLLuminosityFunction(new L.Point(0, 1), new L.Point(100, 0), {outputHue: 35, outputSaturation: '100%'});
+	return colourFunction.evaluate(_score / _maxScore * 50);
 }
 
 // initialize whole map drawn by GeoJSON
@@ -65,7 +65,7 @@ function styleFunc(feature) {
 		}
 	}
 	else return {
-		fillColor: getColour_score(feature.properties.score_total),
+		fillColor: getColour_multiLayer(feature.properties.score_total),
 		weight: 0.5,
 		opacity: 0.15,
 		color: 'blue',
@@ -117,33 +117,38 @@ function updateScore_check() {
 			var data = prop.data[year_index];
 			prop.score_total = data.hiringRate_300.score;
 
-			if (check_hiringRate_1000.checked)
-				prop.score_total += data.hiringRate_1000.score;
-			if (check_mainIndustryPortion.checked)
-				prop.score_total += data.mainIndustryPortion.score;
-			if (check_rateOf20sInIndustry.checked)
-				prop.score_total += data.rateOf20sInIndustry.score;
-			if (check_industryJobCreation.checked)
-				prop.score_total += data.industryJobCreation.score;
-			if (check_incomeRate.checked)
-				prop.score_total += data.incomeRate.score;
-			if (check_R_COSTII.checked)
-				prop.score_total += data.R_COSTII.score;
-			if (check_expertRate.checked)
-				prop.score_total += data.expertRate.score;
+			if ( data.hiringRate_300.score > 0 ) {
+				if (check_hiringRate_1000.checked)
+					prop.score_total += data.hiringRate_1000.score;
+				if (check_mainIndustryPortion.checked)
+					prop.score_total += data.mainIndustryPortion.score;
+				if (check_rateOf20sInIndustry.checked)
+					prop.score_total += data.rateOf20sInIndustry.score;
+				if (check_industryJobCreation.checked)
+					prop.score_total += data.industryJobCreation.score;
+				if (check_incomeRate.checked)
+					prop.score_total += data.incomeRate.score;
+				if (check_R_COSTII.checked)
+					prop.score_total += data.R_COSTII.score;
+				if (check_expertRate.checked)
+					prop.score_total += data.expertRate.score;
 
-			if (prop.score_total > 100) prop.score_total = 100;
+				if (prop.score_total > 100) prop.score_total = 100;
 
-			if (data.hiringRate_300.score <= 0) 
+				prop.validForResearch = true;
+				_layer.setStyle({
+					fillColor: getColour_multiLayer(prop.score_total),
+					fillOpacity: 0.7
+				});
+			}
+
+			else {
+				prop.validForResearch = false;
 				_layer.setStyle({
 					fillColor: "#aaaaaa",
 					fillOpacity: 0.85 // 1.0
 				});
-			else  
-				_layer.setStyle({
-					fillColor: getColour_score(prop.score_total),
-					fillOpacity: 0.7
-				});
+			}
 		});
 	}
 	// if (current_municipal_layer)
@@ -153,32 +158,6 @@ function updateScore_check() {
 
 
 function updateScore_radio() {
-	var outputHue, maxColourValue = 0;
-	if (radio_hue_0.checked)
-		outputHue = 0;
-	else if (radio_hue_35.checked)
-		outputHue = 35;
-	else if (radio_hue_100.checked)
-		outputHue = 100;
-	else if (radio_hue_180.checked)
-		outputHue = 180;
-	else if (radio_hue_224.checked)
-		outputHue = 224;
-	else if (radio_hue_280.checked)
-		outputHue = 280;
-	else if (radio_hue_324.checked)
-		outputHue = 324;
-	if (radio_value_10.checked)
-		maxColourValue = 10;
-	else if (radio_value_30.checked)
-		maxColourValue = 30;
-	else if (radio_value_50.checked)
-		maxColourValue = 50;
-	else if (radio_value_70.checked)
-		maxColourValue = 70;
-	else if (radio_value_100.checked)
-		maxColourValue = 100;
-
 	for (var geojson of geojson_array) {
 		geojson.eachLayer(function(_layer) {
 
@@ -186,49 +165,55 @@ function updateScore_radio() {
 			var data = prop.data[year_index];
 			var max_score;
 
-			if (radio_hiringRate_300.checked) {
-				prop.score_total = data.hiringRate_300.score;
-				max_score = 30;
-			}
-			else if (radio_hiringRate_1000.checked) {
-				prop.score_total = data.hiringRate_1000.score;
-				max_score = 10;
-			}
-			else if (radio_mainIndustryPortion.checked) {
-				prop.score_total = data.mainIndustryPortion.score;
-				max_score = 10;
-			}
-			else if (radio_rateOf20sInIndustry.checked) {
-				prop.score_total = data.rateOf20sInIndustry.score;
-				max_score = 10;
-			}
-			else if (radio_industryJobCreation.checked) {
-				prop.score_total = data.industryJobCreation.score;
-				max_score = 10;
-			}
-			else if (radio_incomeRate.checked) {
-				prop.score_total = data.incomeRate.score;
-				max_score = 10;
-			}
-			else if (radio_R_COSTII.checked) {
-				prop.score_total = data.R_COSTII.score;
-				max_score = 10;
-			}
-			else if (radio_expertRate.checked) {
-				prop.score_total = data.expertRate.score;
-				max_score = 10;
+			if ( data.hiringRate_300.score > 0 ) {
+				if (radio_hiringRate_300.checked) {
+					prop.score_total = data.hiringRate_300.score;
+					max_score = 30;
+				}
+				else if (radio_hiringRate_1000.checked) {
+					prop.score_total = data.hiringRate_1000.score;
+					max_score = 10;
+				}
+				else if (radio_mainIndustryPortion.checked) {
+					prop.score_total = data.mainIndustryPortion.score;
+					max_score = 10;
+				}
+				else if (radio_rateOf20sInIndustry.checked) {
+					prop.score_total = data.rateOf20sInIndustry.score;
+					max_score = 10;
+				}
+				else if (radio_industryJobCreation.checked) {
+					prop.score_total = data.industryJobCreation.score;
+					max_score = 10;
+				}
+				else if (radio_incomeRate.checked) {
+					prop.score_total = data.incomeRate.score;
+					max_score = 10;
+				}
+				else if (radio_R_COSTII.checked) {
+					prop.score_total = data.R_COSTII.score;
+					max_score = 10;
+				}
+				else if (radio_expertRate.checked) {
+					prop.score_total = data.expertRate.score;
+					max_score = 10;
+				}
+
+				prop.validForResearch = true;
+				_layer.setStyle({
+					fillColor: getColour_singleLayer(prop.score_total, max_score),
+					fillOpacity: 0.7
+				});
 			}
 
-			if (data.hiringRate_300.score <= 0) 
+			else {
+				prop.validForResearch = false;
 				_layer.setStyle({
 					fillColor: "#aaaaaa",
 					fillOpacity: 0.85 // 1.0
 				});
-			else  
-				_layer.setStyle({
-					fillColor: getColour_index(prop.score_total, max_score, outputHue, maxColourValue),
-					fillOpacity: 0.7
-				});
+			}
+
 		});
 	}
 	// if (current_municipal_layer)
@@ -277,13 +262,14 @@ var tooltip = d3.select("body").append("div")
 	.style("display", "none");
 function districtTooltip(e) { //build tooltip for mouseover layer
 	var tooltipHTML;
-	if ( e.target.feature.properties.score_total <= 0) 
-		tooltipHTML = e.target.feature.properties.province_name + " <b>" 
-					+ e.target.feature.properties.municipal_name + "</b><br> 300인 이상 제조업체 없음";
-	else
+	if ( e.target.feature.properties.validForResearch ) 
 		tooltipHTML = e.target.feature.properties.province_name + " <b>" 
 					+ e.target.feature.properties.municipal_name + "</b><br> 현재 Total: " 
 					+ d3.format(".1f")(e.target.feature.properties.score_total);// + " / 100.0";
+	else
+		tooltipHTML = e.target.feature.properties.province_name + " <b>" 
+					+ e.target.feature.properties.municipal_name + "</b><br> 300인 이상 제조업체 없음";
+		
 
 	tooltip.html( tooltipHTML )
 		.style("left", (e.containerPoint.x - $(".tooltip").innerWidth()/2) + "px")

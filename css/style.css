@@ -34,7 +34,7 @@ div, input {
 	box-sizing: border-box;
 }
 
-.checkboxes {
+/*.checkboxes {
 	padding: 6px 10px 6px 6px;
 	font: 12px/1.5 Arial, Helvetica, sans-serif;
 	color: #333;
@@ -43,7 +43,7 @@ div, input {
 	box-shadow: 0 0 15px rgba(0,0,0,0.2);
 	border-radius: 5px;
 }
-
+*/
 
 .tooltip {
 	position: absolute;
@@ -82,9 +82,9 @@ div, input {
 
 
 
-/* ------------ #map_background, #site_title, #map_layerControl, #layerControl_legend, #score_legend, #dataInfoaq ------------ */
+/* ------------ #map_background, #site_title, #map_layerControl, #layerControl_legend, .score_legend, #dataInfoaq ------------ */
 
-#map_background, #site_title, #map_layerControl, #layerControl_popup, #layerControl_legend, #score_legend, #dataInfo {
+#map_background, #site_title, #map_layerControl, #layerControl_popup, #layerControl_legend, .score_legend, #dataInfo {
 	position: absolute;
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
@@ -230,58 +230,75 @@ div, input {
 	border-radius: 4px;
 }
 
-	#checkbox_cover, 
-	#radiobox_cover {
-		margin: 0 0 16px 0;
-		padding: 0 0 0 0;
+	#mapLayer {
 	}
 
-		/* ------------ semantic-ui checkbox / radiobox ------------ */
+		#menu_layerControl {
+			border-color: rgba(33, 133, 208, 0.7);
+			font-family: 'Spoqa Han Sans', sans-serif;
+			min-height: auto;
+		}
+			/* ------------ semantic-ui menu ------------ */
 
-		#checkbox_cover .ui.checkbox, 
-		#radiobox_cover .ui.checkbox {
-			min-height: 17px;
-			font-size: inherit;
-			line-height: 1.0;
-			min-width: 17px;
+			#menu_layerControl .active.item, #menu_layerControl .item:hover {
+				background-color: rgba(33, 133, 208, 1.0);
+				color: #ffffff;
+				font-weight: 600;
+			}
+
+		#checkbox_cover, 
+		#radiobox_cover {
+			margin: 0 0 16px 0;
+			padding: 0 0 0 0;
 		}
 
-		#checkbox_cover .ui.checkbox input[type="checkbox"], 
-		#radiobox_cover .ui.checkbox input[type="radio"] {
-			width: 1rem;
-			height: 1rem;
-		}
+			/* ------------ semantic-ui checkbox / radiobox ------------ */
 
-		#checkbox_cover .ui.checkbox .box:before, #checkbox_cover .ui.checkbox label:before {
-			/*top: -1px;*/
-			width: 1rem;
-			height: 1rem;
-		} 
-		#radiobox_cover .ui.checkbox .box:before, #radiobox_cover .ui.checkbox label:before {
-			top: -1px;
-			width: calc( 1rem + 2px );
-			height: calc( 1rem + 2px );
-			border-radius: calc( 1rem + 2px );
-		}
+			#checkbox_cover .ui.checkbox, 
+			#radiobox_cover .ui.checkbox {
+				min-height: 17px;
+				font-size: inherit;
+				line-height: 1.0;
+				min-width: 17px;
+			}
 
-		#checkbox_cover .ui.checkbox .box:after, #checkbox_cover .ui.checkbox label:after {
-			font-size: inherit;
-			top: 1px;
-			left: 1px;
-			width: 1rem;
-			height: 1rem;
-		} 
-		#radiobox_cover .ui.checkbox .box:after, #radiobox_cover .ui.checkbox label:after {
-			font-size: inherit;
-			top: 0px;
-			left: 1px;
-			width: calc( 1rem + 2px );
-			height: calc( 1rem + 2px );
-		}
+			#checkbox_cover .ui.checkbox input[type="checkbox"], 
+			#radiobox_cover .ui.checkbox input[type="radio"] {
+				width: 1rem;
+				height: 1rem;
+			}
+
+			#checkbox_cover .ui.checkbox .box:before, #checkbox_cover .ui.checkbox label:before {
+				left: 1px;
+				width: 1rem;
+				height: 1rem;
+			} 
+			#radiobox_cover .ui.checkbox .box:before, #radiobox_cover .ui.checkbox label:before {
+				top: -1px;
+				width: calc( 1rem + 2px );
+				height: calc( 1rem + 2px );
+				border-radius: calc( 1rem + 2px );
+			}
+
+			#checkbox_cover .ui.checkbox .box:after, #checkbox_cover .ui.checkbox label:after {
+				font-size: inherit;
+				top: 1px;
+				left: 2px;
+				width: 1rem;
+				height: 1rem;
+			} 
+			#radiobox_cover .ui.checkbox .box:after, #radiobox_cover .ui.checkbox label:after {
+				font-size: inherit;
+				top: 0px;
+				left: 1px;
+				width: calc( 1rem + 2px );
+				height: calc( 1rem + 2px );
+				background-color: #51a0dc;
+			}
 
 
 	#mapYear_slider {
-		margin: 0px 8px 8px 6px;
+		margin: 0px 8px 8px 7px;
 	}
 
 		/* ------------ jquery-ui slider ------------ */
@@ -300,7 +317,7 @@ div, input {
 		html .ui-button.ui-state-disabled:hover, 
 		html .ui-button.ui-state-disabled:active {
 			border: 1px solid #d3d3d3;
-			background: #51a0dc;
+			background: rgb(33, 133, 208);
 			font-weight: normal;
 			color: #555555;
 		}
@@ -331,13 +348,15 @@ div, input {
 		left: auto;
 		right: 16px;
 		width: auto;
-		height: 108px;
+		/*height: 108px;*/
 		padding: 0;
 
 		display: flex;
 		flex-direction: row-reverse;
+		align-items: flex-end;
 	}
-		#checkbox_cover, #radiobox_cover {
+
+		#mapLayer {
 			margin: 0 0 0 0;
 			padding: 15px 15px 15px 20px;
 			background-color: #ffffff;
@@ -349,29 +368,46 @@ div, input {
 			width: 320px;
 			display: inline;
 		}
-			#checkbox_cover .ui.checkbox, 
-			#radiobox_cover .ui.checkbox {
-			    width: 140px;
-			    min-height: 0;
-			    margin: 3px 0;
 
-			    line-height: 1.3;
-			}			
-			#radiobox_cover .ui.checkbox .box:before, #radiobox_cover .ui.checkbox label:before {
-				top: 0px;
-				width: 1rem;
-				height: 1rem;
-				border-radius: 1rem;
+			#menu_layerControl {
+				border-color: rgba(33, 133, 208, 0.7);
+				font-family: 'Spoqa Han Sans', sans-serif;
+				margin-right: 5px !important;
+				width: auto;
 			}
-			#radiobox_cover .ui.checkbox .box:after, #radiobox_cover .ui.checkbox label:after {
-				font-size: inherit;
-				top: 0px;
-				left: 0px;
-				width: calc( 1rem + 2px );
-				height: calc( 1rem + 2px );
+				/* ------------ semantic-ui menu ------------ */
+
+				#menu_layerControl .item {
+					height: 1.2em;
+					padding: 0.4em 0;
+				}
+			#checkbox_cover, #radiobox_cover {
+				margin: 0 0 0 0;
 			}
+				#checkbox_cover .ui.checkbox, 
+				#radiobox_cover .ui.checkbox {
+				    width: 140px;
+				    min-height: 0;
+				    margin: 3px 0;
+
+				    line-height: 1.3;
+				}			
+				#radiobox_cover .ui.checkbox .box:before, #radiobox_cover .ui.checkbox label:before {
+					top: 0px;
+					width: 1rem;
+					height: 1rem;
+					border-radius: 1rem;
+				}
+				#radiobox_cover .ui.checkbox .box:after, #radiobox_cover .ui.checkbox label:after {
+					font-size: inherit;
+					top: 0px;
+					left: 0px;
+					width: calc( 1rem + 2px );
+					height: calc( 1rem + 2px );
+				}
 
 		#mapYear {
+			height: 107px;
 			margin: 0 16px 0 0;
 			padding: 21px 15px 21px 18px;
 
@@ -382,7 +418,7 @@ div, input {
 		}
 			#mapYear_slider {
 				width: 8px;
-				height: calc(100% - 7px);
+				height: calc(100% - 8px);
 				margin: 4px 10px 0px 0px;
 			}
 				#mapYear_slider .ui-slider-handle {
@@ -421,7 +457,7 @@ div, input {
 
 @media all and (max-width:1024px) { /* tablet layout */
 	#layerControl_legend {
-		top: 162px;
+		top: 198px;
 		left: 76px;
 	}
 }
@@ -453,7 +489,7 @@ div, input {
 		margin-left: 76px;
 	}
 	.leaflet-top .leaflet-control-zoom {
-		margin-top: 206px;
+		margin-top: 242px;
 	}
 }
 @media all and (max-width:1024px) and (min-aspect-ratio: 2/1) { /* "iPhone X", widescreen aspect */
@@ -477,12 +513,12 @@ div, input {
 
 /* ------------ #score_legend ------------ */
 
-#score_legend {
-	top: 392px;
-	left: 36px;
+.score_legend {
+	top: 448px;
+	left: 40px;
 	width: auto;
-	height: 128px;
-	padding: 10px 9px 10px 7px;
+	height: 108px;
+	padding: 8px 8px 8px 6px;
 
 	display: flex;
 
@@ -491,70 +527,77 @@ div, input {
 }
 
 
-	#score_gradient { 
-		width: 10px;
+	.score_gradient { 
+		width: 6px;
 		height: 100%;
 		opacity: 0.7;
-		/* background-color: hsl(0, 100%, 50%); 그레디언트가 지원되지 않는 경우의 색상(fallback color) */
-		background-image: -webkit-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%));
-		background-image:    -moz-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Fx 3.6 부터 Fx 15 까지 처리 */
-		background-image:     -ms-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* IE 10 Platform Previews, Consumer Preview */
-		background-image:      -o-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Opera 11.1 부터 12.0 까지 처리 */ 
-		background-image:         linear-gradient(to top, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
 	}
+		#score_legend_multiLayer .score_gradient { 
+			/* background-color: hsl(0, 100%, 50%); 그레디언트가 지원되지 않는 경우의 색상(fallback color) */
+			background-image: -webkit-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%));
+			background-image:    -moz-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Fx 3.6 부터 Fx 15 까지 처리 */
+			background-image:     -ms-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* IE 10 Platform Previews, Consumer Preview */
+			background-image:      -o-linear-gradient(bottom, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* Opera 11.1 부터 12.0 까지 처리 */ 
+			background-image:         linear-gradient(to top, hsl(0, 100%, 100%), hsl(0, 100%, 90%), hsl(0, 100%, 80%), hsl(0, 100%, 70%), hsl(0, 100%, 60%), hsl(0, 100%, 50%), hsl(0, 100%, 40%), hsl(0, 100%, 30%), hsl(0, 100%, 20%), hsl(0, 100%, 10%), hsl(0, 100%, 0%)); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
+		}
 
-	#score_integer {
+		#score_legend_singleLayer .score_gradient { 
+			/* background-color: hsl(0, 100%, 50%); 그레디언트가 지원되지 않는 경우의 색상(fallback color) */
+			background-image: -webkit-linear-gradient(bottom, hsl(35, 100%, 100%), hsl(35, 100%, 95%), hsl(35, 100%, 90%), hsl(35, 100%, 85%), hsl(35, 100%, 80%), hsl(35, 100%, 75%), hsl(35, 100%, 70%), hsl(35, 100%, 65%), hsl(35, 100%, 60%), hsl(35, 100%, 55%), hsl(35, 100%, 50%));
+			background-image:    -moz-linear-gradient(bottom, hsl(35, 100%, 100%), hsl(35, 100%, 95%), hsl(35, 100%, 90%), hsl(35, 100%, 85%), hsl(35, 100%, 80%), hsl(35, 100%, 75%), hsl(35, 100%, 70%), hsl(35, 100%, 65%), hsl(35, 100%, 60%), hsl(35, 100%, 55%), hsl(35, 100%, 50%)); /* Fx 3.6 부터 Fx 15 까지 처리 */
+			background-image:     -ms-linear-gradient(bottom, hsl(35, 100%, 100%), hsl(35, 100%, 95%), hsl(35, 100%, 90%), hsl(35, 100%, 85%), hsl(35, 100%, 80%), hsl(35, 100%, 75%), hsl(35, 100%, 70%), hsl(35, 100%, 65%), hsl(35, 100%, 60%), hsl(35, 100%, 55%), hsl(35, 100%, 50%)); /* IE 10 Platform Previews, Consumer Preview */
+			background-image:      -o-linear-gradient(bottom, hsl(35, 100%, 100%), hsl(35, 100%, 95%), hsl(35, 100%, 90%), hsl(35, 100%, 85%), hsl(35, 100%, 80%), hsl(35, 100%, 75%), hsl(35, 100%, 70%), hsl(35, 100%, 65%), hsl(35, 100%, 60%), hsl(35, 100%, 55%), hsl(35, 100%, 50%)); /* Opera 11.1 부터 12.0 까지 처리 */ 
+			background-image:         linear-gradient(to top, hsl(35, 100%, 100%), hsl(35, 100%, 95%), hsl(35, 100%, 90%), hsl(35, 100%, 85%), hsl(35, 100%, 80%), hsl(35, 100%, 75%), hsl(35, 100%, 70%), hsl(35, 100%, 65%), hsl(35, 100%, 60%), hsl(35, 100%, 55%), hsl(35, 100%, 50%)); /* 표준구문, 표준구문은 반드시 마지막에 삽입해야한다. */
+		}
+
+	.score_integer {
 		width: auto;
 		height: 100%;
-		margin: 0 8px 0 0;
+		margin: 0 6px 0 0;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column-reverse;
 	}
 
-		#score_integer div {
+		.score_integer div {
 			width: auto;
-			line-height: 1.0;
-			text-align: right;
+			text-align: center;
 			font-size: 10px;
+		}
+		#score_legend_multiLayer .score_integer div {
+			line-height: 1.0;
+		}
+		#score_legend_singleLayer .score_integer div {
+			line-height: 1.2;
 		}
 
 @media all and (max-width:1024px) { /* tablet layout */
-	#score_legend {
-		top: 162px;
+	.score_legend {
+		top: 198px;
 		left: 24px;
-		height: 108px;
 		padding: 10px 7px 10px 6px;
 	}
-		#score_legend div {
-			text-align: center;
-		}
-		#score_gradient {
-			width: 6px;
-		}
 }
 
 
-@media all and (max-width:767px), all and (max-width:1024px) and (min-aspect-ratio: 2/1) { /* mobile phone AND "iPhone X", widescreen layout */
-	#score_legend {
+@media all and (max-width:767px) { /* mobile phone */
+	.score_legend {
+		position: fixed;
 		top: auto;
-		/*left: 16px;*/
 		left: auto;
 		bottom: calc(30% + 16px);
 		right: 12px;
 		padding: 8px 8px 8px 6px;
 	}
-		#score_gradient {
-			width: 6px;
-		}
 }
 
 @media all and (max-width:1024px) and (min-aspect-ratio: 2/1) { /* "iPhone X", widescreen aspect */
-	#score_legend {
+	.score_legend {
 		top: auto;
 		left: auto;
 		right: 352px;
 		bottom: 20px;
+		padding: 8px 8px 8px 6px;
 	}
 }
 
@@ -824,10 +867,10 @@ div, input {
 
 @media all and (max-width:1024px) { /* tablet layout */
 	#dataInfo {
-		top: 144px;
+		top: 180px;
 		right: 16px;
 		width: 320px;
-		max-height: calc(100vh - 64px - 98px);
+		max-height: calc(100vh - 198px);
 		padding: 20px 18px 12px 12px;
 	}
 		#selectNotice  {
@@ -1092,14 +1135,4 @@ footer {
 
 }
 
-
-
-
-#newcontroller {
-	background-color: #ffffff;
-	position: absolute;
-	bottom: 64px;
-	left: 248px;
-	padding: 12px;
-}
 
