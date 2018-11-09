@@ -15,7 +15,7 @@ function tbody_update(_td_array) {
 	return html_string;
 }
 
-function popup_update() {
+function modal_update() {
 	for (var data_explanation of _data_legend) {
 		var html_string = 
 			'<div class="data_explanation">' +

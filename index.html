@@ -66,7 +66,7 @@
 	<!-- local json/css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
-	<script type="text/javascript" src="@json_data/score_legend.js"></script>
+	<script type="text/javascript" src="@json_data/scoreLegend.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-map-municipal.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-map-province.js"></script>
 	<script type="text/javascript" src="@json_data/skorea-score-2014.js"></script>
@@ -84,13 +84,14 @@
 
 	<a id="site_title" href=""><img src="@images/lab2050_colour.png"/><div>우리 지역 <br>고용위기 시그널</div></a>
 
-	<i class="setting icon" id="layerControl_popup"></i>
+	<i class="info circle icon" id="dataLegend_mapNav"></i>
+	<i class="setting icon" id="mapNav_popup"></i>
 
-	<div class="ui popup bottom right" id="map_layerControl">
+	<div class="ui popup bottom right" id="mapNav">
 
 		<div id="mapLayer">
 
-			<div class="ui two item menu" id="menu_layerControl">
+			<div class="ui two item menu" id="mapLayer_menu">
 				<a class="active item" data-tab="multiLayer" id="menu_multiLayer">위험도 합산</a>
 				<a class="item" data-tab="singleLayer" id="menu_singleLayer">단일 위험도</a>
 			</div>
@@ -130,7 +131,7 @@
 				</div>
 			</div>
 
-			<div class="ui segment tab" id="radiobox_cover" data-tab="singleLayer">
+			<div class="ui segment tab" id="radioButton_cover" data-tab="singleLayer">
 				<div class="ui radio checkbox" id="radioUI_hiringRate_300">
 					<input type="radio" name="radioButton" id="radio_hiringRate_300" checked="checked"> 
 					<label> 300인 이상 제조업 집중도</label>
@@ -176,16 +177,13 @@
 		</div>
 	</div>
 
-
-	<i class="info circle icon" id="layerControl_legend"></i>
-
-	<div class="score_legend" id="score_legend_multiLayer">
+	<div class="scoreLegend" id="scoreLegend_multiLayer">
 		<div class="score_integer">
 			<div>0</div> <div>25</div> <div>50</div> <div>75</div> <div>100</div>
 		</div>
 		<div class="score_gradient"></div>
 	</div>
-	<div class="score_legend" id="score_legend_singleLayer" style="display: none;">
+	<div class="scoreLegend" id="scoreLegend_singleLayer" style="display: none;">
 		<div class="score_integer">
 			<div>위험<br>저</div> <div>고<br>위험</div>
 		</div>
@@ -202,9 +200,9 @@
 			</div>
 			<div class="results"></div>
 		</div>
-
 		<img id="info_gripper" src="@images/Gripper.svg">
-		<div id="selectNotice">
+
+		<div id="initialNotice">
 			<p>[우리 지역 고용위기 시그널] 지도는 각 지역의 고용 위험도를 가늠해 볼 수 있도록 여러 통계 정보를 종합 제시하려는 취지로 제작됐습니다.<br>
 			기본 지도는 ‘300인 이상 제조업 집중도’입니다. 여기서 진하게 표시된 지역들은 한국 사회의 관점에서 ‘안정적인 일자리가 많은 지역’이기도 하지만, 동시에 ‘지역 산업 또는 기업이 위기를 맞을 때 타격을 크게 받을 지역’이기도 합니다. 물론 그 중에는 위기 가능성이 상대적으로 큰 곳과 작은 곳이 있습니다. 이를 구분하기 위해 기본 지도 위에 ‘제조업 고용위기’ 또는 ‘지역 고용 취약성’에 관한 7가지 정보를 더해가며 위험도를 가늠해 보도록 했습니다.</p>
 			<p>이는 단순히 여러 정보들을 한 눈에 볼 수 있도록 중첩 배열한 것일 뿐, 지수(index) 또는 지표를 만든 것은 아닙니다. 색깔 반영도 역시 각 정보의 색깔이 진해지는 정도를 일정하게 맞추기 위해 부여한 것일 뿐 평가 점수는 아닙니다.</p>
@@ -214,80 +212,34 @@
 				문의: <a class="paragraph_link" href="mailto:joonchigirl@lab2050.org">joonchigirl@lab2050.org</a></p>
 		</div>
 
-		<div class="ui top secondary pointing menu" id="info_nameContainer" style="display: none">
+		<div class="ui top secondary pointing menu" id="nameContainer" style="display: none">
 			<a class="active item" data-tab="municipal" id="municipal_name"></a>
 			<a class="item" data-tab="province" id="province_name"></a>
 			<a class="right item" id="cancel_selecting">✕</a>
 		</div>
-		<div id="info_hyperlink" style="display: none">
-			<!-- <a id="candidate_info" href="https://developer.mozilla.org/en-US/" target="_blank"><div>후보자 상세 정보</div></a
-			><a id="disrtict_info" href="https://developer.mozilla.org/en-US/" target="_blank" style="display: none"><div>지역 내 선거 역대 결과</div></a> -->
-		</div>
-
 
 		<div class="ui bottom segment active tab" data-tab="municipal" id="result_municipal" style="display: none">
 			<div class="basicInfo_storage" id="basicInfo_municipal">
-				<div class="dataInfo" id="population_municipal"></div>
-				<div class="dataInfo" id="mean_age_municipal"></div>
-				<div class="dataInfo" id="workers_municipal"></div>
-				<div class="dataInfo" id="mainIndustry_municipal"></div>
-				<div class="dataInfo" id="factory_municipal"></div>
+				<div class="basicInfo" id="population_municipal"></div>
+				<div class="basicInfo" id="mean_age_municipal"></div>
+				<div class="basicInfo" id="workers_municipal"></div>
+				<div class="basicInfo" id="mainIndustry_municipal"></div>
+				<div class="basicInfo" id="factory_municipal"></div>
 			</div>
 
-			<div class="textbox_explain" id="textbox_explain_municipal"></div>
-
-			<div class="score_storage" id="result_municipal_hiringRate_300">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="score"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_municipal_hiringRate_1000">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="score"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_municipal_mainIndustryPortion">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="score"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_municipal_rateOf20sInIndustry">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="score"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_municipal_industryJobCreation">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="score"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_municipal_incomeRate">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="score"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_municipal_R_COSTII">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="score"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_municipal_expertRate">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="score"></div>
-				<div class="dataName"></div>
-			</div>
+			<div class="score_storage" id="result_municipal_hiringRate_300"></div>
+			<div class="score_storage unlayered" id="result_municipal_hiringRate_1000"></div>
+			<div class="score_storage unlayered" id="result_municipal_mainIndustryPortion"></div>
+			<div class="score_storage unlayered" id="result_municipal_rateOf20sInIndustry"></div>
+			<div class="score_storage unlayered" id="result_municipal_industryJobCreation"></div>
+			<div class="score_storage unlayered" id="result_municipal_incomeRate"></div>
+			<div class="score_storage unlayered" id="result_municipal_R_COSTII"></div>
+			<div class="score_storage unlayered" id="result_municipal_expertRate"></div>
+			
 			<div id="score_municipal_total">
 				<div class="scoreName">Total</div>
 				<div class="score">100.0</div>
-				<div class="dataName" id="dataInfo_municipal_legend"><i class="info circle icon"> </i>데이터 구성 및 출처</div>
+				<div class="dataName" id="dataLegend_municipal"><i class="info circle icon"> </i>데이터 구성 및 출처</div>
 				<div id="description_additional_note"></div>
 				<div id="description_municipal_total">* 이 연구는 300인 이상 대기업의 제조업 종사자가 존재하는 지역을 분석하고 있습니다. 지역 내에 해당 기업 사업체가 없을 경우, 연구대상에서 제외했습니다.</div>
 			</div>
@@ -295,55 +247,21 @@
 
 		<div class="ui bottom segment tab" data-tab="province" id="result_province" style="display: none">
 			<div class="basicInfo_storage" id="basicInfo_province">
-				<div class="dataInfo" id="population_province"></div>
-				<div class="dataInfo" id="mean_age_province"></div>
-				<div class="dataInfo" id="workers_province"></div>
-				<div class="dataInfo" id="mainIndustry_province"></div>
-				<div class="dataInfo" id="factory_province"></div>
+				<div class="basicInfo" id="population_province"></div>
+				<div class="basicInfo" id="mean_age_province"></div>
+				<div class="basicInfo" id="workers_province"></div>
+				<div class="basicInfo" id="mainIndustry_province"></div>
+				<div class="basicInfo" id="factory_province"></div>
 			</div>
 
-			<div class="textbox_explain" id="textbox_explain_province"></div>
-
-			<div class="score_storage" id="result_province_hiringRate_300">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_province_hiringRate_1000">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_province_mainIndustryPortion">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_province_rateOf20sInIndustry">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_province_industryJobCreation">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_province_incomeRate">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_province_R_COSTII">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="dataName"></div>
-			</div>
-			<div class="score_storage unlayered" id="result_province_expertRate">
-				<div class="scoreName"></div>
-				<div class="dataValue"></div>
-				<div class="dataName"></div>
-			</div>
+			<div class="score_storage" id="result_province_hiringRate_300"></div>
+			<div class="score_storage unlayered" id="result_province_hiringRate_1000"></div>
+			<div class="score_storage unlayered" id="result_province_mainIndustryPortion"></div>
+			<div class="score_storage unlayered" id="result_province_rateOf20sInIndustry"></div>
+			<div class="score_storage unlayered" id="result_province_industryJobCreation"></div>
+			<div class="score_storage unlayered" id="result_province_incomeRate"></div>
+			<div class="score_storage unlayered" id="result_province_R_COSTII"></div>
+			<div class="score_storage unlayered" id="result_province_expertRate"></div>
 		</div>
 
 		<img id="info_scrollingTop" src="@images/Scroll_down.svg">
@@ -351,7 +269,7 @@
 	</div>
 
 
-	<div class="ui modal" id="popup_modal">
+	<div class="ui modal" id="dataLegend_modal">
 		<i class="close icon"></i>
 		<div class="header">데이터 구성 및 출처</div>
 
@@ -462,7 +380,7 @@
 
 	<!-- local js/css -->
 	<script type="text/javascript" src="js/onLoad.js"></script>
-	<script type="text/javascript" src="js/popup_modal.js"></script>
+	<script type="text/javascript" src="js/dataLegend_modal.js"></script>
 	<script type="text/javascript" src="js/leaflet_script.js"></script>
 	<script type="text/javascript" src="js/dataInfo.js"></script>
 

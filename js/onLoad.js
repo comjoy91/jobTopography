@@ -1,4 +1,4 @@
-// BACKGROUND LAYER
+// ---------- BACKGROUND MAP LAYER ----------
 
 var windowWidth, windowHeight, wideRatio = 0;
 windowWidth = $(window).width();
@@ -38,7 +38,8 @@ if ( !L.Browser.touch ) {
 }
 
 
-// functions for implementing rawData and score into initial geoJSON data.
+// ---------- functions for implementing rawData and score into initial geoJSON data.
+
 function data_object(_dataJson_district) {
 	var returnObject = {	
 		"hiringRate_300": {
@@ -98,7 +99,7 @@ function dataInsertion(_featureArray, _dataArray) {
 			prop.data.push(data_object(_dataArray[j][i]));
 		}
 		
-		if ( /*_dataArray[_dataArray.length-1][i].score_hiringRate_300*/ prop.data[j-1].hiringRate_300.score > 0 ) prop.validForResearch = true;
+		if ( prop.data[j-1].hiringRate_300.score > 0 ) prop.validForResearch = true;
 		else prop.validForResearch = false;
 		prop.score_total = prop.data[j-1].hiringRate_300.score;
 	}
@@ -109,7 +110,19 @@ var provinceData = [_dataJSON_2014.provinces, _dataJSON_2015.provinces, _dataJSO
 dataInsertion(municipalGeoJSON, municipalData);
 dataInsertion(provinceGeoJSON, provinceData);
 
-var updateScore = function() { updateScore_check(); }; // recent "updateScore" function variable, depends on which layer is selected.
+
+// ---------- variable which is related to #mapYear_slider
+var updateScore = function() { updateScore_check(); }; // recent "updateScore" function variable, depends on which #menu_mapNav is selected.
+var year_index = 2; // 2014: 0, 2015: 1, 2016: 2. It is used in "js/leaflet_script.js"
+
+
+// ---------- variable which shows selected polygon (municipal layer, province layer).  Mostly used in "js/leaflet_script.js"
+var current_municipal_layer = null;
+var current_province_layer = null;
+
+var search_contents = []; // array for search_contents. Mostly used in "js/leaflet_script.js"
+
+
 
 (function($){
 
@@ -119,25 +132,25 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 		wideRatio = windowWidth / windowHeight;
 		if ( windowWidth >= 1025 ) {
 			$("#mapYear_slider").slider( "option", "orientation", "horizontal" );
-			$("#map_layerControl").attr( {class: "", style: ""} );
+			$("#mapNav").attr( {class: "", style: ""} );
 			attribution.setPosition("bottomleft");
 		}
 
 		else if ( windowWidth >= 768 && wideRatio > 2/1) { // "iPhone X"
 			$("#mapYear_slider").slider( "option", "orientation", "horizontal" );
-			$("#map_layerControl").addClass( "ui popup bottom right" );
+			$("#mapNav").addClass( "ui popup bottom right" );
 			attribution.setPosition("bottomleft");
 		}
 
 		else if ( windowWidth >= 768 ) {
 			$("#mapYear_slider").slider( "option", "orientation", "vertical" );
-			$("#map_layerControl").attr( {class: "", style: ""} );
+			$("#mapNav").attr( {class: "", style: ""} );
 			attribution.setPosition("bottomleft");
 		}
 
 		else { 
 			$("#mapYear_slider").slider( "option", "orientation", "horizontal" );
-			$("#map_layerControl").addClass( "ui popup bottom right" );
+			$("#mapNav").addClass( "ui popup bottom right" );
 			attribution.setPosition("topright");
 		}
 	}
@@ -156,6 +169,15 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 			}
 		});
 
+		$('.ui.search').search({ // search each district by keyword.
+			source: search_contents,
+			searchFields: ['title_string'],
+			showNoResults: false,
+			fullTextSearch: 'exact',
+			maxResults: 8,
+			onSelect: function(result, response) { zoomToFeature_layer (result.layer); }
+		});
+
 		$('#municipal_name, #province_name').tab(); // municipal & province name menu tab initialize
 		$('#cancel_selecting').click( function() { // canceling selecting
 			cancel_selectingHighlight_layer();
@@ -163,12 +185,12 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 			change_dataInfo();
 		})
 
-		$('#layerControl_legend, #dataInfo_municipal_legend').click( function() { // modal popup
-			$('#popup_modal').modal('show');
+		$('#dataLegend_mapNav, #dataLegend_municipal').click( function() { // #dataLegend_modal popup
+			$('#dataLegend_modal').modal('show');
 		});
 
-		$('#layerControl_popup').popup( { // popup button for #map_layerControl in mobile devices.
-			popup 		: '#map_layerControl',
+		$('#mapNav_popup').popup( { // popup button for #mapNav in mobile devices.
+			popup 		: '#mapNav',
 		    on 			: 'click',
 			inline		: true,
 			position	: 'right center',
@@ -183,6 +205,11 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 			}, 600,'easeOutCubic');
 		});
 
+
+
+		// ---------- checkbox / radio button callback ----------
+
+		// ---------- checkbox
 
 		var check_hiringRate_300 = document.getElementById("check_hiringRate_300"),
 			check_hiringRate_1000 = document.getElementById("check_hiringRate_1000"),  
@@ -250,6 +277,8 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 			}
 		});
 
+
+		// ---------- radio button
 
 		var radio_hiringRate_300 = document.getElementById("radio_hiringRate_300"),
 			radio_hiringRate_1000 = document.getElementById("radio_hiringRate_1000"),  
@@ -325,14 +354,15 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 			}
 		});
 
-		// layerControl(single-layer OR multi-layer) menu tab initialize
+		// ---------- layerControl(single-layer OR multi-layer) menu tab initialize -----------
 		$("#menu_multiLayer, #menu_singleLayer").tab();
+
 		$("#menu_multiLayer").click( function() {
 			updateScore_check();
 			updateScore = function() { updateScore_check(); }; // Layer selection with #mapYear slidebar
 
-			$("#score_legend_multiLayer").css( "display", "" );
-			$("#score_legend_singleLayer").css( "display", "none" );
+			$("#scoreLegend_multiLayer").css( "display", "" );
+			$("#scoreLegend_singleLayer").css( "display", "none" );
 
 			$(".score_storage").addClass("unlayered");
 			if (check_hiringRate_300.checked) {
@@ -368,12 +398,13 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 				$("#result_province_expertRate").removeClass("unlayered");
 			}
 		}); 
+		
 		$("#menu_singleLayer").click( function() {
 			updateScore_radio();
 			updateScore = function() { updateScore_radio(); }; // Layer selection with #mapYear slidebar
 
-			$("#score_legend_multiLayer").css( "display", "none" );
-			$("#score_legend_singleLayer").css( "display", "" );
+			$("#scoreLegend_multiLayer").css( "display", "none" );
+			$("#scoreLegend_singleLayer").css( "display", "" );
 
 			$(".score_storage").addClass("unlayered");
 			if (radio_hiringRate_300.checked) {
@@ -404,25 +435,23 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 				$("#result_municipal_R_COSTII").removeClass("unlayered");
 				$("#result_province_R_COSTII").removeClass("unlayered");
 			}
-			else if (radio_expertRate.checked) {
+			else { // if (radio_expertRate.checked) 
 				$("#result_municipal_expertRate").removeClass("unlayered");
 				$("#result_province_expertRate").removeClass("unlayered");
 			}
 		});
 
 
-
-
 		updateScore_check();
 		resizeWindow();
 		if ( (windowWidth >= 768 && windowWidth < 1025 && wideRatio > 2/1) || (windowWidth < 768) )  { // show popup initially.
-			$("#layerControl_popup").popup('show');
+			$("#mapNav_popup").popup('show');
 		}
 		change_dataInfo();
-		popup_update();
+		modal_update();
 	});
 
-	$(window).on("resize", resizeWindow); // 창 크기가 바뀔 때에는
+	$(window).on("resize", resizeWindow); // 창 크기가 바뀔 때에는 resizeWindow() 가동
 
 })(jQuery);
 
