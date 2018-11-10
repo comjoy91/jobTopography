@@ -930,12 +930,25 @@ div, input {
 		font-family: "Spoqa Han Sans";
 		font-size: 24px;
 	}
+		#dataLegend_modal .header a {
+			vertical-align: 3px;
+			font-size: 14px;
+			line-height: 1.0;
+			font-weight: 400;
+			margin-left: 12px;
+			color: #555555;
+			text-decoration: underline;
+		}
 
 	#dataLegend_modal .data_explanation {
 		margin: 0 0 48px 0;
 		word-break: keep-all;
 		-ms-word-break: keep-all;
 	}
+		#dataLegend_modal .data_explanation a {
+			color: #555555;
+			text-decoration: underline;
+		}
 		#dataLegend_modal h1 {
 			font-size: 18px;
 		}
@@ -989,6 +1002,10 @@ div, input {
 		#dataLegend_modal .header {
 			font-size: 21px;
 		}
+			#dataLegend_modal .header a {
+				font-size: 10px;
+				margin-left: 8px;
+			}
 		#dataLegend_modal h1 {
 			font-size: 15px;
 		}
