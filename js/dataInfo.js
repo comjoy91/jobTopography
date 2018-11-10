@@ -8,13 +8,14 @@ function append_basicInfo(_dataName, _dataValue) {
 
 function append_province_result(_scoreName, _dataValue, _dataName) {
 	return "<div class=\"scoreName\">" + _scoreName + "</div>"
+	+ "<div class=\"score\"></div>"
 	+ "<div class=\"dataValue\">" + _dataValue + "</div>"
 	+ "<div class=\"dataName\">" + _dataName + "</div>";
 }
 
 function append_municipal_result(_scoreName, _dataValue, _score, _dataName) {
 	return "<div class=\"scoreName\">" + _scoreName + "</div>"
-	+ "<div class=\"score\">" + d3.format(".1f")(_score) + "</div><br>"
+	+ "<div class=\"score\">" + d3.format(".1f")(_score) + "</div>"
 	+ "<div class=\"dataValue\">" + _dataValue + "</div>"
 	+ "<div class=\"dataName\">" + _dataName + "</div>";
 }
@@ -87,10 +88,10 @@ function change_dataInfo(_prop) {
 				append_municipal_result("직장인-주민 괴리도(2016)", _data.incomeRate.rawData, _data.incomeRate.score, "(거주지 기준) 지역내 급여 총액 /<br> (근무지 기준) 지역내 급여 총액")
 			);
 			$("#result_municipal_R_COSTII").append(
-				append_municipal_result("과학기술혁신 역량 위험도", _data.R_COSTII.rawData, _data.R_COSTII.score, "과학기술혁신역량지수 R-COSTII")
+				append_municipal_result("과학기술혁신역량 위험도", _data.R_COSTII.rawData, _data.R_COSTII.score, "과학기술혁신역량지수 R-COSTII")
 			);
 			$("#result_municipal_expertRate").append(
-				append_municipal_result("관리자, 전문가 비중 위험도", _data.expertRate.rawData, _data.expertRate.score, "전체 취업자 중 관리자, 전문가 비율")
+				append_municipal_result("관리자·전문가 비중 위험도", _data.expertRate.rawData, _data.expertRate.score, "전체 취업자 중 관리자·전문가 비율")
 			);
 
 			// municipal total score.
@@ -100,7 +101,7 @@ function change_dataInfo(_prop) {
 			}
 			else {
 				$(".score_storage .score").append("*");
-				$("#score_municipal_total .score").html("0.0*"); // / 100.0");
+				$("#score_municipal_total .score").html("0.0* / 100.0");
 				$("#description_municipal_total").css("display", "");
 			}
 
@@ -139,10 +140,10 @@ function change_dataInfo(_prop) {
 				append_province_result("직장인-주민 괴리도(2016)", _data_province.incomeRate.rawData, "(거주지 기준) 지역내 급여 총액 /<br> (근무지 기준) 지역내 급여 총액")
 			);
 			$("#result_province_R_COSTII").append(
-				append_province_result("과학기술혁신 역량 위험도", _data_province.R_COSTII.rawData, "과학기술혁신역량지수 R-COSTII")
+				append_province_result("과학기술혁신역량 위험도", _data_province.R_COSTII.rawData, "과학기술혁신역량지수 R-COSTII")
 			);
 			$("#result_province_expertRate").append(
-				append_province_result("관리자, 전문가 비중 위험도", _data_province.expertRate.rawData, "전체 취업자 중 관리자, 전문가 비율")
+				append_province_result("관리자·전문가 비중 위험도", _data_province.expertRate.rawData, "전체 취업자 중 관리자·전문가 비율")
 			);
 		}
 		
