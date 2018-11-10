@@ -14,8 +14,8 @@ function append_province_result(_scoreName, _dataValue, _dataName) {
 
 function append_municipal_result(_scoreName, _dataValue, _score, _dataName) {
 	return "<div class=\"scoreName\">" + _scoreName + "</div>"
-	+ "<div class=\"score\">" + d3.format(".1f")(_score) + "</div><br>"
 	+ "<div class=\"dataValue\">" + _dataValue + "</div>"
+	+ "<div class=\"score\">" + d3.format(".1f")(_score) + "</div><br>"
 	+ "<div class=\"dataName\">" + _dataName + "</div>";
 }
 
@@ -69,22 +69,22 @@ function change_dataInfo(_prop) {
 
 			// municipal score.
 			$("#result_municipal_hiringRate_300").append(
-				append_municipal_result("300인 이상 제조업 집중도", _data.hiringRate_300.rawData, _data.hiringRate_300.score, "제조업 종사자 중 300인 이상 제조업체 종사 비율")
+				append_municipal_result("300인 이상 제조업 집중도", _data.hiringRate_300.rawData, _data.hiringRate_300.score, "지역 종사자 중 300인 이상 제조업 종사자 비율")
 			);
 			$("#result_municipal_hiringRate_1000").append(
-				append_municipal_result("1000인 이상 제조업 집중도", _data.hiringRate_1000.rawData, _data.hiringRate_1000.score, "제조업 종사자 중 1000인 이상 제조업체 종사 비율")
+				append_municipal_result("1000인 이상 제조업 집중도", _data.hiringRate_1000.rawData, _data.hiringRate_1000.score, "지역 종사자 중 1000인 이상 제조업 종사자 비율")
 			);
 			$("#result_municipal_mainIndustryPortion").append(
-				append_municipal_result("제1제조업 집중도", _data.mainIndustryPortion.rawData, _data.mainIndustryPortion.score, "300인 이상 제조업체 종사자 중 제1제조업 종사 비율")
+				append_municipal_result("제1제조업 집중도", _data.mainIndustryPortion.rawData, _data.mainIndustryPortion.score, "300인 이상 제조업 종사자 중 제1제조업 종사자 비율")
 			);
 			$("#result_municipal_rateOf20sInIndustry").append(
-				append_municipal_result("제조업 고령화", _data.rateOf20sInIndustry.rawData, _data.rateOf20sInIndustry.score, "제조업체 종사자 중 20대 비율")
+				append_municipal_result("제조업 고령화", _data.rateOf20sInIndustry.rawData, _data.rateOf20sInIndustry.score, "제조업 종사자 중 20대 비율")
 			);
 			$("#result_municipal_industryJobCreation").append(
 				append_municipal_result("일자리 창출 위험도", "(비공개)", _data.industryJobCreation.score, "일자리 총 규모 대비 일자리 창출량")
 			);
 			$("#result_municipal_incomeRate").append(
-				append_municipal_result("직장인-주민 괴리도(2016)", _data.incomeRate.rawData, _data.incomeRate.score, "(거주지 기준) 지역내 급여 총액 /<br> (근무지 기준) 지역내 급여 총액")
+				append_municipal_result("직장인-주민 괴리도(2016)", _data.incomeRate.rawData, _data.incomeRate.score, "(거주지 기준)지역내 급여 총액 / (근무지 기준)지역내 급여 총액")
 			);
 			$("#result_municipal_R_COSTII").append(
 				append_municipal_result("과학기술혁신 역량 위험도", _data.R_COSTII.rawData, _data.R_COSTII.score, "과학기술혁신역량지수 R-COSTII")
@@ -121,22 +121,22 @@ function change_dataInfo(_prop) {
 
 			// province score.
 			$("#result_province_hiringRate_300").append(
-				append_province_result("300인 이상 제조업 집중도", _data_province.hiringRate_300.rawData, "제조업 종사자 중 300인 이상 제조업체 종사 비율")
+				append_province_result("300인 이상 제조업 집중도", _data_province.hiringRate_300.rawData, "지역 종사자 중 300인 이상 제조업 종사자 비율")
 			);
 			$("#result_province_hiringRate_1000").append(
-				append_province_result("1000인 이상 제조업 집중도", _data_province.hiringRate_1000.rawData, "제조업 종사자 중 1000인 이상 제조업체 종사 비율")
+				append_province_result("1000인 이상 제조업 집중도", _data_province.hiringRate_1000.rawData, "지역 종사자 중 1000인 이상 제조업 종사자 비율")
 			);
 			$("#result_province_mainIndustryPortion").append(
-				append_province_result("제1제조업 집중도", _data_province.mainIndustryPortion.rawData, "300인 이상 제조업체 종사자 중 제1제조업 종사 비율")
+				append_province_result("제1제조업 집중도", _data_province.mainIndustryPortion.rawData, "300인 이상 제조업 종사자 중 제1제조업 종사자 비율")
 			);
 			$("#result_province_rateOf20sInIndustry").append(
-				append_province_result("제조업 고령화", _data_province.rateOf20sInIndustry.rawData, "제조업체 종사자 중 20대 비율")
+				append_province_result("제조업 고령화", _data_province.rateOf20sInIndustry.rawData, "제조업 종사자 중 20대 비율")
 			);
 			$("#result_province_industryJobCreation").append(
 				append_province_result("일자리 창출 위험도", "(비공개)", "일자리 총 규모 대비 일자리 창출량")
 			);
 			$("#result_province_incomeRate").append(
-				append_province_result("직장인-주민 괴리도(2016)", _data_province.incomeRate.rawData, "(거주지 기준) 지역내 급여 총액 /<br> (근무지 기준) 지역내 급여 총액")
+				append_province_result("직장인-주민 괴리도(2016)", _data_province.incomeRate.rawData, "(거주지 기준)지역내 급여 총액 / (근무지 기준)지역내 급여 총액")
 			);
 			$("#result_province_R_COSTII").append(
 				append_province_result("과학기술혁신 역량 위험도", _data_province.R_COSTII.rawData, "과학기술혁신역량지수 R-COSTII")

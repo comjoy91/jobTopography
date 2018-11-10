@@ -283,13 +283,6 @@ div, input {
 				border-color: rgba(0, 162, 232, 0.5);
 			}
 
-			.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before, 
-			.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before, 
-			.ui.checkbox input:checked:focus ~ .box:before, 
-			.ui.checkbox input:checked:focus ~ label:before {
-				background: rgb(0, 162, 232);
-			}
-
 
 	#mapYear_slider {
 		margin: 0px 8px 8px 7px;
@@ -766,7 +759,7 @@ div, input {
 			display: flex;
 			flex-wrap: wrap;
 			align-items: end;
-			margin: 16px 6px 0 0;
+			margin: 16px 2px 0 0;
 		}
 			.score_storage div {
 				margin: 0 0 3px 0;
@@ -792,10 +785,7 @@ div, input {
 			.unlayered {
 				color: #ccc;
 			}
-				.unlayered .score {
-					visibility: hidden;
-				} 
-				.unlayered .dataName {
+				.unlayered .score, .unlayered .dataName {
 					display: none;
 				}
 
@@ -806,7 +796,7 @@ div, input {
 
 			border-top: 1px solid rgba(34, 36, 38, 0.15);
 			margin: 24px 0 0 0;
-			padding: 16px 6px 0 0;
+			padding: 24px 0 0 0;
 		}
 
 			#score_municipal_total .scoreName {
@@ -815,19 +805,13 @@ div, input {
 			}
 
 			#score_municipal_total .score {
-				width: 15%;
+				width: 40%;
 				font-weight: 300;
 				text-align: right;
 			}
 
-			#score_municipal_total .dataValue {
-				width: 25%;
-				font-weight: 600;
-				text-align: right;
-			}
-
 			#dataLegend_municipal {
-				margin: 12px 0 0 -2px;
+				margin: 0 0 0 -2px;
 				font-weight: 300;
 				line-height: 2.5;
 				color: #444444;
@@ -864,7 +848,7 @@ div, input {
 
 			#score_municipal_total {
 				margin: 18px 0 0 0;
-				padding: 12px 6px 0 0;
+				padding: 18px 0 0 0;
 			}
 }
 
@@ -926,7 +910,7 @@ div, input {
 
 			#score_municipal_total {
 				margin: 12px 0 0 0;
-				padding: 12px 6px 0 0;
+				padding: 12px 0 0 0;
 			}
 }
 
@@ -971,7 +955,6 @@ div, input {
 
 		#dataLegend_modal .explanation_line {
 			margin: 0 0 15px 0;
-			line-height: 1.5;
 			display: flex;
 		}
 
@@ -1065,10 +1048,8 @@ div, input {
 }
 
 @media all and (max-width:767px) { /* mobile phone layout */
-	#info_scrollingTop {		
-		margin: 0 0px 24px 264px;
-		display: initial;
-		cursor: pointer;
+	#title_dataInfo {
+		display: block;
 	}
 }
 
