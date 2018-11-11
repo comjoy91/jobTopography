@@ -85,7 +85,7 @@ function change_dataInfo(_prop) {
 				append_municipal_result("일자리 창출 위험도", "(비공개)", _data.industryJobCreation.score, "일자리 총 규모 대비 일자리 창출량")
 			);
 			$("#result_municipal_incomeRate").append(
-				append_municipal_result("직장인-주민 괴리도(2016)", _data.incomeRate.rawData, _data.incomeRate.score, "(거주지 기준) 지역내 급여 총액 /<br> (근무지 기준) 지역내 급여 총액")
+				append_municipal_result("직장인-주민 괴리도(2016)", _data.incomeRate.rawData, _data.incomeRate.score, "(거주지 기준) 지역내 급여 총액 / (근무지 기준) 지역내 급여 총액")
 			);
 			$("#result_municipal_R_COSTII").append(
 				append_municipal_result("과학기술혁신역량 위험도", _data.R_COSTII.rawData, _data.R_COSTII.score, "과학기술혁신역량지수 R-COSTII")
@@ -96,12 +96,12 @@ function change_dataInfo(_prop) {
 
 			// municipal total score.
 			if ( _data.hiringRate_300.score > 0 ) {
-				$("#score_municipal_total .score").html(d3.format(".1f")(_prop.score_total)); // + " / 100.0");
+				$("#score_municipal_total .score").html(d3.format(".1f")(_prop.score_total) + " <span style=\"font-size:10px;\">/100.0</span>");
 				$("#description_municipal_total").css("display", "none");
 			}
 			else {
-				$(".score_storage .score").append("*");
-				$("#score_municipal_total .score").html("0.0* / 100.0");
+				$(".score_storage .score").html("0.0*");
+				$("#score_municipal_total .score").html("0.0* <span style=\"font-size:10px;\">/100.0</span>");
 				$("#description_municipal_total").css("display", "");
 			}
 
@@ -137,7 +137,7 @@ function change_dataInfo(_prop) {
 				append_province_result("일자리 창출 위험도", "(비공개)", "일자리 총 규모 대비 일자리 창출량")
 			);
 			$("#result_province_incomeRate").append(
-				append_province_result("직장인-주민 괴리도(2016)", _data_province.incomeRate.rawData, "(거주지 기준) 지역내 급여 총액 /<br> (근무지 기준) 지역내 급여 총액")
+				append_province_result("직장인-주민 괴리도(2016)", _data_province.incomeRate.rawData, "(거주지 기준) 지역내 급여 총액 / (근무지 기준) 지역내 급여 총액")
 			);
 			$("#result_province_R_COSTII").append(
 				append_province_result("과학기술혁신역량 위험도", _data_province.R_COSTII.rawData, "과학기술혁신역량지수 R-COSTII")

@@ -781,7 +781,11 @@ div, input {
 				font-weight: 300;
 			}
 			.score_storage .dataName {
-				font-weight: 300;
+				width: 100%;
+				text-align: right;
+				font-size: 10px;
+				font-weight: 400;
+				color: #252525;
 			}
 
 			.unlayered {
@@ -790,6 +794,9 @@ div, input {
 				.unlayered .score {
 					visibility: hidden;
 				} 
+				.unlayered .dataValue {
+					color: #ccc;
+				}
 				.unlayered .dataName {
 					display: none;
 				}
@@ -805,12 +812,12 @@ div, input {
 		}
 
 			#score_municipal_total .scoreName {
-				width: 60%;
+				width: 30%;
 				font-weight: 600;
 			}
 
 			#score_municipal_total .score {
-				width: 15%;
+				width: 45%;
 				font-weight: 300;
 				text-align: right;
 			}
@@ -976,7 +983,7 @@ div, input {
 			}
 
 			#dataLegend_modal .explanation {
-
+				max-width: calc(100% - 116px);
 			}
 
 				#dataLegend_modal .explanation .source {
@@ -1028,6 +1035,7 @@ div, input {
 				margin: 0 0 4px 0;
 			}
 			#dataLegend_modal .explanation {
+				max-width: none;
 				line-height: 1.5;
 			}
 				#dataLegend_modal .explanation .source {

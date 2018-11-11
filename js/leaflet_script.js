@@ -146,6 +146,7 @@ function updateScore_check() {
 			if (prop.score_total > 100) prop.score_total = 100;
 
 			prop.validForResearch = true;
+			prop.exist_300 = true;
 			_layer.setStyle({
 				fillColor: getColour_multiLayer(prop.score_total),
 				fillOpacity: municipal_style.fillOpacity
@@ -153,7 +154,11 @@ function updateScore_check() {
 		}
 
 		else {
-			prop.validForResearch = false;
+			if (data.hiringRate_300.rawData == "0.00%") prop.exist_300 = false;
+			else prop.exist_300 = true; // prop.exist_300 -> 300인 이상 사업장이 존재하느냐 마느냐: if (prop.exist_300 && prop.validForResearch) hiringRate_300은 0~1% 사이.
+
+			prop.validForResearch = false; // prop.validForResearch -> 연구대상이냐 아니냐(지도에서 회색이냐 아니냐): hiringRate_300 >= 1%
+
 			_layer.setStyle({
 				fillColor: municipal_style.fillColor_invalid,
 				fillOpacity: municipal_style.fillOpacity_invalid
@@ -209,6 +214,7 @@ function updateScore_radio() {
 			}
 
 			prop.validForResearch = true;
+			prop.exist_300 = true;
 			_layer.setStyle({
 				fillColor: getColour_singleLayer(prop.score_total, max_score),
 				fillOpacity: municipal_style.fillOpacity
@@ -216,7 +222,10 @@ function updateScore_radio() {
 		}
 
 		else {
-			prop.validForResearch = false;
+			if (data.hiringRate_300.rawData == "0.00%") prop.exist_300 = false;
+			else prop.exist_300 = true; // prop.exist_300 -> 300인 이상 사업장이 존재하느냐 마느냐: if (prop.exist_300 && prop.validForResearch) hiringRate_300은 0~1% 사이.
+
+			prop.validForResearch = false; // prop.validForResearch -> 연구대상이냐 아니냐(지도에서 회색이냐 아니냐): hiringRate_300 >= 1%
 			_layer.setStyle({
 				fillColor: municipal_style.fillColor_invalid,
 				fillOpacity: municipal_style.fillOpacity_invalid
@@ -260,14 +269,17 @@ var tooltip = d3.select("body").append("div")
 	.style("display", "none");
 function districtTooltip(e) { //build tooltip for mouseover layer
 	var tooltipHTML;
-	if ( e.target.feature.properties.validForResearch ) 
+	if ( e.target.feature.properties.validForResearch ) // feature가 회색이 아님: 300인 이상 업체가 존재 (1% 이상)
 		tooltipHTML = e.target.feature.properties.province_name + " <b>" 
 					+ e.target.feature.properties.municipal_name + "</b><br> 현재 Total: " 
 					+ d3.format(".1f")(e.target.feature.properties.score_total);// + " / 100.0";
-	else
+	else if ( e.target.feature.properties.exist_300 ) // feature가 회색이고, 300인 이상 업체가 존재: 300인 이상 업체 0~1%
 		tooltipHTML = e.target.feature.properties.province_name + " <b>" 
-					+ e.target.feature.properties.municipal_name + "</b><br> 300인 이상 제조업체 없음";
-		
+					+ e.target.feature.properties.municipal_name + "</b><br> 색상 표시하지 않음: 300인 이상 제조업체 종사자 비율이 1% 미만임";
+	else // feature가 회색이고, 300인 이상 업체가 존재하지 않음: 300인 이상 업체 0%
+		tooltipHTML = e.target.feature.properties.province_name + " <b>" 
+					+ e.target.feature.properties.municipal_name + "</b><br> 색상 표시하지 않음: 300인 이상 제조업체 없음";
+
 
 	tooltip.html( tooltipHTML )
 		.style("left", (e.containerPoint.x - $(".tooltip").innerWidth()/2) + "px")

@@ -99,8 +99,16 @@ function dataInsertion(_featureArray, _dataArray) {
 			prop.data.push(data_object(_dataArray[j][i]));
 		}
 		
-		if ( prop.data[j-1].hiringRate_300.score > 0 ) prop.validForResearch = true;
-		else prop.validForResearch = false;
+		if ( prop.data[j-1].hiringRate_300.score > 0 ) {
+			prop.validForResearch = true; // prop.validForResearch -> 연구대상이냐 아니냐(지도에서 회색이냐 아니냐): hiringRate_300 >= 1%
+			prop.exist_300 = true; // prop.exist_300 -> 300인 이상 사업장이 존재하느냐 마느냐: if (prop.exist_300 && prop.validForResearch) hiringRate_300은 0~1% 사이.
+		}
+		else {
+			prop.validForResearch = false;
+
+			if (prop.data[j-1].hiringRate_300.rawData == "0.00%") prop.exist_300 = false;
+			else prop.exist_300 = true;
+		}
 		prop.score_total = prop.data[j-1].hiringRate_300.score;
 	}
 };
