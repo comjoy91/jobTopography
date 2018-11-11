@@ -800,14 +800,14 @@ div, input {
 					/*font-weight: 400;*/
 				} 
 				.unlayered .score {
-					visibility: hidden;
-					/*display: none;*/
+					/*visibility: hidden;*/
+					display: none;
 				} 
 				.unlayered .score_dash {
-					/*display: initial;*/
+					display: initial;
 				} 
 				.unlayered .dataValue {
-					/*visibility: hidden;*/
+					visibility: hidden;
 					/*color: #ccc;*/
 				}
 				.unlayered .dataName {
