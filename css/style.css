@@ -775,11 +775,16 @@ div, input {
 				text-align: right;
 				font-weight: 600;
 			}
-			.score_storage .score {
+			.score_storage .score, .score_storage .score_dash {
 				width: 15%;
 				text-align: right;
 				font-weight: 300;
 			}
+				.score_storage .score_dash {
+					display: none;
+					font-weight: 600;
+					padding-right: 2px;
+				}
 			.score_storage .dataName {
 				width: 100%;
 				text-align: right;
@@ -791,14 +796,23 @@ div, input {
 			.unlayered {
 				color: #ccc;
 			}
+				.unlayered .scoreName {
+					/*font-weight: 400;*/
+				} 
 				.unlayered .score {
 					visibility: hidden;
+					/*display: none;*/
+				} 
+				.unlayered .score_dash {
+					/*display: initial;*/
 				} 
 				.unlayered .dataValue {
-					color: #ccc;
+					/*visibility: hidden;*/
+					/*color: #ccc;*/
 				}
 				.unlayered .dataName {
 					display: none;
+					color: #ccc;
 				}
 
 		#score_municipal_total {

@@ -16,6 +16,7 @@ function append_province_result(_scoreName, _dataValue, _dataName) {
 function append_municipal_result(_scoreName, _dataValue, _score, _dataName) {
 	return "<div class=\"scoreName\">" + _scoreName + "</div>"
 	+ "<div class=\"score\">" + d3.format(".1f")(_score) + "</div>"
+	// + "<div class=\"score_dash\"> - </div>"
 	+ "<div class=\"dataValue\">" + _dataValue + "</div>"
 	+ "<div class=\"dataName\">" + _dataName + "</div>";
 }
