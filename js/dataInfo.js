@@ -83,7 +83,7 @@ function change_dataInfo(_prop) {
 				append_municipal_result("제조업 고령화", _data.rateOf20sInIndustry.rawData, _data.rateOf20sInIndustry.score, "제조업체 종사자 중 20대 비율")
 			);
 			$("#result_municipal_industryJobCreation").append(
-				append_municipal_result("일자리 창출 위험도", "(비공개)", _data.industryJobCreation.score, "일자리 총 규모 대비 일자리 창출량")
+				append_municipal_result("일자리 창출 위험도", "(비공개)", _data.industryJobCreation.score, "제조업 일자리 총 규모 대비 제조업 일자리 창출량")
 			);
 			$("#result_municipal_incomeRate").append(
 				append_municipal_result("직장인-주민 괴리도(2016)", _data.incomeRate.rawData, _data.incomeRate.score, "(거주지 기준) 지역내 급여 총액 / (근무지 기준) 지역내 급여 총액")
@@ -135,7 +135,7 @@ function change_dataInfo(_prop) {
 				append_province_result("제조업 고령화", _data_province.rateOf20sInIndustry.rawData, "제조업체 종사자 중 20대 비율")
 			);
 			$("#result_province_industryJobCreation").append(
-				append_province_result("일자리 창출 위험도", "(비공개)", "일자리 총 규모 대비 일자리 창출량")
+				append_province_result("일자리 창출 위험도", "(비공개)", "제조업 일자리 총 규모 대비 제조업 일자리 창출량")
 			);
 			$("#result_province_incomeRate").append(
 				append_province_result("직장인-주민 괴리도(2016)", _data_province.incomeRate.rawData, "(거주지 기준) 지역내 급여 총액 / (근무지 기준) 지역내 급여 총액")
