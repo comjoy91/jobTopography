@@ -108,11 +108,13 @@ function styleFunc_province_border(feature) {
 
 var layer_municipal = L.geoJson(municipalGeoJSON, {
 	style: styleFunc_municipal,
-	onEachFeature: onEachFeature_municipal
+	onEachFeature: onEachFeature_municipal,
+	smoothFactor: 0
 }).addTo(map);
 
 var layer_province_border = L.geoJson(provinceGeoJSON, {
-	style: styleFunc_province_border
+	style: styleFunc_province_border,
+	smoothFactor: 0
 }).addTo(map);
 
 
