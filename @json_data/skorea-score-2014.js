@@ -40,7 +40,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "1.03%",
 			"score_hiringRate_1000": 2.5,
 			"mainIndustryPortion": "23.32%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "13.72%",
 			"score_rateOf20sInIndustry": 5,
 			"industryJobCreation": "",
@@ -160,7 +160,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "1.23%",
 			"score_hiringRate_1000": 2.5,
 			"mainIndustryPortion": "23.92%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "18.37%",
 			"score_rateOf20sInIndustry": 2.5,
 			"industryJobCreation": "",
@@ -400,7 +400,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "3.29%",
 			"score_hiringRate_1000": 2.5,
 			"mainIndustryPortion": "29.42%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "13.57%",
 			"score_rateOf20sInIndustry": 5,
 			"industryJobCreation": "",
@@ -540,7 +540,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "옷, 액세서리",
 			"factory": "",
-			"additional_note": "2015년부터 300인 이상 제조업체가 사라졌습니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 1102,
@@ -1140,7 +1140,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "식료품",
 			"factory": "",
-			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 1122,
@@ -1260,7 +1260,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "N/A",
 			"factory": "",
-			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2015년에 새로 집계됩니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 2101,
@@ -1410,7 +1410,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "N/A",
 			"factory": "",
-			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2016년에 새로 집계됩니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 2106,
@@ -1512,7 +1512,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "0.00%",
 			"score_hiringRate_1000": 0,
 			"mainIndustryPortion": "29.78%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "14.45%",
 			"score_rateOf20sInIndustry": 5,
 			"industryJobCreation": "",
@@ -2159,7 +2159,7 @@ var _dataJSON_2014 = {
 			"numWorkers_300": "",
 			"numWorkers_1000": "",
 			"mainIndustry_300": "자동차",
-			"factory": "한국GM부평공장",
+			"factory": "한국GM 부평공장",
 			"additional_note": ""
 		},
 		{
@@ -2712,7 +2712,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "6.82%",
 			"score_hiringRate_1000": 5,
 			"mainIndustryPortion": "27.15%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "13.64%",
 			"score_rateOf20sInIndustry": 5,
 			"industryJobCreation": "",
@@ -3150,7 +3150,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "N/A",
 			"factory": "",
-			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 3114,
@@ -3192,7 +3192,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "0.75%",
 			"score_hiringRate_1000": 2.5,
 			"mainIndustryPortion": "21.01%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "12.44%",
 			"score_rateOf20sInIndustry": 5,
 			"industryJobCreation": "",
@@ -3359,7 +3359,7 @@ var _dataJSON_2014 = {
 			"numWorkers_300": "",
 			"numWorkers_1000": "",
 			"mainIndustry_300": "전자, 통신",
-			"factory": "LG디스플레이 파주사업장, R&D 센터, LG화학 파주공장, LG이노텍 파주공장",
+			"factory": "LG디스플레이 파주사업장, LG디스플레이 R&D 센터, LG화학 파주공장, LG이노텍 파주공장",
 			"additional_note": ""
 		},
 		{
@@ -3720,7 +3720,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "N/A",
 			"factory": "",
-			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2016년에 새로 집계됩니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 3202,
@@ -3990,7 +3990,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "비금속",
 			"factory": "",
-			"additional_note": "2015년에 300인 이상 제조업체가 사라졌습니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 3211,
@@ -4320,7 +4320,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "N/A",
 			"factory": "",
-			"additional_note": "지역에 300인 이상 제조업체가 없다가, 2016년에 새로 집계됩니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 3304,
@@ -4422,7 +4422,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "0.00%",
 			"score_hiringRate_1000": 0,
 			"mainIndustryPortion": "28.84%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "15.26%",
 			"score_rateOf20sInIndustry": 2.5,
 			"industryJobCreation": "",
@@ -5069,7 +5069,7 @@ var _dataJSON_2014 = {
 			"numWorkers_300": "",
 			"numWorkers_1000": "",
 			"mainIndustry_300": "자동차",
-			"factory": "OCI 군산공장, 세아베스틸 군산공장, 한국GM군산공장, 두산인프라코어 군산공장",
+			"factory": "OCI 군산공장, 세아베스틸 군산공장, 한국GM 군산공장, 두산인프라코어 군산공장",
 			"additional_note": ""
 		},
 		{
@@ -5099,7 +5099,7 @@ var _dataJSON_2014 = {
 			"numWorkers_300": "",
 			"numWorkers_1000": "",
 			"mainIndustry_300": "식료품",
-			"factory": "LG화학 익산공장 1,2,3,",
+			"factory": "LG화학 익산공장 1,2,3",
 			"additional_note": ""
 		},
 		{
@@ -5639,8 +5639,8 @@ var _dataJSON_2014 = {
 			"numWorkers_300": "",
 			"numWorkers_1000": "",
 			"mainIndustry_300": "고무, 플라스틱",
-			"factory": "금호타이어 곡성곡장",
-			"additional_note": "인구(8만 명)에 비해 단일 대공장에 대한 고용 의존도가 높습니다."
+			"factory": "금호타이어 곡성공장",
+			"additional_note": "인구(3만 명)에 비해 단일 대공장에 대한 고용 의존도가 높습니다."
 		},
 		{
 			"code_data": 3608,
@@ -6132,7 +6132,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "3.28%",
 			"score_hiringRate_1000": 2.5,
 			"mainIndustryPortion": "29.40%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "14.82%",
 			"score_rateOf20sInIndustry": 5,
 			"industryJobCreation": "",
@@ -7002,7 +7002,7 @@ var _dataJSON_2014 = {
 			"hiringRate_1000": "8.22%",
 			"score_hiringRate_1000": 5,
 			"mainIndustryPortion": "28.94%",
-			"score_mainIndustryPortion": 2.5,
+			"score_mainIndustryPortion": 0,
 			"rateOf20sInIndustry": "14.38%",
 			"score_rateOf20sInIndustry": 5,
 			"industryJobCreation": "",
@@ -7140,7 +7140,7 @@ var _dataJSON_2014 = {
 			"numWorkers_1000": "",
 			"mainIndustry_300": "N/A",
 			"factory": "",
-			"additional_note": "2016년에 300인 이상 제조업체가 사라졌습니다."
+			"additional_note": ""
 		},
 		{
 			"code_data": 3813,

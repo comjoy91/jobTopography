@@ -71,10 +71,10 @@ function change_dataInfo(_prop) {
 
 			// municipal score.
 			$("#result_municipal_hiringRate_300").append(
-				append_municipal_result("300인 이상 제조업 집중도", _data.hiringRate_300.rawData, _data.hiringRate_300.score, "제조업 종사자 중 300인 이상 제조업체 종사 비율")
+				append_municipal_result("300인 이상 제조업 집중도", _data.hiringRate_300.rawData, _data.hiringRate_300.score, "전체 종사자 중 300인 이상 제조업체 종사 비율")
 			);
 			$("#result_municipal_hiringRate_1000").append(
-				append_municipal_result("1000인 이상 제조업 집중도", _data.hiringRate_1000.rawData, _data.hiringRate_1000.score, "제조업 종사자 중 1000인 이상 제조업체 종사 비율")
+				append_municipal_result("1000인 이상 제조업 집중도", _data.hiringRate_1000.rawData, _data.hiringRate_1000.score, "전체 종사자 중 1000인 이상 제조업체 종사 비율")
 			);
 			$("#result_municipal_mainIndustryPortion").append(
 				append_municipal_result("제1제조업 집중도", _data.mainIndustryPortion.rawData, _data.mainIndustryPortion.score, "300인 이상 제조업체 종사자 중 제1제조업 종사 비율")
@@ -123,10 +123,10 @@ function change_dataInfo(_prop) {
 
 			// province score.
 			$("#result_province_hiringRate_300").append(
-				append_province_result("300인 이상 제조업 집중도", _data_province.hiringRate_300.rawData, "제조업 종사자 중 300인 이상 제조업체 종사 비율")
+				append_province_result("300인 이상 제조업 집중도", _data_province.hiringRate_300.rawData, "전체 종사자 중 300인 이상 제조업체 종사 비율")
 			);
 			$("#result_province_hiringRate_1000").append(
-				append_province_result("1000인 이상 제조업 집중도", _data_province.hiringRate_1000.rawData, "제조업 종사자 중 1000인 이상 제조업체 종사 비율")
+				append_province_result("1000인 이상 제조업 집중도", _data_province.hiringRate_1000.rawData, "전체 종사자 중 1000인 이상 제조업체 종사 비율")
 			);
 			$("#result_province_mainIndustryPortion").append(
 				append_province_result("제1제조업 집중도", _data_province.mainIndustryPortion.rawData, "300인 이상 제조업체 종사자 중 제1제조업 종사 비율")
