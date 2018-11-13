@@ -113,19 +113,25 @@ div, input {
 	background: #ffffff;
 	border: 1px solid #c3c3c3;
 	border-radius: 4px;
-	cursor: pointer;
 
 	color: #000000;
 	text-decoration: none;
 }
-
-	#site_title img {
-		height: 2.6em;
-		margin: 0 0.5em 0 0;
-	}
-	#site_title div {
-		padding: 0.1em 0 0 0;
-	}
+		#site_title_logo {
+			width: 2.6em;
+			height: 2.6em;
+			margin: 0 0.5em 0 0;
+			cursor: pointer;
+		}
+			#site_title_logo img {
+				height: 100%;
+			}
+		#site_title_text {
+			padding: 0.1em 0 0 0;
+			color: #000000;
+			text-decoration: none;
+			cursor: pointer;
+		}
 
 
 #mapNav_popup {
@@ -163,8 +169,7 @@ div, input {
 		padding: 8px 8px 7px 48px;
 		border: 2px solid rgba(0,0,0,0.3);
 	}
-		#site_title img {
-			height: 2.6em;
+		#site_title_logo {
 			margin: 0 0.6em 0 0;
 		}
 	#mapNav_popup {
@@ -181,8 +186,7 @@ div, input {
 		padding: 8px 8px 7px 48px;
 		border: 2px solid rgba(0,0,0,0.3);
 	}
-		#site_title img {
-			height: 2.6em;
+		#site_title_logo {
 			margin: 0 0.6em 0 0;
 		}
 	#mapNav_popup {
