@@ -15,6 +15,8 @@ var map = L.map( 'map_background', {
 					attributionControl: false,
 					minZoom: 5, 
 					maxZoom: 12,
+					zoomSnap: 0.5,
+					zoomDelta: 0.5,
 					scrollWheelZoom: true} );
 var attribution = L.control.attribution({position: 'bottomleft'}).addTo(map);
 L.control.zoom({position: 'topleft'}).addTo(map);
