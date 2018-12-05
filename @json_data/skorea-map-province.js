@@ -1,3 +1,9 @@
+
+// ----------------- contributed by Lucy Park & Justin Meyers. https://github.com/southkorea/southkorea-maps
+
+// ----------------- modified by Hyunik Cho. 
+// ----------------- for building "LAB2050 Workmap"("우리 지역 고용위기 시그널") page. https://github.com/comjoy91/jobTopography OR https://lab2050.org/workmap 
+
 var provinceGeoJSON = {
 	"type": "FeatureCollection",
 	"name": "skorea-map-province",
