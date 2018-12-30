@@ -56,7 +56,7 @@ function municipal_toProvince_prop(_prop) {
 
 // ---------- initialize whole map drawn by GeoJSON ----------
 
-function onEachFeature_municipal(_feature, _layer) { // 
+function onEachFeature_municipal(_feature, _layer) { 
 	_layer.on({
 		mouseover: highlightFeature,
 		mousemove: districtTooltip,
@@ -78,7 +78,7 @@ function onEachFeature_municipal(_feature, _layer) { //
 
 // adding colour for choropleth map
 function styleFunc_municipal(feature) {
-	if ( feature.properties.score_total <= 0 ) {
+	if ( feature.properties.score_total <= 0 ) { // 총점 0이면 그냥 회색으로 밀어버림
 		return {
 			fillColor: municipal_style.fillColor_invalid,
 			fillOpacity: municipal_style.fillOpacity_invalid,
@@ -87,7 +87,7 @@ function styleFunc_municipal(feature) {
 			weight: municipal_style.weight
 		}
 	}
-	else return {
+	else return { // 총점 0이 아니면
 		fillColor: getColour_multiLayer(feature.properties.score_total),
 		fillOpacity: municipal_style.fillOpacity,
 		color: municipal_style.color,
@@ -122,7 +122,7 @@ var layer_province_border = L.geoJson(provinceGeoJSON, {
 
 // ---------- updating score to re-colour the map. ----------
 
-function updateScore_check() {
+function updateScore_check() { // for multi-layer map
 	layer_municipal.eachLayer(function(_layer) {
 
 		var prop = _layer.feature.properties;
@@ -174,7 +174,7 @@ function updateScore_check() {
 
 
 
-function updateScore_radio() {
+function updateScore_radio() { // for single-layer map
 	layer_municipal.eachLayer(function(_layer) {
 
 		var prop = _layer.feature.properties;

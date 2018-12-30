@@ -1,4 +1,4 @@
-function thead_update(_th_array) {
+function thead_update(_th_array) { // <thead>: rawData 표시
 	var html_string = '';
 	for (var th_elem of _th_array) {
 		html_string += '<th>' + th_elem + '</th>';
@@ -6,7 +6,7 @@ function thead_update(_th_array) {
 	html_string = '<thead><tr>' + html_string + '</tr></thead>';
 	return html_string;
 }
-function tbody_update(_td_array) {
+function tbody_update(_td_array) { // <tbody>: 색상반영도 표시
 	var html_string = '';
 	for (var td_elem of _td_array) {
 		html_string += '<td style="background-color: hsl(0, 100%, ' + (100-td_elem) + '%);">' + td_elem + '</td>'; //'점</td>';

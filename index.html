@@ -10,6 +10,29 @@
 
 		gtag('config', 'UA-129343110-1');
 	</script>
+
+	<!-- SEO tags. LIVE MODE ONLY. Comment out all of the below if error occurs in your DEV env. -->
+	<!-- <meta name="description"			content="1948년부터 지금까지. 당신이 투표함에 넣었던 표가 모여, 한국 역대 공직선거 데이터 지도가 되었습니다.">
+	<meta name="author"					content="조현익 Hyunik Cho">
+	<meta name="copyright"				content="workingHyunik@gmail.com">
+	<meta name="application-name"		content="대한민국 전국투표전도">
+	<link rel="shortcut icon" 			href="/assets/img/social_media/favicon.ico"/> -->
+
+	<!-- <meta property="og:url"				content="http://skorea-election-map.org/" />
+	<meta property="og:type"			content="article" />
+	<meta property="og:title"			content="대한민국 전국투표전도" />
+	<meta property="og:description"		content="1948년부터 지금까지. 당신이 투표함에 넣었던 표가 모여, 한국 역대 공직선거 데이터 지도가 되었습니다." />
+	<meta property="og:image"			content="http://skorea-election-map.org/assets/img/social_media/facebook_thumbnail_02.png" /> -->
+	<!-- <meta property="og:image:type"		content="image/png" /> -->
+	<!-- <meta property="fb:app_id"			content="350202635492695" /> -->
+	<!-- <meta property="og:locale"			content="ko_KR" /> -->
+
+	<!-- <meta name="twitter:card"			content="summary_large_image">
+	<meta name="twitter:title"			content="대한민국 전국투표전도">
+	<meta name="twitter:description"	content="1948년부터 지금까지. 당신이 투표함에 넣었던 표가 모여, 한국 역대 공직선거 데이터 지도가 되었습니다.">
+	<meta name="twitter:image"			content="http://skorea-election-map.org/assets/img/social_media/facebook_thumbnail_02.png">  -->
+	<!-- <meta name="twitter:creator"		content="@20timeline"> -->
+	<!-- SEO tags. LIVE MODE ONLY. Comment out all of the above if error occurs in your DEV env. -->
 	
 	<title>우리 지역 고용위기 시그널 - LAB2050</title>
 
@@ -92,7 +115,6 @@
 
 	<div id="map_background"></div>
 
-	<!-- <a id="site_title" href=""><img src="@images/lab2050_colour.png"/><div>우리 지역 <br>고용위기 시그널</div></a> -->
 	<div id="site_title">
 		<a id="site_title_logo" href="https://lab2050.org" target="_blank"><img src="@images/lab2050_colour.png"/></a>
 		<a id="site_title_text" href="">우리 지역 <br>고용위기 시그널</a>
@@ -103,7 +125,7 @@
 
 	<div class="ui popup bottom right" id="mapNav">
 
-		<div id="mapLayer">
+		<div id="mapLayer"><!-- 지도 레이어 선택 -->
 
 			<div class="ui two item menu" id="mapLayer_menu">
 				<a class="active item" data-tab="multiLayer" id="menu_multiLayer">위험도 합산</a>
@@ -183,7 +205,7 @@
 		</div>
 
 
-		<div id="mapYear">
+		<div id="mapYear"><!-- 년도 선택 -->
 			<div id="mapYear_slider"></div>
 			<div id="year_integer">
 				<div>2014</div> <div>2015</div> <div>2016</div>
@@ -191,13 +213,13 @@
 		</div>
 	</div>
 
-	<div class="scoreLegend" id="scoreLegend_multiLayer">
+	<div class="scoreLegend" id="scoreLegend_multiLayer"><!-- multi-layer 지표 색상 -->
 		<div class="score_integer">
 			<div>0</div> <div>25</div> <div>50</div> <div>75</div> <div>100</div>
 		</div>
 		<div class="score_gradient"></div>
 	</div>
-	<div class="scoreLegend" id="scoreLegend_singleLayer" style="display: none;">
+	<div class="scoreLegend" id="scoreLegend_singleLayer" style="display: none;"><!-- single-layer 지표 색상 -->
 		<div class="score_integer">
 			<div>낮은<br>위험</div> <div>높은<br>위험</div>
 		</div>
@@ -205,9 +227,9 @@
 	</div>
 
 
-	<div id="dataInfo">
+	<div id="dataInfo"><!-- 데스크탑 우측 / 모바일 하단 지역별 정보 -->
 
-		<div class="ui fluid search" id="feature_search">
+		<div class="ui fluid search" id="feature_search"><!-- 지역명 검색 -->
 			<div class="ui icon input">
 				<input class="prompt" type="text" id="search_input" name="name" placeholder="행정구역 이름 검색...">
 				<i class="search icon" id="search_button"></i>
@@ -227,13 +249,13 @@
 				문의: <a class="paragraph_link" href="mailto:joonchigirl@lab2050.org">joonchigirl@lab2050.org</a></p>
 		</div>
 
-		<div class="ui top secondary pointing menu" id="nameContainer" style="display: none">
+		<div class="ui top secondary pointing menu" id="nameContainer" style="display: none"><!-- 지역명 -->
 			<a class="active item" data-tab="municipal" id="municipal_name"></a>
 			<a class="item" data-tab="province" id="province_name"></a>
 			<a class="right item" id="cancel_selecting">✕</a>
 		</div>
 
-		<div class="ui bottom segment active tab" data-tab="municipal" id="result_municipal" style="display: none">
+		<div class="ui bottom segment active tab" data-tab="municipal" id="result_municipal" style="display: none"><!-- municipal information -->
 			<div class="basicInfo_storage" id="basicInfo_municipal">
 				<div class="basicInfo" id="population_municipal"></div>
 				<div class="basicInfo" id="mean_age_municipal"></div>
@@ -261,7 +283,7 @@
 			</div>
 		</div>
 
-		<div class="ui bottom segment tab" data-tab="province" id="result_province" style="display: none">
+		<div class="ui bottom segment tab" data-tab="province" id="result_province" style="display: none"><!-- province information -->
 			<div class="basicInfo_storage" id="basicInfo_province">
 				<div class="basicInfo" id="population_province"></div>
 				<div class="basicInfo" id="mean_age_province"></div>
@@ -285,7 +307,7 @@
 	</div>
 
 
-	<div class="ui modal" id="dataLegend_modal">
+	<div class="ui modal" id="dataLegend_modal"><!-- modal: 통계 출처 소개 -->
 		<i class="close icon"></i>
 		<div class="header">데이터 구성 및 출처<a href="https://docs.google.com/spreadsheets/d/1ta1gsoFjL3PcDjd022RgspA7RqGNz6Li9X9sbJwVMD0/edit#gid=0" target="_blank">원데이터 보기</a></div>
 
@@ -299,7 +321,7 @@
 				<br>데이터별 자세한 설명 및 출처, 색깔 반영도는 아래와 같습니다. 사용한 원데이터는 <a href="https://docs.google.com/spreadsheets/d/1ta1gsoFjL3PcDjd022RgspA7RqGNz6Li9X9sbJwVMD0/edit#gid=0" target="_blank">이 곳</a>에서 Google Spreadsheet를 통해 확인할 수 있습니다.<br>
 			</div>
 
-			<div class="data_explanation" id="singleTable_30degree">
+			<div class="data_explanation" id="singleTable_30degree"><!-- 300인 이상 데이터 소개: 데스크탑용 1줄짜리 표 -->
 				<h1>300인 이상 제조업 집중도 (기본지도)</h1>
 				<div class="explanation_line">
 					<div class="explanation_title">원데이터 및 출처</div>
@@ -349,7 +371,7 @@
 				</div>
 			</div>
 
-			<div class="data_explanation" id="twinTable_30degree">
+			<div class="data_explanation" id="twinTable_30degree"><!-- 300인 이상 데이터 소개: 모바일용 2줄짜리 표 -->
 				<h1>300인 이상 제조업 집중도 (기본지도)</h1>
 				<div class="explanation_line">
 					<div class="explanation_title">원데이터 및 출처</div>
@@ -404,6 +426,8 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- 그 외 데이터는 @json_data/scoreLegend.js와 js/dataLegend_modal.js에서 읽어들임. -->
 		</div>
 
 

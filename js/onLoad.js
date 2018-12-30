@@ -126,7 +126,7 @@ var updateScore = function() { updateScore_check(); }; // recent "updateScore" f
 var year_index = 2; // 2014: 0, 2015: 1, 2016: 2. It is used in "js/leaflet_script.js"
 
 
-// ---------- variable which shows selected polygon (municipal layer, province layer).  Mostly used in "js/leaflet_script.js"
+// ---------- variables which show selected polygon (municipal layer, province layer).  Mostly used in "js/leaflet_script.js"
 var current_municipal_layer = null;
 var current_province_layer = null;
 

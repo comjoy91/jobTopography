@@ -1,19 +1,19 @@
 
 
-function append_basicInfo(_dataName, _dataValue) {
+function append_basicInfo(_dataName, _dataValue) { // 인구, 주요 사업장 등 기본정보 1개씩.
 	return "<div class=\"basicInfo\">"
 	+ "<div class=\"name\">" + _dataName + "</div>"
 	+ "<div class=\"value\">" + _dataValue + "</div></div>"
 }
 
-function append_province_result(_scoreName, _dataValue, _dataName) {
+function append_province_result(_scoreName, _dataValue, _dataName) { // data 이름, rawData, 색상반영도 1줄씩.
 	return "<div class=\"scoreName\">" + _scoreName + "</div>"
 	+ "<div class=\"score\"></div>"
 	+ "<div class=\"dataValue\">" + _dataValue + "</div>"
 	+ "<div class=\"dataName\">" + _dataName + "</div>";
 }
 
-function append_municipal_result(_scoreName, _dataValue, _score, _dataName) {
+function append_municipal_result(_scoreName, _dataValue, _score, _dataName) { // data 이름, rawData, 색상반영도 1줄씩.
 	return "<div class=\"scoreName\">" + _scoreName + "</div>"
 	+ "<div class=\"score\">" + d3.format(".1f")(_score) + "</div>"
 	+ "<div class=\"score_dash\"> - </div>"
@@ -26,7 +26,7 @@ function append_municipal_result(_scoreName, _dataValue, _score, _dataName) {
 
 function change_dataInfo(_prop) {
 	(function($){
-		if (_prop == null) {
+		if (_prop == null) { // 초기화면
 			change_dataInfo_needtoSelect();
 		}
 
