@@ -5,7 +5,7 @@ const municipal_style = {
 	fillOpacity: 0.7,
 	fillColor_invalid: "#aaaaaa",
 	fillOpacity_invalid: 0.85,
-	color: 'blue',
+	color: '#0000FF',
 	opacity: 0.15,
 	weight: 0.5,
 	color_hover: '#248', 
@@ -19,7 +19,7 @@ const municipal_style = {
 const province_style = {
 	fillColor: 'black', 
 	fillOpacity: 0,
-	color: 'green', 
+	color: '#3532BD', 
 	opacity: 0.25,
 	weight: 1.4, 
 	color_selected: '#248',
